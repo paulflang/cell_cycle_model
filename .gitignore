@@ -1,0 +1,25 @@
+# python cache
+__pycache__/
+cell_cycle_model/__pycache__
+tests/__pycache__
+
+#distribution files
+/build/
+/dist/
+/sdists/
+*.egg-info
+
+# compiled documentation
+docs/_build
+docs/.doctrees/
+docs/make.bat
+docs/Makefile
+
+# pytest .cache directory
+.cache/
+.pytest_cache/
+
+#
+run_flake8.sh
+venv/
+*/.vscode/
