@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created by COPASI version 4.27 (Build 217) on 2020-04-12 23:12 with libSBML version 5.18.0. -->
+<!-- Created by COPASI version 4.27 (Build 217) on 2020-11-10 12:33 with libSBML version 5.18.0. -->
 <sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
   <model metaid="COPASI0" id="cell_cycle_v2_1_3" name="cell_cycle_v2.1.3">
     <notes>
@@ -12,6 +12,42 @@ Added rate law for reduced Wee1 activity.</pre>
       </body>
     </notes>
     <annotation>
+      <COPASI xmlns="http://www.copasi.org/static/sbml">
+        <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
+          <rdf:Description rdf:about="#COPASI0">
+            <dcterms:created>
+              <rdf:Description>
+                <dcterms:W3CDTF>2018-06-18T12:16:16Z</dcterms:W3CDTF>
+              </rdf:Description>
+            </dcterms:created>
+            <dcterms:creator>
+              <rdf:Bag>
+                <rdf:li>
+                  <rdf:Description>
+                    <vCard:EMAIL>paul.lang@wolfson.ox.ac.uk</vCard:EMAIL>
+                    <vCard:N>
+                      <rdf:Description>
+                        <vCard:Family>Lang</vCard:Family>
+                        <vCard:Given>Paul</vCard:Given>
+                      </rdf:Description>
+                    </vCard:N>
+                    <vCard:ORG>
+                      <rdf:Description>
+                        <vCard:Orgname>University of Oxford</vCard:Orgname>
+                      </rdf:Description>
+                    </vCard:ORG>
+                  </rdf:Description>
+                </rdf:li>
+              </rdf:Bag>
+            </dcterms:creator>
+            <dcterms:modified>
+              <rdf:Description>
+                <dcterms:W3CDTF>2018-06-18T12:16:16Z</dcterms:W3CDTF>
+              </rdf:Description>
+            </dcterms:modified>
+          </rdf:Description>
+        </rdf:RDF>
+      </COPASI>
       <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
         <rdf:Description rdf:about="#COPASI0">
           <dc:creator>
@@ -36,192 +72,16 @@ Added rate law for reduced Wee1 activity.</pre>
           </dcterms:modified>
         </rdf:Description>
       </rdf:RDF>
-      <COPASI xmlns="http://www.copasi.org/static/sbml">
-        <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-          <rdf:Description rdf:about="#COPASI0">
-            <dcterms:created>
-              <rdf:Description>
-                <dcterms:W3CDTF>2018-06-18T12:16:16Z</dcterms:W3CDTF>
-              </rdf:Description>
-            </dcterms:created>
-            <dcterms:creator>
-              <rdf:Description>
-                <vCard:EMAIL>paul.lang@wolfson.ox.ac.uk</vCard:EMAIL>
-                <vCard:N>
-                  <rdf:Description>
-                    <vCard:Family>Lang</vCard:Family>
-                    <vCard:Given>Paul</vCard:Given>
-                  </rdf:Description>
-                </vCard:N>
-                <vCard:ORG>
-                  <rdf:Description>
-                    <vCard:Orgname>University of Oxford</vCard:Orgname>
-                  </rdf:Description>
-                </vCard:ORG>
-              </rdf:Description>
-            </dcterms:creator>
-          </rdf:Description>
-        </rdf:RDF>
-      </COPASI>
     </annotation>
     <listOfFunctionDefinitions>
-      <functionDefinition metaid="COPASI358" id="Inhibited_Synthesis_1" name="Inhibited Synthesis 1">
+      <functionDefinition metaid="COPASI362" id="Constant_flux__irreversible_0" name="Constant flux (irreversible)">
         <annotation>
           <COPASI xmlns="http://www.copasi.org/static/sbml">
             <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-              <rdf:Description rdf:about="#COPASI358">
+              <rdf:Description rdf:about="#COPASI362">
                 <dcterms:created>
                   <rdf:Description>
-                    <dcterms:W3CDTF>2020-04-11T10:17:01Z</dcterms:W3CDTF>
-                  </rdf:Description>
-                </dcterms:created>
-              </rdf:Description>
-            </rdf:RDF>
-          </COPASI>
-        </annotation>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <lambda>
-            <bvar>
-              <ci> k1 </ci>
-            </bvar>
-            <bvar>
-              <ci> ikSy </ci>
-            </bvar>
-            <apply>
-              <times/>
-              <ci> k1 </ci>
-              <ci> ikSy </ci>
-            </apply>
-          </lambda>
-        </math>
-      </functionDefinition>
-      <functionDefinition metaid="COPASI359" id="Inhibited_Synthesis_2" name="Inhibited Synthesis 2">
-        <annotation>
-          <COPASI xmlns="http://www.copasi.org/static/sbml">
-            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-              <rdf:Description rdf:about="#COPASI359">
-                <dcterms:created>
-                  <rdf:Description>
-                    <dcterms:W3CDTF>2020-04-11T10:17:01Z</dcterms:W3CDTF>
-                  </rdf:Description>
-                </dcterms:created>
-              </rdf:Description>
-            </rdf:RDF>
-          </COPASI>
-        </annotation>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <lambda>
-            <bvar>
-              <ci> k1 </ci>
-            </bvar>
-            <bvar>
-              <ci> ikSy </ci>
-            </bvar>
-            <bvar>
-              <ci> PromoterTf </ci>
-            </bvar>
-            <apply>
-              <times/>
-              <ci> k1 </ci>
-              <ci> ikSy </ci>
-              <ci> PromoterTf </ci>
-            </apply>
-          </lambda>
-        </math>
-      </functionDefinition>
-      <functionDefinition metaid="COPASI360" id="Inhibited_catalysis" name="Inhibited catalysis">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <pre>The enzyme is specified to be a `substrate` to allow consistency with other reaction equation formulations where the enzyme appears on both sides of the reaction equation.</pre>
-          </body>
-        </notes>
-        <annotation>
-          <COPASI xmlns="http://www.copasi.org/static/sbml">
-            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-              <rdf:Description rdf:about="#COPASI360">
-                <dcterms:created>
-                  <rdf:Description>
-                    <dcterms:W3CDTF>2020-04-12T20:11:24Z</dcterms:W3CDTF>
-                  </rdf:Description>
-                </dcterms:created>
-              </rdf:Description>
-            </rdf:RDF>
-          </COPASI>
-        </annotation>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <lambda>
-            <bvar>
-              <ci> k_cat </ci>
-            </bvar>
-            <bvar>
-              <ci> substrate </ci>
-            </bvar>
-            <bvar>
-              <ci> enzyme_t </ci>
-            </bvar>
-            <bvar>
-              <ci> inhibitor_t </ci>
-            </bvar>
-            <bvar>
-              <ci> Kd </ci>
-            </bvar>
-            <apply>
-              <times/>
-              <ci> k_cat </ci>
-              <ci> substrate </ci>
-              <cn> 0.5 </cn>
-              <apply>
-                <plus/>
-                <apply>
-                  <minus/>
-                  <apply>
-                    <minus/>
-                    <ci> enzyme_t </ci>
-                    <ci> inhibitor_t </ci>
-                  </apply>
-                  <ci> Kd </ci>
-                </apply>
-                <apply>
-                  <root/>
-                  <degree>
-                    <cn type="integer"> 2 </cn>
-                  </degree>
-                  <apply>
-                    <plus/>
-                    <apply>
-                      <power/>
-                      <apply>
-                        <plus/>
-                        <apply>
-                          <minus/>
-                          <ci> enzyme_t </ci>
-                        </apply>
-                        <ci> inhibitor_t </ci>
-                        <ci> Kd </ci>
-                      </apply>
-                      <cn> 2 </cn>
-                    </apply>
-                    <apply>
-                      <times/>
-                      <cn> 4 </cn>
-                      <ci> Kd </ci>
-                      <ci> enzyme_t </ci>
-                    </apply>
-                  </apply>
-                </apply>
-              </apply>
-            </apply>
-          </lambda>
-        </math>
-      </functionDefinition>
-      <functionDefinition metaid="COPASI361" id="Constant_flux__irreversible" name="Constant flux (irreversible)">
-        <annotation>
-          <COPASI xmlns="http://www.copasi.org/static/sbml">
-            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-              <rdf:Description rdf:about="#COPASI361">
-                <dcterms:created>
-                  <rdf:Description>
-                    <dcterms:W3CDTF>2020-01-28T11:58:52Z</dcterms:W3CDTF>
+                    <dcterms:W3CDTF>2020-11-10T11:32:07Z</dcterms:W3CDTF>
                   </rdf:Description>
                 </dcterms:created>
               </rdf:Description>
@@ -234,6 +94,234 @@ Added rate law for reduced Wee1 activity.</pre>
               <ci> v </ci>
             </bvar>
             <ci> v </ci>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="COPASI363" id="Inhibited_catalysis_2" name="Inhibited catalysis_2">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI363">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2020-11-10T11:32:11Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Cb </ci>
+            </bvar>
+            <bvar>
+              <ci> iWee </ci>
+            </bvar>
+            <bvar>
+              <ci> jiWee </ci>
+            </bvar>
+            <bvar>
+              <ci> kWee1 </ci>
+            </bvar>
+            <bvar>
+              <ci> pWee </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> kWee1 </ci>
+              <ci> Cb </ci>
+              <cn> 0.5 </cn>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <minus/>
+                    <ci> pWee </ci>
+                    <ci> iWee </ci>
+                  </apply>
+                  <ci> jiWee </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <minus/>
+                          <ci> pWee </ci>
+                        </apply>
+                        <ci> iWee </ci>
+                        <ci> jiWee </ci>
+                      </apply>
+                      <cn> 2 </cn>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn> 4 </cn>
+                      <ci> jiWee </ci>
+                      <ci> pWee </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <cn> 1 </cn>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="COPASI364" id="Inhibited_Synthesis_1_1" name="Inhibited Synthesis 1_1">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI364">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2020-11-10T11:32:11Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> ikSyCb </ci>
+            </bvar>
+            <bvar>
+              <ci> kSyCb1 </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> kSyCb1 </ci>
+              <ci> ikSyCb </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="COPASI365" id="Inhibited_Synthesis_2_1" name="Inhibited Synthesis 2_1">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI365">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2020-11-10T11:32:11Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> ikSyCb </ci>
+            </bvar>
+            <bvar>
+              <ci> kSyCb2 </ci>
+            </bvar>
+            <bvar>
+              <ci> pFoxProCb </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> kSyCb2 </ci>
+              <ci> ikSyCb </ci>
+              <ci> pFoxProCb </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="COPASI366" id="Inhibited_catalysis_1" name="Inhibited catalysis_1">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI366">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2020-11-10T11:32:11Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Cb </ci>
+            </bvar>
+            <bvar>
+              <ci> Wee </ci>
+            </bvar>
+            <bvar>
+              <ci> iWee </ci>
+            </bvar>
+            <bvar>
+              <ci> jiWee </ci>
+            </bvar>
+            <bvar>
+              <ci> kWee2 </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> kWee2 </ci>
+              <ci> Cb </ci>
+              <cn> 0.5 </cn>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <minus/>
+                    <ci> Wee </ci>
+                    <ci> iWee </ci>
+                  </apply>
+                  <ci> jiWee </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <minus/>
+                          <ci> Wee </ci>
+                        </apply>
+                        <ci> iWee </ci>
+                        <ci> jiWee </ci>
+                      </apply>
+                      <cn> 2 </cn>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn> 4 </cn>
+                      <ci> jiWee </ci>
+                      <ci> Wee </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <cn> 1 </cn>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
           </lambda>
         </math>
       </functionDefinition>
@@ -991,201 +1079,6 @@ Added rate law for reduced Wee1 activity.</pre>
                 <dcterms:created>
                   <rdf:Description>
                     <dcterms:W3CDTF>2020-01-28T11:58:54Z</dcterms:W3CDTF>
-                  </rdf:Description>
-                </dcterms:created>
-              </rdf:Description>
-            </rdf:RDF>
-          </COPASI>
-        </annotation>
-      </species>
-      <species metaid="COPASI51" id="abCCNE_sum_cps" name="abCCNE_sum_cps" compartment="compartment" initialConcentration="0.232249137" boundaryCondition="true" constant="false">
-        <annotation>
-          <COPASI xmlns="http://www.copasi.org/static/sbml">
-            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-              <rdf:Description rdf:about="#COPASI51">
-                <dcterms:created>
-                  <rdf:Description>
-                    <dcterms:W3CDTF>2020-04-08T11:52:11Z</dcterms:W3CDTF>
-                  </rdf:Description>
-                </dcterms:created>
-              </rdf:Description>
-            </rdf:RDF>
-          </COPASI>
-        </annotation>
-      </species>
-      <species metaid="COPASI52" id="abCCNA2_cps" name="abCCNA2_cps" compartment="compartment" initialConcentration="0.00702849494" boundaryCondition="true" constant="false">
-        <annotation>
-          <COPASI xmlns="http://www.copasi.org/static/sbml">
-            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-              <rdf:Description rdf:about="#COPASI52">
-                <dcterms:created>
-                  <rdf:Description>
-                    <dcterms:W3CDTF>2020-04-08T11:53:24Z</dcterms:W3CDTF>
-                  </rdf:Description>
-                </dcterms:created>
-              </rdf:Description>
-            </rdf:RDF>
-          </COPASI>
-        </annotation>
-      </species>
-      <species metaid="COPASI53" id="abCCNB1_cps" name="abCCNB1_cps" compartment="compartment" initialConcentration="0.01690819263" boundaryCondition="true" constant="false">
-        <annotation>
-          <COPASI xmlns="http://www.copasi.org/static/sbml">
-            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-              <rdf:Description rdf:about="#COPASI53">
-                <dcterms:created>
-                  <rdf:Description>
-                    <dcterms:W3CDTF>2020-04-08T11:53:45Z</dcterms:W3CDTF>
-                  </rdf:Description>
-                </dcterms:created>
-              </rdf:Description>
-            </rdf:RDF>
-          </COPASI>
-        </annotation>
-      </species>
-      <species metaid="COPASI54" id="ab_activeCDKfraction_cps" name="ab_activeCDKfraction_cps" compartment="compartment" initialConcentration="0.111328453087301" boundaryCondition="true" constant="false">
-        <annotation>
-          <COPASI xmlns="http://www.copasi.org/static/sbml">
-            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-              <rdf:Description rdf:about="#COPASI54">
-                <dcterms:created>
-                  <rdf:Description>
-                    <dcterms:W3CDTF>2020-04-08T11:58:58Z</dcterms:W3CDTF>
-                  </rdf:Description>
-                </dcterms:created>
-              </rdf:Description>
-            </rdf:RDF>
-          </COPASI>
-        </annotation>
-      </species>
-      <species metaid="COPASI55" id="abRB1_pSer807pSer811_cps" name="abRB1_pSer807pSer811_cps" compartment="compartment" initialConcentration="2.522236326" boundaryCondition="true" constant="false">
-        <annotation>
-          <COPASI xmlns="http://www.copasi.org/static/sbml">
-            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-              <rdf:Description rdf:about="#COPASI55">
-                <dcterms:created>
-                  <rdf:Description>
-                    <dcterms:W3CDTF>2020-04-08T12:12:11Z</dcterms:W3CDTF>
-                  </rdf:Description>
-                </dcterms:created>
-              </rdf:Description>
-            </rdf:RDF>
-          </COPASI>
-        </annotation>
-      </species>
-      <species metaid="COPASI56" id="abE2F_sum_cps" name="abE2F_sum_cps" compartment="compartment" initialConcentration="0.0902065812285" boundaryCondition="true" constant="false">
-        <annotation>
-          <COPASI xmlns="http://www.copasi.org/static/sbml">
-            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-              <rdf:Description rdf:about="#COPASI56">
-                <dcterms:created>
-                  <rdf:Description>
-                    <dcterms:W3CDTF>2020-04-08T12:16:35Z</dcterms:W3CDTF>
-                  </rdf:Description>
-                </dcterms:created>
-              </rdf:Description>
-            </rdf:RDF>
-          </COPASI>
-        </annotation>
-      </species>
-      <species metaid="COPASI57" id="abFOXM1_cps" name="abFOXM1_cps" compartment="compartment" initialConcentration="0.0059461162812628" boundaryCondition="true" constant="false">
-        <annotation>
-          <COPASI xmlns="http://www.copasi.org/static/sbml">
-            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-              <rdf:Description rdf:about="#COPASI57">
-                <dcterms:created>
-                  <rdf:Description>
-                    <dcterms:W3CDTF>2020-04-08T19:32:08Z</dcterms:W3CDTF>
-                  </rdf:Description>
-                </dcterms:created>
-              </rdf:Description>
-            </rdf:RDF>
-          </COPASI>
-        </annotation>
-      </species>
-      <species metaid="COPASI58" id="abFBXO5_cps" name="abFBXO5_cps" compartment="compartment" initialConcentration="0.1118904811886" boundaryCondition="true" constant="false">
-        <annotation>
-          <COPASI xmlns="http://www.copasi.org/static/sbml">
-            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-              <rdf:Description rdf:about="#COPASI58">
-                <dcterms:created>
-                  <rdf:Description>
-                    <dcterms:W3CDTF>2020-04-08T19:36:56Z</dcterms:W3CDTF>
-                  </rdf:Description>
-                </dcterms:created>
-              </rdf:Description>
-            </rdf:RDF>
-          </COPASI>
-        </annotation>
-      </species>
-      <species metaid="COPASI59" id="abCDC25A_cps" name="abCDC25A_cps" compartment="compartment" initialConcentration="0.9999999998" boundaryCondition="true" constant="false">
-        <annotation>
-          <COPASI xmlns="http://www.copasi.org/static/sbml">
-            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-              <rdf:Description rdf:about="#COPASI59">
-                <dcterms:created>
-                  <rdf:Description>
-                    <dcterms:W3CDTF>2020-04-08T19:43:57Z</dcterms:W3CDTF>
-                  </rdf:Description>
-                </dcterms:created>
-              </rdf:Description>
-            </rdf:RDF>
-          </COPASI>
-        </annotation>
-      </species>
-      <species metaid="COPASI60" id="abCDC25A_pSer18_cps" name="abCDC25A_pSer18_cps" compartment="compartment" initialConcentration="0.0737522672" boundaryCondition="true" constant="false">
-        <annotation>
-          <COPASI xmlns="http://www.copasi.org/static/sbml">
-            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-              <rdf:Description rdf:about="#COPASI60">
-                <dcterms:created>
-                  <rdf:Description>
-                    <dcterms:W3CDTF>2020-04-08T19:45:56Z</dcterms:W3CDTF>
-                  </rdf:Description>
-                </dcterms:created>
-              </rdf:Description>
-            </rdf:RDF>
-          </COPASI>
-        </annotation>
-      </species>
-      <species metaid="COPASI61" id="abWEE1_cps" name="abWEE1_cps" compartment="compartment" initialConcentration="1" boundaryCondition="true" constant="false">
-        <annotation>
-          <COPASI xmlns="http://www.copasi.org/static/sbml">
-            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-              <rdf:Description rdf:about="#COPASI61">
-                <dcterms:created>
-                  <rdf:Description>
-                    <dcterms:W3CDTF>2020-04-08T19:49:07Z</dcterms:W3CDTF>
-                  </rdf:Description>
-                </dcterms:created>
-              </rdf:Description>
-            </rdf:RDF>
-          </COPASI>
-        </annotation>
-      </species>
-      <species metaid="COPASI62" id="abWEE1_pSer123_cps" name="abWEE1_pSer123_cps" compartment="compartment" initialConcentration="0.097791835" boundaryCondition="true" constant="false">
-        <annotation>
-          <COPASI xmlns="http://www.copasi.org/static/sbml">
-            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-              <rdf:Description rdf:about="#COPASI62">
-                <dcterms:created>
-                  <rdf:Description>
-                    <dcterms:W3CDTF>2020-04-08T19:51:20Z</dcterms:W3CDTF>
-                  </rdf:Description>
-                </dcterms:created>
-              </rdf:Description>
-            </rdf:RDF>
-          </COPASI>
-        </annotation>
-      </species>
-      <species metaid="COPASI63" id="abCDC20_cps" name="abCDC20_cps" compartment="compartment" initialConcentration="1.799057205" boundaryCondition="true" constant="false">
-        <annotation>
-          <COPASI xmlns="http://www.copasi.org/static/sbml">
-            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-              <rdf:Description rdf:about="#COPASI63">
-                <dcterms:created>
-                  <rdf:Description>
-                    <dcterms:W3CDTF>2020-04-08T19:53:42Z</dcterms:W3CDTF>
                   </rdf:Description>
                 </dcterms:created>
               </rdf:Description>
@@ -3250,447 +3143,7 @@ Added rate law for reduced Wee1 activity.</pre>
           </COPASI>
         </annotation>
       </parameter>
-      <parameter id="ModelValue_128" name="Initial for fCDK1" value="2">
-        <annotation>
-          <initialValue xmlns="http://copasi.org/initialValue" parent="fCDK1"/>
-        </annotation>
-      </parameter>
-      <parameter id="ModelValue_132" name="Initial for fCdc20" value="6">
-        <annotation>
-          <initialValue xmlns="http://copasi.org/initialValue" parent="fCdc20"/>
-        </annotation>
-      </parameter>
-      <parameter id="ModelValue_130" name="Initial for fCdc25_p" value="4">
-        <annotation>
-          <initialValue xmlns="http://copasi.org/initialValue" parent="fCdc25_p"/>
-        </annotation>
-      </parameter>
-      <parameter id="ModelValue_129" name="Initial for fRB1_p" value="3">
-        <annotation>
-          <initialValue xmlns="http://copasi.org/initialValue" parent="fRB1_p"/>
-        </annotation>
-      </parameter>
-      <parameter id="ModelValue_131" name="Initial for fWee1_p" value="5">
-        <annotation>
-          <initialValue xmlns="http://copasi.org/initialValue" parent="fWee1_p"/>
-        </annotation>
-      </parameter>
     </listOfParameters>
-    <listOfInitialAssignments>
-      <initialAssignment symbol="Cd">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Cd_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="Ce">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Ce_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="E2f">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> E2f_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="pE2f">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> pE2f_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="Ca">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Ca_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="Cb">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Cb_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="E2fRb">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> E2fRb_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="pE2fRb">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> pE2fRb_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="Rb">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Rb_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="pRb">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> pRb_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="B55">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> B55_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="Apc">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Apc_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="Cdc20">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Cdc20_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="pApcCdc">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> pApcCdc_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="pApc">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> pApc_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="ApcCdh">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> ApcCdh_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="Cdh">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Cdh_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="pCdh">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> pCdh_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="ACE">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> ACE_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="Emi">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Emi_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="pACE">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> pACE_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="pApcCdh">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> pApcCdh_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="pEmi">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> pEmi_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="Fox">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Fox_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="pFox">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> pFox_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="pFoxProCb">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> pFoxProCb_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="ProCb">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> ProCb_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="ProCdc">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> ProCdc_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="pFoxProCdc">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> pFoxProCdc_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="Wee">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Wee_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="pCb">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> pCb_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="pWee">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> pWee_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="pCdc25">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> pCdc25_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="Cdc25">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Cdc25_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="Gw">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Gw_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="pGw">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> pGw_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="Ensa">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Ensa_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="pEnsa">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> pEnsa_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="pEB55">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> pEB55_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="ProCe">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Px_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="ProCa">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Px_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="ProE2f">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Px_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="ProEmi">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Px_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="ProFox">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Px_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="E2fProCe">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> E2fPx_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="E2fProCa">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> E2fPx_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="E2fProE2f">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> E2fPx_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="E2fProEmi">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> E2fPx_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="E2fProFox">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> E2fPx_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="iWee">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> iWee_0 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="ModelValue_128">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> fCDK1 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="ModelValue_132">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> fCdc20 </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="ModelValue_130">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> fCdc25_p </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="ModelValue_129">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> fRB1_p </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="ModelValue_131">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> fWee1_p </ci>
-        </math>
-      </initialAssignment>
-    </listOfInitialAssignments>
-    <listOfRules>
-      <assignmentRule variable="abCCNE_sum_cps">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Ce </ci>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="abE2F_sum_cps">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <plus/>
-            <ci> E2f </ci>
-            <ci> E2fProCa </ci>
-            <ci> E2fProCe </ci>
-            <ci> E2fProE2f </ci>
-            <ci> E2fProEmi </ci>
-            <ci> E2fProFox </ci>
-            <ci> E2fRb </ci>
-            <ci> pE2f </ci>
-            <ci> pE2fRb </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="abFOXM1_cps">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <plus/>
-            <ci> Fox </ci>
-            <ci> pFoxProCb </ci>
-            <ci> pFoxProCdc </ci>
-            <ci> pFox </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="abCCNA2_cps">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> Ca </ci>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="abWEE1_cps">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <plus/>
-            <ci> pWee </ci>
-            <ci> Wee </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="abCDC25A_cps">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <plus/>
-            <ci> Cdc25 </ci>
-            <ci> pCdc25 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="abCDC20_cps">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> ModelValue_132 </ci>
-            <apply>
-              <plus/>
-              <ci> Cdc20 </ci>
-              <ci> pApcCdc </ci>
-            </apply>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="ab_activeCDKfraction_cps">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Cb </ci>
-            <apply>
-              <plus/>
-              <apply>
-                <times/>
-                <ci> pCb </ci>
-                <ci> ModelValue_128 </ci>
-              </apply>
-              <ci> Cb </ci>
-            </apply>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="abFBXO5_cps">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <plus/>
-            <ci> ACE </ci>
-            <ci> pEmi </ci>
-            <ci> pACE </ci>
-            <ci> Emi </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="abCDC25A_pSer18_cps">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> ModelValue_130 </ci>
-            <ci> pCdc25 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="abCCNB1_cps">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <plus/>
-            <ci> Cb </ci>
-            <apply>
-              <times/>
-              <ci> ModelValue_128 </ci>
-              <ci> pCb </ci>
-            </apply>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="abRB1_pSer807pSer811_cps">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> ModelValue_129 </ci>
-            <ci> pRb </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="abWEE1_pSer123_cps">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> ModelValue_131 </ci>
-            <ci> pWee </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-    </listOfRules>
     <listOfReactions>
       <reaction metaid="COPASI201" id="SyE2f1" name="SyE2f1" reversible="false">
         <annotation>
@@ -3715,7 +3168,7 @@ Added rate law for reduced Wee1 activity.</pre>
               <times/>
               <ci> compartment </ci>
               <apply>
-                <ci> Constant_flux__irreversible </ci>
+                <ci> Constant_flux__irreversible_0 </ci>
                 <ci> kSyE2f1 </ci>
               </apply>
             </apply>
@@ -4635,7 +4088,7 @@ Added rate law for reduced Wee1 activity.</pre>
               <times/>
               <ci> compartment </ci>
               <apply>
-                <ci> Constant_flux__irreversible </ci>
+                <ci> Constant_flux__irreversible_0 </ci>
                 <ci> kSyCe1 </ci>
               </apply>
             </apply>
@@ -5707,7 +5160,7 @@ Added rate law for reduced Wee1 activity.</pre>
               <times/>
               <ci> compartment </ci>
               <apply>
-                <ci> Constant_flux__irreversible </ci>
+                <ci> Constant_flux__irreversible_0 </ci>
                 <ci> kSyFox1 </ci>
               </apply>
             </apply>
@@ -5902,7 +5355,7 @@ Added rate law for reduced Wee1 activity.</pre>
               <times/>
               <ci> compartment </ci>
               <apply>
-                <ci> Constant_flux__irreversible </ci>
+                <ci> Constant_flux__irreversible_0 </ci>
                 <ci> kSyCa1 </ci>
               </apply>
             </apply>
@@ -6445,9 +5898,9 @@ Added rate law for reduced Wee1 activity.</pre>
               <times/>
               <ci> compartment </ci>
               <apply>
-                <ci> Inhibited_Synthesis_1 </ci>
-                <ci> kSyCb1 </ci>
+                <ci> Inhibited_Synthesis_1_1 </ci>
                 <ci> ikSyCb </ci>
+                <ci> kSyCb1 </ci>
               </apply>
             </apply>
           </math>
@@ -6480,9 +5933,9 @@ Added rate law for reduced Wee1 activity.</pre>
               <times/>
               <ci> compartment </ci>
               <apply>
-                <ci> Inhibited_Synthesis_2 </ci>
-                <ci> kSyCb2 </ci>
+                <ci> Inhibited_Synthesis_2_1 </ci>
                 <ci> ikSyCb </ci>
+                <ci> kSyCb2 </ci>
                 <ci> pFoxProCb </ci>
               </apply>
             </apply>
@@ -6770,7 +6223,7 @@ Added rate law for reduced Wee1 activity.</pre>
               <times/>
               <ci> compartment </ci>
               <apply>
-                <ci> Constant_flux__irreversible </ci>
+                <ci> Constant_flux__irreversible_0 </ci>
                 <ci> kSyCdc_1 </ci>
               </apply>
             </apply>
@@ -6905,12 +6358,12 @@ Added rate law for reduced Wee1 activity.</pre>
               <times/>
               <ci> compartment </ci>
               <apply>
-                <ci> Inhibited_catalysis </ci>
-                <ci> kWee2 </ci>
+                <ci> Inhibited_catalysis_1 </ci>
                 <ci> Cb </ci>
                 <ci> Wee </ci>
                 <ci> iWee </ci>
                 <ci> jiWee </ci>
+                <ci> kWee2 </ci>
               </apply>
             </apply>
           </math>
@@ -6947,12 +6400,12 @@ Added rate law for reduced Wee1 activity.</pre>
               <times/>
               <ci> compartment </ci>
               <apply>
-                <ci> Inhibited_catalysis </ci>
-                <ci> kWee1 </ci>
+                <ci> Inhibited_catalysis_2 </ci>
                 <ci> Cb </ci>
-                <ci> pWee </ci>
                 <ci> iWee </ci>
                 <ci> jiWee </ci>
+                <ci> kWee1 </ci>
+                <ci> pWee </ci>
               </apply>
             </apply>
           </math>
@@ -7545,7 +6998,7 @@ Added rate law for reduced Wee1 activity.</pre>
               <times/>
               <ci> compartment </ci>
               <apply>
-                <ci> Constant_flux__irreversible </ci>
+                <ci> Constant_flux__irreversible_0 </ci>
                 <ci> kSyEmi1 </ci>
               </apply>
             </apply>

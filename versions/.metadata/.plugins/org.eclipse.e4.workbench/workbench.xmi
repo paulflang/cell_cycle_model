@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_a8KpYSEoEeu-H69oON13PQ" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_a8KpYiEoEeu-H69oON13PQ" bindingContexts="_a8KpaCEoEeu-H69oON13PQ">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList/>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;rulebender.editors.dat&quot; name=&quot;cell_cycle_v3.0.0.gdat&quot; tooltip=&quot;v3.0.0/results/cell_cycle_v3.0.0/2020-11-10_17-27-39/cell_cycle_v3.0.0.gdat&quot;>&#xD;&#xA;&lt;persistable path=&quot;/v3.0.0/results/cell_cycle_v3.0.0/2020-11-10_17-27-39/cell_cycle_v3.0.0.gdat&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;rulebender.editors.bngl&quot; name=&quot;cell_cycle_v3.0.0.bngl&quot; tooltip=&quot;v3.0.0/cell_cycle_v3.0.0.bngl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/v3.0.0/cell_cycle_v3.0.0.bngl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;rulebender.editors.dat&quot; name=&quot;cell_cycle_v3.0.0.gdat&quot; tooltip=&quot;v3.0.0/results/cell_cycle_v3.0.0/2020-11-09_19-18-19/cell_cycle_v3.0.0.gdat&quot;>&#xD;&#xA;&lt;persistable path=&quot;/v3.0.0/results/cell_cycle_v3.0.0/2020-11-09_19-18-19/cell_cycle_v3.0.0.gdat&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_a8KpYiEoEeu-H69oON13PQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_bDc9ICEoEeu-H69oON13PQ" label="%trimmedwindow.label.eclipseSDK" x="52" y="52" width="1024" height="768">
@@ -9,6 +9,7 @@
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workingSets/>"/>
     <persistedState key="aggregateWorkingSetId"/>
     <tags>topLevel</tags>
+    <tags>shellMaximized</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_bDc9ICEoEeu-H69oON13PQ" selectedElement="_bDc9ISEoEeu-H69oON13PQ" horizontal="true">
       <children xsi:type="advanced:PerspectiveStack" xmi:id="_bDc9ISEoEeu-H69oON13PQ" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_bFUlYSEoEeu-H69oON13PQ">
         <children xsi:type="advanced:Perspective" xmi:id="_bFUlYSEoEeu-H69oON13PQ" elementId="rulebender.perspective" selectedElement="_bFUlYiEoEeu-H69oON13PQ" label="Default" iconURI="platform:/plugin/rulebender/icons/views/CMap.gif">
@@ -18,13 +19,14 @@
           <tags>persp.actionSet:org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo</tags>
           <tags>persp.actionSet:org.eclipse.ui.actionSet.keyBindings</tags>
           <tags>persp.actionSet:org.eclipse.ui.actionSet.openFiles</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_bFUlYiEoEeu-H69oON13PQ" selectedElement="_bFUlZSEoEeu-H69oON13PQ" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_bFUlYiEoEeu-H69oON13PQ" selectedElement="_bFUlYyEoEeu-H69oON13PQ" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_bFUlYyEoEeu-H69oON13PQ" elementId="rulebender.cnf.CommonNavigatorMStack" containerData="3000" selectedElement="_bFUlZCEoEeu-H69oON13PQ">
               <tags>newtablook</tags>
+              <tags>active</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_bFUlZCEoEeu-H69oON13PQ" elementId="rulebender.cnf.CommonNavigator" ref="_bFQ7ACEoEeu-H69oON13PQ"/>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_bFUlZSEoEeu-H69oON13PQ" containerData="7000" selectedElement="_bFUlbCEoEeu-H69oON13PQ" horizontal="true">
-              <children xsi:type="basic:PartSashContainer" xmi:id="_bFUlZiEoEeu-H69oON13PQ" containerData="6000">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_bFUlZSEoEeu-H69oON13PQ" containerData="7000" selectedElement="_bFUlZiEoEeu-H69oON13PQ" horizontal="true">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_bFUlZiEoEeu-H69oON13PQ" containerData="6000" selectedElement="_bFUlZyEoEeu-H69oON13PQ">
                 <children xsi:type="advanced:Placeholder" xmi:id="_bFUlZyEoEeu-H69oON13PQ" elementId="org.eclipse.ui.editorss" containerData="7000" ref="_bFOewCEoEeu-H69oON13PQ"/>
                 <children xsi:type="basic:PartStack" xmi:id="_bFUlaCEoEeu-H69oON13PQ" elementId="rulebender.views.ConsoleMStack" containerData="3000" selectedElement="_bFUlaSEoEeu-H69oON13PQ">
                   <tags>newtablook</tags>
@@ -34,9 +36,8 @@
                 </children>
               </children>
               <children xsi:type="basic:PartSashContainer" xmi:id="_bFUlbCEoEeu-H69oON13PQ" containerData="4000" selectedElement="_bFUlbSEoEeu-H69oON13PQ">
-                <children xsi:type="basic:PartStack" xmi:id="_bFUlbSEoEeu-H69oON13PQ" elementId="rulebender.contactmap.view.ContactMapViewMStack" containerData="5000" selectedElement="_bFUlbiEoEeu-H69oON13PQ">
+                <children xsi:type="basic:PartStack" xmi:id="_bFUlbSEoEeu-H69oON13PQ" elementId="rulebender.contactmap.view.ContactMapViewMStack" containerData="5000" selectedElement="_bFUlbyEoEeu-H69oON13PQ">
                   <tags>newtablook</tags>
-                  <tags>active</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_bFUlbiEoEeu-H69oON13PQ" elementId="rulebender.contactmap.view.ContactMapView" ref="_bFSJICEoEeu-H69oON13PQ"/>
                   <children xsi:type="advanced:Placeholder" xmi:id="_bFUlbyEoEeu-H69oON13PQ" elementId="rulebender.speciesgraph.SpeciesGraphView" ref="_bFT-UCEoEeu-H69oON13PQ"/>
                   <children xsi:type="advanced:Placeholder" xmi:id="_bFUlcCEoEeu-H69oON13PQ" elementId="rulebender.simulate.view.SimulateView" ref="_bFT-USEoEeu-H69oON13PQ"/>
@@ -59,7 +60,7 @@
       <tags>View</tags>
       <tags>categoryTag:General</tags>
     </sharedElements>
-    <sharedElements xsi:type="advanced:Area" xmi:id="_bFOewCEoEeu-H69oON13PQ" elementId="org.eclipse.ui.editorss">
+    <sharedElements xsi:type="advanced:Area" xmi:id="_bFOewCEoEeu-H69oON13PQ" elementId="org.eclipse.ui.editorss" selectedElement="_bFOewSEoEeu-H69oON13PQ">
       <children xsi:type="basic:PartStack" xmi:id="_bFOewSEoEeu-H69oON13PQ" elementId="org.eclipse.e4.primaryDataStack">
         <tags>newtablook</tags>
         <tags>org.eclipse.e4.primaryDataStack</tags>
@@ -71,6 +72,7 @@
       <tags>View</tags>
       <tags>categoryTag:Other</tags>
       <tags>activeOnClose</tags>
+      <tags>active</tags>
       <menus xmi:id="_bGwIwCEoEeu-H69oON13PQ" elementId="rulebender.cnf.CommonNavigator">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -81,13 +83,12 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Other</tags>
-      <tags>active</tags>
       <tags>activeOnClose</tags>
       <menus xmi:id="_bLe3wCEoEeu-H69oON13PQ" elementId="rulebender.contactmap.view.ContactMapView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
       </menus>
-      <toolbar xmi:id="_bLe3wSEoEeu-H69oON13PQ" elementId="rulebender.contactmap.view.ContactMapView"/>
+      <toolbar xmi:id="_bLe3wSEoEeu-H69oON13PQ" elementId="rulebender.contactmap.view.ContactMapView" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_bFSwMCEoEeu-H69oON13PQ" elementId="rulebender.views.Console" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Console" iconURI="platform:/plugin/rulebender/icons/views/console_view.gif" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
@@ -118,12 +119,25 @@
       <tags>categoryTag:Other</tags>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_bFT-UCEoEeu-H69oON13PQ" elementId="rulebender.speciesgraph.SpeciesGraphView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Species Graph" iconURI="platform:/plugin/rulebender/icons/views/speciesGraph.gif" closeable="true">
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Other</tags>
+      <tags>activeOnClose</tags>
+      <menus xmi:id="_85iCcCK3Eeut3Y1GMvJxTg" elementId="rulebender.speciesgraph.SpeciesGraphView">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_85iCcSK3Eeut3Y1GMvJxTg" elementId="rulebender.speciesgraph.SpeciesGraphView"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_bFT-USEoEeu-H69oON13PQ" elementId="rulebender.simulate.view.SimulateView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Simulation" iconURI="platform:/plugin/rulebender/icons/views/run.gif" closeable="true">
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Other</tags>
+      <menus xmi:id="_8H04sCK3Eeut3Y1GMvJxTg" elementId="rulebender.simulate.view.SimulateView">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_8H04sSK3Eeut3Y1GMvJxTg" elementId="rulebender.simulate.view.SimulateView" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_bFUlYCEoEeu-H69oON13PQ" elementId="org.eclipse.ui.views.ProgressView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Progress View" iconURI="platform:/plugin/rulebender/icons/views/pview.gif" closeable="true">
       <tags>View</tags>
@@ -139,6 +153,10 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_bF2J0CEoEeu-H69oON13PQ" elementId="org.eclipse.ui.edit.text.actionSet.navigation">
         <tags>Draggable</tags>
+      </children>
+      <children xsi:type="menu:ToolBar" xmi:id="_7WLZUCK3Eeut3Y1GMvJxTg" elementId="group.editor" toBeRendered="false">
+        <tags>toolbarSeparator</tags>
+        <children xsi:type="menu:ToolBarSeparator" xmi:id="_7WLZUSK3Eeut3Y1GMvJxTg" elementId="group.editor" toBeRendered="false"/>
       </children>
       <children xsi:type="menu:ToolControl" xmi:id="_bDojUiEoEeu-H69oON13PQ" elementId="PerspectiveSpacer" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
         <tags>stretch</tags>

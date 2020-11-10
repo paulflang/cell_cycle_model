@@ -188,8 +188,8 @@ begin seed species
 	@compartment:RB1(E2F,Ser807_Ser811~p) (0.840745442*6.022e23)  #pRb
 	@compartment:PPP2R2B(ENSA_ARPP19) (0.0771916254*6.022e23)  #B55
 	@compartment:APC(FZR1_CDC20,FBXO5,Ser355~u) (4.02871328*6.022e23)  #Apc
-	@compartment:CDC20(APC) (0.229952789*6.022e23)  #Cdc20
 	@compartment:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) (0.0698900785*6.022e23)  #Apc # This was added manually when checking for model correctness
+	@compartment:CDC20(APC) (0.229952789*6.022e23)  #Cdc20
 	@compartment:APC(FZR1_CDC20,FBXO5,Ser355~p) (0.0630910652*6.022e23)  #pApc
 	@compartment:APC(FZR1_CDC20!1,FBXO5,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u) (0.713544185*6.022e23)  #ApcCdh
 	@compartment:FZR1(APC,FBXO5,nTerm~u) (0.000571340946*6.022e23)  #Cdh
