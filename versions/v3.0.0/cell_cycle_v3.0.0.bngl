@@ -90,11 +90,6 @@ begin parameters
 	kPhCdhEf4 0.00055440055
 	kPhCdhAf4 0.01386001385
 	kPhCdhBf4 0.13860013864
-#	fCDK1 2.0
-#	fRB1_p 3.0
-#	fCdc25_p 4.0
-#	fWee1_p 5.0
-#	fCdc20 6.0
 	ikSyCb 1.0
 	jiWee 0.1*6.022e23
   	ModelValue_128 (2.0)
@@ -109,71 +104,32 @@ end parameters
 begin compartments
 	#volume units: L
 	compartment 3 1 #Todo: e-13
-#	cell 3 1.0
 end compartments
 begin molecule types
-	#pApcCdh()
-	#ProE2f()
-#	ApcCdh()
-#	pFoxProCb()
 	E2F(DBD,RB1,Ser332~u~p)
 	RB1(E2F,Ser807_Ser811~u~p)
 	PPP2R2B(ENSA_ARPP19)
-#	pCdh()
 	CCNB_promoter(FOXM1)
-#	E2fProCa()
 	CCNA()
-#	pFox()
 	CCNA_promoter(E2F)
-#	E2fProE2f()
-#	E2fProFox()
-#	E2fRb()
 	FOXM1_promoter(E2F)
 	ENSA_ARPP19(PPP2R2B,Ser62_Ser67~u~p)
-#	pRb()
 	FZR1(APC,FBXO5,nTerm~u~p)
-#	pEmi()
 	CCNE()
-#	abCCNB1_cps()
-#	abFOXM1_cps()
 	MASTL(Thr198~u~p)
-#	pEnsa()
 	FBXO5_promoter(E2F)
 	CDC20_promoter(FOXM1)
-#	pFoxProCdc()
-#	abWEE1_pSer123_cps()
 	FBXO5(APC,FZR1,Ser182~u~p) # The FBXO5 C-terminus binds to APC and FZR1
-#	abCCNE_sum_cps()
-#	abE2F_sum_cps()
-#	abCDC25A_pSer18_cps()
-#	pWee()
 	iWEE()
-#	pE2f()
-#	abRB1_pSer807pSer811_cps()
 	FOXM1(DBD,Thr600~u~p)
-#	pACE()
-#	pE2fRb()
-#	pCb()
 	WEE1(Ser123~u~p)
-#	ACE()
 	CCNE_promoter(E2F)
 	E2F_promoter(E2F)
 	CCND()
-#	E2fProEmi()
 	CDC20(APC)
-#	pEB55()
-#	pApc()
-#	abCCNA2_cps()
-#	abCDC25A_cps()
-#	pGw()
 	CDC25(pSites~u~p)
-#	pApcCdc()
-#	abFBXO5_cps()
-#	pCdc25()
 	CCNB(CDK1_Thr14_Tyr15~u~p)
 	APC(FZR1_CDC20,FBXO5,Ser355~u~p)
-#	abWEE1_cps()
-#	E2fProCe()
 end molecule types
 begin seed species
 	@compartment:CCND() (1.0*6.022e23)  #Cd
@@ -226,121 +182,11 @@ begin seed species
 	@compartment:E2F(DBD!1,RB1,Ser332~u).FBXO5_promoter(E2F!1) (1.55209759e-05*6.022e23)  #E2fProEmi
 	@compartment:E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1) (1.55209759e-05*6.022e23)  #E2fProFox
 	@compartment:iWEE() (0*6.022e23)  #iWee
-	
-#	@compartment:Cd() (1.0*6.022e23) #Cd
-#	@compartment:Ce() (0.232249137*6.022e23) #Ce
-#	@compartment:E2f() (0.0184790235*6.022e23) #E2f
-#	@compartment:pE2f() (3.8081857e-05*6.022e23) #pE2f
-#	@compartment:Ca() (0.00702849494*6.022e23) #Ca
-#	@compartment:Cb() (0.00188236293*6.022e23) #Cb
-#	@compartment:E2fRb() (0.0714613324*6.022e23) #E2fRb
-#	@compartment:pE2fRb() (0.000150538592*6.022e23) #pE2fRb
-#	@compartment:Rb() (0.0876426874*6.022e23) #Rb
-#	@compartment:pRb() (0.840745442*6.022e23) #pRb
-#	@compartment:B55() (0.0771916254*6.022e23) #B55
-#	@compartment:Apc() (4.02871328*6.022e23) #Apc
-#	@compartment:Cdc20() (0.229952789*6.022e23) #Cdc20
-#	@compartment:pApc() (0.0630910652*6.022e23) #pApc
-#	@compartment:ApcCdh() (0.713544185*6.022e23) #ApcCdh
-#	@compartment:Cdh() (0.000571340946*6.022e23) #Cdh
-#	@compartment:pCdh() (0.16112308*6.022e23) #pCdh
-#	@compartment:ACE() (0.108941313*6.022e23) #ACE
-#	@compartment:Emi() (0.000717816142*6.022e23) #Emi
-#	@compartment:pACE() (0.00221254711*6.022e23) #pACE
-#	@compartment:pApcCdh() (0.0136075334*6.022e23) #pApcCdh
-#	@compartment:pEmi() (1.88049366e-05*6.022e23) #pEmi
-#	@compartment:Fox() (0.0055647336*6.022e23) #Fox
-#	@compartment:pFox() (0.00038111617*6.022e23) #pFox
-#	@compartment:pFoxProCb() (1.90325916e-07*6.022e23) #pFoxProCb
-#	@compartment:ProCb() (9.98096741e-05*6.022e23) #ProCb
-#	@compartment:ProCdc() (9.99238147e-05*6.022e23) #ProCdc
-#	@compartment:pFoxProCdc() (7.61853468e-08*6.022e23) #pFoxProCdc
-#	@compartment:Wee() (0.980441633*6.022e23) #Wee
-#	@compartment:pCb() (0.00751291485*6.022e23) #pCb
-#	@compartment:pWee() (0.019558367*6.022e23) #pWee
-#	@compartment:pCdc25() (0.0184380668*6.022e23) #pCdc25
-#	@compartment:Cdc25() (0.981561933*6.022e23) #Cdc25
-#	@compartment:Gw() (0.997525705*6.022e23) #Gw
-#	@compartment:pGw() (0.00247429497*6.022e23) #pGw
-#	@compartment:Ensa() (0.826863064*6.022e23) #Ensa
-#	@compartment:pEnsa() (0.000328561161*6.022e23) #pEnsa
-#	@compartment:pEB55() (0.172808375*6.022e23) #pEB55
-#	@compartment:ProCe() (8.44790241e-05*6.022e23) #ProCe
-#	@compartment:ProCa() (8.44790241e-05*6.022e23) #ProCa
-#	@compartment:ProE2f() (8.44790241e-05*6.022e23) #ProE2f
-#	@compartment:ProEmi() (8.44790241e-05*6.022e23) #ProEmi
-#	@compartment:ProFox() (8.44790241e-05*6.022e23) #ProFox
-#	@compartment:E2fProCe() (1.55209759e-05*6.022e23) #E2fProCe
-#	@compartment:E2fProCa() (1.55209759e-05*6.022e23) #E2fProCa
-#	@compartment:E2fProE2f() (1.55209759e-05*6.022e23) #E2fProE2f
-#	@compartment:E2fProEmi() (1.55209759e-05*6.022e23) #E2fProEmi
-#	@compartment:E2fProFox() (1.55209759e-05*6.022e23) #E2fProFox
-#	@compartment:iWee() (0*6.022e23) #iWee
 end seed species
 begin observables
-#  	Species Cd_compartment @compartment:Cd() #Cd
     Species Ce_compartment @compartment:CCNE() #Ce
-#  	Species E2f_compartment @compartment:E2f() #E2f
-#  	Species pE2f_compartment @compartment:pE2f() #pE2f
-#  	Species Ca_compartment @compartment:Ca() #Ca
-#  	Species Cb_compartment @compartment:Cb() #Cb
-#  	Species E2fRb_compartment @compartment:E2fRb() #E2fRb
-#  	Species pE2fRb_compartment @compartment:pE2fRb() #pE2fRb
-#  	Species Rb_compartment @compartment:Rb() #Rb
-#  	Species pRb_compartment @compartment:pRb() #pRb
-#  	Species B55_compartment @compartment:B55() #B55
-#  	Species Apc_compartment @compartment:Apc() #Apc
-#  	Species Cdc20_compartment @compartment:Cdc20() #Cdc20
-#  	Species pApcCdc_compartment @compartment:pApcCdc() #pApcCdc
-#  	Species pApc_compartment @compartment:pApc() #pApc
-#  	Species ApcCdh_compartment @compartment:ApcCdh() #ApcCdh
-#  	Species Cdh_compartment @compartment:Cdh() #Cdh
-#  	Species pCdh_compartment @compartment:pCdh() #pCdh
-#  	Species ACE_compartment @compartment:ACE() #ACE
-#  	Species Emi_compartment @compartment:Emi() #Emi
-#  	Species pACE_compartment @compartment:pACE() #pACE
-#  	Species pApcCdh_compartment @compartment:pApcCdh() #pApcCdh
-#  	Species pEmi_compartment @compartment:pEmi() #pEmi
-#  	Species Fox_compartment @compartment:Fox() #Fox
-#  	Species pFox_compartment @compartment:pFox() #pFox
-#  	Species pFoxProCb_compartment @compartment:pFoxProCb() #pFoxProCb
-#  	Species ProCb_compartment @compartment:ProCb() #ProCb
-#  	Species ProCdc_compartment @compartment:ProCdc() #ProCdc
-#  	Species pFoxProCdc_compartment @compartment:pFoxProCdc() #pFoxProCdc
     Species Wee_compartment @compartment:WEE1(Ser123~u) #Wee
-#  	Species pCb_compartment @compartment:pCb() #pCb
     Species pWee_compartment @compartment:WEE1(Ser123~p) #pWee
-#  	Species pCdc25_compartment @compartment:pCdc25() #pCdc25
-#  	Species Cdc25_compartment @compartment:Cdc25() #Cdc25
-#  	Species Gw_compartment @compartment:Gw() #Gw
-#  	Species pGw_compartment @compartment:pGw() #pGw
-#  	Species Ensa_compartment @compartment:Ensa() #Ensa
-# 	Species pEnsa_compartment @compartment:pEnsa() #pEnsa
-# 	Species pEB55_compartment @compartment:pEB55() #pEB55
-#	Species ProCe_compartment @compartment:ProCe() #ProCe
-#	Species ProCa_compartment @compartment:ProCa() #ProCa
-#	Species ProE2f_compartment @compartment:ProE2f() #ProE2f
-#	Species ProEmi_compartment @compartment:ProEmi() #ProEmi
-#	Species ProFox_compartment @compartment:ProFox() #ProFox
-#	Species E2fProCe_compartment @compartment:E2fProCe() #E2fProCe
-#	Species E2fProCa_compartment @compartment:E2fProCa() #E2fProCa
-#	Species E2fProE2f_compartment @compartment:E2fProE2f() #E2fProE2f
-#	Species E2fProEmi_compartment @compartment:E2fProEmi() #E2fProEmi
-#	Species E2fProFox_compartment @compartment:E2fProFox() #E2fProFox
-# 
-#	Species abCCNE_sum_cps_compartment @compartment:abCCNE_sum_cps() #abCCNE_sum_cps
-#	Species abCCNA2_cps_compartment @compartment:abCCNA2_cps() #abCCNA2_cps
-#	Species abCCNB1_cps_compartment @compartment:abCCNB1_cps() #abCCNB1_cps
-#	Species ab_activeCDKfraction_cps_compartment @compartment:ab_activeCDKfraction_cps() #ab_activeCDKfraction_cps
-#	Species abRB1_pSer807pSer811_cps_compartment @compartment:abRB1_pSer807pSer811_cps() #abRB1_pSer807pSer811_cps
-#	Species abE2F_sum_cps_compartment @compartment:abE2F_sum_cps() #abE2F_sum_cps
-#	Species abFOXM1_cps_compartment @compartment:abFOXM1_cps() #abFOXM1_cps
-#	Species abFBXO5_cps_compartment @compartment:abFBXO5_cps() #abFBXO5_cps
-#	Species abCDC25A_cps_compartment @compartment:abCDC25A_cps() #abCDC25A_cps
-#	Species abCDC25A_pSer18_cps_compartment @compartment:abCDC25A_pSer18_cps() #abCDC25A_pSer18_cps
-#	Species abWEE1_cps_compartment @compartment:abWEE1_cps() #abWEE1_cps
-#	Species abWEE1_pSer123_cps_compartment @compartment:abWEE1_pSer123_cps() #abWEE1_pSer123_cps
-#	Species abCDC20_cps_compartment @compartment:abCDC20_cps() #abCDC20_cps
 	Species iWee_compartment @compartment:iWEE() #iWee
 end observables
 begin functions
@@ -445,19 +291,6 @@ begin functions
 	functionRate149() = (kAsEPx) / 6.022e23
 	functionRate150() = (kAsEPx) / 6.022e23
 	functionRate151() = (kAsEPx) / 6.022e23
-#	abCCNE_sum_cps_ar() = Ce_compartment
-#	abE2F_sum_cps_ar() = E2f_compartment + E2fProCa_compartment + E2fProCe_compartment + E2fProE2f_compartment + E2fProEmi_compartment + E2fProFox_compartment + E2fRb_compartment + pE2f_compartment + pE2fRb_compartment
-#	abFOXM1_cps_ar() = Fox_compartment + pFoxProCb_compartment + pFoxProCdc_compartment + pFox_compartment
-#	abCCNA2_cps_ar() = Ca_compartment
-#	abWEE1_cps_ar() = pWee_compartment + Wee_compartment
-#	abCDC25A_cps_ar() = Cdc25_compartment + pCdc25_compartment
-#	abCDC20_cps_ar() = ModelValue_132 * (Cdc20_compartment + pApcCdc_compartment)
-#	ab_activeCDKfraction_cps_ar() = Cb_compartment / (pCb_compartment * ModelValue_128 + Cb_compartment)
-#	abFBXO5_cps_ar() = ACE_compartment + pEmi_compartment + pACE_compartment + Emi_compartment
-#	abCDC25A_pSer18_cps_ar() = ModelValue_130 * pCdc25_compartment
-#	abCCNB1_cps_ar() = Cb_compartment + ModelValue_128 * pCb_compartment
-#	abRB1_pSer807pSer811_cps_ar() = ModelValue_129 * pRb_compartment
-#	abWEE1_pSer123_cps_ar() = ModelValue_131 * pWee_compartment
 end functions
 begin reaction rules # Todo: rename rules to get rid of the complicated reaction inspired names
 	# Todo: make baseline reactions bideirectional
@@ -556,169 +389,6 @@ begin reaction rules # Todo: rename rules to get rid of the complicated reaction
 	AsE2fProE2f: E2F(DBD,RB1,Ser332~u)@compartment + E2F_promoter(E2F)@compartment <-> E2F(DBD!1,RB1,Ser332~u)@compartment.E2F_promoter(E2F!1)@compartment functionRate149(), kDiEPx
 	AsE2fProEmi: E2F(DBD,RB1,Ser332~u)@compartment + FBXO5_promoter(E2F)@compartment <-> E2F(DBD!1,RB1,Ser332~u)@compartment.FBXO5_promoter(E2F!1)@compartment functionRate150(), kDiEPx
 	AsE2fProFox: E2F(DBD,RB1,Ser332~u)@compartment + FOXM1_promoter(E2F)@compartment <-> E2F(DBD!1,RB1,Ser332~u)@compartment.FOXM1_promoter(E2F!1)@compartment functionRate151(), kDiEPx
-	
-	
-
-
-
-	######################################################################################
-#	SyE2f1: 0  -> E2f()@compartment kSyE2f1*6.022e23
-#	AspFoxPcb: pFox()@compartment + ProCb()@compartment -> pFoxProCb()@compartment functionRate1()
-#	SyE2f2: E2fProE2f()@compartment -> E2fProE2f()@compartment + E2f()@compartment kSyE2f2
-#	DeE2f: E2f()@compartment -> 0  kDeE2f1
-#	PhRbE2fByCd: E2fRb()@compartment + Cd()@compartment -> E2f()@compartment + pRb()@compartment + Cd()@compartment functionRate4()
-#	PhRbE2fByCe: E2fRb()@compartment + Ce()@compartment -> E2f()@compartment + pRb()@compartment + Ce()@compartment functionRate5()
-#	PhRbE2fByCa: E2fRb()@compartment + Ca()@compartment -> E2f()@compartment + pRb()@compartment + Ca()@compartment functionRate6()
-#	PhRbE2fByCb: E2fRb()@compartment + Cb()@compartment -> E2f()@compartment + pRb()@compartment + Cb()@compartment functionRate7()
-#	PhE2fByCa: E2f()@compartment + Ca()@compartment -> pE2f()@compartment + Ca()@compartment functionRate8()
-#	PhE2fByCb: E2f()@compartment + Cb()@compartment -> pE2f()@compartment + Cb()@compartment functionRate9()
-#	DppE2f1: pE2f()@compartment -> E2f()@compartment kDpE2f1
-#	DppE2fRb2: pE2fRb()@compartment + B55()@compartment -> E2fRb()@compartment + B55()@compartment functionRate11()
-#	DepE2f1: pE2f()@compartment -> 0  kDeE2f1
-#	DepE2f2: pE2f()@compartment -> 0  kDeE2f2
-#	PhRbpE2fByCd: pE2fRb()@compartment + Cd()@compartment -> pE2f()@compartment + pRb()@compartment + Cd()@compartment functionRate14()
-#	PhRbpE2fByCa: pE2fRb()@compartment + Ca()@compartment -> pE2f()@compartment + pRb()@compartment + Ca()@compartment functionRate15()
-#	PhRbpE2fByCb: pE2fRb()@compartment + Cb()@compartment -> pE2f()@compartment + pRb()@compartment + Cb()@compartment functionRate16()
-#	PhRbpE2fByCe: pE2fRb()@compartment + Ce()@compartment -> pE2f()@compartment + pRb()@compartment + Ce()@compartment functionRate17()
-#	PhE2fRbByCa: E2fRb()@compartment + Ca()@compartment -> pE2fRb()@compartment + Ca()@compartment functionRate18()
-#	PhE2fRbByCb: E2fRb()@compartment + Cb()@compartment -> pE2fRb()@compartment + Cb()@compartment functionRate19()
-#	DppE2fRb1: pE2fRb()@compartment -> E2fRb()@compartment kDpE2f1
-#	DeE2fRb: E2fRb()@compartment -> Rb()@compartment kDeE2f1
-#	DepE2fRb1: pE2fRb()@compartment -> Rb()@compartment kDeE2f1
-#	DepE2fRb2: pE2fRb()@compartment -> Rb()@compartment kDeE2f2
-#	PhRbByCd: Rb()@compartment + Cd()@compartment -> pRb()@compartment + Cd()@compartment functionRate24()
-#	PhRbByCe: Rb()@compartment + Ce()@compartment -> pRb()@compartment + Ce()@compartment functionRate25()
-#	PhRbByCa: Rb()@compartment + Ca()@compartment -> pRb()@compartment + Ca()@compartment functionRate26()
-#	PhRbByCb: Rb()@compartment + Cb()@compartment -> pRb()@compartment + Cb()@compartment functionRate27()
-#	SyCe1: 0  -> Ce()@compartment kSyCe1*6.022e23
-#	SyCa2: E2fProCa()@compartment -> E2fProCa()@compartment + Ca()@compartment kSyCa2
-#	DeCe1: Ce()@compartment -> 0  kDeCe
-#	DeCe2: Ce()@compartment + Ce()@compartment -> Ce()@compartment functionRate31()
-#	DpRb: pRb()@compartment -> Rb()@compartment kDpRb
-#	DppApcCdc20: pApcCdc()@compartment + B55()@compartment -> Cdc20()@compartment + Apc()@compartment + B55()@compartment functionRate33()
-#	PhApcByCa: Apc()@compartment + Ca()@compartment -> Ca()@compartment + pApc()@compartment functionRate34()
-#	PhApcByCb: Apc()@compartment + Cb()@compartment -> Cb()@compartment + pApc()@compartment functionRate35()
-#	DppApc: pApc()@compartment + B55()@compartment -> B55()@compartment + Apc()@compartment functionRate36()
-#	PhCdhApcByCa: ApcCdh()@compartment + Ca()@compartment -> pCdh()@compartment + Apc()@compartment + Ca()@compartment functionRate37()
-#	PhCAEByCe: ACE()@compartment + Ce()@compartment -> pCdh()@compartment + Emi()@compartment + Apc()@compartment + Ce()@compartment functionRate38()
-#	PhCAEByCa: ACE()@compartment + Ca()@compartment -> pCdh()@compartment + Emi()@compartment + Apc()@compartment + Ca()@compartment functionRate39()
-#	PhCAEByCb: ACE()@compartment + Cb()@compartment -> pCdh()@compartment + Emi()@compartment + Apc()@compartment + Cb()@compartment functionRate40()
-#	PhCpAEByCe: pACE()@compartment + Ce()@compartment -> Emi()@compartment + pCdh()@compartment + pApc()@compartment + Ce()@compartment functionRate41()
-#	PhCpAEByCa: pACE()@compartment + Ca()@compartment -> Emi()@compartment + pCdh()@compartment + pApc()@compartment + Ca()@compartment functionRate42()
-#	PhCpAEByCb: pACE()@compartment + Cb()@compartment -> Emi()@compartment + pCdh()@compartment + pApc()@compartment + Cb()@compartment functionRate43()
-#	PhCdhpApcByCe: pApcCdh()@compartment + Ce()@compartment -> pCdh()@compartment + pApc()@compartment + Ce()@compartment functionRate44()
-#	DppApcCdh: pApcCdh()@compartment + B55()@compartment -> ApcCdh()@compartment + B55()@compartment functionRate45()
-#	DeEpAC1: pACE()@compartment -> pApcCdh()@compartment kDeEmi1
-#	DeEpAC2: pACE()@compartment -> pApcCdh()@compartment kDeEmi2
-#	PhEpACByCa: pACE()@compartment + Ca()@compartment -> pEmi()@compartment + pApcCdh()@compartment + Ca()@compartment functionRate48()
-#	PhEpACByCb: pACE()@compartment + Cb()@compartment -> pEmi()@compartment + pApcCdh()@compartment + Cb()@compartment functionRate49()
-#	PhACEByCa: ACE()@compartment + Ca()@compartment -> pACE()@compartment + Ca()@compartment functionRate50()
-#	PhACEByCb: ACE()@compartment + Cb()@compartment -> pACE()@compartment + Cb()@compartment functionRate51()
-#	DppACE: pACE()@compartment + B55()@compartment -> ACE()@compartment + B55()@compartment functionRate52()
-#	PhEmiByCa: Emi()@compartment + Ca()@compartment -> Ca()@compartment + pEmi()@compartment functionRate53()
-#	PhEmiByCb: Emi()@compartment + Cb()@compartment -> Cb()@compartment + pEmi()@compartment functionRate54()
-#	DppEmi: pEmi()@compartment -> Emi()@compartment kDpEmi
-#	PhEACByCa: ACE()@compartment + Ca()@compartment -> pEmi()@compartment + ApcCdh()@compartment + Ca()@compartment functionRate56()
-#	PhEACByCb: ACE()@compartment + Cb()@compartment -> pEmi()@compartment + ApcCdh()@compartment + Cb()@compartment functionRate57()
-#	DepEmi1: pEmi()@compartment -> 0  kDeEmi1
-#	DepEmi2: pEmi()@compartment -> 0  kDeEmi3
-#	SyFox1: 0  -> Fox()@compartment kSyFox1*6.022e23
-#	SyEmi2: E2fProEmi()@compartment -> E2fProEmi()@compartment + Emi()@compartment kSyEmi2
-#	PhCdhByCe: Cdh()@compartment + Ce()@compartment -> Ce()@compartment + pCdh()@compartment functionRate62()
-#	PhCdhByCa: Cdh()@compartment + Ca()@compartment -> Ca()@compartment + pCdh()@compartment functionRate63()
-#	PhCdhByCb: Cdh()@compartment + Cb()@compartment -> Cb()@compartment + pCdh()@compartment functionRate64()
-#	DppCdh: pCdh()@compartment -> Cdh()@compartment kDpCdh
-#	SyCa1: 0  -> Ca()@compartment kSyCa1*6.022e23
-#	DeCa1: Ca()@compartment -> 0  kDeCa1
-#	DeCe3: Ce()@compartment + Ca()@compartment -> Ca()@compartment functionRate68()
-#	DeCa2_1: Ca()@compartment + ApcCdh()@compartment -> ApcCdh()@compartment functionRate69()
-#	DeCa2_2: Ca()@compartment + pApcCdh()@compartment -> pApcCdh()@compartment functionRate70()
-#	DeCa3: Ca()@compartment + pApcCdc()@compartment -> pApcCdc()@compartment functionRate71()
-#	SyFox2: E2fProFox()@compartment -> E2fProFox()@compartment + Fox()@compartment kSyFox2
-#	DeFox1: Fox()@compartment -> 0  kDeFox1
-#	DeFox2_1: Fox()@compartment + ApcCdh()@compartment -> ApcCdh()@compartment functionRate74()
-#	DepFox2_2: pFox()@compartment + pApcCdh()@compartment -> pApcCdh()@compartment functionRate75()
-#	DepFox1: pFox()@compartment -> 0  kDeFox1
-#	DepFox2_1: pFox()@compartment + ApcCdh()@compartment -> ApcCdh()@compartment functionRate77()
-#	DeFox2_2: Fox()@compartment + pApcCdh()@compartment -> pApcCdh()@compartment functionRate78()
-#	PhFoxByCe: Fox()@compartment + Ce()@compartment -> Ce()@compartment + pFox()@compartment functionRate79()
-#	PhFoxByCa: Fox()@compartment + Ca()@compartment -> Ca()@compartment + pFox()@compartment functionRate80()
-#	PhFoxByCb: Fox()@compartment + Cb()@compartment -> Cb()@compartment + pFox()@compartment functionRate81()
-#	DppFox: pFox()@compartment -> Fox()@compartment kDpFox
-#	SyCb1: 0  -> Cb()@compartment functionRate83()*6.022e23
-#	SyCb2: pFoxProCb()@compartment -> pFoxProCb()@compartment + Cb()@compartment functionRate84()
-#	DipFoxPcb: pFoxProCb()@compartment -> ProCb()@compartment + pFox()@compartment kDiFPcb
-#	DeCb1: Cb()@compartment -> 0  kDeCb1
-#	DeCb2_1: Cb()@compartment + ApcCdh()@compartment -> ApcCdh()@compartment functionRate87()
-#	DeCb2_2: Cb()@compartment + pApcCdh()@compartment -> pApcCdh()@compartment functionRate88()
-#	DeCb3: Cb()@compartment + pApcCdc()@compartment -> pApcCdc()@compartment functionRate89()
-#	DeCdcpApc1: pApcCdc()@compartment -> pApc()@compartment kDeCdc_1
-#	DeCdcpApc2_1: pApcCdc()@compartment + ApcCdh()@compartment -> pApc()@compartment + ApcCdh()@compartment functionRate91()
-#	DeCdcpApc2_2: pApcCdc()@compartment + pApcCdh()@compartment -> pApc()@compartment + pApcCdh()@compartment functionRate92()
-#	SyCdc20_1: 0  -> Cdc20()@compartment kSyCdc_1*6.022e23
-#	SyCdc20_2: pFoxProCdc()@compartment -> pFoxProCdc()@compartment + Cdc20()@compartment kSyCdc_2
-#	AspFoxPcdc: pFox()@compartment + ProCdc()@compartment -> pFoxProCdc()@compartment functionRate95()
-#	DipFoxPcdc: pFoxProCdc()@compartment -> ProCdc()@compartment + pFox()@compartment kDiFPcdc
-#	PhCbByWee: Cb()@compartment + Wee()@compartment -> Wee()@compartment + pCb()@compartment functionRate97() #Modifiers(iWee)
-#	PhCbBypWee: Cb()@compartment + pWee()@compartment -> pWee()@compartment + pCb()@compartment functionRate98() #Modifiers(iWee)
-#	DppCbBypCdc25: pCb()@compartment + pCdc25()@compartment -> pCdc25()@compartment + Cb()@compartment functionRate99()
-#	DppCbByCdc25: pCb()@compartment + Cdc25()@compartment -> Cdc25()@compartment + Cb()@compartment functionRate100()
-#	DepCb1: pCb()@compartment -> 0  kDeCb1
-#	DepCb2_1: pCb()@compartment + ApcCdh()@compartment -> ApcCdh()@compartment functionRate102()
-#	DepCb2_2: pCb()@compartment + pApcCdh()@compartment -> pApcCdh()@compartment functionRate103()
-#	DepCb3: pCb()@compartment + pApcCdc()@compartment -> pApcCdc()@compartment functionRate104()
-#	PhCdc25ByCb: Cdc25()@compartment + Cb()@compartment -> Cb()@compartment + pCdc25()@compartment functionRate105()
-#	PhCdc25ByCa: Cdc25()@compartment + Ca()@compartment -> Ca()@compartment + pCdc25()@compartment functionRate106()
-#	DppCdc25: pCdc25()@compartment + B55()@compartment -> B55()@compartment + Cdc25()@compartment functionRate107()
-#	DppWee: pWee()@compartment + B55()@compartment -> B55()@compartment + Wee()@compartment functionRate108()
-#	PhWeeByCa: Wee()@compartment + Ca()@compartment -> Ca()@compartment + pWee()@compartment functionRate109()
-#	PhWeeByCb: Wee()@compartment + Cb()@compartment -> Cb()@compartment + pWee()@compartment functionRate110()
-#	PhGw: Gw()@compartment + Cb()@compartment -> pGw()@compartment + Cb()@compartment functionRate111()
-#	DppGw1: pGw()@compartment -> Gw()@compartment kDpGw1
-#	DppGw2: pGw()@compartment + B55()@compartment -> B55()@compartment + Gw()@compartment functionRate113()
-#	PhEnsa: Ensa()@compartment + pGw()@compartment -> pGw()@compartment + pEnsa()@compartment functionRate114()
-#	DppEB55: pEB55()@compartment -> B55()@compartment + Ensa()@compartment kDpEnsa
-#	SyEmi1: 0  -> Emi()@compartment kSyEmi1*6.022e23
-#	SyCe2: E2fProCe()@compartment -> E2fProCe()@compartment + Ce()@compartment kSyCe2
-#	DeCdc20_1: Cdc20()@compartment -> 0  kDeCdc_1
-#	DeCdc20_2_1: Cdc20()@compartment + ApcCdh()@compartment -> ApcCdh()@compartment functionRate119()
-#	DeCdc20_2_2: Cdc20()@compartment + pApcCdh()@compartment -> pApcCdh()@compartment functionRate120()
-#	DppE2f2: pE2f()@compartment + B55()@compartment -> E2f()@compartment + B55()@compartment functionRate121()
-#	PhCdhpApcByCa: pApcCdh()@compartment + Ca()@compartment -> pCdh()@compartment + pApc()@compartment + Ca()@compartment functionRate122()
-#	PhCdhpApcByCb: pApcCdh()@compartment + Cb()@compartment -> pCdh()@compartment + pApc()@compartment + Cb()@compartment functionRate123()
-#	PhCdhApcByCe: ApcCdh()@compartment + Ce()@compartment -> pCdh()@compartment + Apc()@compartment + Ce()@compartment functionRate124()
-#	PhCdhApcByCb: ApcCdh()@compartment + Cb()@compartment -> pCdh()@compartment + Apc()@compartment + Cb()@compartment functionRate125()
-#	DeEAC1: ACE()@compartment -> ApcCdh()@compartment kDeEmi1
-#	DeEAC2: ACE()@compartment -> ApcCdh()@compartment kDeEmi2
-#	PhApcCdhByCa: ApcCdh()@compartment + Ca()@compartment -> pApcCdh()@compartment + Ca()@compartment functionRate128()
-#	PhApcCdhByCb: ApcCdh()@compartment + Cb()@compartment -> pApcCdh()@compartment + Cb()@compartment functionRate129()
-#	DeEmi1: Emi()@compartment -> 0  kDeEmi1
-#	AsE2fRb__forward: E2f()@compartment + Rb()@compartment -> E2fRb()@compartment functionRate131()
-#	AsE2fRb__backward: E2fRb()@compartment -> E2f()@compartment + Rb()@compartment kDiE2fRb
-#	AspE2fRb__forward: pE2f()@compartment + Rb()@compartment -> pE2fRb()@compartment functionRate133()
-#	AspE2fRb__backward: pE2fRb()@compartment -> pE2f()@compartment + Rb()@compartment kDiE2fRb
-#	AsApcCdh__forward: Cdh()@compartment + Apc()@compartment -> ApcCdh()@compartment functionRate135()
-#	AsApcCdh__backward: ApcCdh()@compartment -> Cdh()@compartment + Apc()@compartment kDiACdh
-#	AspApcCdh__forward: pApc()@compartment + Cdh()@compartment -> pApcCdh()@compartment functionRate137()
-#	AspApcCdh__backward: pApcCdh()@compartment -> pApc()@compartment + Cdh()@compartment kDiACdh
-#	AspACE__forward: Emi()@compartment + pApcCdh()@compartment -> pACE()@compartment functionRate139()
-#	AspACE__backward: pACE()@compartment -> Emi()@compartment + pApcCdh()@compartment kDiACE
-#	AsACE__forward: ApcCdh()@compartment + Emi()@compartment -> ACE()@compartment functionRate141()
-#	AsACE__backward: ACE()@compartment -> ApcCdh()@compartment + Emi()@compartment kDiACE
-#	AspApcCdc20__forward: pApc()@compartment + Cdc20()@compartment -> pApcCdc()@compartment functionRate143()
-#	AspApcCdc20__backward: pApcCdc()@compartment -> pApc()@compartment + Cdc20()@compartment kDipACdc
-#	AspEB55__forward: pEnsa()@compartment + B55()@compartment -> pEB55()@compartment functionRate145()
-#	AspEB55__backward: pEB55()@compartment -> pEnsa()@compartment + B55()@compartment kDipEB55
-#	AsE2fProCe: E2f()@compartment + ProCe()@compartment -> E2fProCe()@compartment functionRate147()
-#	AsE2fProCa: E2f()@compartment + ProCa()@compartment -> E2fProCa()@compartment functionRate148()
-#	AsE2fProE2f: E2f()@compartment + ProE2f()@compartment -> E2fProE2f()@compartment functionRate149()
-#	AsE2fProEmi: E2f()@compartment + ProEmi()@compartment -> E2fProEmi()@compartment functionRate150()
-#	AsE2fProFox: E2f()@compartment + ProFox()@compartment -> E2fProFox()@compartment functionRate151()
-#	DiE2fProCe: E2fProCe()@compartment -> ProCe()@compartment + E2f()@compartment kDiEPx
-#	DiE2fProCa: E2fProCa()@compartment -> ProCa()@compartment + E2f()@compartment kDiEPx
-#	DiE2fProEmi: E2fProEmi()@compartment -> ProEmi()@compartment + E2f()@compartment kDiEPx
-#	DiE2fProFox: E2fProFox()@compartment -> ProFox()@compartment + E2f()@compartment kDiEPx
-#	DiE2fProE2f: E2fProE2f()@compartment -> ProE2f()@compartment + E2f()@compartment kDiEPx
 end reaction rules
 end model
 
