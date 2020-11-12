@@ -194,6 +194,7 @@ begin functions
 	functionRate02() = (if(pWee_compartment>0, kWee1 * 0.5 * (pWee_compartment -iWee_compartment -jiWee + ((-pWee_compartment + iWee_compartment + jiWee)^2 + 4 * jiWee * pWee_compartment)^(1 / 2))/pWee_compartment,0)) / (6.022e23)
 end functions
 begin reaction rules
+    # Todo: decide for a @compartment notation
     SyE2f1: 0  -> @compartment:E2F(DBD,RB1,Ser332~u) kSyE2f1*6.022e23
 	AspFoxPcb: @compartment:FOXM1(DBD,Thr600~p) + CCNB_promoter(FOXM1) <-> @compartment:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) kAsFPcb/6.022e23,kDiFPcb
 	SyE2f2: @compartment:E2F(DBD!1,RB1,Ser332~u).E2F_promoter(E2F!1) -> @compartment:E2F(DBD!1,RB1,Ser332~u).E2F_promoter(E2F!1) + @compartment:E2F(DBD,RB1,Ser332~u) kSyE2f2 # Todo: delete Ser332~u
@@ -216,17 +217,17 @@ begin reaction rules
 	DeCe1: @compartment:CCNE() -> 0  kDeCe
 	DeCe2: @compartment:CCNE() + @compartment:CCNE() -> @compartment:CCNE() kPhCeE / 6.022e23
 	DpRb: @compartment:RB1(E2F,Ser807_Ser811~p) -> @compartment:RB1(E2F,Ser807_Ser811~u) kDpRb # Todo: change once phospho-Rb:E2F complexes can exist.
-	DppApcCdc20: @compartment:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) + @compartment:PPP2R2B(ENSA_ARPP19) -> @compartment:APC(FZR1_CDC20,FBXO5,Ser355~u) + @compartment:CDC20(APC) + @compartment:PPP2R2B(ENSA_ARPP19) kDpApc/6.022e23  # Todo: maybe add a baseline dephosphorylation?
+	DppApcCdc20: @compartment:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) + @compartment:PPP2R2B(ENSA_ARPP19) -> @compartment:APC(FZR1_CDC20,FBXO5,Ser355~u) + @compartment:CDC20(APC) + @compartment:PPP2R2B(ENSA_ARPP19) kDpApc/6.022e23
 	PhApcByCa: @compartment:APC(FZR1_CDC20!?,FBXO5!?,Ser355~u) + @compartment:CCNA() -> @compartment:CCNA() + @compartment:APC(FZR1_CDC20!?,FBXO5!?,Ser355~p) kPhApcA/6.022e23
 	PhApcByCb: @compartment:APC(FZR1_CDC20!?,FBXO5!?,Ser355~u) + @compartment:CCNB(CDK1_Thr14_Tyr15~u) -> @compartment:CCNB(CDK1_Thr14_Tyr15~u) + @compartment:APC(FZR1_CDC20!?,FBXO5!?,Ser355~p) kPhApcA/6.022e23
-	DppApcByB55: @compartment:APC(Ser355~p) + @compartment:PPP2R2B(ENSA_ARPP19) -> @compartment:PPP2R2B(ENSA_ARPP19) + @compartment:APC(Ser355~u) kDpApc/6.022e23 exclude_reactants(1,CDC20()) # Todo: maybe add a baseline dephosphorylation? 
+	DppApcByB55: @compartment:APC(Ser355~p) + @compartment:PPP2R2B(ENSA_ARPP19) -> @compartment:PPP2R2B(ENSA_ARPP19) + @compartment:APC(Ser355~u) kDpApc/6.022e23 exclude_reactants(1,CDC20()) # Todo: is there a baseline dephosphorylation? 
 	PhCdhApcByCa: @compartment:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + @compartment:CCNA() -> @compartment:APC(FZR1_CDC20,FBXO5,Ser355) + @compartment:FZR1(APC,FBXO5,nTerm~p) + @compartment:CCNA() kPhCdhA/6.022e23
 	PhCAEByCe: @compartment:APC(FZR1_CDC20!1,FBXO5!3,Ser355).FZR1(APC!1,FBXO5!2,nTerm~u).FBXO5(APC!3,FZR1!2,Ser182~u) + @compartment:CCNE() -> @compartment:APC(FZR1_CDC20,FBXO5,Ser355) + @compartment:FZR1(APC,FBXO5,nTerm~p) + @compartment:FBXO5(APC,FZR1,Ser182~u) + @compartment:CCNE() kPhCdhEf4/6.022e23
 	PhCAEByCa: @compartment:APC(FZR1_CDC20!1,FBXO5!3,Ser355).FZR1(APC!1,FBXO5!2,nTerm~u).FBXO5(APC!3,FZR1!2,Ser182~u) + @compartment:CCNA() -> @compartment:APC(FZR1_CDC20,FBXO5,Ser355) + @compartment:FZR1(APC,FBXO5,nTerm~p) + @compartment:FBXO5(APC,FZR1,Ser182~u) + @compartment:CCNA() kPhCdhAf4/6.022e23
 	PhCAEByCb: @compartment:APC(FZR1_CDC20!1,FBXO5!3,Ser355).FZR1(APC!1,FBXO5!2,nTerm~u).FBXO5(APC!3,FZR1!2,Ser182~u) + @compartment:CCNB(CDK1_Thr14_Tyr15~u) -> @compartment:APC(FZR1_CDC20,FBXO5,Ser355) + @compartment:FZR1(APC,FBXO5,nTerm~p) + @compartment:FBXO5(APC,FZR1,Ser182~u) + @compartment:CCNB(CDK1_Thr14_Tyr15~u) kPhCdhBf4/6.022e23
 	PhCdhApcByCe: @compartment:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + @compartment:CCNE() -> @compartment:APC(FZR1_CDC20,FBXO5,Ser355) + @compartment:FZR1(APC,FBXO5,nTerm~p) + @compartment:CCNE() kPhCdhE/6.022e23
 	DeEmi1: @compartment:FBXO5(APC!?,FZR1!?,Ser182) -> 0 kDeEmi1 DeleteMolecules
-	DeEmi2: @compartment:FBXO5(APC!+,FZR1!+,Ser182~u) -> 0 kDeEmi2 DeleteMolecules # FZR1 is never in complex if phosphorylated. Ditto for Ser182.
+	DeEmi2: @compartment:FBXO5(APC!+,FZR1!+,Ser182~u) -> 0 kDeEmi2 DeleteMolecules # FZR1 is never in complex if phosphorylated. Ditto for Ser182. Todo: check if FBXO5 can exist bound to either APC or FZR: no, they cannot
 	PhEACByCa: @compartment:APC(FZR1_CDC20!1,FBXO5!3,Ser355).FZR1(APC!1,FBXO5!2,nTerm~u).FBXO5(APC!3,FZR1!2,Ser182) + @compartment:CCNA() -> @compartment:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + @compartment:FBXO5(APC,FZR1,Ser182~p) + @compartment:CCNA() kPhEmiA/6.022e23
 	PhEACByCb: @compartment:APC(FZR1_CDC20!1,FBXO5!3,Ser355).FZR1(APC!1,FBXO5!2,nTerm~u).FBXO5(APC!3,FZR1!2,Ser182) + @compartment:CCNB(CDK1_Thr14_Tyr15~u) -> @compartment:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + @compartment:FBXO5(APC,FZR1,Ser182~p) + @compartment:CCNB(CDK1_Thr14_Tyr15~u) kPhEmiB/6.022e23
 	PhEmiByCa: @compartment:FBXO5(APC,FZR1,Ser182~u) + @compartment:CCNA() -> @compartment:FBXO5(APC,FZR1,Ser182~p) + @compartment:CCNA() kPhEmiA/6.022e23
@@ -279,7 +280,7 @@ begin reaction rules
 	SyEmi1: 0 -> @compartment:FBXO5(APC,FZR1,Ser182~u) kSyEmi1*6.022e23
 	SyCe2: @compartment:E2F(DBD!1,RB1,Ser332~u).CCNE_promoter(E2F!1) -> @compartment:E2F(DBD!1,RB1,Ser332~u).CCNE_promoter(E2F!1) + @compartment:CCNE() kSyCe2
 	PhCdhApcByCb: @compartment:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + @compartment:CCNB(CDK1_Thr14_Tyr15~u) -> @compartment:APC(FZR1_CDC20,FBXO5,Ser355) + @compartment:FZR1(APC,FBXO5,nTerm~p) + @compartment:CCNB(CDK1_Thr14_Tyr15~u) kPhCdhB/6.022e23
-	AsE2fRb: @compartment:E2F(DBD,RB1,Ser332) + @compartment:RB1(E2F,Ser807_Ser811~u) <-> @compartment:E2F(DBD,RB1!1,Ser332).RB1(E2F!1,Ser807_Ser811~u) kAsE2fRb/6.022e23,kDiE2fRb
+	AsE2fRb: @compartment:E2F(DBD,RB1,Ser332) + @compartment:RB1(E2F,Ser807_Ser811~u) <-> @compartment:E2F(DBD,RB1!1,Ser332).RB1(E2F!1,Ser807_Ser811~u) kAsE2fRb/6.022e23,kDiE2fRb # Todo: check if this is the right way for rate constants
 	AsApcCdh: @compartment:APC(FZR1_CDC20,FBXO5,Ser355) + @compartment:FZR1(APC,FBXO5,nTerm~u) <-> @compartment:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kAsACdh/6.022e23,kDiACdh
 	AsACE: @compartment:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + @compartment:FBXO5(APC,FZR1,Ser182~u) <-> @compartment:APC(FZR1_CDC20!1,FBXO5!2,Ser355).FZR1(APC!1,FBXO5!3,nTerm~u).FBXO5(APC!2,FZR1!3,Ser182~u) kAsACE/6.022e23,kDiACE
 	AspApcCdc20: @compartment:APC(FZR1_CDC20,FBXO5,Ser355~p) + @compartment:CDC20(APC) <-> @compartment:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) kAspACdc/6.022e23, kDipACdc
@@ -294,5 +295,5 @@ end model
 
 generate_network({overwrite=>1})
 writeSBML()
-simulate({method=>"ode",t_end=>1e5,n_steps=>1e3,atol=>1e-8,rtol=>1e-8})
+simulate({method=>"ode",t_end=>1e5,n_steps=>1e3,atol=>1e-12,rtol=>1e-12})
 # simulate({method=>"ssa",t_end=>3e2,n_steps=>4e2})

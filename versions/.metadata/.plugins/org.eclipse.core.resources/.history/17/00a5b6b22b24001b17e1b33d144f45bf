@@ -1,0 +1,32 @@
+begin model
+begin molecule types
+	PPP2R2B(ENSA_ARPP19)
+	FZR1(APC,FBXO5,nTerm~u~p)
+	FBXO5(APC,FZR1,Ser182~u~p) # The FBXO5 C-terminus binds to APC and FZR1
+	CDC20(APC)
+	APC(FZR1_CDC20,FBXO5,Ser355~u~p)
+end molecule types
+begin seed species
+	PPP2R2B(ENSA_ARPP19) (0.0771916254*6.022e23*1e-13)  #B55
+	APC(FZR1_CDC20,FBXO5,Ser355~u) (4.02871328*6.022e23*1e-13)  #Apc
+	CDC20(APC) (0.229952789*6.022e23*1e-13)  #Cdc20
+	APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) (0.0698900785*6.022e23*1e-13)  #Apc # This was added manually when checking for model correctness
+	APC(FZR1_CDC20,FBXO5,Ser355~p) (0.0630910652*6.022e23*1e-13)  #pApc
+	APC(FZR1_CDC20!1,FBXO5,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u) (0.713544185*6.022e23*1e-13)  #ApcCdh
+	FZR1(APC,FBXO5,nTerm~u) (0.000571340946*6.022e23*1e-13)  #Cdh
+	FZR1(APC,FBXO5,nTerm~p) (0.16112308*6.022e23*1e-13)  #pCdh
+	APC(FZR1_CDC20!1,FBXO5!2,Ser355~u).FZR1(APC!1,FBXO5!3,nTerm~u).FBXO5(APC!2,FZR1!3,Ser182~u) (0.108941313*6.022e23*1e-13)  #ACE
+	FBXO5(APC,FZR1,Ser182~u) (0.000717816142*6.022e23*1e-13)  #Emi
+	APC(FZR1_CDC20!1,FBXO5!2,Ser355~p).FZR1(APC!1,FBXO5!3,nTerm~u).FBXO5(APC!2,FZR1!3,Ser182~u) (0.00221254711*6.022e23*1e-13)  #pACE
+	APC(FZR1_CDC20!1,FBXO5,Ser355~p).FZR1(APC!1,FBXO5,nTerm~u) (0.0136075334*6.022e23*1e-13)  #pApcCdh
+	FBXO5(APC,FZR1,Ser182~p) (1.88049366e-05*6.022e23*1e-13)  #pEmi
+end seed species
+begin reaction rules
+	DppApcByB55: APC(Ser355~p) + PPP2R2B(ENSA_ARPP19) -> PPP2R2B(ENSA_ARPP19) + APC(Ser355~u) 1 exclude_reactants(1,CDC20()) # Todo: check if this rule does what you want # Todo: is there a baseline dephosphorylation? 
+end reaction rules
+end model
+
+generate_network({overwrite=>1})
+writeSBML()
+simulate({method=>"ode",t_end=>1e5,n_steps=>1e3,atol=>1e-12,rtol=>1e-12})
+# simulate({method=>"ssa",t_end=>3e2,n_steps=>4e2})

@@ -1,0 +1,31 @@
+begin model
+begin molecule types
+	PPP2R2B(ENSA_ARPP19)
+	FZR1(APC,FBXO5,nTerm~u~p)
+	FBXO5(APC,FZR1,Ser182~u~p) # The FBXO5 C-terminus binds to APC and FZR1
+	CDC20(APC)
+	APC(FZR1_CDC20,FBXO5,Ser355~u~p)
+end molecule types
+begin seed species
+	PPP2R2B(ENSA_ARPP19) 1  #B55 c
+	APC(FZR1_CDC20,FBXO5,Ser355~u) 1  #Apc u
+	CDC20(APC) 1  #Cdc20 u
+	APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) 1  #Apc c
+	APC(FZR1_CDC20,FBXO5,Ser355~p) 1  #pApc d
+	APC(FZR1_CDC20!1,FBXO5,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u) 1  #ApcCdh u
+	FZR1(APC,FBXO5,nTerm~u) 1  #Cdh c
+	FZR1(APC,FBXO5,nTerm~p) 1  #pCdh c
+	APC(FZR1_CDC20!1,FBXO5!2,Ser355~u).FZR1(APC!1,FBXO5!3,nTerm~u).FBXO5(APC!2,FZR1!3,Ser182~u) 1  #ACE u
+	FBXO5(APC,FZR1,Ser182~u) 1  #Emi c
+	APC(FZR1_CDC20!1,FBXO5!2,Ser355~p).FZR1(APC!1,FBXO5!3,nTerm~u).FBXO5(APC!2,FZR1!3,Ser182~u) 1  #pACE d
+	APC(FZR1_CDC20!1,FBXO5,Ser355~p).FZR1(APC!1,FBXO5,nTerm~u) 1  #pApcCdh d
+	FBXO5(APC,FZR1,Ser182~p) 1  #pEmi c
+end seed species
+begin reaction rules
+	DppApcByB55: APC(Ser355~p) + PPP2R2B(ENSA_ARPP19) -> PPP2R2B(ENSA_ARPP19) + APC(Ser355~u) 1 exclude_reactants(1,CDC20()) # Todo: check if this rule does what you want # Todo: is there a baseline dephosphorylation? 
+end reaction rules
+end model
+
+generate_network({overwrite=>1})
+simulate({method=>"ode",t_end=>1e1,n_steps=>1e2,atol=>1e-12,rtol=>1e-12})
+# simulate({method=>"ssa",t_end=>3e2,n_steps=>4e2})

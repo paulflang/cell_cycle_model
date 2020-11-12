@@ -19,7 +19,10 @@ docs/Makefile
 .cache/
 .pytest_cache/
 
-#
+# Helper files
 run_flake8.sh
 venv/
 */.vscode/
+versions/v3.0.0/cell_cycle_v3.0.0.txt
+versions/v3.0.0/dict.txt
+versions/v3.0.0/modify_bngl.py

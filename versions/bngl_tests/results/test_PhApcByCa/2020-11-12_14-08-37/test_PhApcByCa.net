@@ -1,0 +1,24 @@
+# Created by BioNetGen 2.3.1
+begin parameters
+    1 _rateLaw1  1  # Constant
+end parameters
+begin species
+    1 CCNA() 1
+    2 APC(FBXO5,FZR1_CDC20,Ser355~u) 1
+    3 CDC20(APC) 1
+    4 APC(FBXO5,FZR1_CDC20!1,Ser355~p).CDC20(APC!1) 1
+    5 APC(FBXO5,FZR1_CDC20,Ser355~p) 1
+    6 APC(FBXO5,FZR1_CDC20!1,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u) 1
+    7 FZR1(APC,FBXO5,nTerm~u) 1
+    8 FZR1(APC,FBXO5,nTerm~p) 1
+    9 APC(FBXO5!1,FZR1_CDC20!2,Ser355~u).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u) 1
+   10 FBXO5(APC,FZR1,Ser182~u) 1
+   11 APC(FBXO5!1,FZR1_CDC20!2,Ser355~p).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u) 1
+   12 APC(FBXO5,FZR1_CDC20!1,Ser355~p).FZR1(APC!1,FBXO5,nTerm~u) 1
+   13 FBXO5(APC,FZR1,Ser182~p) 1
+end species
+begin reactions
+    1 1,2 1,5 _rateLaw1 #PhApcByCa
+    2 1,6 1,12 _rateLaw1 #PhApcByCa
+    3 1,9 1,11 _rateLaw1 #PhApcByCa
+end reactions
