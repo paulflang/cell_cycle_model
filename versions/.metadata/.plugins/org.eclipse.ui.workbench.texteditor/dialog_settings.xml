@@ -2,22 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Todo" key="selection"/>
+		<item value=")" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="todo"/>
-			<item value="DppApc"/>
-			<item value="@compartment:"/>
+			<item value="*1e-13)"/>
 			<item value="@compartment"/>
-			<item value="DeE2f"/>
-			<item value="DppE2fRb"/>
-			<item value="DppE2f"/>
-			<item value="PhRbE2fByCb"/>
+			<item value="jiWee"/>
+			<item value="iWee_0"/>
+			<item value="kPhC25A"/>
+			<item value="kDpE2f1"/>
+			<item value="ikSyCb"/>
+			<item value="kSyCb1"/>
 		</list>
 		<list key="replacehistory">
+			<item value=")"/>
+			<item value="@cell"/>
+			<item value="kPhCAEB"/>
+			<item value="kPhCAEA"/>
+			<item value="kPhCAEE"/>
 			<item value=""/>
 		</list>
 	</section>

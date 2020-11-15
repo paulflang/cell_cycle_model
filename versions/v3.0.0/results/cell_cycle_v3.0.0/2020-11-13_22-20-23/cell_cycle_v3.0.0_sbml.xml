@@ -1,280 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created by BioNetGen 2.3.1  -->
 <sbml xmlns="http://www.sbml.org/sbml/level2/version3" level="2" version="3">
-  <model id="cell_cycle_v3.0.0">
+  <model id="cell_cycle_v3_0_0">
     <listOfCompartments>
-      <compartment id="compartment" spatialDimensions="3" size="1e-13"/>
+      <compartment id="cell" spatialDimensions="3" size="1"/>
     </listOfCompartments>
     <listOfSpecies>
-      <species id="S1" compartment="compartment" initialConcentration="6.022e+010" name="@compartment::CCND()"/>
-      <species id="S2" compartment="compartment" initialConcentration="1.3986043e+010" name="@compartment::CCNE()"/>
-      <species id="S3" compartment="compartment" initialConcentration="1.1128068e+009" name="@compartment::E2F(DBD,RB1,Ser332~u)"/>
-      <species id="S4" compartment="compartment" initialConcentration="2293289.4" name="@compartment::E2F(DBD,RB1,Ser332~p)"/>
-      <species id="S5" compartment="compartment" initialConcentration="4.2325597e+008" name="@compartment::CCNA()"/>
-      <species id="S6" compartment="compartment" initialConcentration="1.133559e+008" name="@compartment::CCNB(CDK1_Thr14_Tyr15~u)"/>
-      <species id="S7" compartment="compartment" initialConcentration="4.3034014e+009" name="@compartment::E2F(DBD,RB1!1,Ser332~u).RB1(E2F!1,Ser807_Ser811~u)"/>
-      <species id="S8" compartment="compartment" initialConcentration="9065434" name="@compartment::E2F(DBD,RB1!1,Ser332~p).RB1(E2F!1,Ser807_Ser811~u)"/>
-      <species id="S9" compartment="compartment" initialConcentration="5.2778426e+009" name="@compartment::RB1(E2F,Ser807_Ser811~u)"/>
-      <species id="S10" compartment="compartment" initialConcentration="5.0629691e+010" name="@compartment::RB1(E2F,Ser807_Ser811~p)"/>
-      <species id="S11" compartment="compartment" initialConcentration="4.6484797e+009" name="@compartment::PPP2R2B(ENSA_ARPP19)"/>
-      <species id="S12" compartment="compartment" initialConcentration="2.4260911e+011" name="@compartment::APC(FBXO5,FZR1_CDC20,Ser355~u)"/>
-      <species id="S13" compartment="compartment" initialConcentration="1.3847757e+010" name="@compartment::CDC20(APC)"/>
-      <species id="S14" compartment="compartment" initialConcentration="4.2087805e+009" name="@compartment::APC(FBXO5,FZR1_CDC20!1,Ser355~p).CDC20(APC!1)"/>
-      <species id="S15" compartment="compartment" initialConcentration="3.7993439e+009" name="@compartment::APC(FBXO5,FZR1_CDC20,Ser355~p)"/>
-      <species id="S16" compartment="compartment" initialConcentration="4.2969631e+010" name="@compartment::APC(FBXO5,FZR1_CDC20!1,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u)"/>
-      <species id="S17" compartment="compartment" initialConcentration="34406152" name="@compartment::FZR1(APC,FBXO5,nTerm~u)"/>
-      <species id="S18" compartment="compartment" initialConcentration="9.7028319e+009" name="@compartment::FZR1(APC,FBXO5,nTerm~p)"/>
-      <species id="S19" compartment="compartment" initialConcentration="6.5604459e+009" name="@compartment::APC(FBXO5!1,FZR1_CDC20!2,Ser355~u).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u)"/>
-      <species id="S20" compartment="compartment" initialConcentration="43226888" name="@compartment::FBXO5(APC,FZR1,Ser182~u)"/>
-      <species id="S21" compartment="compartment" initialConcentration="1.3323959e+008" name="@compartment::APC(FBXO5!1,FZR1_CDC20!2,Ser355~p).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u)"/>
-      <species id="S22" compartment="compartment" initialConcentration="8.1944566e+008" name="@compartment::APC(FBXO5,FZR1_CDC20!1,Ser355~p).FZR1(APC!1,FBXO5,nTerm~u)"/>
-      <species id="S23" compartment="compartment" initialConcentration="1132433.3" name="@compartment::FBXO5(APC,FZR1,Ser182~p)"/>
-      <species id="S24" compartment="compartment" initialConcentration="3.3510826e+008" name="@compartment::FOXM1(DBD,Thr600~u)"/>
-      <species id="S25" compartment="compartment" initialConcentration="22950816" name="@compartment::FOXM1(DBD,Thr600~p)"/>
-      <species id="S26" compartment="compartment" initialConcentration="11461.427" name="@compartment::CCNB_promoter(FOXM1!1).FOXM1(DBD!1,Thr600~p)"/>
-      <species id="S27" compartment="compartment" initialConcentration="6010538.6" name="@compartment::CCNB_promoter(FOXM1)"/>
-      <species id="S28" compartment="compartment" initialConcentration="6017412.1" name="@compartment::CDC20_promoter(FOXM1)"/>
-      <species id="S29" compartment="compartment" initialConcentration="4587.8816" name="@compartment::CDC20_promoter(FOXM1!1).FOXM1(DBD!1,Thr600~p)"/>
-      <species id="S30" compartment="compartment" initialConcentration="5.9042195e+010" name="@compartment::WEE1(Ser123~u)"/>
-      <species id="S31" compartment="compartment" initialConcentration="4.5242773e+008" name="@compartment::CCNB(CDK1_Thr14_Tyr15~p)"/>
-      <species id="S32" compartment="compartment" initialConcentration="1.1778049e+009" name="@compartment::WEE1(Ser123~p)"/>
-      <species id="S33" compartment="compartment" initialConcentration="1.1103404e+009" name="@compartment::CDC25(pSites~p)"/>
-      <species id="S34" compartment="compartment" initialConcentration="5.910966e+010" name="@compartment::CDC25(pSites~u)"/>
-      <species id="S35" compartment="compartment" initialConcentration="6.0070998e+010" name="@compartment::MASTL(Thr198~u)"/>
-      <species id="S36" compartment="compartment" initialConcentration="1.4900204e+008" name="@compartment::MASTL(Thr198~p)"/>
-      <species id="S37" compartment="compartment" initialConcentration="4.9793694e+010" name="@compartment::ENSA_ARPP19(PPP2R2B,Ser62_Ser67~u)"/>
-      <species id="S38" compartment="compartment" initialConcentration="19785953" name="@compartment::ENSA_ARPP19(PPP2R2B,Ser62_Ser67~p)"/>
-      <species id="S39" compartment="compartment" initialConcentration="1.040652e+010" name="@compartment::ENSA_ARPP19(PPP2R2B!1,Ser62_Ser67~p).PPP2R2B(ENSA_ARPP19!1)"/>
-      <species id="S40" compartment="compartment" initialConcentration="5087326.8" name="@compartment::CCNE_promoter(E2F)"/>
-      <species id="S41" compartment="compartment" initialConcentration="5087326.8" name="@compartment::CCNA_promoter(E2F)"/>
-      <species id="S42" compartment="compartment" initialConcentration="5087326.8" name="@compartment::E2F_promoter(E2F)"/>
-      <species id="S43" compartment="compartment" initialConcentration="5087326.8" name="@compartment::FBXO5_promoter(E2F)"/>
-      <species id="S44" compartment="compartment" initialConcentration="5087326.8" name="@compartment::FOXM1_promoter(E2F)"/>
-      <species id="S45" compartment="compartment" initialConcentration="934673.17" name="@compartment::CCNE_promoter(E2F!1).E2F(DBD!1,RB1,Ser332~u)"/>
-      <species id="S46" compartment="compartment" initialConcentration="934673.17" name="@compartment::CCNA_promoter(E2F!1).E2F(DBD!1,RB1,Ser332~u)"/>
-      <species id="S47" compartment="compartment" initialConcentration="934673.17" name="@compartment::E2F(DBD!1,RB1,Ser332~u).E2F_promoter(E2F!1)"/>
-      <species id="S48" compartment="compartment" initialConcentration="934673.17" name="@compartment::E2F(DBD!1,RB1,Ser332~u).FBXO5_promoter(E2F!1)"/>
-      <species id="S49" compartment="compartment" initialConcentration="934673.17" name="@compartment::E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1)"/>
-      <species id="S50" compartment="compartment" initialConcentration="0" name="@compartment::iWEE()"/>
+      <species id="S1" compartment="cell" initialConcentration="6.022e+023" name="@cell::CCND()"/>
+      <species id="S2" compartment="cell" initialConcentration="1.3986043e+023" name="@cell::CCNE()"/>
+      <species id="S3" compartment="cell" initialConcentration="1.1128068e+022" name="@cell::E2F(DBD,RB1,Ser332~u)"/>
+      <species id="S4" compartment="cell" initialConcentration="2.2932894e+019" name="@cell::E2F(DBD,RB1,Ser332~p)"/>
+      <species id="S5" compartment="cell" initialConcentration="4.2325597e+021" name="@cell::CCNA()"/>
+      <species id="S6" compartment="cell" initialConcentration="1.133559e+021" name="@cell::CCNB(CDK1_Thr14_Tyr15~u)"/>
+      <species id="S7" compartment="cell" initialConcentration="4.3034014e+022" name="@cell::E2F(DBD,RB1!1,Ser332~u).RB1(E2F!1,Ser807_Ser811~u)"/>
+      <species id="S8" compartment="cell" initialConcentration="9.065434e+019" name="@cell::E2F(DBD,RB1!1,Ser332~p).RB1(E2F!1,Ser807_Ser811~u)"/>
+      <species id="S9" compartment="cell" initialConcentration="5.2778426e+022" name="@cell::RB1(E2F,Ser807_Ser811~u)"/>
+      <species id="S10" compartment="cell" initialConcentration="5.0629691e+023" name="@cell::RB1(E2F,Ser807_Ser811~p)"/>
+      <species id="S11" compartment="cell" initialConcentration="4.6484797e+022" name="@cell::PPP2R2B(ENSA_ARPP19)"/>
+      <species id="S12" compartment="cell" initialConcentration="2.4260911e+024" name="@cell::APC(FBXO5,FZR1_CDC20,Ser355~u)"/>
+      <species id="S13" compartment="cell" initialConcentration="1.3847757e+023" name="@cell::CDC20(APC)"/>
+      <species id="S14" compartment="cell" initialConcentration="4.2087805e+022" name="@cell::APC(FBXO5,FZR1_CDC20!1,Ser355~p).CDC20(APC!1)"/>
+      <species id="S15" compartment="cell" initialConcentration="3.7993439e+022" name="@cell::APC(FBXO5,FZR1_CDC20,Ser355~p)"/>
+      <species id="S16" compartment="cell" initialConcentration="4.2969631e+023" name="@cell::APC(FBXO5,FZR1_CDC20!1,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u)"/>
+      <species id="S17" compartment="cell" initialConcentration="3.4406152e+020" name="@cell::FZR1(APC,FBXO5,nTerm~u)"/>
+      <species id="S18" compartment="cell" initialConcentration="9.7028319e+022" name="@cell::FZR1(APC,FBXO5,nTerm~p)"/>
+      <species id="S19" compartment="cell" initialConcentration="6.5604459e+022" name="@cell::APC(FBXO5!1,FZR1_CDC20!2,Ser355~u).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u)"/>
+      <species id="S20" compartment="cell" initialConcentration="4.3226888e+020" name="@cell::FBXO5(APC,FZR1,Ser182~u)"/>
+      <species id="S21" compartment="cell" initialConcentration="1.3323959e+021" name="@cell::APC(FBXO5!1,FZR1_CDC20!2,Ser355~p).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u)"/>
+      <species id="S22" compartment="cell" initialConcentration="8.1944566e+021" name="@cell::APC(FBXO5,FZR1_CDC20!1,Ser355~p).FZR1(APC!1,FBXO5,nTerm~u)"/>
+      <species id="S23" compartment="cell" initialConcentration="1.1324333e+019" name="@cell::FBXO5(APC,FZR1,Ser182~p)"/>
+      <species id="S24" compartment="cell" initialConcentration="3.3510826e+021" name="@cell::FOXM1(DBD,Thr600~u)"/>
+      <species id="S25" compartment="cell" initialConcentration="2.2950816e+020" name="@cell::FOXM1(DBD,Thr600~p)"/>
+      <species id="S26" compartment="cell" initialConcentration="1.1461427e+017" name="@cell::CCNB_promoter(FOXM1!1).FOXM1(DBD!1,Thr600~p)"/>
+      <species id="S27" compartment="cell" initialConcentration="6.0105386e+019" name="@cell::CCNB_promoter(FOXM1)"/>
+      <species id="S28" compartment="cell" initialConcentration="6.0174121e+019" name="@cell::CDC20_promoter(FOXM1)"/>
+      <species id="S29" compartment="cell" initialConcentration="4.5878816e+016" name="@cell::CDC20_promoter(FOXM1!1).FOXM1(DBD!1,Thr600~p)"/>
+      <species id="S30" compartment="cell" initialConcentration="5.9042195e+023" name="@cell::WEE1(Ser123~u)"/>
+      <species id="S31" compartment="cell" initialConcentration="4.5242773e+021" name="@cell::CCNB(CDK1_Thr14_Tyr15~p)"/>
+      <species id="S32" compartment="cell" initialConcentration="1.1778049e+022" name="@cell::WEE1(Ser123~p)"/>
+      <species id="S33" compartment="cell" initialConcentration="1.1103404e+022" name="@cell::CDC25(pSites~p)"/>
+      <species id="S34" compartment="cell" initialConcentration="5.910966e+023" name="@cell::CDC25(pSites~u)"/>
+      <species id="S35" compartment="cell" initialConcentration="6.0070998e+023" name="@cell::MASTL(Thr198~u)"/>
+      <species id="S36" compartment="cell" initialConcentration="1.4900204e+021" name="@cell::MASTL(Thr198~p)"/>
+      <species id="S37" compartment="cell" initialConcentration="4.9793694e+023" name="@cell::ENSA_ARPP19(PPP2R2B,Ser62_Ser67~u)"/>
+      <species id="S38" compartment="cell" initialConcentration="1.9785953e+020" name="@cell::ENSA_ARPP19(PPP2R2B,Ser62_Ser67~p)"/>
+      <species id="S39" compartment="cell" initialConcentration="1.040652e+023" name="@cell::ENSA_ARPP19(PPP2R2B!1,Ser62_Ser67~p).PPP2R2B(ENSA_ARPP19!1)"/>
+      <species id="S40" compartment="cell" initialConcentration="5.0873268e+019" name="@cell::CCNE_promoter(E2F)"/>
+      <species id="S41" compartment="cell" initialConcentration="5.0873268e+019" name="@cell::CCNA_promoter(E2F)"/>
+      <species id="S42" compartment="cell" initialConcentration="5.0873268e+019" name="@cell::E2F_promoter(E2F)"/>
+      <species id="S43" compartment="cell" initialConcentration="5.0873268e+019" name="@cell::FBXO5_promoter(E2F)"/>
+      <species id="S44" compartment="cell" initialConcentration="5.0873268e+019" name="@cell::FOXM1_promoter(E2F)"/>
+      <species id="S45" compartment="cell" initialConcentration="9.3467317e+018" name="@cell::CCNE_promoter(E2F!1).E2F(DBD!1,RB1,Ser332~u)"/>
+      <species id="S46" compartment="cell" initialConcentration="9.3467317e+018" name="@cell::CCNA_promoter(E2F!1).E2F(DBD!1,RB1,Ser332~u)"/>
+      <species id="S47" compartment="cell" initialConcentration="9.3467317e+018" name="@cell::E2F(DBD!1,RB1,Ser332~u).E2F_promoter(E2F!1)"/>
+      <species id="S48" compartment="cell" initialConcentration="9.3467317e+018" name="@cell::E2F(DBD!1,RB1,Ser332~u).FBXO5_promoter(E2F!1)"/>
+      <species id="S49" compartment="cell" initialConcentration="9.3467317e+018" name="@cell::E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1)"/>
+      <species id="S50" compartment="cell" initialConcentration="0" name="@cell::iWEE()"/>
     </listOfSpecies>
     <listOfParameters>
       <!-- Independent variables -->
-      <parameter id="kPhRbD" value="0.0055440055"/>
-      <parameter id="kPhRbE" value="0.0069300069"/>
+      <parameter id="kPhRbD" value="9.206253e-027"/>
+      <parameter id="kPhRbE" value="1.1507816e-026"/>
       <parameter id="kDpRb" value="0.0013860014"/>
-      <parameter id="kPhRb" value="0.020790021"/>
-      <parameter id="kSyCe1" value="1.3860014e-005"/>
+      <parameter id="kPhRb" value="3.4523449e-026"/>
+      <parameter id="kSyCe1" value="8.3465003e+018"/>
       <parameter id="kSyCe2" value="4.1580042"/>
       <parameter id="kDeCe" value="0.00013860014"/>
       <parameter id="kDiE2fRb" value="0.00034650035"/>
-      <parameter id="kAsE2fRb" value="0.34650035"/>
-      <parameter id="kSyE2f1" value="6.9300069e-006"/>
+      <parameter id="kAsE2fRb" value="5.7539081e-025"/>
+      <parameter id="kSyE2f1" value="4.1732502e+018"/>
       <parameter id="kSyE2f2" value="0.69300069"/>
       <parameter id="kDeE2f1" value="6.9300069e-005"/>
       <parameter id="kDeE2f2" value="0.0013860014"/>
-      <parameter id="kPhE2f" value="0.0013860014"/>
-      <parameter id="kDpE2f2" value="0.069300069"/>
-      <parameter id="kSyEmi1" value="3.4650035e-005"/>
+      <parameter id="kPhE2f" value="2.3015632e-027"/>
+      <parameter id="kDpE2f2" value="1.1507816e-025"/>
+      <parameter id="kSyEmi1" value="2.0866251e+019"/>
       <parameter id="kSyEmi2" value="3.4650035"/>
       <parameter id="kDeEmi1" value="0.00034650035"/>
       <parameter id="kDeEmi2" value="0.00034650035"/>
       <parameter id="kDeEmi3" value="0.0034650035"/>
-      <parameter id="kPhEmiA" value="3.4650035e-005"/>
-      <parameter id="kPhEmiB" value="0.00017325017"/>
+      <parameter id="kPhEmiA" value="5.7539081e-029"/>
+      <parameter id="kPhEmiB" value="2.8769541e-028"/>
       <parameter id="kDpEmi" value="3.4650035e-006"/>
-      <parameter id="kSyCa1" value="6.9300069e-006"/>
+      <parameter id="kSyCa1" value="4.1732502e+018"/>
       <parameter id="kSyCa2" value="0.51975052"/>
       <parameter id="kDeCa1" value="6.9300069e-006"/>
-      <parameter id="kDeCa2" value="0.0027720028"/>
-      <parameter id="kDeCa3" value="0.00069300069"/>
+      <parameter id="kDeCa2" value="4.6031265e-027"/>
+      <parameter id="kDeCa3" value="1.1507816e-027"/>
       <parameter id="kDpCdh" value="0.0034650035"/>
-      <parameter id="kPhCdhA" value="0.017325017"/>
-      <parameter id="kPhCdhE" value="0.00069300069"/>
-      <parameter id="kPhCdhB" value="0.17325017"/>
+      <parameter id="kPhCdhA" value="2.8769541e-026"/>
+      <parameter id="kPhCdhE" value="1.1507816e-027"/>
+      <parameter id="kPhCdhB" value="2.8769541e-025"/>
       <parameter id="kDiACE" value="0.00034650035"/>
-      <parameter id="kAsACE" value="0.34650035"/>
+      <parameter id="kAsACE" value="5.7539081e-025"/>
       <parameter id="kDiACdh" value="0.00034650035"/>
-      <parameter id="kAsACdh" value="0.34650035"/>
-      <parameter id="kPhCeA" value="0.0069300069"/>
-      <parameter id="kPhCeE" value="6.9300069e-005"/>
-      <parameter id="kPhFoxE" value="0.00069300069"/>
-      <parameter id="kPhFoxA" value="0.00069300069"/>
-      <parameter id="kPhFoxB" value="0.0034650035"/>
+      <parameter id="kAsACdh" value="5.7539081e-025"/>
+      <parameter id="kPhCeA" value="1.1507816e-026"/>
+      <parameter id="kPhCeE" value="1.1507816e-028"/>
+      <parameter id="kPhFoxE" value="1.1507816e-027"/>
+      <parameter id="kPhFoxA" value="1.1507816e-027"/>
+      <parameter id="kPhFoxB" value="5.7539081e-027"/>
       <parameter id="kDpFox" value="3.4650035e-005"/>
-      <parameter id="kSyCb1" value="6.9300069e-006"/>
+      <parameter id="kSyCb1" value="4.1732502e+018"/>
       <parameter id="kSyCb2" value="0.51975052"/>
       <parameter id="kDeCb1" value="6.9300069e-006"/>
-      <parameter id="kDeCb2" value="0.00086625087"/>
-      <parameter id="kDeCb3" value="0.00086625087"/>
-      <parameter id="kPhEnsa" value="0.00069300069"/>
+      <parameter id="kDeCb2" value="1.438477e-027"/>
+      <parameter id="kDeCb3" value="1.438477e-027"/>
+      <parameter id="kPhEnsa" value="1.1507816e-027"/>
       <parameter id="kDpEnsa" value="0.00034650035"/>
-      <parameter id="kPhGw" value="0.0069300069"/>
+      <parameter id="kPhGw" value="1.1507816e-026"/>
       <parameter id="kDpGw1" value="0.0017325017"/>
-      <parameter id="kDpGw2" value="0.069300069"/>
+      <parameter id="kDpGw2" value="1.1507816e-025"/>
       <parameter id="kWee1" value="6.9300069e-005"/>
       <parameter id="kWee2" value="0.0069300069"/>
-      <parameter id="kPhWeeA" value="0.00069300069"/>
-      <parameter id="kPhWeeB" value="0.0069300069"/>
-      <parameter id="kDpWee" value="0.069300069"/>
-      <parameter id="kCdc25_1" value="0.00069300069"/>
-      <parameter id="kCdc25_2" value="0.0069300069"/>
-      <parameter id="kDpCdc25" value="0.069300069"/>
+      <parameter id="kPhWeeA" value="1.1507816e-027"/>
+      <parameter id="kPhWeeB" value="1.1507816e-026"/>
+      <parameter id="kDpWee" value="1.1507816e-025"/>
+      <parameter id="kCdc25_1" value="1.1507816e-027"/>
+      <parameter id="kCdc25_2" value="1.1507816e-026"/>
+      <parameter id="kDpCdc25" value="1.1507816e-025"/>
       <parameter id="kDipEB55" value="4.7124047e-005"/>
-      <parameter id="kAspEB55" value="0.3950104"/>
-      <parameter id="kSyCdc_1" value="6.9300069e-006"/>
+      <parameter id="kAspEB55" value="6.5594552e-025"/>
+      <parameter id="kSyCdc_1" value="4.1732502e+018"/>
       <parameter id="kSyCdc_2" value="0.69300069"/>
       <parameter id="kDeCdc_1" value="2.7720028e-005"/>
-      <parameter id="kDeCdc_2" value="0.00027720028"/>
+      <parameter id="kDeCdc_2" value="4.6031265e-028"/>
       <parameter id="kDipACdc" value="0.00086625087"/>
-      <parameter id="kAspACdc" value="0.0069300069"/>
-      <parameter id="kPhApcA" value="6.9300069e-005"/>
-      <parameter id="kPhApcB" value="6.9300069e-005"/>
-      <parameter id="kDpApc" value="0.034650035"/>
-      <parameter id="kSyFox1" value="6.9300069e-006"/>
+      <parameter id="kAspACdc" value="1.1507816e-026"/>
+      <parameter id="kPhApcA" value="1.1507816e-028"/>
+      <parameter id="kDpApc" value="5.7539081e-026"/>
+      <parameter id="kSyFox1" value="4.1732502e+018"/>
       <parameter id="kSyFox2" value="0.51975052"/>
       <parameter id="kDeFox1" value="6.9300069e-006"/>
-      <parameter id="kDeFox2" value="0.0034650035"/>
-      <parameter id="kAsEPx" value="0.34650035"/>
+      <parameter id="kDeFox2" value="5.7539081e-027"/>
+      <parameter id="kAsEPx" value="5.7539081e-025"/>
       <parameter id="kDiEPx" value="0.034650035"/>
-      <parameter id="kAsFPcb" value="0.34650035"/>
+      <parameter id="kAsFPcb" value="5.7539081e-025"/>
       <parameter id="kDiFPcb" value="0.069300069"/>
-      <parameter id="kAsFPcdc" value="0.34650035"/>
+      <parameter id="kAsFPcdc" value="5.7539081e-025"/>
       <parameter id="kDiFPcdc" value="0.17325017"/>
-      <parameter id="kPhC25B" value="0.0069300069"/>
-      <parameter id="kPhCdhEf4" value="0.00055440055"/>
-      <parameter id="kPhCdhAf4" value="0.013860014"/>
-      <parameter id="kPhCdhBf4" value="0.13860014"/>
+      <parameter id="kPhC25B" value="1.1507816e-026"/>
+      <parameter id="kPhCAEE" value="9.2062529e-028"/>
+      <parameter id="kPhCAEA" value="2.3015632e-026"/>
+      <parameter id="kPhCAEB" value="2.3015632e-025"/>
       <parameter id="ikSyCb" value="1"/>
       <parameter id="jiWee" value="6.022e+022"/>
-      <parameter id="ModelValue_128" value="2"/>
-      <parameter id="ModelValue_132" value="6"/>
-      <parameter id="ModelValue_130" value="4"/>
-      <parameter id="ModelValue_129" value="3"/>
-      <parameter id="ModelValue_131" value="5"/>
       <parameter id="kDpE2f1" value="0"/>
       <parameter id="kPhC25A" value="0"/>
-      <parameter id="iWee_0" value="0"/>
-      <parameter id="_InitialConc1" value="6.022e+010"/>
-      <parameter id="_InitialConc2" value="1.3986043e+010"/>
-      <parameter id="_InitialConc3" value="1.1128068e+009"/>
-      <parameter id="_InitialConc4" value="2293289.4"/>
-      <parameter id="_InitialConc5" value="4.2325597e+008"/>
-      <parameter id="_InitialConc6" value="1.133559e+008"/>
-      <parameter id="_InitialConc7" value="4.3034014e+009"/>
-      <parameter id="_InitialConc8" value="9065434"/>
-      <parameter id="_InitialConc9" value="5.2778426e+009"/>
-      <parameter id="_InitialConc10" value="5.0629691e+010"/>
-      <parameter id="_InitialConc11" value="4.6484797e+009"/>
-      <parameter id="_InitialConc12" value="2.4260911e+011"/>
-      <parameter id="_InitialConc13" value="1.3847757e+010"/>
-      <parameter id="_InitialConc14" value="4.2087805e+009"/>
-      <parameter id="_InitialConc15" value="3.7993439e+009"/>
-      <parameter id="_InitialConc16" value="4.2969631e+010"/>
-      <parameter id="_InitialConc17" value="34406152"/>
-      <parameter id="_InitialConc18" value="9.7028319e+009"/>
-      <parameter id="_InitialConc19" value="6.5604459e+009"/>
-      <parameter id="_InitialConc20" value="43226888"/>
-      <parameter id="_InitialConc21" value="1.3323959e+008"/>
-      <parameter id="_InitialConc22" value="8.1944566e+008"/>
-      <parameter id="_InitialConc23" value="1132433.3"/>
-      <parameter id="_InitialConc24" value="3.3510826e+008"/>
-      <parameter id="_InitialConc25" value="22950816"/>
-      <parameter id="_InitialConc26" value="11461.427"/>
-      <parameter id="_InitialConc27" value="6010538.6"/>
-      <parameter id="_InitialConc28" value="6017412.1"/>
-      <parameter id="_InitialConc29" value="4587.8816"/>
-      <parameter id="_InitialConc30" value="5.9042195e+010"/>
-      <parameter id="_InitialConc31" value="4.5242773e+008"/>
-      <parameter id="_InitialConc32" value="1.1778049e+009"/>
-      <parameter id="_InitialConc33" value="1.1103404e+009"/>
-      <parameter id="_InitialConc34" value="5.910966e+010"/>
-      <parameter id="_InitialConc35" value="6.0070998e+010"/>
-      <parameter id="_InitialConc36" value="1.4900204e+008"/>
-      <parameter id="_InitialConc37" value="4.9793694e+010"/>
-      <parameter id="_InitialConc38" value="19785953"/>
-      <parameter id="_InitialConc39" value="1.040652e+010"/>
-      <parameter id="_InitialConc40" value="5087326.8"/>
-      <parameter id="_InitialConc41" value="5087326.8"/>
-      <parameter id="_InitialConc42" value="5087326.8"/>
-      <parameter id="_InitialConc43" value="5087326.8"/>
-      <parameter id="_InitialConc44" value="5087326.8"/>
-      <parameter id="_InitialConc45" value="934673.17"/>
-      <parameter id="_InitialConc46" value="934673.17"/>
-      <parameter id="_InitialConc47" value="934673.17"/>
-      <parameter id="_InitialConc48" value="934673.17"/>
-      <parameter id="_InitialConc49" value="934673.17"/>
+      <parameter id="_InitialConc1" value="6.022e+023"/>
+      <parameter id="_InitialConc2" value="1.3986043e+023"/>
+      <parameter id="_InitialConc3" value="1.1128068e+022"/>
+      <parameter id="_InitialConc4" value="2.2932894e+019"/>
+      <parameter id="_InitialConc5" value="4.2325597e+021"/>
+      <parameter id="_InitialConc6" value="1.133559e+021"/>
+      <parameter id="_InitialConc7" value="4.3034014e+022"/>
+      <parameter id="_InitialConc8" value="9.065434e+019"/>
+      <parameter id="_InitialConc9" value="5.2778426e+022"/>
+      <parameter id="_InitialConc10" value="5.0629691e+023"/>
+      <parameter id="_InitialConc11" value="4.6484797e+022"/>
+      <parameter id="_InitialConc12" value="2.4260911e+024"/>
+      <parameter id="_InitialConc13" value="1.3847757e+023"/>
+      <parameter id="_InitialConc14" value="4.2087805e+022"/>
+      <parameter id="_InitialConc15" value="3.7993439e+022"/>
+      <parameter id="_InitialConc16" value="4.2969631e+023"/>
+      <parameter id="_InitialConc17" value="3.4406152e+020"/>
+      <parameter id="_InitialConc18" value="9.7028319e+022"/>
+      <parameter id="_InitialConc19" value="6.5604459e+022"/>
+      <parameter id="_InitialConc20" value="4.3226888e+020"/>
+      <parameter id="_InitialConc21" value="1.3323959e+021"/>
+      <parameter id="_InitialConc22" value="8.1944566e+021"/>
+      <parameter id="_InitialConc23" value="1.1324333e+019"/>
+      <parameter id="_InitialConc24" value="3.3510826e+021"/>
+      <parameter id="_InitialConc25" value="2.2950816e+020"/>
+      <parameter id="_InitialConc26" value="1.1461427e+017"/>
+      <parameter id="_InitialConc27" value="6.0105386e+019"/>
+      <parameter id="_InitialConc28" value="6.0174121e+019"/>
+      <parameter id="_InitialConc29" value="4.5878816e+016"/>
+      <parameter id="_InitialConc30" value="5.9042195e+023"/>
+      <parameter id="_InitialConc31" value="4.5242773e+021"/>
+      <parameter id="_InitialConc32" value="1.1778049e+022"/>
+      <parameter id="_InitialConc33" value="1.1103404e+022"/>
+      <parameter id="_InitialConc34" value="5.910966e+023"/>
+      <parameter id="_InitialConc35" value="6.0070998e+023"/>
+      <parameter id="_InitialConc36" value="1.4900204e+021"/>
+      <parameter id="_InitialConc37" value="4.9793694e+023"/>
+      <parameter id="_InitialConc38" value="1.9785953e+020"/>
+      <parameter id="_InitialConc39" value="1.040652e+023"/>
+      <parameter id="_InitialConc40" value="5.0873268e+019"/>
+      <parameter id="_InitialConc41" value="5.0873268e+019"/>
+      <parameter id="_InitialConc42" value="5.0873268e+019"/>
+      <parameter id="_InitialConc43" value="5.0873268e+019"/>
+      <parameter id="_InitialConc44" value="5.0873268e+019"/>
+      <parameter id="_InitialConc45" value="9.3467317e+018"/>
+      <parameter id="_InitialConc46" value="9.3467317e+018"/>
+      <parameter id="_InitialConc47" value="9.3467317e+018"/>
+      <parameter id="_InitialConc48" value="9.3467317e+018"/>
+      <parameter id="_InitialConc49" value="9.3467317e+018"/>
       <parameter id="_InitialConc50" value="0"/>
       <!-- Dependent variables -->
       <parameter id="_rateLaw1" constant="true"/>
       <parameter id="_rateLaw2" constant="true"/>
-      <parameter id="_rateLaw3" constant="true"/>
-      <parameter id="_rateLaw4" constant="true"/>
-      <parameter id="_rateLaw5" constant="true"/>
-      <parameter id="_rateLaw6" constant="true"/>
-      <parameter id="_rateLaw7" constant="true"/>
-      <parameter id="_rateLaw8" constant="true"/>
-      <parameter id="_rateLaw9" constant="true"/>
-      <parameter id="_rateLaw10" constant="true"/>
-      <parameter id="_rateLaw11" constant="true"/>
-      <parameter id="_rateLaw12" constant="true"/>
-      <parameter id="_rateLaw13" constant="true"/>
-      <parameter id="_rateLaw14" constant="true"/>
-      <parameter id="_rateLaw15" constant="true"/>
-      <parameter id="_rateLaw16" constant="true"/>
-      <parameter id="_rateLaw17" constant="true"/>
-      <parameter id="_rateLaw18" constant="true"/>
-      <parameter id="_rateLaw19" constant="true"/>
-      <parameter id="_rateLaw20" constant="true"/>
-      <parameter id="_rateLaw21" constant="true"/>
-      <parameter id="_rateLaw22" constant="true"/>
-      <parameter id="_rateLaw23" constant="true"/>
-      <parameter id="_rateLaw24" constant="true"/>
-      <parameter id="_rateLaw25" constant="true"/>
-      <parameter id="_rateLaw26" constant="true"/>
-      <parameter id="_rateLaw27" constant="true"/>
-      <parameter id="_rateLaw28" constant="true"/>
-      <parameter id="_rateLaw29" constant="true"/>
-      <parameter id="_rateLaw30" constant="true"/>
-      <parameter id="_rateLaw31" constant="true"/>
-      <parameter id="_rateLaw32" constant="true"/>
-      <parameter id="_rateLaw33" constant="true"/>
-      <parameter id="_rateLaw34" constant="true"/>
-      <parameter id="_rateLaw35" constant="true"/>
-      <parameter id="_rateLaw36" constant="true"/>
-      <parameter id="_rateLaw37" constant="true"/>
-      <parameter id="_rateLaw38" constant="true"/>
-      <parameter id="_rateLaw39" constant="true"/>
-      <parameter id="_rateLaw40" constant="true"/>
-      <parameter id="_rateLaw41" constant="true"/>
-      <parameter id="_rateLaw42" constant="true"/>
-      <parameter id="_rateLaw43" constant="true"/>
-      <parameter id="_rateLaw44" constant="true"/>
-      <parameter id="_rateLaw45" constant="true"/>
-      <parameter id="_rateLaw46" constant="true"/>
-      <parameter id="_rateLaw47" constant="true"/>
-      <parameter id="_rateLaw48" constant="true"/>
-      <parameter id="_rateLaw49" constant="true"/>
-      <parameter id="_rateLaw50" constant="true"/>
-      <parameter id="_rateLaw51" constant="true"/>
-      <parameter id="_rateLaw52" constant="true"/>
-      <parameter id="_rateLaw53" constant="true"/>
-      <parameter id="_rateLaw54" constant="true"/>
-      <parameter id="_rateLaw55" constant="true"/>
-      <parameter id="_rateLaw56" constant="true"/>
-      <parameter id="_rateLaw57" constant="true"/>
-      <parameter id="_rateLaw58" constant="true"/>
-      <parameter id="_rateLaw59" constant="true"/>
-      <parameter id="_rateLaw60" constant="true"/>
-      <parameter id="_rateLaw61" constant="true"/>
-      <parameter id="_rateLaw62" constant="true"/>
-      <parameter id="_rateLaw63" constant="true"/>
-      <parameter id="_rateLaw64" constant="true"/>
-      <parameter id="_rateLaw65" constant="true"/>
-      <parameter id="_rateLaw66" constant="true"/>
-      <parameter id="_rateLaw67" constant="true"/>
-      <parameter id="_rateLaw68" constant="true"/>
-      <parameter id="_rateLaw69" constant="true"/>
-      <parameter id="_rateLaw70" constant="true"/>
       <!-- Observables -->
       <parameter id="Ce_compartment" constant="false"/>
       <parameter id="Wee_compartment" constant="false"/>
@@ -290,633 +215,17 @@
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>
             <times/>
-            <ci> kSyE2f1 </ci>
-            <cn> 6.022e23 </cn>
+            <ci> kSyCb1 </ci>
+            <ci> ikSyCb </ci>
           </apply>
         </math>
       </initialAssignment>
       <initialAssignment symbol="_rateLaw2">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>
-            <divide/>
-            <ci> kAsFPcb </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw3">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhRbD </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw4">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhRbE </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw5">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhRb </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw6">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhRb </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw7">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhE2f </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw8">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhE2f </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw9">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kDpE2f2 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw10">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhRbD </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw11">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhRbE </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw12">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhRb </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw13">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhRb </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw14">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> kSyCe1 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw15">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhCeE </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw16">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kDpApc </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw17">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhApcA </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw18">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhApcA </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw19">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kDpApc </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw20">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhCdhA </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw21">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhCdhEf4 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw22">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhCdhAf4 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw23">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhCdhBf4 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw24">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhCdhE </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw25">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhEmiA </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw26">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhEmiB </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw27">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhEmiA </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw28">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhEmiB </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw29">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> kSyFox1 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw30">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhCdhE </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw31">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhCdhA </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw32">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhCdhB </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw33">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> kSyCa1 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw34">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhCeA </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw35">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kDeCa2 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw36">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kDeCa3 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw37">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kDeFox2 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw38">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhFoxE </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw39">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhFoxA </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw40">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhFoxB </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw41">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <times/>
-              <ci> kSyCb1 </ci>
-              <ci> ikSyCb </ci>
-            </apply>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw42">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
             <times/>
             <ci> kSyCb2 </ci>
             <ci> ikSyCb </ci>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw43">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kDeCb2 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw44">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kDeCb3 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw45">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kDeCdc_2 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw46">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> kSyCdc_1 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw47">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kAsFPcdc </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw48">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kCdc25_2 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw49">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kCdc25_1 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw50">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhC25B </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw51">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhC25A </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw52">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kDpCdc25 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw53">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kDpWee </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw54">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhWeeA </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw55">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhWeeB </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw56">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhGw </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw57">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kDpGw2 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw58">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhEnsa </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw59">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> kSyEmi1 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw60">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kPhCdhB </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw61">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kAsE2fRb </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw62">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kAsACdh </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw63">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kAsACE </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw64">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kAspACdc </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw65">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kAspEB55 </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw66">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kAsEPx </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw67">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kAsEPx </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw68">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kAsEPx </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw69">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kAsEPx </ci>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw70">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> kAsEPx </ci>
-            <cn> 6.022e23 </cn>
           </apply>
         </math>
       </initialAssignment>
@@ -1130,7 +439,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw1 </ci>
+              <ci> kSyE2f1 </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1147,7 +456,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw2 </ci>
+              <ci> kAsFPcb </ci>
               <ci> S25 </ci>
               <ci> S27 </ci>
             </apply>
@@ -1266,7 +575,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw3 </ci>
+              <ci> kPhRbD </ci>
               <ci> S1 </ci>
               <ci> S7 </ci>
             </apply>
@@ -1287,7 +596,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw3 </ci>
+              <ci> kPhRbD </ci>
               <ci> S1 </ci>
               <ci> S8 </ci>
             </apply>
@@ -1308,7 +617,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw4 </ci>
+              <ci> kPhRbE </ci>
               <ci> S2 </ci>
               <ci> S7 </ci>
             </apply>
@@ -1329,7 +638,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw4 </ci>
+              <ci> kPhRbE </ci>
               <ci> S2 </ci>
               <ci> S8 </ci>
             </apply>
@@ -1350,7 +659,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw5 </ci>
+              <ci> kPhRb </ci>
               <ci> S5 </ci>
               <ci> S7 </ci>
             </apply>
@@ -1371,7 +680,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw5 </ci>
+              <ci> kPhRb </ci>
               <ci> S5 </ci>
               <ci> S8 </ci>
             </apply>
@@ -1392,7 +701,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw6 </ci>
+              <ci> kPhRb </ci>
               <ci> S6 </ci>
               <ci> S7 </ci>
             </apply>
@@ -1413,7 +722,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw6 </ci>
+              <ci> kPhRb </ci>
               <ci> S6 </ci>
               <ci> S8 </ci>
             </apply>
@@ -1433,7 +742,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw7 </ci>
+              <ci> kPhE2f </ci>
               <ci> S3 </ci>
               <ci> S5 </ci>
             </apply>
@@ -1453,7 +762,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw7 </ci>
+              <ci> kPhE2f </ci>
               <ci> S5 </ci>
               <ci> S7 </ci>
             </apply>
@@ -1473,7 +782,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw8 </ci>
+              <ci> kPhE2f </ci>
               <ci> S3 </ci>
               <ci> S6 </ci>
             </apply>
@@ -1493,7 +802,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw8 </ci>
+              <ci> kPhE2f </ci>
               <ci> S6 </ci>
               <ci> S7 </ci>
             </apply>
@@ -1547,7 +856,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw9 </ci>
+              <ci> kDpE2f2 </ci>
               <ci> S4 </ci>
               <ci> S11 </ci>
             </apply>
@@ -1567,7 +876,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw9 </ci>
+              <ci> kDpE2f2 </ci>
               <ci> S8 </ci>
               <ci> S11 </ci>
             </apply>
@@ -1618,7 +927,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw10 </ci>
+              <ci> kPhRbD </ci>
               <ci> S1 </ci>
               <ci> S9 </ci>
             </apply>
@@ -1638,7 +947,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw11 </ci>
+              <ci> kPhRbE </ci>
               <ci> S2 </ci>
               <ci> S9 </ci>
             </apply>
@@ -1658,7 +967,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw12 </ci>
+              <ci> kPhRb </ci>
               <ci> S5 </ci>
               <ci> S9 </ci>
             </apply>
@@ -1678,7 +987,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw13 </ci>
+              <ci> kPhRb </ci>
               <ci> S6 </ci>
               <ci> S9 </ci>
             </apply>
@@ -1693,7 +1002,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw14 </ci>
+              <ci> kSyCe1 </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1742,7 +1051,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw15 </ci>
+              <ci> kPhCeE </ci>
               <ci> S2 </ci>
               <ci> S2 </ci>
             </apply>
@@ -1780,7 +1089,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw16 </ci>
+              <ci> kDpApc </ci>
               <ci> S11 </ci>
               <ci> S14 </ci>
             </apply>
@@ -1800,7 +1109,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw17 </ci>
+              <ci> kPhApcA </ci>
               <ci> S5 </ci>
               <ci> S12 </ci>
             </apply>
@@ -1820,7 +1129,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw17 </ci>
+              <ci> kPhApcA </ci>
               <ci> S5 </ci>
               <ci> S16 </ci>
             </apply>
@@ -1840,7 +1149,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw17 </ci>
+              <ci> kPhApcA </ci>
               <ci> S5 </ci>
               <ci> S19 </ci>
             </apply>
@@ -1860,7 +1169,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw18 </ci>
+              <ci> kPhApcA </ci>
               <ci> S6 </ci>
               <ci> S12 </ci>
             </apply>
@@ -1880,7 +1189,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw18 </ci>
+              <ci> kPhApcA </ci>
               <ci> S6 </ci>
               <ci> S16 </ci>
             </apply>
@@ -1900,7 +1209,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw18 </ci>
+              <ci> kPhApcA </ci>
               <ci> S6 </ci>
               <ci> S19 </ci>
             </apply>
@@ -1920,7 +1229,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw19 </ci>
+              <ci> kDpApc </ci>
               <ci> S11 </ci>
               <ci> S15 </ci>
             </apply>
@@ -1940,7 +1249,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw19 </ci>
+              <ci> kDpApc </ci>
               <ci> S11 </ci>
               <ci> S21 </ci>
             </apply>
@@ -1960,7 +1269,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw19 </ci>
+              <ci> kDpApc </ci>
               <ci> S11 </ci>
               <ci> S22 </ci>
             </apply>
@@ -1981,7 +1290,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw20 </ci>
+              <ci> kPhCdhA </ci>
               <ci> S5 </ci>
               <ci> S16 </ci>
             </apply>
@@ -2002,7 +1311,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw20 </ci>
+              <ci> kPhCdhA </ci>
               <ci> S5 </ci>
               <ci> S22 </ci>
             </apply>
@@ -2024,7 +1333,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw21 </ci>
+              <ci> kPhCAEE </ci>
               <ci> S2 </ci>
               <ci> S19 </ci>
             </apply>
@@ -2046,7 +1355,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw21 </ci>
+              <ci> kPhCAEE </ci>
               <ci> S2 </ci>
               <ci> S21 </ci>
             </apply>
@@ -2068,7 +1377,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw22 </ci>
+              <ci> kPhCAEA </ci>
               <ci> S5 </ci>
               <ci> S19 </ci>
             </apply>
@@ -2090,7 +1399,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw22 </ci>
+              <ci> kPhCAEA </ci>
               <ci> S5 </ci>
               <ci> S21 </ci>
             </apply>
@@ -2112,7 +1421,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw23 </ci>
+              <ci> kPhCAEB </ci>
               <ci> S6 </ci>
               <ci> S19 </ci>
             </apply>
@@ -2134,7 +1443,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw23 </ci>
+              <ci> kPhCAEB </ci>
               <ci> S6 </ci>
               <ci> S21 </ci>
             </apply>
@@ -2155,7 +1464,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw24 </ci>
+              <ci> kPhCdhE </ci>
               <ci> S2 </ci>
               <ci> S16 </ci>
             </apply>
@@ -2176,7 +1485,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw24 </ci>
+              <ci> kPhCdhE </ci>
               <ci> S2 </ci>
               <ci> S22 </ci>
             </apply>
@@ -2293,7 +1602,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw25 </ci>
+              <ci> kPhEmiA </ci>
               <ci> S5 </ci>
               <ci> S19 </ci>
             </apply>
@@ -2314,7 +1623,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw25 </ci>
+              <ci> kPhEmiA </ci>
               <ci> S5 </ci>
               <ci> S21 </ci>
             </apply>
@@ -2335,7 +1644,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw26 </ci>
+              <ci> kPhEmiB </ci>
               <ci> S6 </ci>
               <ci> S19 </ci>
             </apply>
@@ -2356,7 +1665,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw26 </ci>
+              <ci> kPhEmiB </ci>
               <ci> S6 </ci>
               <ci> S21 </ci>
             </apply>
@@ -2376,7 +1685,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw27 </ci>
+              <ci> kPhEmiA </ci>
               <ci> S5 </ci>
               <ci> S20 </ci>
             </apply>
@@ -2396,7 +1705,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw28 </ci>
+              <ci> kPhEmiB </ci>
               <ci> S6 </ci>
               <ci> S20 </ci>
             </apply>
@@ -2442,7 +1751,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw29 </ci>
+              <ci> kSyFox1 </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -2478,7 +1787,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw30 </ci>
+              <ci> kPhCdhE </ci>
               <ci> S2 </ci>
               <ci> S17 </ci>
             </apply>
@@ -2498,7 +1807,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw31 </ci>
+              <ci> kPhCdhA </ci>
               <ci> S5 </ci>
               <ci> S17 </ci>
             </apply>
@@ -2518,7 +1827,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw32 </ci>
+              <ci> kPhCdhB </ci>
               <ci> S6 </ci>
               <ci> S17 </ci>
             </apply>
@@ -2550,7 +1859,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw33 </ci>
+              <ci> kSyCa1 </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -2581,7 +1890,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw34 </ci>
+              <ci> kPhCeA </ci>
               <ci> S2 </ci>
               <ci> S5 </ci>
             </apply>
@@ -2600,7 +1909,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw35 </ci>
+              <ci> kDeCa2 </ci>
               <ci> S5 </ci>
               <ci> S16 </ci>
             </apply>
@@ -2619,7 +1928,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw35 </ci>
+              <ci> kDeCa2 </ci>
               <ci> S5 </ci>
               <ci> S22 </ci>
             </apply>
@@ -2638,7 +1947,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw36 </ci>
+              <ci> kDeCa3 </ci>
               <ci> S5 </ci>
               <ci> S14 </ci>
             </apply>
@@ -2703,7 +2012,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw37 </ci>
+              <ci> kDeFox2 </ci>
               <ci> S16 </ci>
               <ci> S24 </ci>
             </apply>
@@ -2722,7 +2031,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw37 </ci>
+              <ci> kDeFox2 </ci>
               <ci> S22 </ci>
               <ci> S24 </ci>
             </apply>
@@ -2741,7 +2050,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw37 </ci>
+              <ci> kDeFox2 </ci>
               <ci> S16 </ci>
               <ci> S25 </ci>
             </apply>
@@ -2760,7 +2069,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw37 </ci>
+              <ci> kDeFox2 </ci>
               <ci> S22 </ci>
               <ci> S25 </ci>
             </apply>
@@ -2780,7 +2089,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw38 </ci>
+              <ci> kPhFoxE </ci>
               <ci> S2 </ci>
               <ci> S24 </ci>
             </apply>
@@ -2800,7 +2109,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw39 </ci>
+              <ci> kPhFoxA </ci>
               <ci> S5 </ci>
               <ci> S24 </ci>
             </apply>
@@ -2820,7 +2129,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw40 </ci>
+              <ci> kPhFoxB </ci>
               <ci> S6 </ci>
               <ci> S24 </ci>
             </apply>
@@ -2852,7 +2161,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw41 </ci>
+              <ci> _rateLaw1 </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -2869,7 +2178,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw42 </ci>
+              <ci> _rateLaw2 </ci>
               <ci> S26 </ci>
             </apply>
           </math>
@@ -2915,7 +2224,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw43 </ci>
+              <ci> kDeCb2 </ci>
               <ci> S6 </ci>
               <ci> S16 </ci>
             </apply>
@@ -2934,7 +2243,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw43 </ci>
+              <ci> kDeCb2 </ci>
               <ci> S6 </ci>
               <ci> S22 </ci>
             </apply>
@@ -2953,7 +2262,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw43 </ci>
+              <ci> kDeCb2 </ci>
               <ci> S16 </ci>
               <ci> S31 </ci>
             </apply>
@@ -2972,7 +2281,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw43 </ci>
+              <ci> kDeCb2 </ci>
               <ci> S22 </ci>
               <ci> S31 </ci>
             </apply>
@@ -2991,7 +2300,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw44 </ci>
+              <ci> kDeCb3 </ci>
               <ci> S6 </ci>
               <ci> S14 </ci>
             </apply>
@@ -3010,7 +2319,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw44 </ci>
+              <ci> kDeCb3 </ci>
               <ci> S14 </ci>
               <ci> S31 </ci>
             </apply>
@@ -3060,7 +2369,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw45 </ci>
+              <ci> kDeCdc_2 </ci>
               <ci> S13 </ci>
               <ci> S16 </ci>
             </apply>
@@ -3079,7 +2388,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw45 </ci>
+              <ci> kDeCdc_2 </ci>
               <ci> S13 </ci>
               <ci> S22 </ci>
             </apply>
@@ -3099,7 +2408,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw45 </ci>
+              <ci> kDeCdc_2 </ci>
               <ci> S14 </ci>
               <ci> S16 </ci>
             </apply>
@@ -3119,7 +2428,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw45 </ci>
+              <ci> kDeCdc_2 </ci>
               <ci> S14 </ci>
               <ci> S22 </ci>
             </apply>
@@ -3134,7 +2443,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw46 </ci>
+              <ci> kSyCdc_1 </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -3169,7 +2478,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw47 </ci>
+              <ci> kAsFPcdc </ci>
               <ci> S25 </ci>
               <ci> S28 </ci>
             </apply>
@@ -3247,7 +2556,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw48 </ci>
+              <ci> kCdc25_2 </ci>
               <ci> S31 </ci>
               <ci> S33 </ci>
             </apply>
@@ -3267,7 +2576,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw49 </ci>
+              <ci> kCdc25_1 </ci>
               <ci> S31 </ci>
               <ci> S34 </ci>
             </apply>
@@ -3287,7 +2596,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw50 </ci>
+              <ci> kPhC25B </ci>
               <ci> S6 </ci>
               <ci> S34 </ci>
             </apply>
@@ -3307,7 +2616,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw51 </ci>
+              <ci> kPhC25A </ci>
               <ci> S5 </ci>
               <ci> S34 </ci>
             </apply>
@@ -3327,7 +2636,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw52 </ci>
+              <ci> kDpCdc25 </ci>
               <ci> S11 </ci>
               <ci> S33 </ci>
             </apply>
@@ -3347,7 +2656,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw53 </ci>
+              <ci> kDpWee </ci>
               <ci> S11 </ci>
               <ci> S32 </ci>
             </apply>
@@ -3367,7 +2676,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw54 </ci>
+              <ci> kPhWeeA </ci>
               <ci> S5 </ci>
               <ci> S30 </ci>
             </apply>
@@ -3387,7 +2696,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw55 </ci>
+              <ci> kPhWeeB </ci>
               <ci> S6 </ci>
               <ci> S30 </ci>
             </apply>
@@ -3407,7 +2716,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw56 </ci>
+              <ci> kPhGw </ci>
               <ci> S6 </ci>
               <ci> S35 </ci>
             </apply>
@@ -3444,7 +2753,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw57 </ci>
+              <ci> kDpGw2 </ci>
               <ci> S11 </ci>
               <ci> S36 </ci>
             </apply>
@@ -3464,7 +2773,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw58 </ci>
+              <ci> kPhEnsa </ci>
               <ci> S36 </ci>
               <ci> S37 </ci>
             </apply>
@@ -3497,7 +2806,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw59 </ci>
+              <ci> kSyEmi1 </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -3534,7 +2843,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw60 </ci>
+              <ci> kPhCdhB </ci>
               <ci> S6 </ci>
               <ci> S16 </ci>
             </apply>
@@ -3555,7 +2864,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw60 </ci>
+              <ci> kPhCdhB </ci>
               <ci> S6 </ci>
               <ci> S22 </ci>
             </apply>
@@ -3574,7 +2883,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw61 </ci>
+              <ci> kAsE2fRb </ci>
               <ci> S3 </ci>
               <ci> S9 </ci>
             </apply>
@@ -3593,7 +2902,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw61 </ci>
+              <ci> kAsE2fRb </ci>
               <ci> S4 </ci>
               <ci> S9 </ci>
             </apply>
@@ -3648,7 +2957,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw62 </ci>
+              <ci> kAsACdh </ci>
               <ci> S12 </ci>
               <ci> S17 </ci>
             </apply>
@@ -3667,7 +2976,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw62 </ci>
+              <ci> kAsACdh </ci>
               <ci> S15 </ci>
               <ci> S17 </ci>
             </apply>
@@ -3722,7 +3031,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw63 </ci>
+              <ci> kAsACE </ci>
               <ci> S16 </ci>
               <ci> S20 </ci>
             </apply>
@@ -3741,7 +3050,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw63 </ci>
+              <ci> kAsACE </ci>
               <ci> S20 </ci>
               <ci> S22 </ci>
             </apply>
@@ -3796,7 +3105,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw64 </ci>
+              <ci> kAspACdc </ci>
               <ci> S13 </ci>
               <ci> S15 </ci>
             </apply>
@@ -3833,7 +3142,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw65 </ci>
+              <ci> kAspEB55 </ci>
               <ci> S11 </ci>
               <ci> S38 </ci>
             </apply>
@@ -3870,7 +3179,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw66 </ci>
+              <ci> kAsEPx </ci>
               <ci> S3 </ci>
               <ci> S40 </ci>
             </apply>
@@ -3907,7 +3216,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw67 </ci>
+              <ci> kAsEPx </ci>
               <ci> S3 </ci>
               <ci> S41 </ci>
             </apply>
@@ -3944,7 +3253,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw68 </ci>
+              <ci> kAsEPx </ci>
               <ci> S3 </ci>
               <ci> S42 </ci>
             </apply>
@@ -3981,7 +3290,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw69 </ci>
+              <ci> kAsEPx </ci>
               <ci> S3 </ci>
               <ci> S43 </ci>
             </apply>
@@ -4018,7 +3327,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw70 </ci>
+              <ci> kAsEPx </ci>
               <ci> S3 </ci>
               <ci> S44 </ci>
             </apply>
