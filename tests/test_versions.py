@@ -18,7 +18,15 @@ class V3_0_0_TestCase(unittest.TestCase):
         from model_tools import simulate_sbml
         v2_1_4_xml = os.path.join(VERSIONS, 'v2.1.4', 'model_cell_cycle_v2.1.4.xml')
         v3_0_0_xml = os.path.join(VERSIONS, 'v3.0.0', 'results', 'cell_cycle_v3.0.0',
-                                  '2020-11-10_17-27-39', 'cell_cycle_v3.0.0_sbml.xml')
+                                  '2020-11-13_22-20-23', 'cell_cycle_v3.0.0_sbml.xml')
         v2_1_4 = simulate_sbml(v2_1_4_xml)['x']
         v3_0_0 = simulate_sbml(v3_0_0_xml)['x']
         np.testing.assert_allclose(v2_1_4, v3_0_0/6.022e23, atol=1e-5, rtol=1e-5)
+
+    def test_petab_compatible_sbml(self):
+        from model_tools import simulate_sbml
+        v2_1_4_xml = os.path.join(VERSIONS, 'v2.1.4', 'model_cell_cycle_v2.1.4.xml')
+        v3_0_0_xml = os.path.join(VERSIONS, 'v3.0.0', 'cell_cycle_v3.0.0_sbml.xml')
+        v2_1_4 = simulate_sbml(v2_1_4_xml)['x']
+        v3_0_0 = simulate_sbml(v3_0_0_xml)['x']
+        np.testing.assert_allclose(v2_1_4, v3_0_0/6.022e10, atol=1e-5, rtol=1e-5)

@@ -13,4 +13,4 @@ This module contains various cell cycle models and simple
 model analysis tools.
 """
 
-from .utils import simulate_sbml
+from .utils import (simulate_sbml, make_petab_compatible)

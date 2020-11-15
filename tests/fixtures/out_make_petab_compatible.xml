@@ -1,0 +1,7 @@
+<!-- Created by. -->
+<_cell__A>
+<_cell__B_X_Yp_Z_1__C_D_1_>
+    <species id="_cell__CCND" compartment="cell" initialConcentration="1" name="_cell__CCND"/>
+    <species id="_cell__CCNE" compartment="cell" initialConcentration="1" name="_cell__CCNE"/>
+    <ci> _cell__CCND </ci>
+    <ci> _cell__CCNE </ci>

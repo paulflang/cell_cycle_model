@@ -1,0 +1,7 @@
+<!-- Created by. -->
+<@cell::A()>
+<@cell::B(X,Y~p,Z!1).C(D!1)>
+    <species id="S1" compartment="cell" initialConcentration="1" name="_cell__CCND"/>
+    <species id="S10" compartment="cell" initialConcentration="1" name="_cell__CCNE"/>
+    <ci> S1 </ci>
+    <ci> S10 </ci>
