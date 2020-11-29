@@ -20,10 +20,14 @@ docs/Makefile
 .pytest_cache/
 
 # Helper and run files
+amici_models
 run_flake8.sh
 venv/
+.vscode
 */.vscode/
 versions/v3.0.0/cell_cycle_v3.0.0.txt
 versions/v3.0.0/dict.txt
 versions/v3.0.0/modify_bngl.py
 versions/v3.0.0/make_peatab_compatible.py
+versions/v*/results
+versions/.metadata/
