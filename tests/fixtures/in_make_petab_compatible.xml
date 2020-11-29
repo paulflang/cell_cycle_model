@@ -1,4 +1,5 @@
 <!-- Created by. -->
+<model id="something_v0.1.2">
 <@cell::A()>
 <@cell::B(X,Y~p,Z!1).C(D!1)>
     <species id="S1" compartment="cell" initialConcentration="1" name="_cell__CCND"/>

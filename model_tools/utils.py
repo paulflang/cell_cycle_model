@@ -72,6 +72,7 @@ def make_petab_compatible(path_in, path_out):
         text = file.read()
 
     text = re.sub('[^<]'+'!', lambda matchobj: matchobj.group(0)[0]+'_', text)
+    text = re.sub('<model id="[a-zA-Z_0-9.]+">', lambda matchobj: re.sub('v[0-9].[0-9].[0-9]', lambda matchobj: matchobj.group(0).replace('.', '_'), matchobj.group(0)), text)
     text = text.replace('()', '').replace('@', '_').replace('::', '__')\
             .replace(').', ')_').replace('(', '_').replace(')', '_')\
             .replace(',', '_').replace('~', '')
