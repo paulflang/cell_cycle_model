@@ -57,8 +57,8 @@ begin parameters
 	kPhGw 0.00693000693/6.022e23
 	kDpGw1 0.0017325017325
 	kDpGw2 0.0693000693/6.022e23
-	kWee1 6.93000693e-05
-	kWee2 0.00693000693
+	kWee1 6.93000693e-05/6.022e23
+	kWee2 0.00693000693/6.022e23
 	kPhWeeA 0.000693000693/6.022e23
 	kPhWeeB 0.00693000693/6.022e23
 	kDpWee 0.0693000693/6.022e23
@@ -178,16 +178,6 @@ begin seed species
 	@cell:E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1) (1.55209759e-05*6.022e23)  #E2fProFox
 	@cell:iWEE() (0*6.022e23)  #iWee
 end seed species
-begin observables
-    Species Ce_compartment @cell:CCNE() #Ce
-    Species Wee_compartment @cell:WEE1(Ser123~u) #Wee
-    Species pWee_compartment @cell:WEE1(Ser123~p) #pWee
-	Species iWee_compartment @cell:iWEE() #iWee
-end observables
-begin functions
-	functionRate01() = (if(Wee_compartment>0, kWee2 * 0.5 * (Wee_compartment -iWee_compartment -jiWee + ((-Wee_compartment + iWee_compartment + jiWee)^2 + 4 * jiWee * Wee_compartment)^(1 / 2))/Wee_compartment,0)) / (6.022e23)
-	functionRate02() = (if(pWee_compartment>0, kWee1 * 0.5 * (pWee_compartment -iWee_compartment -jiWee + ((-pWee_compartment + iWee_compartment + jiWee)^2 + 4 * jiWee * pWee_compartment)^(1 / 2))/pWee_compartment,0)) / (6.022e23)
-end functions
 begin reaction rules
     SyE2f1: 0  -> @cell:E2F(DBD,RB1,Ser332~u) kSyE2f1
 	AspFoxPcb: @cell:FOXM1(DBD,Thr600~p) + CCNB_promoter(FOXM1) <-> @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) kAsFPcb,kDiFPcb
@@ -256,8 +246,8 @@ begin reaction rules
 	SyCdc20_1: 0  -> @cell:CDC20(APC) kSyCdc_1
 	SyCdc20_2: @cell:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) -> @cell:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) + @cell:CDC20(APC) kSyCdc_2
 	AspFoxPcdc: @cell:FOXM1(DBD,Thr600~p) + @cell:CDC20_promoter(FOXM1) <-> @cell:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) kAsFPcdc, kDiFPcdc
-	PhCbByWee: @cell:CCNB(CDK1_Thr14_Tyr15~u) + @cell:WEE1(Ser123~u) -> @cell:WEE1(Ser123~u) + @cell:CCNB(CDK1_Thr14_Tyr15~p) functionRate01() #Modifiers(iWee)
-	PhCbBypWee: @cell:CCNB(CDK1_Thr14_Tyr15~u) + @cell:WEE1(Ser123~p) -> @cell:WEE1(Ser123~p) + @cell:CCNB(CDK1_Thr14_Tyr15~p) functionRate02() #Modifiers(iWee)
+	PhCbByWee: @cell:CCNB(CDK1_Thr14_Tyr15~u) + @cell:WEE1(Ser123~u) -> @cell:WEE1(Ser123~u) + @cell:CCNB(CDK1_Thr14_Tyr15~p) kWee2 # functionRate01() #Modifiers(iWee)
+	PhCbBypWee: @cell:CCNB(CDK1_Thr14_Tyr15~u) + @cell:WEE1(Ser123~p) -> @cell:WEE1(Ser123~p) + @cell:CCNB(CDK1_Thr14_Tyr15~p) kWee1 # functionRate02() #Modifiers(iWee)
 	DppCbBypCdc25: @cell:CCNB(CDK1_Thr14_Tyr15~p) + @cell:CDC25(pSites~p) -> @cell:CDC25(pSites~p) + @cell:CCNB(CDK1_Thr14_Tyr15~u) kCdc25_2
 	DppCbByCdc25: @cell:CCNB(CDK1_Thr14_Tyr15~p) + @cell:CDC25(pSites~u) -> @cell:CDC25(pSites~u) + @cell:CCNB(CDK1_Thr14_Tyr15~u) kCdc25_1
 	PhCdc25ByCb: @cell:CDC25(pSites~u) + @cell:CCNB(CDK1_Thr14_Tyr15~u) -> @cell:CCNB(CDK1_Thr14_Tyr15~u) + @cell:CDC25(pSites~p) kPhC25B
