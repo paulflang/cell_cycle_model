@@ -1,0 +1,37 @@
+# Unified model for Greatwall pathway controlled SAC signalling
+init CycB=1.012, GwlP=0.793, ENSAPt=1.423, Mps1P=0.908init Mad2at=0.968, MCCt=0.677, MCCAPC=0.0287, Cdc20T=0.712, uKT=0
+# ODEs for the Greatwall pathway and SAC signalling
+CycB' = kscyc' + kscyc*Cdk1 -(kdcyc' + kdcyc*Psome*Cdc20)*CycB
+GwlP' = kagw*Cdk1*(GwlT -GwlP) -(kigw' + kigw*B55)*GwlP
+ENSAPt' = kaensa*GwlP*(ENSAT -ENSAPt) -kiensa*ENSAB55 -kiensa'*(ENSAPt -ENSAB55)
+Mps1P' = kamps1*Cdk1*(Mps1T-Mps1P)-kimps1*(B55+PP)*Mps1P
+# Mad2at represents free and MCC incorporated Mad2a
+Mad2at' = kamad*Mps1P*uKT*Mad2i -kimad*Psome*MCCAPC
+# MCCt represent free and APC/C-Cdc20 bound MCC
+MCCt' = kasmcc*Mad2a*Cdc20f -(kdimcc + kdcdc20)*MCCt -kimad*Psome*MCCAPC
+MCCAPC' =  kasapc*MCC*Cdc20 -(kdiapc + kdimcc + 2*kdcdc20 + kimad*Psome)*MCCAPC
+Cdc20T' = kscdc20 -kdcdc20*Cdc20T -kimad*Psome*MCCAPC
+uKT' = kauKT*(1 -uKT) -kiuKT*uKT
+# Calculation of pENSA:B55 complex in pseudo-steady state
+BB = ENSAPt + B55T + (kdi55ensa + kiensa)/kas55ensa
+ENSAB55 = 2*ENSAPt*B55T/(BB + sqrt(BB^2 -4*ENSAPt*B55T))
+B55 = B55T -ENSAB55
+# Calculation of other forms in the network
+Mad2i = Mad2T -Mad2at
+Mad2a= Mad2at -MCCt
+MCC = MCCt -MCCAPC
+Cdk1 = (CycB + eps)/(1 + flavo)
+Cdc20f = Cdc20T -MCCt -MCCAPC
+Cdc20 = Cdc20f/(1 + alpha*Cdk1)
+# Calculation of auxiliary variables
+aux relENSA = ENSAPt*delta
+aux KTMps1P = Mps1P*uKT
+aux B55 = B55T -ENSAB55
+# Values of kinetic parameters
+p kscyc'=0.0005, kscyc=0.0045, kdcyc'=0.005, kdcyc=0.7, Psome=1, eps=0.01p GwlT=1, kagw=8, kigw'=2, kigw=2p ENSAT=2, kaensa=0.7, kiensa=0.25, kiensa'=0.175
+p Mps1T=1, B55T=1, kas55ensa=10, kdi55ensa=0.01,p kamps1=0.5, kimps1=0.5, PP=0.05p Mad2T=1, kamad=1, kimad=1p kasmcc=100, kdimcc=0.1, kasapc=100, kdiapc=0.1
+p kscdc20=0.1, kdcdc20=0.1, kauKT=0, kiuKT=0
+p delta=0.5, alpha=8, flavo=0
+@ total=70,dt=1@ meth=STIFF,xlo=0,xhi=70,ylo=0,yhi=1.05
+@ xp=time,nplot=7,yp=CycB,yp2=GwlP,yp3=relENSA,yp4=Mps1P,yp5=MCCt,yp6=KTMps1P,yp7=B55
+done
