@@ -31,3 +31,18 @@ versions/v3.0.0/modify_bngl.py
 versions/v3.0.0/make_peatab_compatible.py
 versions/v*/results
 versions/.metadata/
+
+# Recycle bin
+sim2opt.csv.xlsx
+versions/0015_objectivePrior/
+versions/bngl_tests/results/test_compartment_topology/
+versions/bngl_tests/test_compartment_synthesis.bngl
+versions/bngl_tests/test_compartment_topology.bngl
+versions/v3.0.0/PEtab/cell_cycle_v3.0.0_sbml_inh.xml
+versions/v3.0.0/PEtab/cell_cycle_v3.0.0_sbml_old.xml
+versions/v3.0.0/PEtab/parameters_v3.0.0_old (2).tsv
+versions/v3.0.0/cell_cycle_v3.0.0_inh.bngl
+versions/v3.0.0/cell_cycle_v3.0.0_sbml.xml
+versions/v3.0.0/launch_pypesto.py
+versions/v3.0.0/launch_pypesto1.py
+versions/v3.0.0/launch_refitting.m
