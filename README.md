@@ -12,6 +12,10 @@ Models are of different degree of complexity. They typicall include `BNGL` and `
 
 * v2.1.4: basic cell cycle model in SBML format.
 * v3.0.0: same as v2.1.4 in BNGL and auto-generated SBML format.
+* v3.0.1: added refinements to reaction rules of v3.0.0.
+* v3.1.0: added DNA damage checkpoint (SKP2 and TP53 and CDKN1A).
+* v3.2.0: added CDKN1B.
+* v4.0.0: added compartments.
 
 ## Installation
 
