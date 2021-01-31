@@ -46,3 +46,6 @@ versions/v3.0.0/cell_cycle_v3.0.0_sbml.xml
 versions/v3.0.0/launch_pypesto.py
 versions/v3.0.0/launch_pypesto1.py
 versions/v3.0.0/launch_refitting.m
+
+# Other
+versions/bngl_tests/confirmation_presentation.bngl
