@@ -1,0 +1,7 @@
+observableId	simulationConditionId	measurement	time
+obs_cell__E2F_DBD_RB1_Ser332u_	wt	1.11E+22	0
+obs_cell__E2F_DBD_RB1_Ser332u_	wt	1.17E+22	50
+obs_cell__E2F_DBD_RB1_Ser332u_	wt	1.22E+22	100
+obs_cell__E2F_DBD_RB1_Ser332p_	wt	2.29E+19	0
+obs_cell__E2F_DBD_RB1_Ser332p_	wt	6.25E+19	50
+obs_cell__E2F_DBD_RB1_Ser332p_	wt	1.02E+20	100

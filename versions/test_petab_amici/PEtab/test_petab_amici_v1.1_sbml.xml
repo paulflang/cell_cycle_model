@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by BioNetGen 2.3.1  -->
+<sbml xmlns="http://www.sbml.org/sbml/level2/version3" level="2" version="3">
+  <model id="test_petab_amici_v1_1">
+    <listOfCompartments>
+      <compartment id="cell" spatialDimensions="3" size="1"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="_cell__A_B_" compartment="cell" initialConcentration="6.022e+023" name="_cell__A_B_"/>
+      <species id="_cell__B_A_" compartment="cell" initialConcentration="6.022e+023" name="_cell__B_A_"/>
+      <species id="_cell__C" compartment="cell" initialConcentration="6.022e+023" name="_cell__C"/>
+      <species id="_cell__A_B_1__B_A_1_" compartment="cell" initialConcentration="0" name="_cell__A_B_1__B_A_1_"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <!-- Independent variables -->
+      <parameter id="kAs" value="1.6605779e-024"/>
+      <parameter id="kDi" value="1.6605779e-024"/>
+      <parameter id="_InitialConc1" value="6.022e+023"/>
+      <parameter id="_InitialConc2" value="6.022e+023"/>
+      <parameter id="_InitialConc3" value="6.022e+023"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction id="R1" reversible="false">
+        <listOfReactants>
+          <speciesReference species="_cell__A_B_"/>
+          <speciesReference species="_cell__B_A_"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="_cell__A_B_1__B_A_1_"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kAs </ci>
+              <ci> _cell__A_B_ </ci>
+              <ci> _cell__B_A_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R2" reversible="false">
+        <listOfReactants>
+          <speciesReference species="_cell__C"/>
+          <speciesReference species="_cell__A_B_1__B_A_1_"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="_cell__A_B_"/>
+          <speciesReference species="_cell__B_A_"/>
+          <speciesReference species="_cell__C"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDi </ci>
+              <ci> _cell__C </ci>
+              <ci> _cell__A_B_1__B_A_1_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>
