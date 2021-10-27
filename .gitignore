@@ -31,6 +31,8 @@ versions/v3.0.0/modify_bngl.py
 versions/v3.0.0/make_peatab_compatible.py
 versions/v*/results
 versions/.metadata/
+versions/test_petab_amici/make_peatab_compatible.py
+versions/test_petab_amici/launch_pypesto.py
 
 # Recycle bin
 sim2opt.csv.xlsx
