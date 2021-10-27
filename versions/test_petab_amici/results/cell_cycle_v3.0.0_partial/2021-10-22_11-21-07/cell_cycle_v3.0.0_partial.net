@@ -1,0 +1,210 @@
+# Created by BioNetGen 2.3.1
+begin parameters
+    1 kPhRbD          0.005544005544/6.022e23  # Constant
+    2 kPhRbE          0.00693000693/6.022e23  # Constant
+    3 kDpRb           0.001386001386  # Constant
+    4 kPhRb           0.02079002079/6.022e23  # Constant
+    5 kSyCe1          1.386001386e-05*6.022e23  # Constant
+    6 kSyCe2          4.158004158  # Constant
+    7 kDeCe           0.0001386001386  # Constant
+    8 kDiE2fRb        0.0003465003465  # Constant
+    9 kAsE2fRb        0.3465003465/6.022e23  # Constant
+   10 kSyE2f1         6.93000693e-06*6.022e23  # Constant
+   11 kSyE2f2         0.693000693  # Constant
+   12 kDeE2f1         6.93000693e-05  # Constant
+   13 kDeE2f2         0.001386001386  # Constant
+   14 kPhE2f          0.001386001386/6.022e23  # Constant
+   15 kDpE2f2         0.0693000693/6.022e23  # Constant
+   16 kSyEmi1         3.465003465e-05*6.022e23  # Constant
+   17 kSyEmi2         3.465003465  # Constant
+   18 kDeEmi1         0.0003465003465  # Constant
+   19 kDeEmi2         0.0003465003465  # Constant
+   20 kDeEmi3         0.003465003465  # Constant
+   21 kPhEmiA         3.465003465e-05/6.022e23  # Constant
+   22 kPhEmiB         0.00017325017325/6.022e23  # Constant
+   23 kDpEmi          3.465003465e-06  # Constant
+   24 kSyCa1          6.93000693e-06*6.022e23  # Constant
+   25 kSyCa2          0.5197505197  # Constant
+   26 kDeCa1          6.93000693e-06  # Constant
+   27 kDeCa2          0.002772002772/6.022e23  # Constant
+   28 kDeCa3          0.000693000693/6.022e23  # Constant
+   29 kDpCdh          0.003465003465  # Constant
+   30 kPhCdhA         0.01732501732/6.022e23  # Constant
+   31 kPhCdhE         0.000693000693/6.022e23  # Constant
+   32 kPhCdhB         0.1732501733/6.022e23  # Constant
+   33 kDiACE          0.0003465003465  # Constant
+   34 kAsACE          0.3465003465/6.022e23  # Constant
+   35 kDiACdh         0.0003465003465  # Constant
+   36 kAsACdh         0.3465003465/6.022e23  # Constant
+   37 kPhCeA          0.00693000693/6.022e23  # Constant
+   38 kPhCeE          6.93000693e-05/6.022e23  # Constant
+   39 kPhFoxE         0.000693000693/6.022e23  # Constant
+   40 kPhFoxA         0.000693000693/6.022e23  # Constant
+   41 kPhFoxB         0.003465003465/6.022e23  # Constant
+   42 kDpFox          3.465003465e-05  # Constant
+   43 kSyCb1          6.93000693e-06*6.022e23  # Constant
+   44 kSyCb2          0.5197505197  # Constant
+   45 kDeCb1          6.93000693e-06  # Constant
+   46 kDeCb2          0.00086625086625/6.022e23  # Constant
+   47 kDeCb3          0.00086625086625/6.022e23  # Constant
+   48 kPhEnsa         0.000693000693/6.022e23  # Constant
+   49 kDpEnsa         0.0003465003465  # Constant
+   50 kPhGw           0.00693000693/6.022e23  # Constant
+   51 kDpGw1          0.0017325017325  # Constant
+   52 kDpGw2          0.0693000693/6.022e23  # Constant
+   53 kWee1           6.93000693e-05/6.022e23  # Constant
+   54 kWee2           0.00693000693/6.022e23  # Constant
+   55 kPhWeeA         0.000693000693/6.022e23  # Constant
+   56 kPhWeeB         0.00693000693/6.022e23  # Constant
+   57 kDpWee          0.0693000693/6.022e23  # Constant
+   58 kCdc25_1        0.000693000693/6.022e23  # Constant
+   59 kCdc25_2        0.00693000693/6.022e23  # Constant
+   60 kDpCdc25        0.0693000693/6.022e23  # Constant
+   61 kDipEB55        4.7124047124e-05  # Constant
+   62 kAspEB55        0.39501039501/6.022e23  # Constant
+   63 kSyCdc_1        6.93000693e-06*6.022e23  # Constant
+   64 kSyCdc_2        0.693000693  # Constant
+   65 kDeCdc_1        2.772002772e-05  # Constant
+   66 kDeCdc_2        0.0002772002772/6.022e23  # Constant
+   67 kDipACdc        0.00086625086625  # Constant
+   68 kAspACdc        0.00693000693/6.022e23  # Constant
+   69 kPhApcA         6.93000693e-05/6.022e23  # Constant
+   70 kPhApcB         6.93000693e-05  # Constant
+   71 kDpApc          0.03465003465/6.022e23  # Constant
+   72 kSyFox1         6.93000693e-06*6.022e23  # Constant
+   73 kSyFox2         0.5197505197  # Constant
+   74 kDeFox1         6.93000693e-06  # Constant
+   75 kDeFox2         0.003465003465/6.022e23  # Constant
+   76 kAsEPx          0.3465003465/6.022e23  # Constant
+   77 kDiEPx          0.03465003465  # Constant
+   78 kAsFPcb         0.3465003465/6.022e23  # Constant
+   79 kDiFPcb         0.0693000693  # Constant
+   80 kAsFPcdc        0.3465003465/6.022e23  # Constant
+   81 kDiFPcdc        0.17325017325  # Constant
+   82 kPhC25B         0.00693000693/6.022e23  # Constant
+   83 kPhCAEE         0.00055440055/6.022e23  # Constant
+   84 kPhCAEA         0.01386001385/6.022e23  # Constant
+   85 kPhCAEB         0.13860013864/6.022e23  # Constant
+   86 ikSyCb          1.0  # Constant
+   87 jiWee           0.1*6.022e23  # Constant
+   88 _InitialConc1   1.0*6.022e23  # Constant
+   89 _InitialConc2   0.232249137*6.022e23  # Constant
+   90 _InitialConc3   0.0184790235*6.022e23  # Constant
+   91 _InitialConc4   3.8081857e-05*6.022e23  # Constant
+   92 _InitialConc5   0.00702849494*6.022e23  # Constant
+   93 _InitialConc6   0.00188236293*6.022e23  # Constant
+   94 _InitialConc7   0.0714613324*6.022e23  # Constant
+   95 _InitialConc8   0.000150538592*6.022e23  # Constant
+   96 _InitialConc9   0.0876426874*6.022e23  # Constant
+   97 _InitialConc10  0.840745442*6.022e23  # Constant
+   98 _InitialConc11  0.0771916254*6.022e23  # Constant
+   99 _InitialConc12  4.02871328*6.022e23  # Constant
+  100 _InitialConc13  0.229952789*6.022e23  # Constant
+  101 _InitialConc14  0.0698900785*6.022e23  # Constant
+  102 _InitialConc15  0.0630910652*6.022e23  # Constant
+  103 _InitialConc16  0.713544185*6.022e23  # Constant
+  104 _InitialConc17  0.000571340946*6.022e23  # Constant
+  105 _InitialConc18  0.16112308*6.022e23  # Constant
+  106 _InitialConc19  0.108941313*6.022e23  # Constant
+  107 _InitialConc20  0.000717816142*6.022e23  # Constant
+  108 _InitialConc21  0.00221254711*6.022e23  # Constant
+  109 _InitialConc22  0.0136075334*6.022e23  # Constant
+  110 _InitialConc23  1.88049366e-05*6.022e23  # Constant
+  111 _InitialConc24  0.0055647336*6.022e23  # Constant
+  112 _InitialConc25  0.00038111617*6.022e23  # Constant
+  113 _InitialConc26  1.90325916e-07*6.022e23  # Constant
+  114 _InitialConc27  9.98096741e-05*6.022e23  # Constant
+  115 _InitialConc28  9.99238147e-05*6.022e23  # Constant
+  116 _InitialConc29  7.61853468e-08*6.022e23  # Constant
+  117 _InitialConc30  0.980441633*6.022e23  # Constant
+  118 _InitialConc31  0.00751291485*6.022e23  # Constant
+  119 _InitialConc32  0.019558367*6.022e23  # Constant
+  120 _InitialConc33  0.0184380668*6.022e23  # Constant
+  121 _InitialConc34  0.981561933*6.022e23  # Constant
+  122 _InitialConc35  0.997525705*6.022e23  # Constant
+  123 _InitialConc36  0.00247429497*6.022e23  # Constant
+  124 _InitialConc37  0.826863064*6.022e23  # Constant
+  125 _InitialConc38  0.000328561161*6.022e23  # Constant
+  126 _InitialConc39  0.172808375*6.022e23  # Constant
+  127 _InitialConc40  8.44790241e-05*6.022e23  # Constant
+  128 _InitialConc41  8.44790241e-05*6.022e23  # Constant
+  129 _InitialConc42  8.44790241e-05*6.022e23  # Constant
+  130 _InitialConc43  8.44790241e-05*6.022e23  # Constant
+  131 _InitialConc44  8.44790241e-05*6.022e23  # Constant
+  132 _InitialConc45  1.55209759e-05*6.022e23  # Constant
+  133 _InitialConc46  1.55209759e-05*6.022e23  # Constant
+  134 _InitialConc47  1.55209759e-05*6.022e23  # Constant
+  135 _InitialConc48  1.55209759e-05*6.022e23  # Constant
+  136 _InitialConc49  1.55209759e-05*6.022e23  # Constant
+  137 _InitialConc50  0*6.022e23  # Constant
+end parameters
+begin species
+    1 @cell::CCND() _InitialConc1
+    2 @cell::CCNE() _InitialConc2
+    3 @cell::E2F(DBD,RB1,Ser332~u) _InitialConc3
+    4 @cell::E2F(DBD,RB1,Ser332~p) _InitialConc4
+    5 @cell::CCNA() _InitialConc5
+    6 @cell::CCNB(CDK1_Thr14_Tyr15~u) _InitialConc6
+    7 @cell::E2F(DBD,RB1!1,Ser332~u).RB1(E2F!1,Ser807_Ser811~u) _InitialConc7
+    8 @cell::E2F(DBD,RB1!1,Ser332~p).RB1(E2F!1,Ser807_Ser811~u) _InitialConc8
+    9 @cell::RB1(E2F,Ser807_Ser811~u) _InitialConc9
+   10 @cell::RB1(E2F,Ser807_Ser811~p) _InitialConc10
+   11 @cell::PPP2R2B(ENSA_ARPP19) _InitialConc11
+   12 @cell::APC(FBXO5,FZR1_CDC20,Ser355~u) _InitialConc12
+   13 @cell::CDC20(APC) _InitialConc13
+   14 @cell::APC(FBXO5,FZR1_CDC20!1,Ser355~p).CDC20(APC!1) _InitialConc14
+   15 @cell::APC(FBXO5,FZR1_CDC20,Ser355~p) _InitialConc15
+   16 @cell::APC(FBXO5,FZR1_CDC20!1,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u) _InitialConc16
+   17 @cell::FZR1(APC,FBXO5,nTerm~u) _InitialConc17
+   18 @cell::FZR1(APC,FBXO5,nTerm~p) _InitialConc18
+   19 @cell::APC(FBXO5!1,FZR1_CDC20!2,Ser355~u).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u) _InitialConc19
+   20 @cell::FBXO5(APC,FZR1,Ser182~u) _InitialConc20
+   21 @cell::APC(FBXO5!1,FZR1_CDC20!2,Ser355~p).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u) _InitialConc21
+   22 @cell::APC(FBXO5,FZR1_CDC20!1,Ser355~p).FZR1(APC!1,FBXO5,nTerm~u) _InitialConc22
+   23 @cell::FBXO5(APC,FZR1,Ser182~p) _InitialConc23
+   24 @cell::FOXM1(DBD,Thr600~u) _InitialConc24
+   25 @cell::FOXM1(DBD,Thr600~p) _InitialConc25
+   26 @cell::CCNB_promoter(FOXM1!1).FOXM1(DBD!1,Thr600~p) _InitialConc26
+   27 @cell::CCNB_promoter(FOXM1) _InitialConc27
+   28 @cell::CDC20_promoter(FOXM1) _InitialConc28
+   29 @cell::CDC20_promoter(FOXM1!1).FOXM1(DBD!1,Thr600~p) _InitialConc29
+   30 @cell::WEE1(Ser123~u) _InitialConc30
+   31 @cell::CCNB(CDK1_Thr14_Tyr15~p) _InitialConc31
+   32 @cell::WEE1(Ser123~p) _InitialConc32
+   33 @cell::CDC25(pSites~p) _InitialConc33
+   34 @cell::CDC25(pSites~u) _InitialConc34
+   35 @cell::MASTL(Thr198~u) _InitialConc35
+   36 @cell::MASTL(Thr198~p) _InitialConc36
+   37 @cell::ENSA_ARPP19(PPP2R2B,Ser62_Ser67~u) _InitialConc37
+   38 @cell::ENSA_ARPP19(PPP2R2B,Ser62_Ser67~p) _InitialConc38
+   39 @cell::ENSA_ARPP19(PPP2R2B!1,Ser62_Ser67~p).PPP2R2B(ENSA_ARPP19!1) _InitialConc39
+   40 @cell::CCNE_promoter(E2F) _InitialConc40
+   41 @cell::CCNA_promoter(E2F) _InitialConc41
+   42 @cell::E2F_promoter(E2F) _InitialConc42
+   43 @cell::FBXO5_promoter(E2F) _InitialConc43
+   44 @cell::FOXM1_promoter(E2F) _InitialConc44
+   45 @cell::CCNE_promoter(E2F!1).E2F(DBD!1,RB1,Ser332~u) _InitialConc45
+   46 @cell::CCNA_promoter(E2F!1).E2F(DBD!1,RB1,Ser332~u) _InitialConc46
+   47 @cell::E2F(DBD!1,RB1,Ser332~u).E2F_promoter(E2F!1) _InitialConc47
+   48 @cell::E2F(DBD!1,RB1,Ser332~u).FBXO5_promoter(E2F!1) _InitialConc48
+   49 @cell::E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1) _InitialConc49
+   50 @cell::iWEE() _InitialConc50
+end species
+begin reactions
+    1 0 3 1*kSyE2f1 #SyE2f1 unit_conversion=1
+    2 25,27 26 1*kAsFPcb #AspFoxPcb unit_conversion=1/1
+    3 26 25,27 kDiFPcb #_reverse_AspFoxPcb
+    4 47 3,47 kSyE2f2 #SyE2f2
+    5 3 0 kDeE2f1 #DeE2f1
+    6 4 0 kDeE2f1 #DeE2f1
+    7 7 9 kDeE2f1 #DeE2f1
+    8 8 9 kDeE2f1 #DeE2f1
+    9 1,7 1,3,10 1*kPhRbD #PhRbE2fByCd unit_conversion=1/1
+   10 1,8 1,4,10 1*kPhRbD #PhRbE2fByCd unit_conversion=1/1
+   11 2,7 2,3,10 1*kPhRbE #PhRbE2fByCe unit_conversion=1/1
+   12 2,8 2,4,10 1*kPhRbE #PhRbE2fByCe unit_conversion=1/1
+   13 5,7 3,5,10 1*kPhRb #PhRbE2fByCa unit_conversion=1/1
+   14 5,8 4,5,10 1*kPhRb #PhRbE2fByCa unit_conversion=1/1
+   15 6,7 3,6,10 1*kPhRb #PhRbE2fByCb unit_conversion=1/1
+   16 6,8 4,6,10 1*kPhRb #PhRbE2fByCb unit_conversion=1/1
+end reactions

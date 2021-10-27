@@ -1,0 +1,32 @@
+###
+#@creatorEmail:'paul.lang@wolfson.ox.ac.uk'
+#@creatorName:'Lang Paul'
+#@notes:'This is a manual translation of an SBML model created on 08/06/2020.
+###
+begin model
+begin parameters
+	kAs 1/6.022e23
+	kDi 1
+end parameters
+begin compartments
+	#volume units: L
+	cell 3 1
+end compartments
+begin molecule types
+	A(B)
+	B(A)
+end molecule types
+begin seed species
+	@cell:A(B) (1.0*6.022e23)  #Cd
+	@cell:B(A) (1.0*6.022e23)  #Ce
+end seed species
+begin reaction rules
+    AsAB: @cell:A(B) + @cell:B(A) -> @cell:A(B!1).B(A!1) kAs
+    DiAB: @cell:A(B!1).B(A!1) -> @cell:A(B) + @cell:B(A) kDi
+end reaction rules
+end model
+
+generate_network({overwrite=>1})
+writeSBML()
+simulate({method=>"ode",t_end=>1e1,n_steps=>1e3,atol=>1e-8,rtol=>1e-8})
+#simulate({method=>"ssa",t_end=>100,n_steps=>4e2})

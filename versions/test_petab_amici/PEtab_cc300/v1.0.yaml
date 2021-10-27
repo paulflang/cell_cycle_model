@@ -1,0 +1,11 @@
+format_version: 1
+parameter_file: parameters_v1.0.tsv
+problems:
+- condition_files:
+  - experimentalCondition_v1.0.tsv
+  measurement_files:
+  - measurementData_v1.0.tsv
+  observable_files:
+  - observables_v1.0.tsv
+  sbml_files:
+  - cell_cycle_v3.0.0_partial_fails.xml

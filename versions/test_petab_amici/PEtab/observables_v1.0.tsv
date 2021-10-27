@@ -1,0 +1,4 @@
+observableId	observableName	observableFormula	noiseFormula	observableTransformation	noiseDistribution
+obs_cell__A_B_		_cell__A_B_	1	lin	normal
+obs_cell__A_B_1__B_A_1_		_cell__A_B_1__B_A_1_	1	lin	normal
+obs_cell__B_A_		_cell__B_A_	1	lin	normal

@@ -1,0 +1,3 @@
+observableId	observableName	observableFormula	noiseFormula	observableTransformation	noiseDistribution
+obs_cell__E2F_DBD_RB1_Ser332u_		_cell__E2F_DBD_RB1_Ser332u_	1	lin	normal
+obs_cell__E2F_DBD_RB1_Ser332p_		_cell__E2F_DBD_RB1_Ser332p_	1	lin	normal
