@@ -1,1 +1,0 @@
-#define tcl__cell__CCND tcl[0]
