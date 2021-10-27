@@ -111,8 +111,8 @@
       <parameter id="kPhGw" value="1.1507816e-026"/>
       <parameter id="kDpGw1" value="0.0017325017"/>
       <parameter id="kDpGw2" value="1.1507816e-025"/>
-      <parameter id="kWee1" value="6.9300069e-005"/>
-      <parameter id="kWee2" value="0.0069300069"/>
+      <parameter id="kWee1" value="1.1507816e-028"/>
+      <parameter id="kWee2" value="1.1507816e-026"/>
       <parameter id="kPhWeeA" value="1.1507816e-027"/>
       <parameter id="kPhWeeB" value="1.1507816e-026"/>
       <parameter id="kDpWee" value="1.1507816e-025"/>
@@ -205,9 +205,6 @@
       <parameter id="Wee_compartment" constant="false"/>
       <parameter id="pWee_compartment" constant="false"/>
       <parameter id="iWee_compartment" constant="false"/>
-      <!-- Global functions -->
-      <parameter id="functionRate01" constant="false"/>
-      <parameter id="functionRate02" constant="false"/>
     </listOfParameters>
     <listOfInitialAssignments>
       <!-- Dependent variables -->
@@ -267,167 +264,6 @@
               <ci> _cell__iWEE </ci>
             </apply>
           </math>
-      </assignmentRule>
-      <!-- Global functions -->
-      <assignmentRule variable="functionRate01">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <piecewise>
-              <piece>
-                <apply>
-                  <divide/>
-                  <apply>
-                    <times/>
-                    <apply>
-                      <times/>
-                      <ci> kWee2 </ci>
-                      <cn> 0.5 </cn>
-                    </apply>
-                    <apply>
-                      <plus/>
-                      <apply>
-                        <minus/>
-                        <apply>
-                          <minus/>
-                          <ci> Wee_compartment </ci>
-                          <ci> iWee_compartment </ci>
-                        </apply>
-                        <ci> jiWee </ci>
-                      </apply>
-                      <apply>
-                        <power/>
-                        <apply>
-                          <plus/>
-                          <apply>
-                            <power/>
-                            <apply>
-                              <plus/>
-                              <apply>
-                                <plus/>
-                                <apply>
-                                  <minus/>
-                                  <ci> Wee_compartment </ci>
-                                </apply>
-                                <ci> iWee_compartment </ci>
-                              </apply>
-                              <ci> jiWee </ci>
-                            </apply>
-                            <cn> 2 </cn>
-                          </apply>
-                          <apply>
-                            <times/>
-                            <apply>
-                              <times/>
-                              <cn> 4 </cn>
-                              <ci> jiWee </ci>
-                            </apply>
-                            <ci> Wee_compartment </ci>
-                          </apply>
-                        </apply>
-                        <apply>
-                          <divide/>
-                          <cn> 1 </cn>
-                          <cn> 2 </cn>
-                        </apply>
-                      </apply>
-                    </apply>
-                  </apply>
-                  <ci> Wee_compartment </ci>
-                </apply>
-                <apply>
-                  <gt/>
-                  <ci> Wee_compartment </ci>
-                  <cn> 0 </cn>
-                </apply>
-              </piece>
-              <otherwise>
-                <cn> 0 </cn>
-              </otherwise>
-            </piecewise>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="functionRate02">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <piecewise>
-              <piece>
-                <apply>
-                  <divide/>
-                  <apply>
-                    <times/>
-                    <apply>
-                      <times/>
-                      <ci> kWee1 </ci>
-                      <cn> 0.5 </cn>
-                    </apply>
-                    <apply>
-                      <plus/>
-                      <apply>
-                        <minus/>
-                        <apply>
-                          <minus/>
-                          <ci> pWee_compartment </ci>
-                          <ci> iWee_compartment </ci>
-                        </apply>
-                        <ci> jiWee </ci>
-                      </apply>
-                      <apply>
-                        <power/>
-                        <apply>
-                          <plus/>
-                          <apply>
-                            <power/>
-                            <apply>
-                              <plus/>
-                              <apply>
-                                <plus/>
-                                <apply>
-                                  <minus/>
-                                  <ci> pWee_compartment </ci>
-                                </apply>
-                                <ci> iWee_compartment </ci>
-                              </apply>
-                              <ci> jiWee </ci>
-                            </apply>
-                            <cn> 2 </cn>
-                          </apply>
-                          <apply>
-                            <times/>
-                            <apply>
-                              <times/>
-                              <cn> 4 </cn>
-                              <ci> jiWee </ci>
-                            </apply>
-                            <ci> pWee_compartment </ci>
-                          </apply>
-                        </apply>
-                        <apply>
-                          <divide/>
-                          <cn> 1 </cn>
-                          <cn> 2 </cn>
-                        </apply>
-                      </apply>
-                    </apply>
-                  </apply>
-                  <ci> pWee_compartment </ci>
-                </apply>
-                <apply>
-                  <gt/>
-                  <ci> pWee_compartment </ci>
-                  <cn> 0 </cn>
-                </apply>
-              </piece>
-              <otherwise>
-                <cn> 0 </cn>
-              </otherwise>
-            </piecewise>
-            <cn> 6.022e23 </cn>
-          </apply>
-        </math>
       </assignmentRule>
     </listOfRules>
     <listOfReactions>
@@ -2516,7 +2352,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> functionRate01 </ci>
+              <ci> kWee2 </ci>
               <ci> _cell__CCNB_CDK1_Thr14_Tyr15u_ </ci>
               <ci> _cell__WEE1_Ser123u_ </ci>
             </apply>
@@ -2536,7 +2372,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> functionRate02 </ci>
+              <ci> kWee1 </ci>
               <ci> _cell__CCNB_CDK1_Thr14_Tyr15u_ </ci>
               <ci> _cell__WEE1_Ser123p_ </ci>
             </apply>

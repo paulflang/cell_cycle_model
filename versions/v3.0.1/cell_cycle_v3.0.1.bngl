@@ -1,7 +1,7 @@
 ###
 #@creatorEmail:'paul.lang@wolfson.ox.ac.uk'
 #@creatorName:'Lang Paul'
-#@notes:'This is a manual translation of an SBML model created on 08/06/2020.
+#@notes:'This is a manual translation of an SBML model created on 29/11/2020.
 ###
 begin model
 begin parameters
@@ -46,7 +46,7 @@ begin parameters
 	kPhFoxE 0.000693000693/6.022e23
 	kPhFoxA 0.000693000693/6.022e23
 	kPhFoxB 0.003465003465/6.022e23
-	kDpFox 3.465003465e-05
+	kDpFox 1e-05
 	kSyCb1 6.93000693e-06*6.022e23
 	kSyCb2 0.5197505197
 	kDeCb1 6.93000693e-06
@@ -75,7 +75,8 @@ begin parameters
 	kAspACdc 0.00693000693/6.022e23
 	kPhApcA 6.93000693e-05/6.022e23
 #	kPhApcB 6.93000693e-05 #
-	kDpApc 0.03465003465/6.022e23
+	kDpApc_1 0/6.022e23
+	kDpApc_2 0.03465003465/6.022e23
 	kSyFox1 6.93000693e-06*6.022e23
 	kSyFox2 0.5197505197
 	kDeFox1 6.93000693e-06
@@ -181,30 +182,32 @@ end seed species
 begin reaction rules
     SyE2f1: 0  -> @cell:E2F(DBD,RB1,Ser332~u) kSyE2f1
 	AspFoxPcb: @cell:FOXM1(DBD,Thr600~p) + CCNB_promoter(FOXM1) <-> @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) kAsFPcb,kDiFPcb
-	SyE2f2: @cell:E2F(DBD!1,RB1,Ser332~u).E2F_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1,Ser332~u).E2F_promoter(E2F!1) + @cell:E2F(DBD,RB1,Ser332~u) kSyE2f2 # Todo: delete Ser332~u
-	DeE2f1: @cell:E2F(DBD,RB1!?,Ser332) -> 0  kDeE2f1 DeleteMolecules # Todo: consider if you do not want to delete E2F if bound to DNA
+	SyE2f2: @cell:E2F(DBD!1,RB1).E2F_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1).E2F_promoter(E2F!1) + @cell:E2F(DBD,RB1,Ser332~u) kSyE2f2
+	DeE2f1: @cell:E2F(DBD!?,RB1!?,Ser332) -> 0  kDeE2f1 DeleteMolecules
 	PhRbE2fByCd: @cell:RB1(E2F!1,Ser807_Ser811~u).E2F(DBD,RB1!1,Ser332) + @cell:CCND() -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:E2F(DBD,RB1,Ser332) + @cell:CCND() kPhRbD
 	PhRbE2fByCe: @cell:RB1(E2F!1,Ser807_Ser811~u).E2F(DBD,RB1!1,Ser332) + @cell:CCNE() -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:E2F(DBD,RB1,Ser332) + @cell:CCNE() kPhRbE
 	PhRbE2fByCa: @cell:RB1(E2F!1,Ser807_Ser811~u).E2F(DBD,RB1!1,Ser332) + @cell:CCNA() -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:E2F(DBD,RB1,Ser332) + @cell:CCNA() kPhRb
 	PhRbE2fByCb: @cell:RB1(E2F!1,Ser807_Ser811~u).E2F(DBD,RB1!1,Ser332) + @cell:CCNB(CDK1_Thr14_Tyr15~u) -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:E2F(DBD,RB1,Ser332) + @cell:CCNB(CDK1_Thr14_Tyr15~u) kPhRb
 	PhE2fByCa: @cell:E2F(DBD,RB1!?,Ser332~u) + @cell:CCNA() -> @cell:E2F(DBD,RB1!?,Ser332~p) + @cell:CCNA() kPhE2f
 	PhE2fByCb: @cell:E2F(DBD,RB1!?,Ser332~u) + @cell:CCNB(CDK1_Thr14_Tyr15~u) -> @cell:E2F(DBD,RB1!?,Ser332~p) + @cell:CCNB(CDK1_Thr14_Tyr15~u) kPhE2f
-	DppE2f: @cell:E2F(DBD,RB1!?,Ser332~p) -> @cell:E2F(DBD,RB1!?,Ser332~u) kDpE2f1 # Todo: Allow phospho-E2F bind the promoter
+	DppE2f: @cell:E2F(DBD!?,RB1!?,Ser332~p) -> @cell:E2F(DBD!?,RB1!?,Ser332~u) kDpE2f1
     DppE2fByB55: @cell:E2F(DBD,RB1!?,Ser332~p) + @cell:PPP2R2B(ENSA_ARPP19) -> @cell:E2F(DBD,RB1!?,Ser332~u) + @cell:PPP2R2B(ENSA_ARPP19) kDpE2f2
-    DeE2f2: @cell:E2F(DBD,RB1!?,Ser332~p) -> 0 kDeE2f2 DeleteMolecules # Todo: consider if you do not want to delete E2F if bound to DNA
+    DeE2f2: @cell:E2F(DBD!?,RB1!?,Ser332~p) -> 0 kDeE2f2 DeleteMolecules
 	PhRbByCd: @cell:RB1(E2F,Ser807_Ser811~u) + @cell:CCND() -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:CCND() kPhRbD
 	PhRbByCe: @cell:RB1(E2F,Ser807_Ser811~u) + @cell:CCNE() -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:CCNE() kPhRbE
 	PhRbByCa: @cell:RB1(E2F,Ser807_Ser811~u) + @cell:CCNA() -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:CCNA() kPhRb
 	PhRbByCb: @cell:RB1(E2F,Ser807_Ser811~u) + @cell:CCNB(CDK1_Thr14_Tyr15~u) -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:CCNB(CDK1_Thr14_Tyr15~u) kPhRb
 	SyCe1: 0  -> @cell:CCNE() kSyCe1
-	SyCa2: @cell:E2F(DBD!1,RB1,Ser332~u).CCNA_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1,Ser332~u).CCNA_promoter(E2F!1) + @cell:CCNA() kSyCa2 # Todo: delete Ser332~u
+	SyCa2: @cell:E2F(DBD!1,RB1).CCNA_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1).CCNA_promoter(E2F!1) + @cell:CCNA() kSyCa2
 	DeCe1: @cell:CCNE() -> 0  kDeCe
 	DeCe2: @cell:CCNE() + @cell:CCNE() -> @cell:CCNE() kPhCeE
 	DpRb: @cell:RB1(E2F,Ser807_Ser811~p) -> @cell:RB1(E2F,Ser807_Ser811~u) kDpRb # Todo: change once phospho-Rb:E2F complexes can exist.
-	DppApcCdc20: @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) + @cell:PPP2R2B(ENSA_ARPP19) -> @cell:APC(FZR1_CDC20,FBXO5,Ser355~u) + @cell:CDC20(APC) + @cell:PPP2R2B(ENSA_ARPP19) kDpApc  # Todo: maybe add a baseline dephosphorylation?
+	DppApcCdc20_1: @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) -> @cell:APC(FZR1_CDC20,FBXO5,Ser355~u) + @cell:CDC20(APC) kDpApc_1
+	DppApcCdc20: @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) + @cell:PPP2R2B(ENSA_ARPP19) -> @cell:APC(FZR1_CDC20,FBXO5,Ser355~u) + @cell:CDC20(APC) + @cell:PPP2R2B(ENSA_ARPP19) kDpApc_2
 	PhApcByCa: @cell:APC(FZR1_CDC20!?,FBXO5!?,Ser355~u) + @cell:CCNA() -> @cell:CCNA() + @cell:APC(FZR1_CDC20!?,FBXO5!?,Ser355~p) kPhApcA
 	PhApcByCb: @cell:APC(FZR1_CDC20!?,FBXO5!?,Ser355~u) + @cell:CCNB(CDK1_Thr14_Tyr15~u) -> @cell:CCNB(CDK1_Thr14_Tyr15~u) + @cell:APC(FZR1_CDC20!?,FBXO5!?,Ser355~p) kPhApcA
-	DppApcByB55: @cell:APC(Ser355~p) + @cell:PPP2R2B(ENSA_ARPP19) -> @cell:PPP2R2B(ENSA_ARPP19) + @cell:APC(Ser355~u) kDpApc exclude_reactants(1,CDC20()) # Todo: maybe add a baseline dephosphorylation? 
+	DppApcByB55_1: @cell:APC(Ser355~p) -> @cell:APC(Ser355~u) kDpApc_1 exclude_reactants(1,CDC20())
+	DppApcByB55_2: @cell:APC(Ser355~p) + @cell:PPP2R2B(ENSA_ARPP19) -> @cell:PPP2R2B(ENSA_ARPP19) + @cell:APC(Ser355~u) kDpApc_2 exclude_reactants(1,CDC20()) 
 	PhCdhApcByCa: @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + @cell:CCNA() -> @cell:APC(FZR1_CDC20,FBXO5,Ser355) + @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:CCNA() kPhCdhA
 	PhCAEByCe: @cell:APC(FZR1_CDC20!1,FBXO5!3,Ser355).FZR1(APC!1,FBXO5!2,nTerm~u).FBXO5(APC!3,FZR1!2,Ser182~u) + @cell:CCNE() -> @cell:APC(FZR1_CDC20,FBXO5,Ser355) + @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:FBXO5(APC,FZR1,Ser182~u) + @cell:CCNE() kPhCAEE
 	PhCAEByCa: @cell:APC(FZR1_CDC20!1,FBXO5!3,Ser355).FZR1(APC!1,FBXO5!2,nTerm~u).FBXO5(APC!3,FZR1!2,Ser182~u) + @cell:CCNA() -> @cell:APC(FZR1_CDC20,FBXO5,Ser355) + @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:FBXO5(APC,FZR1,Ser182~u) + @cell:CCNA() kPhCAEA
@@ -230,12 +233,12 @@ begin reaction rules
 	DeCa2: @cell:CCNA() + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeCa2
 	DeCa3: @cell:CCNA() + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) kDeCa3
 	SyFox2: @cell:E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1) + @cell:FOXM1(DBD,Thr600~u) kSyFox2
-	DeFox: @cell:FOXM1(DBD,Thr600) -> 0  kDeFox1 # Todo: decide whether promoter bound Fox shall be degraded, too
+	DeFox: @cell:FOXM1(DBD!?,Thr600) -> 0 kDeFox1
 	DeFoxByApcCdh: @cell:FOXM1(DBD,Thr600) + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeFox2
 	PhFoxByCe: @cell:FOXM1(DBD,Thr600~u) + @cell:CCNE() -> @cell:CCNE() + @cell:FOXM1(DBD,Thr600~p) kPhFoxE
 	PhFoxByCa: @cell:FOXM1(DBD,Thr600~u) + @cell:CCNA() -> @cell:CCNA() + @cell:FOXM1(DBD,Thr600~p) kPhFoxA
 	PhFoxByCb: @cell:FOXM1(DBD,Thr600~u) + @cell:CCNB(CDK1_Thr14_Tyr15~u) -> @cell:CCNB(CDK1_Thr14_Tyr15~u) + @cell:FOXM1(DBD,Thr600~p) kPhFoxB
-	DppFox: @cell:FOXM1(DBD,Thr600~p) -> @cell:FOXM1(DBD,Thr600~u) kDpFox # Todo: make FOXM1 at DNA dephosphorylatable
+	DppFox: @cell:FOXM1(DBD!?,Thr600~p) -> @cell:FOXM1(DBD!?,Thr600~u) kDpFox
 	SyCb1: 0 -> @cell:CCNB(CDK1_Thr14_Tyr15~u) kSyCb1 * ikSyCb
 	SyCb2: @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) -> @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) + @cell:CCNB(CDK1_Thr14_Tyr15~u) kSyCb2 * ikSyCb
 	DeCb: @cell:CCNB(CDK1_Thr14_Tyr15) -> 0  kDeCb1

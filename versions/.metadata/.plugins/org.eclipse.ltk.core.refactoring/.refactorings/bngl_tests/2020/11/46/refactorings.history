@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;bngl_tests/bngl_tests.bngl&apos; to &apos;test_PhApcByCa.bngl&apos;" description="Rename resource &apos;bngl_tests.bngl&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="bngl_tests.bngl" name="test_PhApcByCa.bngl" stamp="1605104759945" updateReferences="true"/>
-</session>

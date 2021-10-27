@@ -1,4 +1,5 @@
 <!-- Created by. -->
+<model id="something_v0_1_2">
 <_cell__A>
 <_cell__B_X_Yp_Z_1__C_D_1_>
     <species id="_cell__CCND" compartment="cell" initialConcentration="1" name="_cell__CCND"/>
