@@ -28,7 +28,7 @@ venv/
 versions/v3.0.0/cell_cycle_v3.0.0.txt
 versions/v3.0.0/dict.txt
 versions/v3.0.0/modify_bngl.py
-versions/v3.0.0/make_peatab_compatible.py
+versions/v3.0.0/make_petab_compatible.py
 versions/v*/results
 versions/.metadata/
 
@@ -46,6 +46,7 @@ versions/v3.0.0/cell_cycle_v3.0.0_sbml.xml
 versions/v3.0.0/launch_pypesto.py
 versions/v3.0.0/launch_pypesto1.py
 versions/v3.0.0/launch_refitting.m
+versions/test_petab_amici/
 
 # Other
 versions/bngl_tests/confirmation_presentation.bngl
