@@ -8,10 +8,12 @@
 #
 import numpy as np
 import os
+import pandas as pd
 import shutil
 import tempfile
 import unittest
 # from unittest.mock import patch
+from pandas._testing import assert_frame_equal
 
 FIXTURES = os.path.join(os.path.dirname(__file__), 'fixtures')
 
@@ -50,3 +52,35 @@ class UtilsTestCase(unittest.TestCase):
 
         make_petab_compatible(tmp_file_in, tmp_file_out)
         self.assertEqual(open(tmp_file_out,'r').read(), open(out_file_gold,'r').read())
+
+
+    def test_get_periods(self):
+        from model_tools import get_periods
+
+        res = np.array([[11,22,33],[1,2,3],[11,22,33],[111,222,333],[11,22,33],[1,2,3]])
+        idx_true = [1, 5]
+        idx = get_periods(res)
+        self.assertTrue(np.array_equal(idx, idx_true))
+
+    def test_get_drift(self):
+        from model_tools import get_drift
+
+        delta_true = np.array([[0,1e-6],[0,0]])
+        res = np.array([[0,1],[1,1+1e-6],[1,2],[1,1]])
+        delta = get_drift(res)
+        print('---------')
+        print(delta_true)
+        print(delta)
+        self.assertTrue(np.array_equal(delta_true, delta_true))
+
+    def test_evaluate_drift(self):
+        from model_tools import evaluate_drift
+
+        index = [0, 1, 2, 'slope', 'intercept', 'rvalue', 'pvalue', 'stderr']
+        columns = ['S1', 'S2']
+        data = np.array([[0.,0.,0.,0.,0.,0.,1.,0.], [0.,0.,0.,0.,0.,0.,1.,0.]]).transpose()
+        df_true = pd.DataFrame(index=index, columns=columns, data=data)
+        print(df_true)
+        df = evaluate_drift(os.path.join(FIXTURES, 'mock.cdat'))
+        print(df)
+        assert_frame_equal(df, df_true)

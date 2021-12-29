@@ -10,8 +10,10 @@
 import amici
 import numpy as np
 import os
+import pandas as pd
 import re
 import sys
+from scipy.stats import linregress
 from tempfile import TemporaryDirectory
 
 
@@ -99,3 +101,35 @@ def make_petab_compatible(path_in, path_out):
 
     with open(path_out, 'w') as file:
         file.write(text)
+
+def get_drift(res):
+    idxs = get_periods(res)
+    delta = res[idxs, :] 
+    delta = (delta - delta[-1, :]) / delta[-1, :]
+    return delta
+
+def get_periods(res, thresh=1e-5):
+    ls = np.sum((res - res[-1, :])**2, axis=1)
+    diffs = np.diff(ls)
+    diffs = [1 if diff > 0 else -1 for diff in diffs] + [1]
+    mins = [False] + [True if diffs[i-1]<0 and diffs[i]>= 0 else False for i in range(1, len(diffs))]
+    idxs = [i for i in range(len(ls)) if ls[i] < thresh and mins[i]]
+    return idxs
+
+def evaluate_drift(cdat_file):
+    res = pd.read_csv(cdat_file, sep='\t')
+    species = res.columns[1:-1]
+    delta = get_drift(np.array(res)[:, 1:-1])
+    df1 = pd.DataFrame(delta, columns=species)
+
+    x = range(len(delta[:, 0]))
+    index = ['slope', 'intercept', 'rvalue', 'pvalue', 'stderr']  # , 'intercept_stderr']
+    df2 = pd.DataFrame(index=index)
+    for i in range(len(delta[0,:])):
+        colname = f'S{i+1}'
+        y = delta[:, i]
+        res = linregress(x,y)
+        df2[colname] = res._asdict().values()
+    df = pd.concat([df1, df2])
+    df.to_csv(cdat_file+'.csv')
+    return df
