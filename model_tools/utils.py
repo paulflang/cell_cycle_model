@@ -108,8 +108,9 @@ def get_drift(res):
     delta = (delta - delta[-1, :]) / delta[-1, :]
     return delta
 
-def get_periods(res, thresh=1e-5):
+def get_periods(res, thresh=1e-2):
     ls = np.sum((res - res[-1, :])**2, axis=1)
+    thresh = thresh * len(ls)
     diffs = np.diff(ls)
     diffs = [1 if diff > 0 else -1 for diff in diffs] + [1]
     mins = [False] + [True if diffs[i-1]<0 and diffs[i]>= 0 else False for i in range(1, len(diffs))]
