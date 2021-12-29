@@ -104,7 +104,7 @@ def make_petab_compatible(path_in, path_out):
 
 def get_drift(res):
     idxs = get_periods(res)
-    delta = res[idxs, :] 
+    delta = res[idxs, :]
     delta = (delta - delta[-1, :]) / delta[-1, :]
     return delta
 
@@ -117,9 +117,10 @@ def get_periods(res, thresh=1e-5):
     return idxs
 
 def evaluate_drift(cdat_file):
-    res = pd.read_csv(cdat_file, sep='\t')
-    species = res.columns[1:-1]
-    delta = get_drift(np.array(res)[:, 1:-1])
+    res = pd.read_csv(cdat_file, sep=r"[#\s]+")
+    res = pd.DataFrame(data=np.array(res)[:, 0:-1], columns=res.columns[1:])
+    species = res.columns[1:]
+    delta = get_drift(np.array(res)[:, 1:])
     df1 = pd.DataFrame(delta, columns=species)
 
     x = range(len(delta[:, 0]))

@@ -68,9 +68,6 @@ class UtilsTestCase(unittest.TestCase):
         delta_true = np.array([[0,1e-6],[0,0]])
         res = np.array([[0,1],[1,1+1e-6],[1,2],[1,1]])
         delta = get_drift(res)
-        print('---------')
-        print(delta_true)
-        print(delta)
         self.assertTrue(np.array_equal(delta_true, delta_true))
 
     def test_evaluate_drift(self):
@@ -80,7 +77,5 @@ class UtilsTestCase(unittest.TestCase):
         columns = ['S1', 'S2']
         data = np.array([[0.,0.,0.,0.,0.,0.,1.,0.], [0.,0.,0.,0.,0.,0.,1.,0.]]).transpose()
         df_true = pd.DataFrame(index=index, columns=columns, data=data)
-        print(df_true)
         df = evaluate_drift(os.path.join(FIXTURES, 'mock.cdat'))
-        print(df)
         assert_frame_equal(df, df_true)
