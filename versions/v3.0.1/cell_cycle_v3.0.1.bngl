@@ -75,7 +75,8 @@ begin parameters
 	kAspACdc 0.00693000693/1
 	kPhApcA 6.93000693e-05/1
 #	kPhApcB 6.93000693e-05 #
-	kDpApc 0.03465003465/1
+	kDpApc_1 0/6.022e23
+	kDpApc_2 0.03465003465/6.022e23
 	kSyFox1 6.93000693e-06*1
 	kSyFox2 0.5197505197
 	kDeFox1 6.93000693e-06
@@ -202,14 +203,16 @@ begin reaction rules
 	PhRbByCa: @cell:RB1(E2F,Ser807_Ser811~u) + @cell:CCNA() -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:CCNA() kPhRb
 	PhRbByCb: @cell:RB1(E2F,Ser807_Ser811~u) + @cell:CCNB(CDK1_Thr14_Tyr15~u) -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:CCNB(CDK1_Thr14_Tyr15~u) kPhRb
 	SyCe1: 0  -> @cell:CCNE() kSyCe1
-	SyCa2: @cell:E2F(DBD!1,RB1).CCNA_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1).CCNA_promoter(E2F!1) + @cell:CCNA() kSyCa2 # Todo: delete Ser332~u
+	SyCa2: @cell:E2F(DBD!1,RB1).CCNA_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1).CCNA_promoter(E2F!1) + @cell:CCNA() kSyCa2
 	DeCe1: @cell:CCNE() -> 0  kDeCe
 	DeCe2: @cell:CCNE() + @cell:CCNE() -> @cell:CCNE() kPhCeE
 	DpRb: @cell:RB1(E2F,Ser807_Ser811~p) -> @cell:RB1(E2F,Ser807_Ser811~u) kDpRb # Todo: change once phospho-Rb:E2F complexes can exist.
-	DppApcCdc20: @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) + @cell:PPP2R2B(ENSA_ARPP19) -> @cell:APC(FZR1_CDC20,FBXO5,Ser355~u) + @cell:CDC20(APC) + @cell:PPP2R2B(ENSA_ARPP19) kDpApc  # Todo: maybe add a baseline dephosphorylation?
+	DppApcCdc20_1: @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) -> @cell:APC(FZR1_CDC20,FBXO5,Ser355~u) + @cell:CDC20(APC) kDpApc_1
+	DppApcCdc20: @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) + @cell:PPP2R2B(ENSA_ARPP19) -> @cell:APC(FZR1_CDC20,FBXO5,Ser355~u) + @cell:CDC20(APC) + @cell:PPP2R2B(ENSA_ARPP19) kDpApc_2
 	PhApcByCa: @cell:APC(FZR1_CDC20!?,FBXO5!?,Ser355~u) + @cell:CCNA() -> @cell:CCNA() + @cell:APC(FZR1_CDC20!?,FBXO5!?,Ser355~p) kPhApcA
 	PhApcByCb: @cell:APC(FZR1_CDC20!?,FBXO5!?,Ser355~u) + @cell:CCNB(CDK1_Thr14_Tyr15~u) -> @cell:CCNB(CDK1_Thr14_Tyr15~u) + @cell:APC(FZR1_CDC20!?,FBXO5!?,Ser355~p) kPhApcA
-	DppApcByB55: @cell:APC(Ser355~p) + @cell:PPP2R2B(ENSA_ARPP19) -> @cell:PPP2R2B(ENSA_ARPP19) + @cell:APC(Ser355~u) kDpApc exclude_reactants(1,CDC20()) # Todo: maybe add a baseline dephosphorylation? 
+	DppApcByB55_1: @cell:APC(Ser355~p) -> @cell:APC(Ser355~u) kDpApc_1 exclude_reactants(1,CDC20())
+	DppApcByB55_2: @cell:APC(Ser355~p) + @cell:PPP2R2B(ENSA_ARPP19) -> @cell:PPP2R2B(ENSA_ARPP19) + @cell:APC(Ser355~u) kDpApc_2 exclude_reactants(1,CDC20())
 	PhCdhApcByCa: @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + @cell:CCNA() -> @cell:APC(FZR1_CDC20,FBXO5,Ser355) + @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:CCNA() kPhCdhA
 	PhCAEByCe: @cell:APC(FZR1_CDC20!1,FBXO5!3,Ser355).FZR1(APC!1,FBXO5!2,nTerm~u).FBXO5(APC!3,FZR1!2,Ser182~u) + @cell:CCNE() -> @cell:APC(FZR1_CDC20,FBXO5,Ser355) + @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:FBXO5(APC,FZR1,Ser182~u) + @cell:CCNE() kPhCAEE
 	PhCAEByCa: @cell:APC(FZR1_CDC20!1,FBXO5!3,Ser355).FZR1(APC!1,FBXO5!2,nTerm~u).FBXO5(APC!3,FZR1!2,Ser182~u) + @cell:CCNA() -> @cell:APC(FZR1_CDC20,FBXO5,Ser355) + @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:FBXO5(APC,FZR1,Ser182~u) + @cell:CCNA() kPhCAEA

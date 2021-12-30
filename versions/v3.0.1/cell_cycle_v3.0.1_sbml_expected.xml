@@ -134,6 +134,7 @@
       <parameter id="kAspACdc" value="0.0069300069"/>
       <parameter id="kPhApcA" value="6.9300069e-005"/>
       <parameter id="kDpApc" value="0.034650035"/>
+      <parameter id="kDpApc" value="0.034650035"/>
       <parameter id="kSyFox1" value="6.9300069e-006"/>
       <parameter id="kSyFox2" value="0.51975052"/>
       <parameter id="kDeFox1" value="6.9300069e-006"/>
@@ -1574,6 +1575,27 @@
           </math>
         </kineticLaw>
       </reaction>
+      <reaction id="R73" reversible="false">
+        <listOfReactants>
+          <speciesReference species="S11"/>
+          <speciesReference species="S14"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="S11"/>
+          <speciesReference species="S12"/>
+          <speciesReference species="S13"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDpApc </ci>
+              <ci> S11 </ci>
+              <ci> S14 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
       <reaction id="R74" reversible="false">
         <listOfReactants>
           <speciesReference species="S5"/>
@@ -1714,6 +1736,26 @@
           </math>
         </kineticLaw>
       </reaction>
+      <reaction id="R80" reversible="false">
+        <listOfReactants>
+          <speciesReference species="S11"/>
+          <speciesReference species="S15"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="S11"/>
+          <speciesReference species="S12"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDpApc </ci>
+              <ci> S11 </ci>
+              <ci> S15 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
       <reaction id="R81" reversible="false">
         <listOfReactants>
           <speciesReference species="S11"/>
@@ -1730,6 +1772,46 @@
               <ci> kDpApc </ci>
               <ci> S11 </ci>
               <ci> S21 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R81" reversible="false">
+        <listOfReactants>
+          <speciesReference species="S11"/>
+          <speciesReference species="S21"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="S11"/>
+          <speciesReference species="S19"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDpApc </ci>
+              <ci> S11 </ci>
+              <ci> S21 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R82" reversible="false">
+        <listOfReactants>
+          <speciesReference species="S11"/>
+          <speciesReference species="S22"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="S11"/>
+          <speciesReference species="S16"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDpApc </ci>
+              <ci> S11 </ci>
+              <ci> S22 </ci>
             </apply>
           </math>
         </kineticLaw>
