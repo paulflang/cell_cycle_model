@@ -1,0 +1,159 @@
+BioNetGen version 2.3.1
+Reading from file C:\Users\wolf5212\OneDrive - Nexus365\DPhil Project\Project04_Full cell cycle modelling\cell_cycle_model\versions\v3.0.1\cell_cycle_v3.0.1.bngl (level 0)
+Read 89 parameters.
+Read 1 compartments.
+Read 24 molecule types.
+Read 55 species.
+Read 97 reaction rule(s).
+ACTION: generate_network( cell_cycle_v3.0.1 )
+Iteration   0:    55 species      0 rxns  0.00e+000 CPU s
+Iteration   1:    55 species    217 rxns  2.96e-001 CPU s
+Cumulative CPU time for each rule
+Rule   1:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule   2:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule   3:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule   4:    14 reactions 1.50e-002 CPU s 1.07e-003 CPU s/rxn
+Rule   5:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule   6:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule   7:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule   8:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule   9:     7 reactions 1.60e-002 CPU s 2.29e-003 CPU s/rxn
+Rule  10:     7 reactions 1.50e-002 CPU s 2.14e-003 CPU s/rxn
+Rule  11:     7 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  12:     7 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  13:     7 reactions 1.60e-002 CPU s 2.29e-003 CPU s/rxn
+Rule  14:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  15:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  16:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  17:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  18:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  19:     2 reactions 1.60e-002 CPU s 8.00e-003 CPU s/rxn
+Rule  20:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  21:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  22:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  23:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  24:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  25:     3 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  26:     3 reactions 1.50e-002 CPU s 5.00e-003 CPU s/rxn
+Rule  27:     3 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  28:     3 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  29:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  30:     2 reactions 1.60e-002 CPU s 8.00e-003 CPU s/rxn
+Rule  31:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  32:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  33:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  34:     4 reactions 1.60e-002 CPU s 4.00e-003 CPU s/rxn
+Rule  35:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  36:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  37:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  38:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  39:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  40:     1 reactions 1.50e-002 CPU s 1.50e-002 CPU s/rxn
+Rule  41:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  42:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  43:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  44:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  45:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  46:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  47:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  48:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  49:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  50:     1 reactions 1.60e-002 CPU s 1.60e-002 CPU s/rxn
+Rule  51:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  52:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  53:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  54:     4 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  55:     8 reactions 1.50e-002 CPU s 1.88e-003 CPU s/rxn
+Rule  56:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  57:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  58:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  59:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  60:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  61:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  62:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  63:     4 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  64:     2 reactions 1.60e-002 CPU s 8.00e-003 CPU s/rxn
+Rule  65:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  66:     4 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  67:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  68:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  69:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  70:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  71:     1 reactions 1.60e-002 CPU s 1.60e-002 CPU s/rxn
+Rule  72:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  73:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  74:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  75:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  76:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  77:     1 reactions 1.50e-002 CPU s 1.50e-002 CPU s/rxn
+Rule  78:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  79:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  80:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  81:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  82:     1 reactions 1.60e-002 CPU s 1.60e-002 CPU s/rxn
+Rule  83:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  84:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  85:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  86:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  87:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  88:     4 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  89:     4 reactions 1.60e-002 CPU s 4.00e-003 CPU s/rxn
+Rule  90:     4 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  91:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  92:     2 reactions 1.50e-002 CPU s 7.50e-003 CPU s/rxn
+Rule  93:     4 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  94:     4 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  95:     4 reactions 1.60e-002 CPU s 4.00e-003 CPU s/rxn
+Rule  96:     4 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  97:     4 reactions 1.50e-002 CPU s 3.75e-003 CPU s/rxn
+Total   :   217 reactions 2.96e-001 CPU s 1.36e-003 CPU s/rxn
+Wrote network in net format to C:\Users\wolf5212\OneDrive - Nexus365\DPhil Project\Project04_Full cell cycle modelling\cell_cycle_model\versions\v3.0.1\results\cell_cycle_v3.0.1\2021-12-30_21-29-52\cell_cycle_v3.0.1.net.
+CPU TIME: generate_network 0.31 s.
+Wrote SBML to C:\Users\wolf5212\OneDrive - Nexus365\DPhil Project\Project04_Full cell cycle modelling\cell_cycle_model\versions\v3.0.1\results\cell_cycle_v3.0.1\2021-12-30_21-29-52\cell_cycle_v3.0.1_sbml.xml.
+CPU TIME: writeSBML 0.03 s.
+ACTION: simulate( method=>"cvode" )
+Network simulation using cvode
+WARNING: writeFile(): Overwriting existing file C:\Users\wolf5212\OneDrive - Nexus365\DPhil Project\Project04_Full cell cycle modelling\cell_cycle_model\versions\v3.0.1\results\cell_cycle_v3.0.1\2021-12-30_21-29-52\cell_cycle_v3.0.1.net.
+Wrote network in net format to C:\Users\wolf5212\OneDrive - Nexus365\DPhil Project\Project04_Full cell cycle modelling\cell_cycle_model\versions\v3.0.1\results\cell_cycle_v3.0.1\2021-12-30_21-29-52\cell_cycle_v3.0.1.net.
+Running run_network on DESKTOP-MMIB2CJ
+full command: C:\Users\wolf5212\Downloads\RuleBender-2.2.1-win64b\RuleBender-2.2.1-win64\BioNetGen-2.3\bin\run_network.exe -o C:\Users\wolf5212\OneDrive - Nexus365\DPhil Project\Project04_Full cell cycle modelling\cell_cycle_model\versions\v3.0.1\results\cell_cycle_v3.0.1\2021-12-30_21-29-52\cell_cycle_v3.0.1 -p cvode -a 1e-008 -r 1e-008 --cdat 1 --fdat 0 -g C:\Users\wolf5212\OneDrive - Nexus365\DPhil Project\Project04_Full cell cycle modelling\cell_cycle_model\versions\v3.0.1\results\cell_cycle_v3.0.1\2021-12-30_21-29-52\cell_cycle_v3.0.1.net C:\Users\wolf5212\OneDrive - Nexus365\DPhil Project\Project04_Full cell cycle modelling\cell_cycle_model\versions\v3.0.1\results\cell_cycle_v3.0.1\2021-12-30_21-29-52\cell_cycle_v3.0.1.net 1000 1000
+[simulation PID is: 32640]
+run_network 3.0
+Read 146 parameters
+Read 55 species
+Read 0 group(s) from C:\Users\wolf5212\OneDrive - Nexus365\DPhil Project\Project04_Full cell cycle modelling\cell_cycle_model\versions\v3.0.1\results\cell_cycle_v3.0.1\2021-12-30_21-29-52\cell_cycle_v3.0.1.net
+Read 0 function(s)
+Found species with index 0 at line 208: assuming this is the null species.
+Found species with index 0 at line 213: assuming this is the null species.
+Found species with index 0 at line 214: assuming this is the null species.
+Found species with index 0 at line 263: assuming this is the null species.
+Found species with index 0 at line 274: assuming this is the null species.
+Found species with index 0 at line 277: assuming this is the null species.
+Found species with index 0 at line 305: assuming this is the null species.
+Found species with index 0 at line 307: assuming this is the null species.
+Found species with index 0 at line 317: assuming this is the null species.
+Found species with index 0 at line 318: assuming this is the null species.
+Found species with index 0 at line 325: assuming this is the null species.
+Found species with index 0 at line 326: assuming this is the null species.
+Found species with index 0 at line 333: assuming this is the null species.
+Found species with index 0 at line 334: assuming this is the null species.
+Found species with index 0 at line 349: assuming this is the null species.
+Found species with index 0 at line 351: assuming this is the null species.
+Found species with index 0 at line 352: assuming this is the null species.
+Found species with index 0 at line 359: assuming this is the null species.
+Found species with index 0 at line 365: assuming this is the null species.
+Found species with index 0 at line 384: assuming this is the null species.
+Read 217 reaction(s)
+Removed 12 reactions with zero rate
+205 reaction(s) have nonzero rate
+Initialization took 0.05 CPU seconds
+Propagating with cvode using dense LU
+Time course of concentrations written to file C:\Users\wolf5212\OneDrive - Nexus365\DPhil Project\Project04_Full cell cycle modelling\cell_cycle_model\versions\v3.0.1\results\cell_cycle_v3.0.1\2021-12-30_21-29-52\cell_cycle_v3.0.1.cdat.
+Propagation took 1.00e+00 CPU seconds
+Program times:  1.05 CPU s 1.00 clock s 
+Updating species concentrations from C:\Users\wolf5212\OneDrive - Nexus365\DPhil Project\Project04_Full cell cycle modelling\cell_cycle_model\versions\v3.0.1\results\cell_cycle_v3.0.1\2021-12-30_21-29-52\cell_cycle_v3.0.1.cdat
+CPU TIME: simulate 0.06 s.
+Finished processing file C:\Users\wolf5212\OneDrive - Nexus365\DPhil Project\Project04_Full cell cycle modelling\cell_cycle_model\versions\v3.0.1\cell_cycle_v3.0.1.bngl.
+CPU TIME: total 0.65 s.
+
+
