@@ -333,6 +333,146 @@
           </math>
         </kineticLaw>
       </reaction>
+      <reaction id="R6" reversible="false">
+        <listOfReactants>
+          <speciesReference species="S3"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDeE2f1 </ci>
+              <ci> S3 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R6" reversible="false">
+        <listOfReactants>
+          <speciesReference species="S3"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDeE2f1 </ci>
+              <ci> S3 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R6" reversible="false">
+        <listOfReactants>
+          <speciesReference species="S3"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDeE2f1 </ci>
+              <ci> S3 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R6" reversible="false">
+        <listOfReactants>
+          <speciesReference species="S3"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDeE2f1 </ci>
+              <ci> S3 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R6" reversible="false">
+        <listOfReactants>
+          <speciesReference species="S3"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDeE2f1 </ci>
+              <ci> S3 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R7" reversible="false">
+        <listOfReactants>
+          <speciesReference species="S4"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDeE2f1 </ci>
+              <ci> S4 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R7" reversible="false">
+        <listOfReactants>
+          <speciesReference species="S4"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDeE2f1 </ci>
+              <ci> S4 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R7" reversible="false">
+        <listOfReactants>
+          <speciesReference species="S4"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDeE2f1 </ci>
+              <ci> S4 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R7" reversible="false">
+        <listOfReactants>
+          <speciesReference species="S4"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDeE2f1 </ci>
+              <ci> S4 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R7" reversible="false">
+        <listOfReactants>
+          <speciesReference species="S4"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDeE2f1 </ci>
+              <ci> S4 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
       <reaction id="R7" reversible="false">
         <listOfReactants>
           <speciesReference species="S4"/>
@@ -1084,6 +1224,76 @@
               <ci> kDpE2f2 </ci>
               <ci> S11 </ci>
               <ci> S54 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R46" reversible="false">
+        <listOfReactants>
+          <speciesReference species="S4"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDeE2f2 </ci>
+              <ci> S4 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R46" reversible="false">
+        <listOfReactants>
+          <speciesReference species="S4"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDeE2f2 </ci>
+              <ci> S4 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R46" reversible="false">
+        <listOfReactants>
+          <speciesReference species="S4"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDeE2f2 </ci>
+              <ci> S4 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R46" reversible="false">
+        <listOfReactants>
+          <speciesReference species="S4"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDeE2f2 </ci>
+              <ci> S4 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="R46" reversible="false">
+        <listOfReactants>
+          <speciesReference species="S4"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kDeE2f2 </ci>
+              <ci> S4 </ci>
             </apply>
           </math>
         </kineticLaw>
