@@ -238,12 +238,14 @@ begin reaction rules
 	DeCa2: @cell:CCNA() + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeCa2
 	DeCa3: @cell:CCNA() + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) kDeCa3
 	SyFox2: @cell:E2F(DBD!1,RB1).FOXM1_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1).FOXM1_promoter(E2F!1) + @cell:FOXM1(DBD,Thr600~u) kSyFox2
-	DeFox: @cell:FOXM1(DBD!?,Thr600) -> 0  kDeFox1 DeleteMolecules # Todo: decide whether promoter bound Fox shall be degraded, too
+	DeFox: @cell:FOXM1(DBD!?,Thr600) -> 0  kDeFox1 DeleteMolecules
 	DeFoxByApcCdh: @cell:FOXM1(DBD!?,Thr600) + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeFox2 DeleteMolecules
 	PhFoxByCe: @cell:FOXM1(DBD,Thr600~u) + @cell:CCNE() -> @cell:CCNE() + @cell:FOXM1(DBD,Thr600~p) kPhFoxE
 	PhFoxByCa: @cell:FOXM1(DBD,Thr600~u) + @cell:CCNA() -> @cell:CCNA() + @cell:FOXM1(DBD,Thr600~p) kPhFoxA
 	PhFoxByCb: @cell:FOXM1(DBD,Thr600~u) + @cell:CCNB(CDK1_Thr14_Tyr15~u) -> @cell:CCNB(CDK1_Thr14_Tyr15~u) + @cell:FOXM1(DBD,Thr600~p) kPhFoxB
-	DppFox: @cell:FOXM1(DBD,Thr600~p) -> @cell:FOXM1(DBD,Thr600~u) kDpFox # Todo: make FOXM1 at DNA dephosphorylatable
+	DppFox_1: @cell:FOXM1(DBD,Thr600~p) -> @cell:FOXM1(DBD,Thr600~u) kDpFox # Todo: make FOXM1 at DNA dephosphorylatable
+	DppFox_2: @cell:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) -> @cell:FOXM1(DBD,Thr600~u) + @cell:CDC20_promoter(FOXM1) kDpFox # Todo: make FOXM1 at DNA dephosphorylatable
+	DppFox_3: @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) -> @cell:FOXM1(DBD,Thr600~u) + @cell:CCNB_promoter(FOXM1) kDpFox # Todo: make FOXM1 at DNA dephosphorylatable
 	SyCb1: 0 -> @cell:CCNB(CDK1_Thr14_Tyr15~u) kSyCb1 * ikSyCb
 	SyCb2: @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) -> @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) + @cell:CCNB(CDK1_Thr14_Tyr15~u) kSyCb2 * ikSyCb
 	DeCb: @cell:CCNB(CDK1_Thr14_Tyr15) -> 0  kDeCb1
