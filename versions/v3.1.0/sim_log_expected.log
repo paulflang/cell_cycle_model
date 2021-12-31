@@ -83,10 +83,10 @@ Rule  68:     4 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule  69:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule  70:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule  71:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
-Rule  72:     1 reactions 1.60e-002 CPU s 1.60e-002 CPU s/rxn
-Rule  73:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
-Rule  74:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
-Rule  75:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  72:     2 reactions 1.60e-002 CPU s 1.60e-002 CPU s/rxn
+Rule  73:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  74:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  75:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule  76:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule  77:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule  78:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn

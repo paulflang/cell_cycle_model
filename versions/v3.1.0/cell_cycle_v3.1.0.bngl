@@ -284,10 +284,10 @@ begin reaction rules
 	SyCdc20_1: 0  -> @cell:CDC20(APC) kSyCdc_1
 	SyCdc20_2: @cell:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) -> @cell:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) + @cell:CDC20(APC) kSyCdc_2
 	AspFoxPcdc: @cell:FOXM1(DBD,Thr600~p) + @cell:CDC20_promoter(FOXM1) <-> @cell:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) kAsFPcdc, kDiFPcdc
-	PhCbByWee: @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) + @cell:WEE1(Ser123~u) -> @cell:WEE1(Ser123~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~p) kWee2 # functionRate01() #Modifiers(iWee)
-	PhCbBypWee: @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) + @cell:WEE1(Ser123~p) -> @cell:WEE1(Ser123~p) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~p) kWee1 # functionRate02() #Modifiers(iWee)
-	DppCbBypCdc25: @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~p) + @cell:CDC25(pSites~p) -> @cell:CDC25(pSites~p) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kCdc25_2
-	DppCbByCdc25: @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~p) + @cell:CDC25(pSites~u) -> @cell:CDC25(pSites~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kCdc25_1
+	PhCbByWee: @cell:CCNB(CDKN1A!?,CDK1_Thr14_Tyr15~u) + @cell:WEE1(Ser123~u) -> @cell:WEE1(Ser123~u) + @cell:CCNB(CDKN1A!?,CDK1_Thr14_Tyr15~p) kWee2 # functionRate01() #Modifiers(iWee)
+	PhCbBypWee: @cell:CCNB(CDKN1A!?,CDK1_Thr14_Tyr15~u) + @cell:WEE1(Ser123~p) -> @cell:WEE1(Ser123~p) + @cell:CCNB(CDKN1A!?,CDK1_Thr14_Tyr15~p) kWee1 # functionRate02() #Modifiers(iWee)
+	DppCbBypCdc25: @cell:CCNB(CDKN1A!?,CDK1_Thr14_Tyr15~p) + @cell:CDC25(pSites~p) -> @cell:CDC25(pSites~p) + @cell:CCNB(CDKN1A!?,CDK1_Thr14_Tyr15~u) kCdc25_2
+	DppCbByCdc25: @cell:CCNB(CDKN1A!?,CDK1_Thr14_Tyr15~p) + @cell:CDC25(pSites~u) -> @cell:CDC25(pSites~u) + @cell:CCNB(CDKN1A!?,CDK1_Thr14_Tyr15~u) kCdc25_1
 	PhCdc25ByCb: @cell:CDC25(pSites~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) + @cell:CDC25(pSites~p) kPhC25B
 	PhCdc25ByCa: @cell:CDC25(pSites~u) + @cell:CCNA(CDKN1A) -> @cell:CCNA(CDKN1A) + @cell:CDC25(pSites~p) kPhC25A
 	DppCdc25: @cell:CDC25(pSites~p) + @cell:PPP2R2B(ENSA_ARPP19) -> @cell:PPP2R2B(ENSA_ARPP19) + @cell:CDC25(pSites~u) kDpCdc25
