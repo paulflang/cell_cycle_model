@@ -203,8 +203,8 @@ begin seed species
 	@cell:E2F(DBD!1,RB1,Ser332~p).FOXM1_promoter(E2F!1) (0*1)  #E2fProFox
 	@cell:iWEE() (0*1)  #iWee
 	@cell:SKP2() (1*1)
-	@cell:TP53(DBD,Ser15~p) (0*1)
-	@cell:CDKN1A_promoter(TP53) (8.44790241e-05*1)
+	@cell:TP53(DBD,Ser15~p) (0.0*1)
+	@cell:CDKN1A_promoter(TP53) (1e-04*1)
 end seed species
 begin reaction rules
     SyE2f1: 0  -> @cell:E2F(DBD,RB1,Ser332~u) kSyE2f1
