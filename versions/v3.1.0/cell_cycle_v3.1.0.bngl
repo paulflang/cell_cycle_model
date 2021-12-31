@@ -230,7 +230,7 @@ begin reaction rules
 	PhRbByCe: @cell:RB1(E2F,Ser807_Ser811~u) + @cell:CCNE(CDKN1A) -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:CCNE(CDKN1A) kPhRbE
 	PhRbByCa: @cell:RB1(E2F,Ser807_Ser811~u) + @cell:CCNA(CDKN1A) -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:CCNA(CDKN1A) kPhRb
 	PhRbByCb: @cell:RB1(E2F,Ser807_Ser811~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhRb
-	SyCe1: 0  -> @cell:CCNE(CDKN1A) kSyCe1
+	SyCe1: 0 -> @cell:CCNE(CDKN1A) kSyCe1
 	SyCa2: @cell:E2F(DBD!1,RB1).CCNA_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1).CCNA_promoter(E2F!1) + @cell:CCNA(CDKN1A) kSyCa2
 	DeCe1: @cell:CCNE(CDKN1A!?) -> 0  kDeCe
 	DeCe2: @cell:CCNE(CDKN1A!?) + @cell:CCNE(CDKN1A) -> @cell:CCNE(CDKN1A) kPhCeE DeleteMolecules
