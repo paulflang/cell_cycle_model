@@ -96,6 +96,9 @@ begin parameters
 	kDpE2f1 0
 	kPhC25A 0/1
 #	iWee_0 0
+    kSySkp2 1e-04*1
+    kDeSkp2_1 0.0001
+    kDeSkp2_2 0.002/1
 end parameters
 begin compartments
 	#volume units: L
@@ -126,6 +129,7 @@ begin molecule types
 	CDC25(pSites~u~p)
 	CCNB(CDK1_Thr14_Tyr15~u~p)
 	APC(FZR1_CDC20,FBXO5,Ser355~u~p)
+	SKP2()
 end molecule types
 begin seed species
 	@cell:CCND() (1.0*1)  #Cd
@@ -183,6 +187,7 @@ begin seed species
 	@cell:E2F(DBD!1,RB1,Ser332~p).FBXO5_promoter(E2F!1) (0*1)  #E2fProEmi
 	@cell:E2F(DBD!1,RB1,Ser332~p).FOXM1_promoter(E2F!1) (0*1)  #E2fProFox
 	@cell:iWEE() (0*1)  #iWee
+	@cell:SKP2() (1*1)
 end seed species
 begin reaction rules
     SyE2f1: 0  -> @cell:E2F(DBD,RB1,Ser332~u) kSyE2f1
@@ -197,7 +202,7 @@ begin reaction rules
 	PhE2fByCb: @cell:E2F(DBD!?,RB1!?,Ser332~u) + @cell:CCNB(CDK1_Thr14_Tyr15~u) -> @cell:E2F(DBD!?,RB1!?,Ser332~p) + @cell:CCNB(CDK1_Thr14_Tyr15~u) kPhE2f
 	DppE2f: @cell:E2F(DBD!?,RB1!?,Ser332~p) -> @cell:E2F(DBD!?,RB1!?,Ser332~u) kDpE2f1
     DppE2fByB55: @cell:E2F(DBD!?,RB1!?,Ser332~p) + @cell:PPP2R2B(ENSA_ARPP19) -> @cell:E2F(DBD!?,RB1!?,Ser332~u) + @cell:PPP2R2B(ENSA_ARPP19) kDpE2f2
-    DeE2f2: @cell:E2F(DBD!?,RB1!?,Ser332~p) -> 0 kDeE2f2 DeleteMolecules
+    DeE2f2: @cell:E2F(DBD!?,RB1!?,Ser332~p) + @cell:SKP2() -> @cell:SKP2() kDeE2f2 DeleteMolecules
 	PhRbByCd: @cell:RB1(E2F,Ser807_Ser811~u) + @cell:CCND() -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:CCND() kPhRbD
 	PhRbByCe: @cell:RB1(E2F,Ser807_Ser811~u) + @cell:CCNE() -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:CCNE() kPhRbE
 	PhRbByCa: @cell:RB1(E2F,Ser807_Ser811~u) + @cell:CCNA() -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:CCNA() kPhRb
@@ -284,6 +289,9 @@ begin reaction rules
 	AsE2fProE2f: @cell:E2F(DBD,RB1) + @cell:E2F_promoter(E2F) <-> @cell:E2F(DBD!1,RB1).E2F_promoter(E2F!1) kAsEPx, kDiEPx
 	AsE2fProEmi: @cell:E2F(DBD,RB1) + @cell:FBXO5_promoter(E2F) <-> @cell:E2F(DBD!1,RB1).FBXO5_promoter(E2F!1) kAsEPx, kDiEPx
 	AsE2fProFox: @cell:E2F(DBD,RB1) + @cell:FOXM1_promoter(E2F) <-> @cell:E2F(DBD!1,RB1).FOXM1_promoter(E2F!1) kAsEPx, kDiEPx
+	SySkp2: 0 -> @cell:SKP2() kSySkp2
+	DeSkp2_1: @cell:SKP2() -> 0 kDeSkp2_1
+	DeSkp2_2: @cell:SKP2() + @cell:APC(FZR1_CDC20!1,FBXO5).FZR1(APC!1,FBXO5) -> @cell:APC(FZR1_CDC20!1,FBXO5).FZR1(APC!1,FBXO5) kDeSkp2_2
 end reaction rules
 end model
 
