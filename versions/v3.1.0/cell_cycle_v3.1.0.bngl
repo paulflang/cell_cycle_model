@@ -232,7 +232,7 @@ begin reaction rules
 	PhRbByCb: @cell:RB1(E2F,Ser807_Ser811~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhRb
 	SyCe1: 0 -> @cell:CCNE(CDKN1A) kSyCe1
 	SyCa2: @cell:E2F(DBD!1,RB1).CCNA_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1).CCNA_promoter(E2F!1) + @cell:CCNA(CDKN1A) kSyCa2
-	DeCe1: @cell:CCNE(CDKN1A!?) -> 0  kDeCe
+	DeCe1: @cell:CCNE(CDKN1A!?) -> 0  kDeCe DeleteMolecules
 	DeCe2: @cell:CCNE(CDKN1A!?) + @cell:CCNE(CDKN1A) -> @cell:CCNE(CDKN1A) kPhCeE DeleteMolecules
 	DpRb: @cell:RB1(E2F,Ser807_Ser811~p) -> @cell:RB1(E2F,Ser807_Ser811~u) kDpRb # Todo: change once phospho-Rb:E2F complexes can exist.
 	DppApcCdc20_1: @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) -> @cell:APC(FZR1_CDC20,FBXO5,Ser355~u) + @cell:CDC20(APC) kDpApc_1
@@ -253,7 +253,7 @@ begin reaction rules
 	PhEmiByCa: @cell:FBXO5(APC,FZR1,Ser182~u) + @cell:CCNA(CDKN1A) -> @cell:FBXO5(APC,FZR1,Ser182~p) + @cell:CCNA(CDKN1A) kPhEmiA
 	PhEmiByCb: @cell:FBXO5(APC,FZR1,Ser182~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:FBXO5(APC,FZR1,Ser182~p) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhEmiB
 	DppEmi: @cell:FBXO5(APC,FZR1,Ser182~p) -> @cell:FBXO5(APC,FZR1,Ser182~u) kDpEmi
-	DeEmi3: @cell:FBXO5(APC,FZR1,Ser182~p) -> 0  kDeEmi3 # FBXO5 is never in complex if phosphorylated.
+	DeEmi3: @cell:FBXO5(APC,FZR1,Ser182~p) -> 0  kDeEmi3 DeleteMolecules # FBXO5 is never in complex if phosphorylated.
 	SyFox1: 0 -> @cell:FOXM1(DBD,Thr600~u) kSyFox1
 	SyEmi2: @cell:E2F(DBD!1,RB1).FBXO5_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1).FBXO5_promoter(E2F!1) + @cell:FBXO5(APC,FZR1,Ser182~u) kSyEmi2
 	PhCdhByCe: @cell:FZR1(APC,FBXO5,nTerm~u) + @cell:CCNE(CDKN1A) -> @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:CCNE(CDKN1A) kPhCdhE
@@ -261,7 +261,7 @@ begin reaction rules
 	PhCdhByCb: @cell:FZR1(APC,FBXO5,nTerm~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCdhB
 	DppCdh: @cell:FZR1(APC,FBXO5,nTerm~p) -> @cell:FZR1(APC,FBXO5,nTerm~u) kDpCdh
 	SyCa1: 0 -> @cell:CCNA(CDKN1A) kSyCa1
-	DeCa1: @cell:CCNA(CDKN1A!?) -> 0  kDeCa1
+	DeCa1: @cell:CCNA(CDKN1A!?) -> 0  kDeCa1 DeleteMolecules
 	DeCe3: @cell:CCNE(CDKN1A!?) + @cell:CCNA(CDKN1A) -> @cell:CCNA(CDKN1A) kPhCeA DeleteMolecules
 	DeCa2: @cell:CCNA(CDKN1A!?) + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeCa2 DeleteMolecules
 	DeCa3: @cell:CCNA(CDKN1A!?) + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) kDeCa3 DeleteMolecules
