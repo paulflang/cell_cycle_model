@@ -251,7 +251,7 @@ begin reaction rules
 	SyFox1: 0 -> @cell:FOXM1(DBD,Thr600~u) kSyFox1
 	SyEmi2: @cell:E2F(DBD!1,RB1).FBXO5_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1).FBXO5_promoter(E2F!1) + @cell:FBXO5(APC,FZR1,Ser182~u) kSyEmi2
 	PhCdhByCe: @cell:FZR1(APC,FBXO5,nTerm~u) + @cell:CCNE(CDKN1A) -> @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:CCNE(CDKN1A) kPhCdhE
-	PhCdhByCa: @cell:FZR1(APC,FBXO5,nTerm~u) + @cell:CCNA() -> @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:CCNA(CDKN1A) kPhCdhA
+	PhCdhByCa: @cell:FZR1(APC,FBXO5,nTerm~u) + @cell:CCNA(CDKN1A) -> @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:CCNA(CDKN1A) kPhCdhA
 	PhCdhByCb: @cell:FZR1(APC,FBXO5,nTerm~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCdhB
 	DppCdh: @cell:FZR1(APC,FBXO5,nTerm~p) -> @cell:FZR1(APC,FBXO5,nTerm~u) kDpCdh
 	SyCa1: 0 -> @cell:CCNA(CDKN1A) kSyCa1
