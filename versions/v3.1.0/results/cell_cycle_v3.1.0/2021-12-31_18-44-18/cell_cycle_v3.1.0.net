@@ -160,8 +160,8 @@ begin parameters
   158 _InitialConc54  0*1  # Constant
   159 _InitialConc55  0*1  # Constant
   160 _InitialConc56  1*1  # Constant
-  161 _InitialConc57  0*1  # Constant
-  162 _InitialConc58  8.44790241e-05*1  # Constant
+  161 _InitialConc57  0.0*1  # Constant
+  162 _InitialConc58  1e-04*1  # Constant
   163 _rateLaw1       kSyCb1*ikSyCb  # ConstantExpression
   164 _rateLaw2       kSyCb2*ikSyCb  # ConstantExpression
 end parameters

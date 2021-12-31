@@ -63,7 +63,7 @@
       <species id="S55" compartment="cell" initialConcentration="0" name="@cell::iWEE()"/>
       <species id="S56" compartment="cell" initialConcentration="1" name="@cell::SKP2()"/>
       <species id="S57" compartment="cell" initialConcentration="0" name="@cell::TP53(DBD,Ser15~p)"/>
-      <species id="S58" compartment="cell" initialConcentration="8.4479024e-005" name="@cell::CDKN1A_promoter(TP53)"/>
+      <species id="S58" compartment="cell" initialConcentration="0.0001" name="@cell::CDKN1A_promoter(TP53)"/>
       <species id="S59" compartment="cell" initialConcentration="0" name="@cell::CDKN1A_promoter(TP53!1).TP53(DBD!1,Ser15~p)"/>
       <species id="S60" compartment="cell" initialConcentration="0" name="@cell::CDKN1A(CCNE_A_B,Ser130~u)"/>
       <species id="S61" compartment="cell" initialConcentration="0" name="@cell::CCNA(CDKN1A!1).CDKN1A(CCNE_A_B!1,Ser130~u)"/>
@@ -235,7 +235,7 @@
       <parameter id="_InitialConc55" value="0"/>
       <parameter id="_InitialConc56" value="1"/>
       <parameter id="_InitialConc57" value="0"/>
-      <parameter id="_InitialConc58" value="8.4479024e-005"/>
+      <parameter id="_InitialConc58" value="0.0001"/>
       <!-- Dependent variables -->
       <parameter id="_rateLaw1" constant="true"/>
       <parameter id="_rateLaw2" constant="true"/>
