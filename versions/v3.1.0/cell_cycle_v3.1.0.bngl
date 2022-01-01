@@ -232,8 +232,8 @@ begin reaction rules
 	PhRbByCb: @cell:RB1(E2F,Ser807_Ser811~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhRb
 	SyCe1: 0 -> @cell:CCNE(CDKN1A) kSyCe1
 	SyCa2: @cell:E2F(DBD!1,RB1).CCNA_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1).CCNA_promoter(E2F!1) + @cell:CCNA(CDKN1A) kSyCa2
-	DeCe1: @cell:CCNE(CDKN1A!?) -> 0  kDeCe DeleteMolecules
-	DeCe2: @cell:CCNE(CDKN1A!?) + @cell:CCNE(CDKN1A) -> @cell:CCNE(CDKN1A) kPhCeE DeleteMolecules
+	DeCe1: @cell:CCNE() -> 0  kDeCe DeleteMolecules
+	DeCe2: @cell:CCNE(CDKN1A) + @cell:CCNE() -> @cell:CCNE(CDKN1A) kPhCeE DeleteMolecules
 	DpRb: @cell:RB1(E2F,Ser807_Ser811~p) -> @cell:RB1(E2F,Ser807_Ser811~u) kDpRb # Todo: change once phospho-Rb:E2F complexes can exist.
 	DppApcCdc20_1: @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) -> @cell:APC(FZR1_CDC20,FBXO5,Ser355~u) + @cell:CDC20(APC) kDpApc_1
 	DppApcCdc20: @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) + @cell:PPP2R2B(ENSA_ARPP19) -> @cell:APC(FZR1_CDC20,FBXO5,Ser355~u) + @cell:CDC20(APC) + @cell:PPP2R2B(ENSA_ARPP19) kDpApc_2
@@ -261,10 +261,10 @@ begin reaction rules
 	PhCdhByCb: @cell:FZR1(APC,FBXO5,nTerm~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCdhB
 	DppCdh: @cell:FZR1(APC,FBXO5,nTerm~p) -> @cell:FZR1(APC,FBXO5,nTerm~u) kDpCdh
 	SyCa1: 0 -> @cell:CCNA(CDKN1A) kSyCa1
-	DeCa1: @cell:CCNA(CDKN1A!?) -> 0  kDeCa1 DeleteMolecules
-	DeCe3: @cell:CCNE(CDKN1A!?) + @cell:CCNA(CDKN1A) -> @cell:CCNA(CDKN1A) kPhCeA DeleteMolecules
-	DeCa2: @cell:CCNA(CDKN1A!?) + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeCa2 DeleteMolecules
-	DeCa3: @cell:CCNA(CDKN1A!?) + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) kDeCa3 DeleteMolecules
+	DeCa1: @cell:CCNA() -> 0  kDeCa1 DeleteMolecules
+	DeCe3: @cell:CCNE() + @cell:CCNA(CDKN1A) -> @cell:CCNA(CDKN1A) kPhCeA DeleteMolecules
+	DeCa2: @cell:CCNA() + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeCa2 DeleteMolecules
+	DeCa3: @cell:CCNA() + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) kDeCa3 DeleteMolecules
 	SyFox2: @cell:E2F(DBD!1,RB1).FOXM1_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1).FOXM1_promoter(E2F!1) + @cell:FOXM1(DBD,Thr600~u) kSyFox2
 	DeFox: @cell:FOXM1(DBD!?,Thr600) -> 0 kDeFox1 DeleteMolecules
 	DeFoxByApcCdh: @cell:FOXM1(DBD!?,Thr600) + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeFox2 DeleteMolecules
@@ -276,18 +276,18 @@ begin reaction rules
 	DppFox_3: @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) -> @cell:FOXM1(DBD,Thr600~u) + @cell:CCNB_promoter(FOXM1) kDpFox
 	SyCb1: 0 -> @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kSyCb1 * ikSyCb
 	SyCb2: @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) -> @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kSyCb2 * ikSyCb
-	DeCb: @cell:CCNB(CDKN1A!?,CDK1_Thr14_Tyr15) -> 0  kDeCb1 DeleteMolecules
-	DeCbByApcCdh: @cell:CCNB(CDKN1A!?,CDK1_Thr14_Tyr15) + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeCb2 DeleteMolecules
-	DeCbByApcCdc: @cell:CCNB(CDKN1A!?,CDK1_Thr14_Tyr15) + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) kDeCb3 DeleteMolecules
+	DeCb: @cell:CCNB(CDK1_Thr14_Tyr15) -> 0  kDeCb1 DeleteMolecules
+	DeCbByApcCdh: @cell:CCNB(CDK1_Thr14_Tyr15) + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeCb2 DeleteMolecules
+	DeCbByApcCdc: @cell:CCNB(CDK1_Thr14_Tyr15) + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) kDeCb3 DeleteMolecules
 	DeCdc: @cell:CDC20(APC!?) -> 0 kDeCdc_1 DeleteMolecules
 	DeCdcByApcCdh: @cell:CDC20(APC!?) + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeCdc_2 DeleteMolecules
 	SyCdc20_1: 0  -> @cell:CDC20(APC) kSyCdc_1
 	SyCdc20_2: @cell:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) -> @cell:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) + @cell:CDC20(APC) kSyCdc_2
 	AspFoxPcdc: @cell:FOXM1(DBD,Thr600~p) + @cell:CDC20_promoter(FOXM1) <-> @cell:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) kAsFPcdc, kDiFPcdc
-	PhCbByWee: @cell:CCNB(CDKN1A!?,CDK1_Thr14_Tyr15~u) + @cell:WEE1(Ser123~u) -> @cell:WEE1(Ser123~u) + @cell:CCNB(CDKN1A!?,CDK1_Thr14_Tyr15~p) kWee2 # functionRate01() #Modifiers(iWee)
-	PhCbBypWee: @cell:CCNB(CDKN1A!?,CDK1_Thr14_Tyr15~u) + @cell:WEE1(Ser123~p) -> @cell:WEE1(Ser123~p) + @cell:CCNB(CDKN1A!?,CDK1_Thr14_Tyr15~p) kWee1 # functionRate02() #Modifiers(iWee)
-	DppCbBypCdc25: @cell:CCNB(CDKN1A!?,CDK1_Thr14_Tyr15~p) + @cell:CDC25(pSites~p) -> @cell:CDC25(pSites~p) + @cell:CCNB(CDKN1A!?,CDK1_Thr14_Tyr15~u) kCdc25_2
-	DppCbByCdc25: @cell:CCNB(CDKN1A!?,CDK1_Thr14_Tyr15~p) + @cell:CDC25(pSites~u) -> @cell:CDC25(pSites~u) + @cell:CCNB(CDKN1A!?,CDK1_Thr14_Tyr15~u) kCdc25_1
+	PhCbByWee: @cell:CCNB(CDK1_Thr14_Tyr15~u) + @cell:WEE1(Ser123~u) -> @cell:WEE1(Ser123~u) + @cell:CCNB(CDK1_Thr14_Tyr15~p) kWee2 # functionRate01() #Modifiers(iWee)
+	PhCbBypWee: @cell:CCNB(CDK1_Thr14_Tyr15~u) + @cell:WEE1(Ser123~p) -> @cell:WEE1(Ser123~p) + @cell:CCNB(CDK1_Thr14_Tyr15~p) kWee1 # functionRate02() #Modifiers(iWee)
+	DppCbBypCdc25: @cell:CCNB(CDK1_Thr14_Tyr15~p) + @cell:CDC25(pSites~p) -> @cell:CDC25(pSites~p) + @cell:CCNB(CDK1_Thr14_Tyr15~u) kCdc25_2
+	DppCbByCdc25: @cell:CCNB(CDK1_Thr14_Tyr15~p) + @cell:CDC25(pSites~u) -> @cell:CDC25(pSites~u) + @cell:CCNB(CDK1_Thr14_Tyr15~u) kCdc25_1
 	PhCdc25ByCb: @cell:CDC25(pSites~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) + @cell:CDC25(pSites~p) kPhC25B
 	PhCdc25ByCa: @cell:CDC25(pSites~u) + @cell:CCNA(CDKN1A) -> @cell:CCNA(CDKN1A) + @cell:CDC25(pSites~p) kPhC25A
 	DppCdc25: @cell:CDC25(pSites~p) + @cell:PPP2R2B(ENSA_ARPP19) -> @cell:PPP2R2B(ENSA_ARPP19) + @cell:CDC25(pSites~u) kDpCdc25
