@@ -363,9 +363,9 @@ begin reaction rules
  	SyCDKN1B_2: @cell:FOXO(DBD!1).CDKN1B_promoter(FOXO!1) -> @cell:FOXO(DBD!1).CDKN1B_promoter(FOXO!1) + @cell:CDKN1B(CCNE_A,Thr187~u) kSyCDKN1B_2
 	DeCDKN1B_1: @cell:CDKN1B() -> 0 kDeCDKN1B_1 DeleteMolecules
 	DeCDKN1B_2: @cell:CDKN1B(Thr187~p) + @cell:SKP2() -> @cell:SKP2() kDeCDKN1B_2 DeleteMolecules
-	DeCDKN1B_3: @cell:CDKN1B(Thr187~u) + @cell:SKP2() -> @cell:SKP2() 0 DeleteMolecules # There seems evidence that Thr187 phosphorylation is required for SKP2 mediated degradation.
+	DeCDKN1B_3: @cell:CDKN1B(Thr187~u) + @cell:SKP2() -> @cell:SKP2() 0 DeleteMolecules  # There seems evidence that Thr187 phosphorylation is required for SKP2 mediated degradation.
 	AsCDKN1BCCNA: @cell:CDKN1B(CCNE_A) + @cell:CCNA(CDKN1A_B) <-> @cell:CDKN1B(CCNE_A!1).CCNA(CDKN1A_B!1) kAsCdkn1bC, kDiCdkn1bC # CDK mediated phosphorylation does not seem to reduce biding affinity.
-	AsCDKN1BCCNE: @cell:CDKN1B(CCNE_A) + @cell:CCNE(CDKN1A_B) <-> @cell:CDKN1B(CCNE_A!1).CCNE(CDKN1A_B!1) kAsCdkn1bC, kDiCdkn1bC # CDKN1B cannot form a stable complex with CCNB/Cdk1
+	AsCDKN1BCCNE: @cell:CDKN1B(CCNE_A) + @cell:CCNE(CDKN1A_B) <-> @cell:CDKN1B(CCNE_A!1).CCNE(CDKN1A_B!1) kAsCdkn1bC, kDiCdkn1bC  # CDKN1B cannot form a stable complex with CCNB/Cdk1
 	PhCDKN1BByCe: @cell:CDKN1B(Thr187~u) + CCNE(CDKN1A_B) -> @cell:CDKN1B(Thr187~p) + CCNE(CDKN1A_B) kPhCDKN1BByCe
 	PhCDKN1BByCa: @cell:CDKN1B(Thr187~u) + CCNA(CDKN1A_B) -> @cell:CDKN1B(Thr187~p) + CCNA(CDKN1A_B) kPhCDKN1BByCa
 	PhCDKN1BByCb: @cell:CDKN1B(Thr187~u) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:CDKN1B(Thr187~p) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCDKN1BByCb
