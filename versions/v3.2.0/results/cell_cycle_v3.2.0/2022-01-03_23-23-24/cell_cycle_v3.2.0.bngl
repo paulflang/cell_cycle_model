@@ -358,7 +358,6 @@ begin reaction rules
 	PhCdkn1aCeByCb: @cell:CDKN1A(CCNE_A_B!1,Ser130~u).CCNE(CDKN1A_B!1) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:CDKN1A(CCNE_A_B,Ser130~p) + CCNE(CDKN1A_B) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCDKN1AByCb
 	PhCdkn1aCbByCb: @cell:CDKN1A(CCNE_A_B!1,Ser130~u).CCNB(CDKN1A!1) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:CDKN1A(CCNE_A_B,Ser130~p) + CCNB(CDKN1A) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCDKN1AByCb
 	DpCDKN1A: @cell:CDKN1A(Ser130~p) -> @cell:CDKN1A(Ser130~u) kDpCDKN1A
-	AsFOXOPCDKN1B: @cell:CDKN1B_promoter(FOXO) + @cell:FOXO(DBD) <-> @cell:CDKN1B_promoter(FOXO!1).FOXO(DBD!1) kAsFOXOPCDKN1B, kDiFOXOPCDKN1B
 	SyCDKN1B_1: 0 -> @cell:CDKN1B(CCNE_A,Thr187~u) kSyCDKN1B_1
  	SyCDKN1B_2: @cell:FOXO(DBD!1).CDKN1B_promoter(FOXO!1) -> @cell:FOXO(DBD!1).CDKN1B_promoter(FOXO!1) + @cell:CDKN1B(CCNE_A,Thr187~u) kSyCDKN1B_2
 	DeCDKN1B_1: @cell:CDKN1B() -> 0 kDeCDKN1B_1 DeleteMolecules
