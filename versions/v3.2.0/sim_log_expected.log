@@ -10,7 +10,7 @@ ACTION: generate_network( cell_cycle_v3.2.0 )
 Iteration   0:    60 species      0 rxns  0.00e+000 CPU s
 Iteration   1:    64 species    227 rxns  3.28e-001 CPU s
 Iteration   2:    72 species    247 rxns  1.60e-002 CPU s
-Iteration   3:    72 species    315 rxns  9.40e-002 CPU s
+Iteration   3:    74 species    329 rxns  9.40e-002 CPU s
 Cumulative CPU time for each rule
 Rule   1:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule   2:     2 reactions 3.10e-002 CPU s 1.55e-002 CPU s/rxn
@@ -31,8 +31,8 @@ Rule  16:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule  17:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule  18:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule  19:     2 reactions 1.50e-002 CPU s 7.50e-003 CPU s/rxn
-Rule  20:     3 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
-Rule  21:     3 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  20:     5 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  21:     5 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule  22:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule  23:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule  24:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
@@ -60,10 +60,10 @@ Rule  45:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule  46:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule  47:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule  48:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
-Rule  49:     3 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
-Rule  50:     3 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
-Rule  51:     6 reactions 1.50e-002 CPU s 2.50e-003 CPU s/rxn
-Rule  52:     3 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  49:     5 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  50:     5 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule  51:    10 reactions 1.50e-002 CPU s 2.50e-003 CPU s/rxn
+Rule  52:     5 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule  53:     2 reactions 1.50e-002 CPU s 7.50e-003 CPU s/rxn
 Rule  54:     4 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule  55:     8 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
@@ -142,19 +142,13 @@ Rule 127:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule 128:     4 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule 129:     1 reactions 1.60e-002 CPU s 1.60e-002 CPU s/rxn
 Rule 130:     3 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
-Rule 131:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
-Rule 132:     2 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
-Rule 133:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
-Rule 134:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
-Rule 135:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
-Rule 136:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
-Rule 137:     1 reactions 1.60e-002 CPU s 1.60e-002 CPU s/rxn
-Rule 138:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
-Rule 139:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
-Rule 140:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
-Rule 141:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule 131:     4 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule 132:     4 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule 133:     3 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule 136:     3 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
+Rule 139:     3 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
 Rule 142:     1 reactions 0.00e+000 CPU s 0.00e+000 CPU s/rxn
-Total   :   315 reactions 4.38e-001 CPU s 1.39e-003 CPU s/rxn
+Total   :   329 reactions 4.38e-001 CPU s 1.39e-003 CPU s/rxn
 Wrote network in net format to C:\Users\wolf5212\OneDrive - Nexus365\DPhil Project\Project04_Full cell cycle modelling\cell_cycle_model\versions\v3.2.0\results\cell_cycle_v3.2.0\2022-01-04_16-07-11\cell_cycle_v3.2.0.net.
 CPU TIME: generate_network 0.48 s.
 Wrote SBML to C:\Users\wolf5212\OneDrive - Nexus365\DPhil Project\Project04_Full cell cycle modelling\cell_cycle_model\versions\v3.2.0\results\cell_cycle_v3.2.0\2022-01-04_16-07-11\cell_cycle_v3.2.0_sbml.xml.
