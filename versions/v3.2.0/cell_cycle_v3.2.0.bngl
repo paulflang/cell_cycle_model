@@ -362,9 +362,9 @@ begin reaction rules
 	SyCDKN1B_1: 0 -> @cell:CDKN1B(CCNE_A,Thr187~u) kSyCDKN1B_1
  	SyCDKN1B_2: @cell:FOXO(DBD!1).CDKN1B_promoter(FOXO!1) -> @cell:FOXO(DBD!1).CDKN1B_promoter(FOXO!1) + @cell:CDKN1B(CCNE_A,Thr187~u) kSyCDKN1B_2
 	DeCDKN1B_1: @cell:CDKN1B() -> 0 kDeCDKN1B_1 DeleteMolecules
-	DeCDKN1B_2: @cell:CDKN1B(Thr187~p) + @cell:SKP2() -> @cell:SKP2() kDeCDKN1B_2 DeleteMolecules
-	DeCDKN1B_3: @cell:CDKN1B(Thr187~u) + @cell:SKP2() -> @cell:SKP2() 0 DeleteMolecules
-	AsCDKN1BCCNA: @cell:CDKN1B(CCNE_A) + @cell:CCNA(CDKN1A_B) <-> @cell:CDKN1B(CCNE_A!1).CCNA(CDKN1A_B!1) kAsCdkn1bC, kDiCdkn1bC
+	DeCDKN1B_2: @cell:CDKN1B(Thr187~p) + @cell:SKP2() -> @cell:SKP2() kDeCDKN1B_2 DeleteMolecules # There seems evidence that Thr187 phosphorylation is required for SKP2 mediated degradation.
+	DeCDKN1B_3: @cell:CDKN1B(Thr187~u) + @cell:SKP2() -> @cell:SKP2() 0 DeleteMolecules # CDK mediated phosphorylation does not seem to reduce biding affinity.
+	AsCDKN1BCCNA: @cell:CDKN1B(CCNE_A) + @cell:CCNA(CDKN1A_B) <-> @cell:CDKN1B(CCNE_A!1).CCNA(CDKN1A_B!1) kAsCdkn1bC, kDiCdkn1bC # CDKN1B cannot form a stable complex with CCNB/Cdk1
 	AsCDKN1BCCNE: @cell:CDKN1B(CCNE_A) + @cell:CCNE(CDKN1A_B) <-> @cell:CDKN1B(CCNE_A!1).CCNE(CDKN1A_B!1) kAsCdkn1bC, kDiCdkn1bC
 	PhCDKN1BByCe: @cell:CDKN1B(Thr187~u) + CCNE(CDKN1A_B) -> @cell:CDKN1B(Thr187~p) + CCNE(CDKN1A_B) kPhCDKN1BByCe
 	PhCDKN1BByCa: @cell:CDKN1B(Thr187~u) + CCNA(CDKN1A_B) -> @cell:CDKN1B(Thr187~p) + CCNA(CDKN1A_B) kPhCDKN1BByCa
@@ -377,3 +377,6 @@ generate_network({overwrite=>1})
 writeSBML()
 simulate({method=>"ode",t_end=>1e6,n_steps=>1e3,atol=>1e-8,rtol=>1e-8})
 #simulate({method=>"ssa",t_end=>100,n_steps=>4e2})
+#saveConcentrations();
+#setConcentration("@cell:TP53(DBD,Ser15~p)","1*6.022e23");
+#simulate({method=>"ode",continue=>1,t_start=>1.2e5,t_end=>2e5,n_steps=>1e3}); 
