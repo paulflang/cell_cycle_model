@@ -106,7 +106,7 @@ begin parameters
 	kDeCDKN1A_1 0.00002
     kDeCDKN1A_2 0.00025/1
     kAsCdkn1aC 0.007/1
-	kDiCdkn1aC 0.0003
+	kDiCdkn1aC 0.0003  # Consider using different binding strength for different CKI/CDK complexes
 	kPhCDKN1AByCe 0.005/1
 	kPhCDKN1AByCa 0.0005/1
 	kPhCDKN1AByCb 0.005/1
@@ -123,8 +123,8 @@ begin parameters
 	kPhCDKN1BByCa 0.05/1
 	kPhCDKN1BByCb  0.0005/1
 	kDpCDKN1B 0.002
-#	kPhNup 3e12/1
-#	kDpNup_1 2
+	kPhNup 3e12/1
+	kDpNup_1 2
 	kImImCCND_1 1e9/1
 	kExImCCND_1 1e9/1
 	kImImCCNE_CDKN1A_B__1 1e9/1
@@ -276,8 +276,8 @@ begin molecule types
 	CDKN1B(CCNE_A,Thr187~u~p)
 	FOXO(DBD)
 	CDKN1B_promoter(FOXO)
-	# Same as p21 but: no CCNB binidng. and can be phosphorylated by CCNA
 	NUP(pSites~u~p)
+	# Same as p21 but: no CCNB binidng. and can be phosphorylated by CCNA
 end molecule types
 begin seed species
 	# Species (concentration*scaling*volume)
@@ -396,7 +396,7 @@ end observables
 #	rPhNup() (kPhNup*aCCNB)^10
 #end functions
 begin reaction rules
-    SyE2f1: 0  -> @Cyt:E2F(DBD,RB1,Ser332~u) kSyE2f1
+    SyE2f1: 0 -> @Cyt:E2F(DBD,RB1,Ser332~u) kSyE2f1
 	AspFoxPcb: FOXM1(DBD,Thr600~p) + CCNB_promoter(FOXM1) <-> FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) kAsFPcb,kDiFPcb
 	SyE2f2: E2F(DBD!1,RB1).E2F_promoter(E2F!1) -> E2F(DBD!1,RB1).E2F_promoter(E2F!1) + @Cyt:E2F(DBD,RB1,Ser332~u) kSyE2f2
 	DeE2f1: E2F(DBD!?,RB1!?,Ser332) -> 0  kDeE2f1 DeleteMolecules
