@@ -16,13 +16,13 @@ with open(species_file, 'r') as file:
                 .replace(').', ')_').replace('(', '_').replace(')', '_')\
                 .replace(',', '_').replace('~', '').replace('!', '')
             reaction_name = 'Im'+reaction_name
-            rate_contants = rate_contants + f"kIm{reaction_name}_1 1e9/6.022e23\nkEx{reaction_name}_1 1e9/6.022e23\n"
+            rate_contants = rate_contants + f"kIm{reaction_name}_1 1e9/1\nkEx{reaction_name}_1 1e9/1\n"
             rule_1 = f"{reaction_name}_1: @Cyt:{species_name} + @Num:NUP(pSites~u) <-> @Nuc:{species_name} + @Num:NUP(pSites~u) kIm{reaction_name}_1,kEx{reaction_name}_1"
             rules_1 = rules_1+rule_1+'\n'
             rule_2 = f"{reaction_name}_2: @Cyt:{species_name} + @Num:NUP(pSites~p) <-> @Nuc:{species_name} + @Num:NUP(pSites~p) kIm_2,kEx_2"
             rules_2 = rules_2+rule_2+'\n'
 
-rate_contants = rate_contants + 'kIm_2 1e10/6.022e23\nkEx_2 1e10/6.022e23'
+rate_contants = rate_contants + 'kIm_2 1e10/1\nkEx_2 1e10/1'
 
 text = rate_contants+'\n\n'+rules_1+'\n'+rules_2
 
