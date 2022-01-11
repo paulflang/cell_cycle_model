@@ -280,7 +280,47 @@ begin molecule types
 	# Same as p21 but: no CCNB binidng. and can be phosphorylated by CCNA
 end molecule types
 begin seed species
-	# Species (concentration*scaling*volume)
+#	Species (concentration*scaling*volume)
+#	@Cyt:CCND() (1.0*1*1e-12)  #Cd
+#	@Cyt:CCNE(CDKN1A_B) (0.232249137*1*1e-12)  #Ce
+#	@Cyt:E2F(DBD,RB1,Ser332~u) (0.0184790235*1*1e-12)  #E2f
+#	@Cyt:E2F(DBD,RB1,Ser332~p) (3.8081857e-05*1*1e-12)  #pE2f
+#	@Cyt:CCNA(CDKN1A_B) (0.00702849494*1*1e-12)  #Ca
+#	@Cyt:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) (0.00188236293*1*1e-12)  #Cb
+#	@Cyt:E2F(DBD,RB1!1,Ser332~u).RB1(E2F!1,Ser807_Ser811~u) (0.0714613324*1*1e-12)  #E2fRb
+#	@Cyt:E2F(DBD,RB1!1,Ser332~p).RB1(E2F!1,Ser807_Ser811~u) (0.000150538592*1*1e-12)  #pE2fRb
+#	@Cyt:RB1(E2F,Ser807_Ser811~u) (0.0876426874*1*1e-12)  #Rb
+#	@Cyt:RB1(E2F,Ser807_Ser811~p) (0.840745442*1*1e-12)  #pRb
+#	@Cyt:PPP2R2B(ENSA_ARPP19) (0.0771916254*1*1e-12)  #B55
+#	@Cyt:APC(FZR1_CDC20,FBXO5,Ser355~u) (4.02871328*1*1e-12)  #Apc
+#	@Cyt:CDC20(APC) (0.229952789*1*1e-12)  #Cdc20
+#	@Cyt:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) (0.0698900785*1*1e-12)  #Apc # This was added manually when checking for model correctness
+#	@Cyt:APC(FZR1_CDC20,FBXO5,Ser355~p) (0.0630910652*1*1e-12)  #pApc
+#	@Cyt:APC(FZR1_CDC20!1,FBXO5,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u) (0.713544185*1*1e-12)  #ApcCdh
+#	@Cyt:FZR1(APC,FBXO5,nTerm~u) (0.000571340946*1*1e-12)  #Cdh
+#	@Cyt:FZR1(APC,FBXO5,nTerm~p) (0.16112308*1*1e-12)  #pCdh
+#	@Cyt:APC(FZR1_CDC20!1,FBXO5!2,Ser355~u).FZR1(APC!1,FBXO5!3,nTerm~u).FBXO5(APC!2,FZR1!3,Ser182~u) (0.108941313*1*1e-12)  #ACE
+#	@Cyt:FBXO5(APC,FZR1,Ser182~u) (0.000717816142*1*1e-12)  #Emi
+#	@Cyt:APC(FZR1_CDC20!1,FBXO5!2,Ser355~p).FZR1(APC!1,FBXO5!3,nTerm~u).FBXO5(APC!2,FZR1!3,Ser182~u) (0.00221254711*1*1e-12)  #pACE
+#	@Cyt:APC(FZR1_CDC20!1,FBXO5,Ser355~p).FZR1(APC!1,FBXO5,nTerm~u) (0.0136075334*1*1e-12)  #pApcCdh
+#	@Cyt:FBXO5(APC,FZR1,Ser182~p) (1.88049366e-05*1*1e-12)  #pEmi
+#	@Cyt:FOXM1(DBD,Thr600~u) (0.0055647336*1*1e-12)  #Fox
+#	@Cyt:FOXM1(DBD,Thr600~p) (0.00038111617*1*1e-12)  #pFox
+#	@Cyt:WEE1(Ser123~u) (0.980441633*1*1e-12)  #Wee
+#	@Cyt:CCNB(CDKN1A,CDK1_Thr14_Tyr15~p) (0.00751291485*1*1e-12)  #pCb
+#	@Cyt:WEE1(Ser123~p) (0.019558367*1*1e-12)  #pWee
+#	@Cyt:CDC25(pSites~p) (0.0184380668*1*1e-12)  #pCdc25
+#	@Cyt:CDC25(pSites~u) (0.981561933*1*1e-12)  #Cdc25
+#	@Cyt:MASTL(Thr198~u) (0.997525705*1*1e-12)  #Gw
+#	@Cyt:MASTL(Thr198~p) (0.00247429497*1*1e-12)  #pGw
+#	@Cyt:ENSA_ARPP19(PPP2R2B,Ser62_Ser67~u) (0.826863064*1*1e-12)  #Ensa
+#	@Cyt:ENSA_ARPP19(PPP2R2B,Ser62_Ser67~p) (0.000328561161*1*1e-12)  #pEnsa
+#	@Cyt:ENSA_ARPP19(PPP2R2B!1,Ser62_Ser67~p).PPP2R2B(ENSA_ARPP19!1) (0.172808375*1*1e-12)  #pEB55
+#	@Cyt:iWEE() (0*1*1e-12)  #iWee
+#	@Cyt:SKP2() (1*1*1e-12)
+#	@Cyt:TP53(DBD,Ser15~p) (0*1*1e-12)
+#	@Cyt:FOXO(DBD) (1*1*1e-12)
+	
 	@Cyt:CCND() (1.0*1*1e-12)  #Cd
 	@Cyt:CCNE(CDKN1A_B) (0.232249137*1*1e-12)  #Ce
 	@Cyt:E2F(DBD,RB1,Ser332~u) (0.0184790235*1*1e-12)  #E2f
@@ -306,6 +346,10 @@ begin seed species
 	@Cyt:FBXO5(APC,FZR1,Ser182~p) (1.88049366e-05*1*1e-12)  #pEmi
 	@Cyt:FOXM1(DBD,Thr600~u) (0.0055647336*1*1e-12)  #Fox
 	@Cyt:FOXM1(DBD,Thr600~p) (0.00038111617*1*1e-12)  #pFox
+	@Cyt:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) (1.90325916e-07*1*1e-12)  #pFoxProCb
+	@Cyt:CCNB_promoter(FOXM1) (9.98096741e-05*1*1e-12)  #ProCb
+	@Cyt:CDC20_promoter(FOXM1) (9.99238147e-05*1*1e-12)  #ProCdc
+	@Cyt:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) (7.61853468e-08*1*1e-12)  #pFoxProCdc
 	@Cyt:WEE1(Ser123~u) (0.980441633*1*1e-12)  #Wee
 	@Cyt:CCNB(CDKN1A,CDK1_Thr14_Tyr15~p) (0.00751291485*1*1e-12)  #pCb
 	@Cyt:WEE1(Ser123~p) (0.019558367*1*1e-12)  #pWee
@@ -316,10 +360,29 @@ begin seed species
 	@Cyt:ENSA_ARPP19(PPP2R2B,Ser62_Ser67~u) (0.826863064*1*1e-12)  #Ensa
 	@Cyt:ENSA_ARPP19(PPP2R2B,Ser62_Ser67~p) (0.000328561161*1*1e-12)  #pEnsa
 	@Cyt:ENSA_ARPP19(PPP2R2B!1,Ser62_Ser67~p).PPP2R2B(ENSA_ARPP19!1) (0.172808375*1*1e-12)  #pEB55
+	@Cyt:CCNE_promoter(E2F) (8.44790241e-05*1*1e-12)  #ProCe
+	@Cyt:CCNA_promoter(E2F) (8.44790241e-05*1*1e-12)  #ProCa
+	@Cyt:E2F_promoter(E2F) (8.44790241e-05*1*1e-12)  #ProE2f
+	@Cyt:FBXO5_promoter(E2F) (8.44790241e-05*1*1e-12)  #ProEmi
+	@Cyt:FOXM1_promoter(E2F) (8.44790241e-05*1*1e-12)  #ProFox
+	@Cyt:E2F(DBD!1,RB1,Ser332~u).CCNE_promoter(E2F!1) (1.55209759e-05*1*1e-12)  #E2fProCe
+	@Cyt:E2F(DBD!1,RB1,Ser332~u).CCNA_promoter(E2F!1) (1.55209759e-05*1*1e-12)  #E2fProCa
+	@Cyt:E2F(DBD!1,RB1,Ser332~u).E2F_promoter(E2F!1) (1.55209759e-05*1*1e-12)  #E2fProE2f
+	@Cyt:E2F(DBD!1,RB1,Ser332~u).FBXO5_promoter(E2F!1) (1.55209759e-05*1*1e-12)  #E2fProEmi
+	@Cyt:E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1) (1.55209759e-05*1*1e-12)  #E2fProFox
+	@Cyt:E2F(DBD!1,RB1,Ser332~p).CCNE_promoter(E2F!1) (0*1*1e-12)  #E2fProCe
+	@Cyt:E2F(DBD!1,RB1,Ser332~p).CCNA_promoter(E2F!1) (0*1*1e-12)  #E2fProCa
+	@Cyt:E2F(DBD!1,RB1,Ser332~p).E2F_promoter(E2F!1) (0*1*1e-12)  #E2fProE2f
+	@Cyt:E2F(DBD!1,RB1,Ser332~p).FBXO5_promoter(E2F!1) (0*1*1e-12)  #E2fProEmi
+	@Cyt:E2F(DBD!1,RB1,Ser332~p).FOXM1_promoter(E2F!1) (0*1*1e-12)  #E2fProFox
 	@Cyt:iWEE() (0*1*1e-12)  #iWee
 	@Cyt:SKP2() (1*1*1e-12)
 	@Cyt:TP53(DBD,Ser15~p) (0*1*1e-12)
+	@Cyt:CDKN1A_promoter(TP53) (1e-04*1*1e-12)
 	@Cyt:FOXO(DBD) (1*1*1e-12)
+	@Cyt:CDKN1B_promoter(FOXO) (1e-04*1*1e-12)
+	
+	
 	@Num:NUP(pSites~u) 3e3
 	@Nuc:CCND() (1.0*1*1e-12)  #Cd
 	@Nuc:CCNE(CDKN1A_B) (0.232249137*1*1e-12)  #Ce
@@ -643,7 +706,7 @@ end model
 
 generate_network({overwrite=>1})
 writeSBML()
-simulate({method=>"ode",t_end=>1e6,n_steps=>1e3,atol=>1e-8,rtol=>1e-8})
+#simulate({method=>"ode",t_end=>1e6,n_steps=>1e3,atol=>1e-8,rtol=>1e-8})
 #simulate({method=>"ssa",t_end=>100,n_steps=>4e2})
 #saveConcentrations();
 #setConcentration("TP53(DBD,Ser15~p)","1*6.022e23");
