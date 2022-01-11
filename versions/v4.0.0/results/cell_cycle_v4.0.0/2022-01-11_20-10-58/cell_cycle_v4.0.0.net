@@ -1,0 +1,1267 @@
+# Created by BioNetGen 2.3.1
+begin parameters
+    1 kPhRbD                                                                                     0.005544005544/1  # Constant
+    2 kPhRbE                                                                                     0.00693000693/1  # Constant
+    3 kDpRb                                                                                      0.001386001386  # Constant
+    4 kPhRb                                                                                      0.02079002079/1  # Constant
+    5 kSyCe1                                                                                     (1.386001386e-05*1)*2  # Constant
+    6 kSyCe2                                                                                     4.158004158*2  # Constant
+    7 kDeCe                                                                                      0.0001386001386  # Constant
+    8 kDiE2fRb                                                                                   0.0003465003465  # Constant
+    9 kAsE2fRb                                                                                   0.3465003465/1  # Constant
+   10 kSyE2f1                                                                                    (6.93000693e-06*1)*2  # Constant
+   11 kSyE2f2                                                                                    0.693000693*2  # Constant
+   12 kDeE2f1                                                                                    6.93000693e-05  # Constant
+   13 kDeE2f2                                                                                    0.001386001386  # Constant
+   14 kPhE2f                                                                                     0.001386001386/1  # Constant
+   15 kDpE2f2                                                                                    0.0693000693/1  # Constant
+   16 kSyEmi1                                                                                    (3.465003465e-05*1)*2  # Constant
+   17 kSyEmi2                                                                                    3.465003465*2  # Constant
+   18 kDeEmi1                                                                                    0.0003465003465  # Constant
+   19 kDeEmi2                                                                                    0.0003465003465  # Constant
+   20 kDeEmi3                                                                                    0.003465003465  # Constant
+   21 kPhEmiA                                                                                    3.465003465e-05/1  # Constant
+   22 kPhEmiB                                                                                    0.00017325017325/1  # Constant
+   23 kDpEmi                                                                                     3.465003465e-06  # Constant
+   24 kSyCa1                                                                                     (6.93000693e-06*1)*2  # Constant
+   25 kSyCa2                                                                                     0.5197505197*2  # Constant
+   26 kDeCa1                                                                                     6.93000693e-06  # Constant
+   27 kDeCa2                                                                                     0.002772002772/1  # Constant
+   28 kDeCa3                                                                                     0.000693000693/1  # Constant
+   29 kDpCdh                                                                                     0.003465003465  # Constant
+   30 kPhCdhA                                                                                    0.01732501732/1  # Constant
+   31 kPhCdhE                                                                                    0.000693000693/1  # Constant
+   32 kPhCdhB                                                                                    0.1732501733/1  # Constant
+   33 kDiACE                                                                                     0.0003465003465  # Constant
+   34 kAsACE                                                                                     0.3465003465/1  # Constant
+   35 kDiACdh                                                                                    0.0003465003465  # Constant
+   36 kAsACdh                                                                                    0.3465003465/1  # Constant
+   37 kPhCeA                                                                                     0.00693000693/1  # Constant
+   38 kPhCeE                                                                                     6.93000693e-05/1  # Constant
+   39 kPhFoxE                                                                                    0.000693000693/1  # Constant
+   40 kPhFoxA                                                                                    0.000693000693/1  # Constant
+   41 kPhFoxB                                                                                    0.003465003465/1  # Constant
+   42 kDpFox                                                                                     1e-05  # Constant
+   43 kSyCb1                                                                                     (6.93000693e-06*1)*2  # Constant
+   44 kSyCb2                                                                                     0.5197505197*2  # Constant
+   45 kDeCb1                                                                                     6.93000693e-06  # Constant
+   46 kDeCb2                                                                                     0.00086625086625/1  # Constant
+   47 kDeCb3                                                                                     0.00086625086625/1  # Constant
+   48 kPhEnsa                                                                                    0.000693000693/1  # Constant
+   49 kDpEnsa                                                                                    0.0003465003465  # Constant
+   50 kPhGw                                                                                      0.00693000693/1  # Constant
+   51 kDpGw1                                                                                     0.0017325017325  # Constant
+   52 kDpGw2                                                                                     0.0693000693/1  # Constant
+   53 kWee1                                                                                      6.93000693e-05/1  # Constant
+   54 kWee2                                                                                      0.00693000693/1  # Constant
+   55 kPhWeeA                                                                                    0.000693000693/1  # Constant
+   56 kPhWeeB                                                                                    0.00693000693/1  # Constant
+   57 kDpWee                                                                                     0.0693000693/1  # Constant
+   58 kCdc25_1                                                                                   0.000693000693/1  # Constant
+   59 kCdc25_2                                                                                   0.00693000693/1  # Constant
+   60 kDpCdc25                                                                                   0.0693000693/1  # Constant
+   61 kDipEB55                                                                                   4.7124047124e-05  # Constant
+   62 kAspEB55                                                                                   0.39501039501/1  # Constant
+   63 kSyCdc_1                                                                                   (6.93000693e-06*1)*2  # Constant
+   64 kSyCdc_2                                                                                   0.693000693*2  # Constant
+   65 kDeCdc_1                                                                                   2.772002772e-05  # Constant
+   66 kDeCdc_2                                                                                   0.0002772002772/1  # Constant
+   67 kDipACdc                                                                                   0.00086625086625  # Constant
+   68 kAspACdc                                                                                   0.00693000693/1  # Constant
+   69 kPhApcA                                                                                    6.93000693e-05/1  # Constant
+   70 kDpApc_1                                                                                   0/1  # Constant
+   71 kDpApc_2                                                                                   0.03465003465/1  # Constant
+   72 kSyFox1                                                                                    (6.93000693e-06*1)*2  # Constant
+   73 kSyFox2                                                                                    0.5197505197*2  # Constant
+   74 kDeFox1                                                                                    6.93000693e-06  # Constant
+   75 kDeFox2                                                                                    0.003465003465/1  # Constant
+   76 kAsEPx                                                                                     0.3465003465/1  # Constant
+   77 kDiEPx                                                                                     0.03465003465  # Constant
+   78 kAsFPcb                                                                                    0.3465003465/1  # Constant
+   79 kDiFPcb                                                                                    0.0693000693  # Constant
+   80 kAsFPcdc                                                                                   0.3465003465/1  # Constant
+   81 kDiFPcdc                                                                                   0.17325017325  # Constant
+   82 kPhC25B                                                                                    0.00693000693/1  # Constant
+   83 kPhCAEE                                                                                    0.00055440055/1  # Constant
+   84 kPhCAEA                                                                                    0.01386001385/1  # Constant
+   85 kPhCAEB                                                                                    0.13860013864/1  # Constant
+   86 ikSyCb                                                                                     1.0  # Constant
+   87 jiWee                                                                                      0.1*1  # Constant
+   88 kDpE2f1                                                                                    0  # Constant
+   89 kPhC25A                                                                                    0/1  # Constant
+   90 kSySkp2                                                                                    (1e-04*1)*2  # Constant
+   91 kDeSkp2_1                                                                                  0.0001  # Constant
+   92 kDeSkp2_2                                                                                  0.002/1  # Constant
+   93 kAsTP53PCDKN1A                                                                             0.3/1  # Constant
+   94 kDiTP53PCDKN1A                                                                             0.15  # Constant
+   95 kSyCDKN1A_1                                                                                (1e-05*1)*2  # Constant
+   96 kSyCDKN1A_2                                                                                4*2  # Constant
+   97 kDeCDKN1A_1                                                                                0.00002  # Constant
+   98 kDeCDKN1A_2                                                                                0.00025/1  # Constant
+   99 kAsCdkn1aC                                                                                 0.007/1  # Constant
+  100 kDiCdkn1aC                                                                                 0.0003  # Constant
+  101 kPhCDKN1AByCe                                                                              0.005/1  # Constant
+  102 kPhCDKN1AByCa                                                                              0.0005/1  # Constant
+  103 kPhCDKN1AByCb                                                                              0.005/1  # Constant
+  104 kDpCDKN1A                                                                                  0.002  # Constant
+  105 kAsFOXOPCDKN1B                                                                             0.3/1  # Constant
+  106 kDiFOXOPCDKN1B                                                                             0.15  # Constant
+  107 kSyCDKN1B_1                                                                                (1e-05*1)*2  # Constant
+  108 kSyCDKN1B_2                                                                                0.5*2  # Constant
+  109 kDeCDKN1B_1                                                                                0.00002  # Constant
+  110 kDeCDKN1B_2                                                                                0.0025/1  # Constant
+  111 kAsCdkn1bC                                                                                 0.007/1  # Constant
+  112 kDiCdkn1bC                                                                                 0.0003  # Constant
+  113 kPhCDKN1BByCe                                                                              0.005/1  # Constant
+  114 kPhCDKN1BByCa                                                                              0.05/1  # Constant
+  115 kPhCDKN1BByCb                                                                              0.0005/1  # Constant
+  116 kDpCDKN1B                                                                                  0.002  # Constant
+  117 kPhNup                                                                                     3e12/1  # Constant
+  118 kDpNup_1                                                                                   2  # Constant
+  119 kImImCCND_1                                                                                1e9/1  # Constant
+  120 kExImCCND_1                                                                                1e9/1  # Constant
+  121 kImImCCNE_CDKN1A_B__1                                                                      1e9/1  # Constant
+  122 kExImCCNE_CDKN1A_B__1                                                                      1e9/1  # Constant
+  123 kImImE2F_DBD_RB1_Ser332u__1                                                                1e9/1  # Constant
+  124 kExImE2F_DBD_RB1_Ser332u__1                                                                1e9/1  # Constant
+  125 kImImE2F_DBD_RB1_Ser332p__1                                                                1e9/1  # Constant
+  126 kExImE2F_DBD_RB1_Ser332p__1                                                                1e9/1  # Constant
+  127 kImImCCNA_CDKN1A_B__1                                                                      1e9/1  # Constant
+  128 kExImCCNA_CDKN1A_B__1                                                                      1e9/1  # Constant
+  129 kImImCCNB_CDK1_Thr14_Tyr15u_CDKN1A__1                                                      1e9/1  # Constant
+  130 kExImCCNB_CDK1_Thr14_Tyr15u_CDKN1A__1                                                      1e9/1  # Constant
+  131 kImImE2F_DBD_RB11_Ser332u__RB1_E2F1_Ser807_Ser811u__1                                      1e9/1  # Constant
+  132 kExImE2F_DBD_RB11_Ser332u__RB1_E2F1_Ser807_Ser811u__1                                      1e9/1  # Constant
+  133 kImImE2F_DBD_RB11_Ser332p__RB1_E2F1_Ser807_Ser811u__1                                      1e9/1  # Constant
+  134 kExImE2F_DBD_RB11_Ser332p__RB1_E2F1_Ser807_Ser811u__1                                      1e9/1  # Constant
+  135 kImImRB1_E2F_Ser807_Ser811u__1                                                             1e9/1  # Constant
+  136 kExImRB1_E2F_Ser807_Ser811u__1                                                             1e9/1  # Constant
+  137 kImImRB1_E2F_Ser807_Ser811p__1                                                             1e9/1  # Constant
+  138 kExImRB1_E2F_Ser807_Ser811p__1                                                             1e9/1  # Constant
+  139 kImImPPP2R2B_ENSA_ARPP19__1                                                                1e9/1  # Constant
+  140 kExImPPP2R2B_ENSA_ARPP19__1                                                                1e9/1  # Constant
+  141 kImImAPC_FBXO5_FZR1_CDC20_Ser355u__1                                                       1e9/1  # Constant
+  142 kExImAPC_FBXO5_FZR1_CDC20_Ser355u__1                                                       1e9/1  # Constant
+  143 kImImCDC20_APC__1                                                                          1e9/1  # Constant
+  144 kExImCDC20_APC__1                                                                          1e9/1  # Constant
+  145 kImImAPC_FBXO5_FZR1_CDC201_Ser355p__CDC20_APC1__1                                          1e9/1  # Constant
+  146 kExImAPC_FBXO5_FZR1_CDC201_Ser355p__CDC20_APC1__1                                          1e9/1  # Constant
+  147 kImImAPC_FBXO5_FZR1_CDC20_Ser355p__1                                                       1e9/1  # Constant
+  148 kExImAPC_FBXO5_FZR1_CDC20_Ser355p__1                                                       1e9/1  # Constant
+  149 kImImAPC_FBXO5_FZR1_CDC201_Ser355u__FZR1_APC1_FBXO5_nTermu__1                              1e9/1  # Constant
+  150 kExImAPC_FBXO5_FZR1_CDC201_Ser355u__FZR1_APC1_FBXO5_nTermu__1                              1e9/1  # Constant
+  151 kImImFZR1_APC_FBXO5_nTermu__1                                                              1e9/1  # Constant
+  152 kExImFZR1_APC_FBXO5_nTermu__1                                                              1e9/1  # Constant
+  153 kImImFZR1_APC_FBXO5_nTermp__1                                                              1e9/1  # Constant
+  154 kExImFZR1_APC_FBXO5_nTermp__1                                                              1e9/1  # Constant
+  155 kImImAPC_FBXO51_FZR1_CDC202_Ser355u__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1  1e9/1  # Constant
+  156 kExImAPC_FBXO51_FZR1_CDC202_Ser355u__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1  1e9/1  # Constant
+  157 kImImFBXO5_APC_FZR1_Ser182u__1                                                             1e9/1  # Constant
+  158 kExImFBXO5_APC_FZR1_Ser182u__1                                                             1e9/1  # Constant
+  159 kImImAPC_FBXO51_FZR1_CDC202_Ser355p__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1  1e9/1  # Constant
+  160 kExImAPC_FBXO51_FZR1_CDC202_Ser355p__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1  1e9/1  # Constant
+  161 kImImAPC_FBXO5_FZR1_CDC201_Ser355p__FZR1_APC1_FBXO5_nTermu__1                              1e9/1  # Constant
+  162 kExImAPC_FBXO5_FZR1_CDC201_Ser355p__FZR1_APC1_FBXO5_nTermu__1                              1e9/1  # Constant
+  163 kImImFBXO5_APC_FZR1_Ser182p__1                                                             1e9/1  # Constant
+  164 kExImFBXO5_APC_FZR1_Ser182p__1                                                             1e9/1  # Constant
+  165 kImImFOXM1_DBD_Thr600u__1                                                                  1e9/1  # Constant
+  166 kExImFOXM1_DBD_Thr600u__1                                                                  1e9/1  # Constant
+  167 kImImFOXM1_DBD_Thr600p__1                                                                  1e9/1  # Constant
+  168 kExImFOXM1_DBD_Thr600p__1                                                                  1e9/1  # Constant
+  169 kImImWEE1_Ser123u__1                                                                       1e9/1  # Constant
+  170 kExImWEE1_Ser123u__1                                                                       1e9/1  # Constant
+  171 kImImCCNB_CDK1_Thr14_Tyr15p_CDKN1A__1                                                      1e9/1  # Constant
+  172 kExImCCNB_CDK1_Thr14_Tyr15p_CDKN1A__1                                                      1e9/1  # Constant
+  173 kImImWEE1_Ser123p__1                                                                       1e9/1  # Constant
+  174 kExImWEE1_Ser123p__1                                                                       1e9/1  # Constant
+  175 kImImCDC25_pSitesp__1                                                                      1e9/1  # Constant
+  176 kExImCDC25_pSitesp__1                                                                      1e9/1  # Constant
+  177 kImImCDC25_pSitesu__1                                                                      1e9/1  # Constant
+  178 kExImCDC25_pSitesu__1                                                                      1e9/1  # Constant
+  179 kImImMASTL_Thr198u__1                                                                      1e9/1  # Constant
+  180 kExImMASTL_Thr198u__1                                                                      1e9/1  # Constant
+  181 kImImMASTL_Thr198p__1                                                                      1e9/1  # Constant
+  182 kExImMASTL_Thr198p__1                                                                      1e9/1  # Constant
+  183 kImImENSA_ARPP19_PPP2R2B_Ser62_Ser67u__1                                                   1e9/1  # Constant
+  184 kExImENSA_ARPP19_PPP2R2B_Ser62_Ser67u__1                                                   1e9/1  # Constant
+  185 kImImENSA_ARPP19_PPP2R2B_Ser62_Ser67p__1                                                   1e9/1  # Constant
+  186 kExImENSA_ARPP19_PPP2R2B_Ser62_Ser67p__1                                                   1e9/1  # Constant
+  187 kImImENSA_ARPP19_PPP2R2B1_Ser62_Ser67p__PPP2R2B_ENSA_ARPP191__1                            1e9/1  # Constant
+  188 kExImENSA_ARPP19_PPP2R2B1_Ser62_Ser67p__PPP2R2B_ENSA_ARPP191__1                            1e9/1  # Constant
+  189 kImImiWEE_1                                                                                1e9/1  # Constant
+  190 kExImiWEE_1                                                                                1e9/1  # Constant
+  191 kImImSKP2_1                                                                                1e9/1  # Constant
+  192 kExImSKP2_1                                                                                1e9/1  # Constant
+  193 kImImTP53_DBD_Ser15p__1                                                                    1e9/1  # Constant
+  194 kExImTP53_DBD_Ser15p__1                                                                    1e9/1  # Constant
+  195 kImImFOXO_DBD__1                                                                           1e9/1  # Constant
+  196 kExImFOXO_DBD__1                                                                           1e9/1  # Constant
+  197 kImImCDKN1A_CCNE_A_B_Ser130u__1                                                            1e9/1  # Constant
+  198 kExImCDKN1A_CCNE_A_B_Ser130u__1                                                            1e9/1  # Constant
+  199 kImImCDKN1B_CCNE_A_Thr187u__1                                                              1e9/1  # Constant
+  200 kExImCDKN1B_CCNE_A_Thr187u__1                                                              1e9/1  # Constant
+  201 kImImCCNA_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1                                           1e9/1  # Constant
+  202 kExImCCNA_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1                                           1e9/1  # Constant
+  203 kImImCCNE_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1                                           1e9/1  # Constant
+  204 kExImCCNE_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1                                           1e9/1  # Constant
+  205 kImImCCNB_CDK1_Thr14_Tyr15u_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1                           1e9/1  # Constant
+  206 kExImCCNB_CDK1_Thr14_Tyr15u_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1                           1e9/1  # Constant
+  207 kImImCCNB_CDK1_Thr14_Tyr15p_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1                           1e9/1  # Constant
+  208 kExImCCNB_CDK1_Thr14_Tyr15p_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1                           1e9/1  # Constant
+  209 kImImCDKN1A_CCNE_A_B_Ser130p__1                                                            1e9/1  # Constant
+  210 kExImCDKN1A_CCNE_A_B_Ser130p__1                                                            1e9/1  # Constant
+  211 kImImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1                                             1e9/1  # Constant
+  212 kExImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1                                             1e9/1  # Constant
+  213 kImImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1                                             1e9/1  # Constant
+  214 kExImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1                                             1e9/1  # Constant
+  215 kImImCDKN1B_CCNE_A_Thr187p__1                                                              1e9/1  # Constant
+  216 kExImCDKN1B_CCNE_A_Thr187p__1                                                              1e9/1  # Constant
+  217 kImImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1                                             1e9/1  # Constant
+  218 kExImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1                                             1e9/1  # Constant
+  219 kImImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1                                             1e9/1  # Constant
+  220 kExImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1                                             1e9/1  # Constant
+  221 kIm_2                                                                                      1e10/1  # Constant
+  222 kEx_2                                                                                      1e10/1  # Constant
+  223 _InitialConc1                                                                              (1.0*1)*1e-12  # Constant
+  224 _InitialConc2                                                                              (0.232249137*1)*1e-12  # Constant
+  225 _InitialConc3                                                                              (0.0184790235*1)*1e-12  # Constant
+  226 _InitialConc4                                                                              (3.8081857e-05*1)*1e-12  # Constant
+  227 _InitialConc5                                                                              (0.00702849494*1)*1e-12  # Constant
+  228 _InitialConc6                                                                              (0.00188236293*1)*1e-12  # Constant
+  229 _InitialConc7                                                                              (0.0714613324*1)*1e-12  # Constant
+  230 _InitialConc8                                                                              (0.000150538592*1)*1e-12  # Constant
+  231 _InitialConc9                                                                              (0.0876426874*1)*1e-12  # Constant
+  232 _InitialConc10                                                                             (0.840745442*1)*1e-12  # Constant
+  233 _InitialConc11                                                                             (0.0771916254*1)*1e-12  # Constant
+  234 _InitialConc12                                                                             (4.02871328*1)*1e-12  # Constant
+  235 _InitialConc13                                                                             (0.229952789*1)*1e-12  # Constant
+  236 _InitialConc14                                                                             (0.0698900785*1)*1e-12  # Constant
+  237 _InitialConc15                                                                             (0.0630910652*1)*1e-12  # Constant
+  238 _InitialConc16                                                                             (0.713544185*1)*1e-12  # Constant
+  239 _InitialConc17                                                                             (0.000571340946*1)*1e-12  # Constant
+  240 _InitialConc18                                                                             (0.16112308*1)*1e-12  # Constant
+  241 _InitialConc19                                                                             (0.108941313*1)*1e-12  # Constant
+  242 _InitialConc20                                                                             (0.000717816142*1)*1e-12  # Constant
+  243 _InitialConc21                                                                             (0.00221254711*1)*1e-12  # Constant
+  244 _InitialConc22                                                                             (0.0136075334*1)*1e-12  # Constant
+  245 _InitialConc23                                                                             (1.88049366e-05*1)*1e-12  # Constant
+  246 _InitialConc24                                                                             (0.0055647336*1)*1e-12  # Constant
+  247 _InitialConc25                                                                             (0.00038111617*1)*1e-12  # Constant
+  248 _InitialConc26                                                                             (1.90325916e-07*1)*1e-12  # Constant
+  249 _InitialConc27                                                                             (9.98096741e-05*1)*1e-12  # Constant
+  250 _InitialConc28                                                                             (9.99238147e-05*1)*1e-12  # Constant
+  251 _InitialConc29                                                                             (7.61853468e-08*1)*1e-12  # Constant
+  252 _InitialConc30                                                                             (0.980441633*1)*1e-12  # Constant
+  253 _InitialConc31                                                                             (0.00751291485*1)*1e-12  # Constant
+  254 _InitialConc32                                                                             (0.019558367*1)*1e-12  # Constant
+  255 _InitialConc33                                                                             (0.0184380668*1)*1e-12  # Constant
+  256 _InitialConc34                                                                             (0.981561933*1)*1e-12  # Constant
+  257 _InitialConc35                                                                             (0.997525705*1)*1e-12  # Constant
+  258 _InitialConc36                                                                             (0.00247429497*1)*1e-12  # Constant
+  259 _InitialConc37                                                                             (0.826863064*1)*1e-12  # Constant
+  260 _InitialConc38                                                                             (0.000328561161*1)*1e-12  # Constant
+  261 _InitialConc39                                                                             (0.172808375*1)*1e-12  # Constant
+  262 _InitialConc40                                                                             (8.44790241e-05*1)*1e-12  # Constant
+  263 _InitialConc41                                                                             (8.44790241e-05*1)*1e-12  # Constant
+  264 _InitialConc42                                                                             (8.44790241e-05*1)*1e-12  # Constant
+  265 _InitialConc43                                                                             (8.44790241e-05*1)*1e-12  # Constant
+  266 _InitialConc44                                                                             (8.44790241e-05*1)*1e-12  # Constant
+  267 _InitialConc45                                                                             (1.55209759e-05*1)*1e-12  # Constant
+  268 _InitialConc46                                                                             (1.55209759e-05*1)*1e-12  # Constant
+  269 _InitialConc47                                                                             (1.55209759e-05*1)*1e-12  # Constant
+  270 _InitialConc48                                                                             (1.55209759e-05*1)*1e-12  # Constant
+  271 _InitialConc49                                                                             (1.55209759e-05*1)*1e-12  # Constant
+  272 _InitialConc50                                                                             (0*1)*1e-12  # Constant
+  273 _InitialConc51                                                                             (0*1)*1e-12  # Constant
+  274 _InitialConc52                                                                             (0*1)*1e-12  # Constant
+  275 _InitialConc53                                                                             (0*1)*1e-12  # Constant
+  276 _InitialConc54                                                                             (0*1)*1e-12  # Constant
+  277 _InitialConc55                                                                             (0*1)*1e-12  # Constant
+  278 _InitialConc56                                                                             (1*1)*1e-12  # Constant
+  279 _InitialConc57                                                                             (0*1)*1e-12  # Constant
+  280 _InitialConc58                                                                             (1e-04*1)*1e-12  # Constant
+  281 _InitialConc59                                                                             (1*1)*1e-12  # Constant
+  282 _InitialConc60                                                                             (1e-04*1)*1e-12  # Constant
+  283 _InitialConc61                                                                             (1.0*1)*1e-12  # Constant
+  284 _InitialConc62                                                                             (0.232249137*1)*1e-12  # Constant
+  285 _InitialConc63                                                                             (0.0184790235*1)*1e-12  # Constant
+  286 _InitialConc64                                                                             (3.8081857e-05*1)*1e-12  # Constant
+  287 _InitialConc65                                                                             (0.00702849494*1)*1e-12  # Constant
+  288 _InitialConc66                                                                             (0.00188236293*1)*1e-12  # Constant
+  289 _InitialConc67                                                                             (0.0714613324*1)*1e-12  # Constant
+  290 _InitialConc68                                                                             (0.000150538592*1)*1e-12  # Constant
+  291 _InitialConc69                                                                             (0.0876426874*1)*1e-12  # Constant
+  292 _InitialConc70                                                                             (0.840745442*1)*1e-12  # Constant
+  293 _InitialConc71                                                                             (0.0771916254*1)*1e-12  # Constant
+  294 _InitialConc72                                                                             (4.02871328*1)*1e-12  # Constant
+  295 _InitialConc73                                                                             (0.229952789*1)*1e-12  # Constant
+  296 _InitialConc74                                                                             (0.0698900785*1)*1e-12  # Constant
+  297 _InitialConc75                                                                             (0.0630910652*1)*1e-12  # Constant
+  298 _InitialConc76                                                                             (0.713544185*1)*1e-12  # Constant
+  299 _InitialConc77                                                                             (0.000571340946*1)*1e-12  # Constant
+  300 _InitialConc78                                                                             (0.16112308*1)*1e-12  # Constant
+  301 _InitialConc79                                                                             (0.108941313*1)*1e-12  # Constant
+  302 _InitialConc80                                                                             (0.000717816142*1)*1e-12  # Constant
+  303 _InitialConc81                                                                             (0.00221254711*1)*1e-12  # Constant
+  304 _InitialConc82                                                                             (0.0136075334*1)*1e-12  # Constant
+  305 _InitialConc83                                                                             (1.88049366e-05*1)*1e-12  # Constant
+  306 _InitialConc84                                                                             (0.0055647336*1)*1e-12  # Constant
+  307 _InitialConc85                                                                             (0.00038111617*1)*1e-12  # Constant
+  308 _InitialConc86                                                                             (1.90325916e-07*1)*1e-12  # Constant
+  309 _InitialConc87                                                                             (9.98096741e-05*1)*1e-12  # Constant
+  310 _InitialConc88                                                                             (9.99238147e-05*1)*1e-12  # Constant
+  311 _InitialConc89                                                                             (7.61853468e-08*1)*1e-12  # Constant
+  312 _InitialConc90                                                                             (0.980441633*1)*1e-12  # Constant
+  313 _InitialConc91                                                                             (0.00751291485*1)*1e-12  # Constant
+  314 _InitialConc92                                                                             (0.019558367*1)*1e-12  # Constant
+  315 _InitialConc93                                                                             (0.0184380668*1)*1e-12  # Constant
+  316 _InitialConc94                                                                             (0.981561933*1)*1e-12  # Constant
+  317 _InitialConc95                                                                             (0.997525705*1)*1e-12  # Constant
+  318 _InitialConc96                                                                             (0.00247429497*1)*1e-12  # Constant
+  319 _InitialConc97                                                                             (0.826863064*1)*1e-12  # Constant
+  320 _InitialConc98                                                                             (0.000328561161*1)*1e-12  # Constant
+  321 _InitialConc99                                                                             (0.172808375*1)*1e-12  # Constant
+  322 _InitialConc100                                                                            (8.44790241e-05*1)*1e-12  # Constant
+  323 _InitialConc101                                                                            (8.44790241e-05*1)*1e-12  # Constant
+  324 _InitialConc102                                                                            (8.44790241e-05*1)*1e-12  # Constant
+  325 _InitialConc103                                                                            (8.44790241e-05*1)*1e-12  # Constant
+  326 _InitialConc104                                                                            (8.44790241e-05*1)*1e-12  # Constant
+  327 _InitialConc105                                                                            (1.55209759e-05*1)*1e-12  # Constant
+  328 _InitialConc106                                                                            (1.55209759e-05*1)*1e-12  # Constant
+  329 _InitialConc107                                                                            (1.55209759e-05*1)*1e-12  # Constant
+  330 _InitialConc108                                                                            (1.55209759e-05*1)*1e-12  # Constant
+  331 _InitialConc109                                                                            (1.55209759e-05*1)*1e-12  # Constant
+  332 _InitialConc110                                                                            (0*1)*1e-12  # Constant
+  333 _InitialConc111                                                                            (0*1)*1e-12  # Constant
+  334 _InitialConc112                                                                            (0*1)*1e-12  # Constant
+  335 _InitialConc113                                                                            (0*1)*1e-12  # Constant
+  336 _InitialConc114                                                                            (0*1)*1e-12  # Constant
+  337 _InitialConc115                                                                            (0*1)*1e-12  # Constant
+  338 _InitialConc116                                                                            (1*1)*1e-12  # Constant
+  339 _InitialConc117                                                                            (0*1)*1e-12  # Constant
+  340 _InitialConc118                                                                            (1e-04*1)*1e-12  # Constant
+  341 _InitialConc119                                                                            (1*1)*1e-12  # Constant
+  342 _InitialConc120                                                                            (1e-04*1)*1e-12  # Constant
+  343 _rateLaw1                                                                                  kSyCb1*ikSyCb  # ConstantExpression
+  344 _rateLaw2                                                                                  kSyCb2*ikSyCb  # ConstantExpression
+  345 _rateLaw3                                                                                  0  # Constant
+end parameters
+begin species
+    1 @Cyt::CCND() _InitialConc1
+    2 @Cyt::CCNE(CDKN1A_B) _InitialConc2
+    3 @Cyt::E2F(DBD,RB1,Ser332~u) _InitialConc3
+    4 @Cyt::E2F(DBD,RB1,Ser332~p) _InitialConc4
+    5 @Cyt::CCNA(CDKN1A_B) _InitialConc5
+    6 @Cyt::CCNB(CDK1_Thr14_Tyr15~u,CDKN1A) _InitialConc6
+    7 @Cyt::E2F(DBD,RB1!1,Ser332~u).RB1(E2F!1,Ser807_Ser811~u) _InitialConc7
+    8 @Cyt::E2F(DBD,RB1!1,Ser332~p).RB1(E2F!1,Ser807_Ser811~u) _InitialConc8
+    9 @Cyt::RB1(E2F,Ser807_Ser811~u) _InitialConc9
+   10 @Cyt::RB1(E2F,Ser807_Ser811~p) _InitialConc10
+   11 @Cyt::PPP2R2B(ENSA_ARPP19) _InitialConc11
+   12 @Cyt::APC(FBXO5,FZR1_CDC20,Ser355~u) _InitialConc12
+   13 @Cyt::CDC20(APC) _InitialConc13
+   14 @Cyt::APC(FBXO5,FZR1_CDC20!1,Ser355~p).CDC20(APC!1) _InitialConc14
+   15 @Cyt::APC(FBXO5,FZR1_CDC20,Ser355~p) _InitialConc15
+   16 @Cyt::APC(FBXO5,FZR1_CDC20!1,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u) _InitialConc16
+   17 @Cyt::FZR1(APC,FBXO5,nTerm~u) _InitialConc17
+   18 @Cyt::FZR1(APC,FBXO5,nTerm~p) _InitialConc18
+   19 @Cyt::APC(FBXO5!1,FZR1_CDC20!2,Ser355~u).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u) _InitialConc19
+   20 @Cyt::FBXO5(APC,FZR1,Ser182~u) _InitialConc20
+   21 @Cyt::APC(FBXO5!1,FZR1_CDC20!2,Ser355~p).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u) _InitialConc21
+   22 @Cyt::APC(FBXO5,FZR1_CDC20!1,Ser355~p).FZR1(APC!1,FBXO5,nTerm~u) _InitialConc22
+   23 @Cyt::FBXO5(APC,FZR1,Ser182~p) _InitialConc23
+   24 @Cyt::FOXM1(DBD,Thr600~u) _InitialConc24
+   25 @Cyt::FOXM1(DBD,Thr600~p) _InitialConc25
+   26 @Cyt::CCNB_promoter(FOXM1!1).FOXM1(DBD!1,Thr600~p) _InitialConc26
+   27 @Cyt::CCNB_promoter(FOXM1) _InitialConc27
+   28 @Cyt::CDC20_promoter(FOXM1) _InitialConc28
+   29 @Cyt::CDC20_promoter(FOXM1!1).FOXM1(DBD!1,Thr600~p) _InitialConc29
+   30 @Cyt::WEE1(Ser123~u) _InitialConc30
+   31 @Cyt::CCNB(CDK1_Thr14_Tyr15~p,CDKN1A) _InitialConc31
+   32 @Cyt::WEE1(Ser123~p) _InitialConc32
+   33 @Cyt::CDC25(pSites~p) _InitialConc33
+   34 @Cyt::CDC25(pSites~u) _InitialConc34
+   35 @Cyt::MASTL(Thr198~u) _InitialConc35
+   36 @Cyt::MASTL(Thr198~p) _InitialConc36
+   37 @Cyt::ENSA_ARPP19(PPP2R2B,Ser62_Ser67~u) _InitialConc37
+   38 @Cyt::ENSA_ARPP19(PPP2R2B,Ser62_Ser67~p) _InitialConc38
+   39 @Cyt::ENSA_ARPP19(PPP2R2B!1,Ser62_Ser67~p).PPP2R2B(ENSA_ARPP19!1) _InitialConc39
+   40 @Cyt::CCNE_promoter(E2F) _InitialConc40
+   41 @Cyt::CCNA_promoter(E2F) _InitialConc41
+   42 @Cyt::E2F_promoter(E2F) _InitialConc42
+   43 @Cyt::FBXO5_promoter(E2F) _InitialConc43
+   44 @Cyt::FOXM1_promoter(E2F) _InitialConc44
+   45 @Cyt::CCNE_promoter(E2F!1).E2F(DBD!1,RB1,Ser332~u) _InitialConc45
+   46 @Cyt::CCNA_promoter(E2F!1).E2F(DBD!1,RB1,Ser332~u) _InitialConc46
+   47 @Cyt::E2F(DBD!1,RB1,Ser332~u).E2F_promoter(E2F!1) _InitialConc47
+   48 @Cyt::E2F(DBD!1,RB1,Ser332~u).FBXO5_promoter(E2F!1) _InitialConc48
+   49 @Cyt::E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1) _InitialConc49
+   50 @Cyt::CCNE_promoter(E2F!1).E2F(DBD!1,RB1,Ser332~p) _InitialConc50
+   51 @Cyt::CCNA_promoter(E2F!1).E2F(DBD!1,RB1,Ser332~p) _InitialConc51
+   52 @Cyt::E2F(DBD!1,RB1,Ser332~p).E2F_promoter(E2F!1) _InitialConc52
+   53 @Cyt::E2F(DBD!1,RB1,Ser332~p).FBXO5_promoter(E2F!1) _InitialConc53
+   54 @Cyt::E2F(DBD!1,RB1,Ser332~p).FOXM1_promoter(E2F!1) _InitialConc54
+   55 @Cyt::iWEE() _InitialConc55
+   56 @Cyt::SKP2() _InitialConc56
+   57 @Cyt::TP53(DBD,Ser15~p) _InitialConc57
+   58 @Cyt::CDKN1A_promoter(TP53) _InitialConc58
+   59 @Cyt::FOXO(DBD) _InitialConc59
+   60 @Cyt::CDKN1B_promoter(FOXO) _InitialConc60
+   61 @Num::NUP(pSites~u) 3e3
+   62 @Nuc::CCND() _InitialConc61
+   63 @Nuc::CCNE(CDKN1A_B) _InitialConc62
+   64 @Nuc::E2F(DBD,RB1,Ser332~u) _InitialConc63
+   65 @Nuc::E2F(DBD,RB1,Ser332~p) _InitialConc64
+   66 @Nuc::CCNA(CDKN1A_B) _InitialConc65
+   67 @Nuc::CCNB(CDK1_Thr14_Tyr15~u,CDKN1A) _InitialConc66
+   68 @Nuc::E2F(DBD,RB1!1,Ser332~u).RB1(E2F!1,Ser807_Ser811~u) _InitialConc67
+   69 @Nuc::E2F(DBD,RB1!1,Ser332~p).RB1(E2F!1,Ser807_Ser811~u) _InitialConc68
+   70 @Nuc::RB1(E2F,Ser807_Ser811~u) _InitialConc69
+   71 @Nuc::RB1(E2F,Ser807_Ser811~p) _InitialConc70
+   72 @Nuc::PPP2R2B(ENSA_ARPP19) _InitialConc71
+   73 @Nuc::APC(FBXO5,FZR1_CDC20,Ser355~u) _InitialConc72
+   74 @Nuc::CDC20(APC) _InitialConc73
+   75 @Nuc::APC(FBXO5,FZR1_CDC20!1,Ser355~p).CDC20(APC!1) _InitialConc74
+   76 @Nuc::APC(FBXO5,FZR1_CDC20,Ser355~p) _InitialConc75
+   77 @Nuc::APC(FBXO5,FZR1_CDC20!1,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u) _InitialConc76
+   78 @Nuc::FZR1(APC,FBXO5,nTerm~u) _InitialConc77
+   79 @Nuc::FZR1(APC,FBXO5,nTerm~p) _InitialConc78
+   80 @Nuc::APC(FBXO5!1,FZR1_CDC20!2,Ser355~u).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u) _InitialConc79
+   81 @Nuc::FBXO5(APC,FZR1,Ser182~u) _InitialConc80
+   82 @Nuc::APC(FBXO5!1,FZR1_CDC20!2,Ser355~p).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u) _InitialConc81
+   83 @Nuc::APC(FBXO5,FZR1_CDC20!1,Ser355~p).FZR1(APC!1,FBXO5,nTerm~u) _InitialConc82
+   84 @Nuc::FBXO5(APC,FZR1,Ser182~p) _InitialConc83
+   85 @Nuc::FOXM1(DBD,Thr600~u) _InitialConc84
+   86 @Nuc::FOXM1(DBD,Thr600~p) _InitialConc85
+   87 @Nuc::CCNB_promoter(FOXM1!1).FOXM1(DBD!1,Thr600~p) _InitialConc86
+   88 @Nuc::CCNB_promoter(FOXM1) _InitialConc87
+   89 @Nuc::CDC20_promoter(FOXM1) _InitialConc88
+   90 @Nuc::CDC20_promoter(FOXM1!1).FOXM1(DBD!1,Thr600~p) _InitialConc89
+   91 @Nuc::WEE1(Ser123~u) _InitialConc90
+   92 @Nuc::CCNB(CDK1_Thr14_Tyr15~p,CDKN1A) _InitialConc91
+   93 @Nuc::WEE1(Ser123~p) _InitialConc92
+   94 @Nuc::CDC25(pSites~p) _InitialConc93
+   95 @Nuc::CDC25(pSites~u) _InitialConc94
+   96 @Nuc::MASTL(Thr198~u) _InitialConc95
+   97 @Nuc::MASTL(Thr198~p) _InitialConc96
+   98 @Nuc::ENSA_ARPP19(PPP2R2B,Ser62_Ser67~u) _InitialConc97
+   99 @Nuc::ENSA_ARPP19(PPP2R2B,Ser62_Ser67~p) _InitialConc98
+  100 @Nuc::ENSA_ARPP19(PPP2R2B!1,Ser62_Ser67~p).PPP2R2B(ENSA_ARPP19!1) _InitialConc99
+  101 @Nuc::CCNE_promoter(E2F) _InitialConc100
+  102 @Nuc::CCNA_promoter(E2F) _InitialConc101
+  103 @Nuc::E2F_promoter(E2F) _InitialConc102
+  104 @Nuc::FBXO5_promoter(E2F) _InitialConc103
+  105 @Nuc::FOXM1_promoter(E2F) _InitialConc104
+  106 @Nuc::CCNE_promoter(E2F!1).E2F(DBD!1,RB1,Ser332~u) _InitialConc105
+  107 @Nuc::CCNA_promoter(E2F!1).E2F(DBD!1,RB1,Ser332~u) _InitialConc106
+  108 @Nuc::E2F(DBD!1,RB1,Ser332~u).E2F_promoter(E2F!1) _InitialConc107
+  109 @Nuc::E2F(DBD!1,RB1,Ser332~u).FBXO5_promoter(E2F!1) _InitialConc108
+  110 @Nuc::E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1) _InitialConc109
+  111 @Nuc::CCNE_promoter(E2F!1).E2F(DBD!1,RB1,Ser332~p) _InitialConc110
+  112 @Nuc::CCNA_promoter(E2F!1).E2F(DBD!1,RB1,Ser332~p) _InitialConc111
+  113 @Nuc::E2F(DBD!1,RB1,Ser332~p).E2F_promoter(E2F!1) _InitialConc112
+  114 @Nuc::E2F(DBD!1,RB1,Ser332~p).FBXO5_promoter(E2F!1) _InitialConc113
+  115 @Nuc::E2F(DBD!1,RB1,Ser332~p).FOXM1_promoter(E2F!1) _InitialConc114
+  116 @Nuc::iWEE() _InitialConc115
+  117 @Nuc::SKP2() _InitialConc116
+  118 @Nuc::TP53(DBD,Ser15~p) _InitialConc117
+  119 @Nuc::CDKN1A_promoter(TP53) _InitialConc118
+  120 @Nuc::FOXO(DBD) _InitialConc119
+  121 @Nuc::CDKN1B_promoter(FOXO) _InitialConc120
+  122 @Cyt::CDKN1A_promoter(TP53!1).TP53(DBD!1,Ser15~p) 0
+  123 @Nuc::CDKN1A_promoter(TP53!1).TP53(DBD!1,Ser15~p) 0
+  124 @Cyt::CDKN1A(CCNE_A_B,Ser130~u) 0
+  125 @Cyt::CDKN1B_promoter(FOXO!1).FOXO(DBD!1) 0
+  126 @Nuc::CDKN1B_promoter(FOXO!1).FOXO(DBD!1) 0
+  127 @Cyt::CDKN1B(CCNE_A,Thr187~u) 0
+  128 @Cyt::CCNA(CDKN1A_B!1).CDKN1A(CCNE_A_B!1,Ser130~u) 0
+  129 @Cyt::CCNE(CDKN1A_B!1).CDKN1A(CCNE_A_B!1,Ser130~u) 0
+  130 @Cyt::CCNB(CDK1_Thr14_Tyr15~u,CDKN1A!1).CDKN1A(CCNE_A_B!1,Ser130~u) 0
+  131 @Cyt::CCNB(CDK1_Thr14_Tyr15~p,CDKN1A!1).CDKN1A(CCNE_A_B!1,Ser130~u) 0
+  132 @Cyt::CDKN1A(CCNE_A_B,Ser130~p) 0
+  133 @Cyt::CCNA(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~u) 0
+  134 @Cyt::CCNE(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~u) 0
+  135 @Cyt::CDKN1B(CCNE_A,Thr187~p) 0
+  136 @Nuc::CDKN1A(CCNE_A_B,Ser130~u) 0
+  137 @Nuc::CDKN1B(CCNE_A,Thr187~u) 0
+  138 @Nuc::CCNA(CDKN1A_B!1).CDKN1A(CCNE_A_B!1,Ser130~u) 0
+  139 @Nuc::CCNE(CDKN1A_B!1).CDKN1A(CCNE_A_B!1,Ser130~u) 0
+  140 @Nuc::CCNB(CDK1_Thr14_Tyr15~u,CDKN1A!1).CDKN1A(CCNE_A_B!1,Ser130~u) 0
+  141 @Nuc::CCNB(CDK1_Thr14_Tyr15~p,CDKN1A!1).CDKN1A(CCNE_A_B!1,Ser130~u) 0
+  142 @Nuc::CDKN1A(CCNE_A_B,Ser130~p) 0
+  143 @Cyt::CCNA(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~p) 0
+  144 @Nuc::CCNA(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~u) 0
+  145 @Cyt::CCNE(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~p) 0
+  146 @Nuc::CCNE(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~u) 0
+  147 @Nuc::CDKN1B(CCNE_A,Thr187~p) 0
+  148 @Nuc::CCNA(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~p) 0
+  149 @Nuc::CCNE(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~p) 0
+end species
+begin reactions
+    1 0 3 1e-012*kSyE2f1 #SyE2f1 unit_conversion=2e-12*0.5
+    2 25,27 26 1e+012*kAsFPcb #AspFoxPcb unit_conversion=1/(2e-12*0.5)
+    3 86,88 87 1e+012*kAsFPcb #AspFoxPcb unit_conversion=1/(2e-12*0.5)
+    4 26 25,27 kDiFPcb #_reverse_AspFoxPcb
+    5 87 86,88 kDiFPcb #_reverse_AspFoxPcb
+    6 47 3,47 kSyE2f2 #SyE2f2
+    7 52 3,52 kSyE2f2 #SyE2f2
+    8 108 3,108 kSyE2f2 #SyE2f2
+    9 113 3,113 kSyE2f2 #SyE2f2
+   10 3 0 kDeE2f1 #DeE2f1
+   11 4 0 kDeE2f1 #DeE2f1
+   12 7 9 kDeE2f1 #DeE2f1
+   13 8 9 kDeE2f1 #DeE2f1
+   14 45 40 kDeE2f1 #DeE2f1
+   15 46 41 kDeE2f1 #DeE2f1
+   16 47 42 kDeE2f1 #DeE2f1
+   17 48 43 kDeE2f1 #DeE2f1
+   18 49 44 kDeE2f1 #DeE2f1
+   19 50 40 kDeE2f1 #DeE2f1
+   20 51 41 kDeE2f1 #DeE2f1
+   21 52 42 kDeE2f1 #DeE2f1
+   22 53 43 kDeE2f1 #DeE2f1
+   23 54 44 kDeE2f1 #DeE2f1
+   24 64 0 kDeE2f1 #DeE2f1
+   25 65 0 kDeE2f1 #DeE2f1
+   26 68 70 kDeE2f1 #DeE2f1
+   27 69 70 kDeE2f1 #DeE2f1
+   28 106 101 kDeE2f1 #DeE2f1
+   29 107 102 kDeE2f1 #DeE2f1
+   30 108 103 kDeE2f1 #DeE2f1
+   31 109 104 kDeE2f1 #DeE2f1
+   32 110 105 kDeE2f1 #DeE2f1
+   33 111 101 kDeE2f1 #DeE2f1
+   34 112 102 kDeE2f1 #DeE2f1
+   35 113 103 kDeE2f1 #DeE2f1
+   36 114 104 kDeE2f1 #DeE2f1
+   37 115 105 kDeE2f1 #DeE2f1
+   38 1,7 1,3,10 1e+012*kPhRbD #PhRbE2fByCd unit_conversion=1/(2e-12*0.5)
+   39 1,8 1,4,10 1e+012*kPhRbD #PhRbE2fByCd unit_conversion=1/(2e-12*0.5)
+   40 62,68 62,64,71 1e+012*kPhRbD #PhRbE2fByCd unit_conversion=1/(2e-12*0.5)
+   41 62,69 62,65,71 1e+012*kPhRbD #PhRbE2fByCd unit_conversion=1/(2e-12*0.5)
+   42 2,7 2,3,10 1e+012*kPhRbE #PhRbE2fByCe unit_conversion=1/(2e-12*0.5)
+   43 2,8 2,4,10 1e+012*kPhRbE #PhRbE2fByCe unit_conversion=1/(2e-12*0.5)
+   44 63,68 63,64,71 1e+012*kPhRbE #PhRbE2fByCe unit_conversion=1/(2e-12*0.5)
+   45 63,69 63,65,71 1e+012*kPhRbE #PhRbE2fByCe unit_conversion=1/(2e-12*0.5)
+   46 5,7 3,5,10 1e+012*kPhRb #PhRbE2fByCa unit_conversion=1/(2e-12*0.5)
+   47 5,8 4,5,10 1e+012*kPhRb #PhRbE2fByCa unit_conversion=1/(2e-12*0.5)
+   48 66,68 64,66,71 1e+012*kPhRb #PhRbE2fByCa unit_conversion=1/(2e-12*0.5)
+   49 66,69 65,66,71 1e+012*kPhRb #PhRbE2fByCa unit_conversion=1/(2e-12*0.5)
+   50 6,7 3,6,10 1e+012*kPhRb #PhRbE2fByCb unit_conversion=1/(2e-12*0.5)
+   51 6,8 4,6,10 1e+012*kPhRb #PhRbE2fByCb unit_conversion=1/(2e-12*0.5)
+   52 67,68 64,67,71 1e+012*kPhRb #PhRbE2fByCb unit_conversion=1/(2e-12*0.5)
+   53 67,69 65,67,71 1e+012*kPhRb #PhRbE2fByCb unit_conversion=1/(2e-12*0.5)
+   54 3,5 4,5 1e+012*kPhE2f #PhE2fByCa unit_conversion=1/(2e-12*0.5)
+   55 5,7 5,8 1e+012*kPhE2f #PhE2fByCa unit_conversion=1/(2e-12*0.5)
+   56 5,45 5,50 1e+012*kPhE2f #PhE2fByCa unit_conversion=1/(2e-12*0.5)
+   57 5,46 5,51 1e+012*kPhE2f #PhE2fByCa unit_conversion=1/(2e-12*0.5)
+   58 5,47 5,52 1e+012*kPhE2f #PhE2fByCa unit_conversion=1/(2e-12*0.5)
+   59 5,48 5,53 1e+012*kPhE2f #PhE2fByCa unit_conversion=1/(2e-12*0.5)
+   60 5,49 5,54 1e+012*kPhE2f #PhE2fByCa unit_conversion=1/(2e-12*0.5)
+   61 64,66 65,66 1e+012*kPhE2f #PhE2fByCa unit_conversion=1/(2e-12*0.5)
+   62 66,68 66,69 1e+012*kPhE2f #PhE2fByCa unit_conversion=1/(2e-12*0.5)
+   63 66,106 66,111 1e+012*kPhE2f #PhE2fByCa unit_conversion=1/(2e-12*0.5)
+   64 66,107 66,112 1e+012*kPhE2f #PhE2fByCa unit_conversion=1/(2e-12*0.5)
+   65 66,108 66,113 1e+012*kPhE2f #PhE2fByCa unit_conversion=1/(2e-12*0.5)
+   66 66,109 66,114 1e+012*kPhE2f #PhE2fByCa unit_conversion=1/(2e-12*0.5)
+   67 66,110 66,115 1e+012*kPhE2f #PhE2fByCa unit_conversion=1/(2e-12*0.5)
+   68 3,6 4,6 1e+012*kPhE2f #PhE2fByCb unit_conversion=1/(2e-12*0.5)
+   69 6,7 6,8 1e+012*kPhE2f #PhE2fByCb unit_conversion=1/(2e-12*0.5)
+   70 6,45 6,50 1e+012*kPhE2f #PhE2fByCb unit_conversion=1/(2e-12*0.5)
+   71 6,46 6,51 1e+012*kPhE2f #PhE2fByCb unit_conversion=1/(2e-12*0.5)
+   72 6,47 6,52 1e+012*kPhE2f #PhE2fByCb unit_conversion=1/(2e-12*0.5)
+   73 6,48 6,53 1e+012*kPhE2f #PhE2fByCb unit_conversion=1/(2e-12*0.5)
+   74 6,49 6,54 1e+012*kPhE2f #PhE2fByCb unit_conversion=1/(2e-12*0.5)
+   75 64,67 65,67 1e+012*kPhE2f #PhE2fByCb unit_conversion=1/(2e-12*0.5)
+   76 67,68 67,69 1e+012*kPhE2f #PhE2fByCb unit_conversion=1/(2e-12*0.5)
+   77 67,106 67,111 1e+012*kPhE2f #PhE2fByCb unit_conversion=1/(2e-12*0.5)
+   78 67,107 67,112 1e+012*kPhE2f #PhE2fByCb unit_conversion=1/(2e-12*0.5)
+   79 67,108 67,113 1e+012*kPhE2f #PhE2fByCb unit_conversion=1/(2e-12*0.5)
+   80 67,109 67,114 1e+012*kPhE2f #PhE2fByCb unit_conversion=1/(2e-12*0.5)
+   81 67,110 67,115 1e+012*kPhE2f #PhE2fByCb unit_conversion=1/(2e-12*0.5)
+   82 4 3 kDpE2f1 #DppE2f
+   83 8 7 kDpE2f1 #DppE2f
+   84 50 45 kDpE2f1 #DppE2f
+   85 51 46 kDpE2f1 #DppE2f
+   86 52 47 kDpE2f1 #DppE2f
+   87 53 48 kDpE2f1 #DppE2f
+   88 54 49 kDpE2f1 #DppE2f
+   89 65 64 kDpE2f1 #DppE2f
+   90 69 68 kDpE2f1 #DppE2f
+   91 111 106 kDpE2f1 #DppE2f
+   92 112 107 kDpE2f1 #DppE2f
+   93 113 108 kDpE2f1 #DppE2f
+   94 114 109 kDpE2f1 #DppE2f
+   95 115 110 kDpE2f1 #DppE2f
+   96 4,11 3,11 1e+012*kDpE2f2 #DppE2fByB55 unit_conversion=1/(2e-12*0.5)
+   97 8,11 7,11 1e+012*kDpE2f2 #DppE2fByB55 unit_conversion=1/(2e-12*0.5)
+   98 11,50 11,45 1e+012*kDpE2f2 #DppE2fByB55 unit_conversion=1/(2e-12*0.5)
+   99 11,51 11,46 1e+012*kDpE2f2 #DppE2fByB55 unit_conversion=1/(2e-12*0.5)
+  100 11,52 11,47 1e+012*kDpE2f2 #DppE2fByB55 unit_conversion=1/(2e-12*0.5)
+  101 11,53 11,48 1e+012*kDpE2f2 #DppE2fByB55 unit_conversion=1/(2e-12*0.5)
+  102 11,54 11,49 1e+012*kDpE2f2 #DppE2fByB55 unit_conversion=1/(2e-12*0.5)
+  103 65,72 64,72 1e+012*kDpE2f2 #DppE2fByB55 unit_conversion=1/(2e-12*0.5)
+  104 69,72 68,72 1e+012*kDpE2f2 #DppE2fByB55 unit_conversion=1/(2e-12*0.5)
+  105 72,111 72,106 1e+012*kDpE2f2 #DppE2fByB55 unit_conversion=1/(2e-12*0.5)
+  106 72,112 72,107 1e+012*kDpE2f2 #DppE2fByB55 unit_conversion=1/(2e-12*0.5)
+  107 72,113 72,108 1e+012*kDpE2f2 #DppE2fByB55 unit_conversion=1/(2e-12*0.5)
+  108 72,114 72,109 1e+012*kDpE2f2 #DppE2fByB55 unit_conversion=1/(2e-12*0.5)
+  109 72,115 72,110 1e+012*kDpE2f2 #DppE2fByB55 unit_conversion=1/(2e-12*0.5)
+  110 4,56 56 1e+012*kDeE2f2 #DeE2f2 unit_conversion=1/(2e-12*0.5)
+  111 8,56 9,56 1e+012*kDeE2f2 #DeE2f2 unit_conversion=1/(2e-12*0.5)
+  112 50,56 40,56 1e+012*kDeE2f2 #DeE2f2 unit_conversion=1/(2e-12*0.5)
+  113 51,56 41,56 1e+012*kDeE2f2 #DeE2f2 unit_conversion=1/(2e-12*0.5)
+  114 52,56 42,56 1e+012*kDeE2f2 #DeE2f2 unit_conversion=1/(2e-12*0.5)
+  115 53,56 43,56 1e+012*kDeE2f2 #DeE2f2 unit_conversion=1/(2e-12*0.5)
+  116 54,56 44,56 1e+012*kDeE2f2 #DeE2f2 unit_conversion=1/(2e-12*0.5)
+  117 65,117 117 1e+012*kDeE2f2 #DeE2f2 unit_conversion=1/(2e-12*0.5)
+  118 69,117 70,117 1e+012*kDeE2f2 #DeE2f2 unit_conversion=1/(2e-12*0.5)
+  119 111,117 101,117 1e+012*kDeE2f2 #DeE2f2 unit_conversion=1/(2e-12*0.5)
+  120 112,117 102,117 1e+012*kDeE2f2 #DeE2f2 unit_conversion=1/(2e-12*0.5)
+  121 113,117 103,117 1e+012*kDeE2f2 #DeE2f2 unit_conversion=1/(2e-12*0.5)
+  122 114,117 104,117 1e+012*kDeE2f2 #DeE2f2 unit_conversion=1/(2e-12*0.5)
+  123 115,117 105,117 1e+012*kDeE2f2 #DeE2f2 unit_conversion=1/(2e-12*0.5)
+  124 1,9 1,10 1e+012*kPhRbD #PhRbByCd unit_conversion=1/(2e-12*0.5)
+  125 62,70 62,71 1e+012*kPhRbD #PhRbByCd unit_conversion=1/(2e-12*0.5)
+  126 2,9 2,10 1e+012*kPhRbE #PhRbByCe unit_conversion=1/(2e-12*0.5)
+  127 63,70 63,71 1e+012*kPhRbE #PhRbByCe unit_conversion=1/(2e-12*0.5)
+  128 5,9 5,10 1e+012*kPhRb #PhRbByCa unit_conversion=1/(2e-12*0.5)
+  129 66,70 66,71 1e+012*kPhRb #PhRbByCa unit_conversion=1/(2e-12*0.5)
+  130 6,9 6,10 1e+012*kPhRb #PhRbByCb unit_conversion=1/(2e-12*0.5)
+  131 67,70 67,71 1e+012*kPhRb #PhRbByCb unit_conversion=1/(2e-12*0.5)
+  132 0 2 1e-012*kSyCe1 #SyCe1 unit_conversion=2e-12*0.5
+  133 46 5,46 kSyCa2 #SyCa2
+  134 51 5,51 kSyCa2 #SyCa2
+  135 107 5,107 kSyCa2 #SyCa2
+  136 112 5,112 kSyCa2 #SyCa2
+  137 2 0 kDeCe #DeCe1
+  138 63 0 kDeCe #DeCe1
+  139 2,2 2 1e+012*kPhCeE #DeCe2 unit_conversion=1/(2e-12*0.5)
+  140 63,63 63 1e+012*kPhCeE #DeCe2 unit_conversion=1/(2e-12*0.5)
+  141 10 9 kDpRb #DpRb
+  142 71 70 kDpRb #DpRb
+  143 14 12,13 kDpApc_1 #DppApcCdc20_1
+  144 75 73,74 kDpApc_1 #DppApcCdc20_1
+  145 11,14 11,12,13 1e+012*kDpApc_2 #DppApcCdc20 unit_conversion=1/(2e-12*0.5)
+  146 72,75 72,73,74 1e+012*kDpApc_2 #DppApcCdc20 unit_conversion=1/(2e-12*0.5)
+  147 5,12 5,15 1e+012*kPhApcA #PhApcByCa unit_conversion=1/(2e-12*0.5)
+  148 5,16 5,22 1e+012*kPhApcA #PhApcByCa unit_conversion=1/(2e-12*0.5)
+  149 5,19 5,21 1e+012*kPhApcA #PhApcByCa unit_conversion=1/(2e-12*0.5)
+  150 66,73 66,76 1e+012*kPhApcA #PhApcByCa unit_conversion=1/(2e-12*0.5)
+  151 66,77 66,83 1e+012*kPhApcA #PhApcByCa unit_conversion=1/(2e-12*0.5)
+  152 66,80 66,82 1e+012*kPhApcA #PhApcByCa unit_conversion=1/(2e-12*0.5)
+  153 6,12 6,15 1e+012*kPhApcA #PhApcByCb unit_conversion=1/(2e-12*0.5)
+  154 6,16 6,22 1e+012*kPhApcA #PhApcByCb unit_conversion=1/(2e-12*0.5)
+  155 6,19 6,21 1e+012*kPhApcA #PhApcByCb unit_conversion=1/(2e-12*0.5)
+  156 67,73 67,76 1e+012*kPhApcA #PhApcByCb unit_conversion=1/(2e-12*0.5)
+  157 67,77 67,83 1e+012*kPhApcA #PhApcByCb unit_conversion=1/(2e-12*0.5)
+  158 67,80 67,82 1e+012*kPhApcA #PhApcByCb unit_conversion=1/(2e-12*0.5)
+  159 15 12 kDpApc_1 #DppApcByB55_1
+  160 21 19 kDpApc_1 #DppApcByB55_1
+  161 22 16 kDpApc_1 #DppApcByB55_1
+  162 76 73 kDpApc_1 #DppApcByB55_1
+  163 82 80 kDpApc_1 #DppApcByB55_1
+  164 83 77 kDpApc_1 #DppApcByB55_1
+  165 11,15 11,12 1e+012*kDpApc_2 #DppApcByB55_2 unit_conversion=1/(2e-12*0.5)
+  166 11,21 11,19 1e+012*kDpApc_2 #DppApcByB55_2 unit_conversion=1/(2e-12*0.5)
+  167 11,22 11,16 1e+012*kDpApc_2 #DppApcByB55_2 unit_conversion=1/(2e-12*0.5)
+  168 72,76 72,73 1e+012*kDpApc_2 #DppApcByB55_2 unit_conversion=1/(2e-12*0.5)
+  169 72,82 72,80 1e+012*kDpApc_2 #DppApcByB55_2 unit_conversion=1/(2e-12*0.5)
+  170 72,83 72,77 1e+012*kDpApc_2 #DppApcByB55_2 unit_conversion=1/(2e-12*0.5)
+  171 5,16 5,12,18 1e+012*kPhCdhA #PhCdhApcByCa unit_conversion=1/(2e-12*0.5)
+  172 5,22 5,15,18 1e+012*kPhCdhA #PhCdhApcByCa unit_conversion=1/(2e-12*0.5)
+  173 66,77 66,73,79 1e+012*kPhCdhA #PhCdhApcByCa unit_conversion=1/(2e-12*0.5)
+  174 66,83 66,76,79 1e+012*kPhCdhA #PhCdhApcByCa unit_conversion=1/(2e-12*0.5)
+  175 2,19 2,12,18,20 1e+012*kPhCAEE #PhCAEByCe unit_conversion=1/(2e-12*0.5)
+  176 2,21 2,15,18,20 1e+012*kPhCAEE #PhCAEByCe unit_conversion=1/(2e-12*0.5)
+  177 63,80 63,73,79,81 1e+012*kPhCAEE #PhCAEByCe unit_conversion=1/(2e-12*0.5)
+  178 63,82 63,76,79,81 1e+012*kPhCAEE #PhCAEByCe unit_conversion=1/(2e-12*0.5)
+  179 5,19 5,12,18,20 1e+012*kPhCAEA #PhCAEByCa unit_conversion=1/(2e-12*0.5)
+  180 5,21 5,15,18,20 1e+012*kPhCAEA #PhCAEByCa unit_conversion=1/(2e-12*0.5)
+  181 66,80 66,73,79,81 1e+012*kPhCAEA #PhCAEByCa unit_conversion=1/(2e-12*0.5)
+  182 66,82 66,76,79,81 1e+012*kPhCAEA #PhCAEByCa unit_conversion=1/(2e-12*0.5)
+  183 6,19 6,12,18,20 1e+012*kPhCAEB #PhCAEByCb unit_conversion=1/(2e-12*0.5)
+  184 6,21 6,15,18,20 1e+012*kPhCAEB #PhCAEByCb unit_conversion=1/(2e-12*0.5)
+  185 67,80 67,73,79,81 1e+012*kPhCAEB #PhCAEByCb unit_conversion=1/(2e-12*0.5)
+  186 67,82 67,76,79,81 1e+012*kPhCAEB #PhCAEByCb unit_conversion=1/(2e-12*0.5)
+  187 2,16 2,12,18 1e+012*kPhCdhE #PhCdhApcByCe unit_conversion=1/(2e-12*0.5)
+  188 2,22 2,15,18 1e+012*kPhCdhE #PhCdhApcByCe unit_conversion=1/(2e-12*0.5)
+  189 63,77 63,73,79 1e+012*kPhCdhE #PhCdhApcByCe unit_conversion=1/(2e-12*0.5)
+  190 63,83 63,76,79 1e+012*kPhCdhE #PhCdhApcByCe unit_conversion=1/(2e-12*0.5)
+  191 19 16 kDeEmi1 #DeEmi1
+  192 20 0 kDeEmi1 #DeEmi1
+  193 21 22 kDeEmi1 #DeEmi1
+  194 23 0 kDeEmi1 #DeEmi1
+  195 80 77 kDeEmi1 #DeEmi1
+  196 81 0 kDeEmi1 #DeEmi1
+  197 82 83 kDeEmi1 #DeEmi1
+  198 84 0 kDeEmi1 #DeEmi1
+  199 19 16 kDeEmi2 #DeEmi2
+  200 21 22 kDeEmi2 #DeEmi2
+  201 80 77 kDeEmi2 #DeEmi2
+  202 82 83 kDeEmi2 #DeEmi2
+  203 5,19 5,16,23 1e+012*kPhEmiA #PhEACByCa unit_conversion=1/(2e-12*0.5)
+  204 5,21 5,22,23 1e+012*kPhEmiA #PhEACByCa unit_conversion=1/(2e-12*0.5)
+  205 66,80 66,77,84 1e+012*kPhEmiA #PhEACByCa unit_conversion=1/(2e-12*0.5)
+  206 66,82 66,83,84 1e+012*kPhEmiA #PhEACByCa unit_conversion=1/(2e-12*0.5)
+  207 6,19 6,16,23 1e+012*kPhEmiB #PhEACByCb unit_conversion=1/(2e-12*0.5)
+  208 6,21 6,22,23 1e+012*kPhEmiB #PhEACByCb unit_conversion=1/(2e-12*0.5)
+  209 67,80 67,77,84 1e+012*kPhEmiB #PhEACByCb unit_conversion=1/(2e-12*0.5)
+  210 67,82 67,83,84 1e+012*kPhEmiB #PhEACByCb unit_conversion=1/(2e-12*0.5)
+  211 5,20 5,23 1e+012*kPhEmiA #PhEmiByCa unit_conversion=1/(2e-12*0.5)
+  212 66,81 66,84 1e+012*kPhEmiA #PhEmiByCa unit_conversion=1/(2e-12*0.5)
+  213 6,20 6,23 1e+012*kPhEmiB #PhEmiByCb unit_conversion=1/(2e-12*0.5)
+  214 67,81 67,84 1e+012*kPhEmiB #PhEmiByCb unit_conversion=1/(2e-12*0.5)
+  215 23 20 kDpEmi #DppEmi
+  216 84 81 kDpEmi #DppEmi
+  217 23 0 kDeEmi3 #DeEmi3
+  218 84 0 kDeEmi3 #DeEmi3
+  219 0 24 1e-012*kSyFox1 #SyFox1 unit_conversion=2e-12*0.5
+  220 48 20,48 kSyEmi2 #SyEmi2
+  221 53 20,53 kSyEmi2 #SyEmi2
+  222 109 20,109 kSyEmi2 #SyEmi2
+  223 114 20,114 kSyEmi2 #SyEmi2
+  224 2,17 2,18 1e+012*kPhCdhE #PhCdhByCe unit_conversion=1/(2e-12*0.5)
+  225 63,78 63,79 1e+012*kPhCdhE #PhCdhByCe unit_conversion=1/(2e-12*0.5)
+  226 5,17 5,18 1e+012*kPhCdhA #PhCdhByCa unit_conversion=1/(2e-12*0.5)
+  227 66,78 66,79 1e+012*kPhCdhA #PhCdhByCa unit_conversion=1/(2e-12*0.5)
+  228 6,17 6,18 1e+012*kPhCdhB #PhCdhByCb unit_conversion=1/(2e-12*0.5)
+  229 67,78 67,79 1e+012*kPhCdhB #PhCdhByCb unit_conversion=1/(2e-12*0.5)
+  230 18 17 kDpCdh #DppCdh
+  231 79 78 kDpCdh #DppCdh
+  232 0 5 1e-012*kSyCa1 #SyCa1 unit_conversion=2e-12*0.5
+  233 5 0 kDeCa1 #DeCa1
+  234 66 0 kDeCa1 #DeCa1
+  235 2,5 5 1e+012*kPhCeA #DeCe3 unit_conversion=1/(2e-12*0.5)
+  236 63,66 66 1e+012*kPhCeA #DeCe3 unit_conversion=1/(2e-12*0.5)
+  237 5,16 16 1e+012*kDeCa2 #DeCa2 unit_conversion=1/(2e-12*0.5)
+  238 5,22 22 1e+012*kDeCa2 #DeCa2 unit_conversion=1/(2e-12*0.5)
+  239 66,77 77 1e+012*kDeCa2 #DeCa2 unit_conversion=1/(2e-12*0.5)
+  240 66,83 83 1e+012*kDeCa2 #DeCa2 unit_conversion=1/(2e-12*0.5)
+  241 5,14 14 1e+012*kDeCa3 #DeCa3 unit_conversion=1/(2e-12*0.5)
+  242 66,75 75 1e+012*kDeCa3 #DeCa3 unit_conversion=1/(2e-12*0.5)
+  243 49 24,49 kSyFox2 #SyFox2
+  244 54 24,54 kSyFox2 #SyFox2
+  245 110 24,110 kSyFox2 #SyFox2
+  246 115 24,115 kSyFox2 #SyFox2
+  247 24 0 kDeFox1 #DeFox
+  248 25 0 kDeFox1 #DeFox
+  249 26 27 kDeFox1 #DeFox
+  250 29 28 kDeFox1 #DeFox
+  251 85 0 kDeFox1 #DeFox
+  252 86 0 kDeFox1 #DeFox
+  253 87 88 kDeFox1 #DeFox
+  254 90 89 kDeFox1 #DeFox
+  255 16,24 16 1e+012*kDeFox2 #DeFoxByApcCdh unit_conversion=1/(2e-12*0.5)
+  256 22,24 22 1e+012*kDeFox2 #DeFoxByApcCdh unit_conversion=1/(2e-12*0.5)
+  257 16,25 16 1e+012*kDeFox2 #DeFoxByApcCdh unit_conversion=1/(2e-12*0.5)
+  258 22,25 22 1e+012*kDeFox2 #DeFoxByApcCdh unit_conversion=1/(2e-12*0.5)
+  259 16,26 16,27 1e+012*kDeFox2 #DeFoxByApcCdh unit_conversion=1/(2e-12*0.5)
+  260 22,26 22,27 1e+012*kDeFox2 #DeFoxByApcCdh unit_conversion=1/(2e-12*0.5)
+  261 16,29 16,28 1e+012*kDeFox2 #DeFoxByApcCdh unit_conversion=1/(2e-12*0.5)
+  262 22,29 22,28 1e+012*kDeFox2 #DeFoxByApcCdh unit_conversion=1/(2e-12*0.5)
+  263 77,85 77 1e+012*kDeFox2 #DeFoxByApcCdh unit_conversion=1/(2e-12*0.5)
+  264 83,85 83 1e+012*kDeFox2 #DeFoxByApcCdh unit_conversion=1/(2e-12*0.5)
+  265 77,86 77 1e+012*kDeFox2 #DeFoxByApcCdh unit_conversion=1/(2e-12*0.5)
+  266 83,86 83 1e+012*kDeFox2 #DeFoxByApcCdh unit_conversion=1/(2e-12*0.5)
+  267 77,87 77,88 1e+012*kDeFox2 #DeFoxByApcCdh unit_conversion=1/(2e-12*0.5)
+  268 83,87 83,88 1e+012*kDeFox2 #DeFoxByApcCdh unit_conversion=1/(2e-12*0.5)
+  269 77,90 77,89 1e+012*kDeFox2 #DeFoxByApcCdh unit_conversion=1/(2e-12*0.5)
+  270 83,90 83,89 1e+012*kDeFox2 #DeFoxByApcCdh unit_conversion=1/(2e-12*0.5)
+  271 2,24 2,25 1e+012*kPhFoxE #PhFoxByCe unit_conversion=1/(2e-12*0.5)
+  272 63,85 63,86 1e+012*kPhFoxE #PhFoxByCe unit_conversion=1/(2e-12*0.5)
+  273 5,24 5,25 1e+012*kPhFoxA #PhFoxByCa unit_conversion=1/(2e-12*0.5)
+  274 66,85 66,86 1e+012*kPhFoxA #PhFoxByCa unit_conversion=1/(2e-12*0.5)
+  275 6,24 6,25 1e+012*kPhFoxB #PhFoxByCb unit_conversion=1/(2e-12*0.5)
+  276 67,85 67,86 1e+012*kPhFoxB #PhFoxByCb unit_conversion=1/(2e-12*0.5)
+  277 25 24 kDpFox #DppFox_1
+  278 86 85 kDpFox #DppFox_1
+  279 29 24,28 kDpFox #DppFox_2
+  280 90 85,89 kDpFox #DppFox_2
+  281 26 24,27 kDpFox #DppFox_3
+  282 87 85,88 kDpFox #DppFox_3
+  283 0 6 1e-012*_rateLaw1 #SyCb1 unit_conversion=2e-12*0.5
+  284 26 6,26 _rateLaw2 #SyCb2
+  285 87 6,87 _rateLaw2 #SyCb2
+  286 6 0 kDeCb1 #DeCb
+  287 31 0 kDeCb1 #DeCb
+  288 67 0 kDeCb1 #DeCb
+  289 92 0 kDeCb1 #DeCb
+  290 6,16 16 1e+012*kDeCb2 #DeCbByApcCdh unit_conversion=1/(2e-12*0.5)
+  291 6,22 22 1e+012*kDeCb2 #DeCbByApcCdh unit_conversion=1/(2e-12*0.5)
+  292 16,31 16 1e+012*kDeCb2 #DeCbByApcCdh unit_conversion=1/(2e-12*0.5)
+  293 22,31 22 1e+012*kDeCb2 #DeCbByApcCdh unit_conversion=1/(2e-12*0.5)
+  294 67,77 77 1e+012*kDeCb2 #DeCbByApcCdh unit_conversion=1/(2e-12*0.5)
+  295 67,83 83 1e+012*kDeCb2 #DeCbByApcCdh unit_conversion=1/(2e-12*0.5)
+  296 77,92 77 1e+012*kDeCb2 #DeCbByApcCdh unit_conversion=1/(2e-12*0.5)
+  297 83,92 83 1e+012*kDeCb2 #DeCbByApcCdh unit_conversion=1/(2e-12*0.5)
+  298 6,14 14 1e+012*kDeCb3 #DeCbByApcCdc unit_conversion=1/(2e-12*0.5)
+  299 14,31 14 1e+012*kDeCb3 #DeCbByApcCdc unit_conversion=1/(2e-12*0.5)
+  300 67,75 75 1e+012*kDeCb3 #DeCbByApcCdc unit_conversion=1/(2e-12*0.5)
+  301 75,92 75 1e+012*kDeCb3 #DeCbByApcCdc unit_conversion=1/(2e-12*0.5)
+  302 13 0 kDeCdc_1 #DeCdc
+  303 14 15 kDeCdc_1 #DeCdc
+  304 74 0 kDeCdc_1 #DeCdc
+  305 75 76 kDeCdc_1 #DeCdc
+  306 13,16 16 1e+012*kDeCdc_2 #DeCdcByApcCdh unit_conversion=1/(2e-12*0.5)
+  307 13,22 22 1e+012*kDeCdc_2 #DeCdcByApcCdh unit_conversion=1/(2e-12*0.5)
+  308 14,16 15,16 1e+012*kDeCdc_2 #DeCdcByApcCdh unit_conversion=1/(2e-12*0.5)
+  309 14,22 15,22 1e+012*kDeCdc_2 #DeCdcByApcCdh unit_conversion=1/(2e-12*0.5)
+  310 74,77 77 1e+012*kDeCdc_2 #DeCdcByApcCdh unit_conversion=1/(2e-12*0.5)
+  311 74,83 83 1e+012*kDeCdc_2 #DeCdcByApcCdh unit_conversion=1/(2e-12*0.5)
+  312 75,77 76,77 1e+012*kDeCdc_2 #DeCdcByApcCdh unit_conversion=1/(2e-12*0.5)
+  313 75,83 76,83 1e+012*kDeCdc_2 #DeCdcByApcCdh unit_conversion=1/(2e-12*0.5)
+  314 0 13 1e-012*kSyCdc_1 #SyCdc20_1 unit_conversion=2e-12*0.5
+  315 29 13,29 kSyCdc_2 #SyCdc20_2
+  316 90 13,90 kSyCdc_2 #SyCdc20_2
+  317 25,28 29 1e+012*kAsFPcdc #AspFoxPcdc unit_conversion=1/(2e-12*0.5)
+  318 86,89 90 1e+012*kAsFPcdc #AspFoxPcdc unit_conversion=1/(2e-12*0.5)
+  319 29 25,28 kDiFPcdc #_reverse_AspFoxPcdc
+  320 90 86,89 kDiFPcdc #_reverse_AspFoxPcdc
+  321 6,30 30,31 1e+012*kWee2 #PhCbByWee unit_conversion=1/(2e-12*0.5)
+  322 67,91 91,92 1e+012*kWee2 #PhCbByWee unit_conversion=1/(2e-12*0.5)
+  323 6,32 31,32 1e+012*kWee1 #PhCbBypWee unit_conversion=1/(2e-12*0.5)
+  324 67,93 92,93 1e+012*kWee1 #PhCbBypWee unit_conversion=1/(2e-12*0.5)
+  325 31,33 6,33 1e+012*kCdc25_2 #DppCbBypCdc25 unit_conversion=1/(2e-12*0.5)
+  326 92,94 67,94 1e+012*kCdc25_2 #DppCbBypCdc25 unit_conversion=1/(2e-12*0.5)
+  327 31,34 6,34 1e+012*kCdc25_1 #DppCbByCdc25 unit_conversion=1/(2e-12*0.5)
+  328 92,95 67,95 1e+012*kCdc25_1 #DppCbByCdc25 unit_conversion=1/(2e-12*0.5)
+  329 6,34 6,33 1e+012*kPhC25B #PhCdc25ByCb unit_conversion=1/(2e-12*0.5)
+  330 67,95 67,94 1e+012*kPhC25B #PhCdc25ByCb unit_conversion=1/(2e-12*0.5)
+  331 5,34 5,33 1e+012*kPhC25A #PhCdc25ByCa unit_conversion=1/(2e-12*0.5)
+  332 66,95 66,94 1e+012*kPhC25A #PhCdc25ByCa unit_conversion=1/(2e-12*0.5)
+  333 11,33 11,34 1e+012*kDpCdc25 #DppCdc25 unit_conversion=1/(2e-12*0.5)
+  334 72,94 72,95 1e+012*kDpCdc25 #DppCdc25 unit_conversion=1/(2e-12*0.5)
+  335 11,32 11,30 1e+012*kDpWee #DppWee unit_conversion=1/(2e-12*0.5)
+  336 72,93 72,91 1e+012*kDpWee #DppWee unit_conversion=1/(2e-12*0.5)
+  337 5,30 5,32 1e+012*kPhWeeA #PhWeeByCa unit_conversion=1/(2e-12*0.5)
+  338 66,91 66,93 1e+012*kPhWeeA #PhWeeByCa unit_conversion=1/(2e-12*0.5)
+  339 6,30 6,32 1e+012*kPhWeeB #PhWeeByCb unit_conversion=1/(2e-12*0.5)
+  340 67,91 67,93 1e+012*kPhWeeB #PhWeeByCb unit_conversion=1/(2e-12*0.5)
+  341 6,35 6,36 1e+012*kPhGw #PhGw unit_conversion=1/(2e-12*0.5)
+  342 67,96 67,97 1e+012*kPhGw #PhGw unit_conversion=1/(2e-12*0.5)
+  343 36 35 kDpGw1 #DppGw
+  344 97 96 kDpGw1 #DppGw
+  345 11,36 11,35 1e+012*kDpGw2 #DppGwByB55 unit_conversion=1/(2e-12*0.5)
+  346 72,97 72,96 1e+012*kDpGw2 #DppGwByB55 unit_conversion=1/(2e-12*0.5)
+  347 36,37 36,38 1e+012*kPhEnsa #PhEnsa unit_conversion=1/(2e-12*0.5)
+  348 97,98 97,99 1e+012*kPhEnsa #PhEnsa unit_conversion=1/(2e-12*0.5)
+  349 39 11,37 kDpEnsa #DppEB55
+  350 100 72,98 kDpEnsa #DppEB55
+  351 0 20 1e-012*kSyEmi1 #SyEmi1 unit_conversion=2e-12*0.5
+  352 45 2,45 kSyCe2 #SyCe2
+  353 50 2,50 kSyCe2 #SyCe2
+  354 106 2,106 kSyCe2 #SyCe2
+  355 111 2,111 kSyCe2 #SyCe2
+  356 6,16 6,12,18 1e+012*kPhCdhB #PhCdhApcByCb unit_conversion=1/(2e-12*0.5)
+  357 6,22 6,15,18 1e+012*kPhCdhB #PhCdhApcByCb unit_conversion=1/(2e-12*0.5)
+  358 67,77 67,73,79 1e+012*kPhCdhB #PhCdhApcByCb unit_conversion=1/(2e-12*0.5)
+  359 67,83 67,76,79 1e+012*kPhCdhB #PhCdhApcByCb unit_conversion=1/(2e-12*0.5)
+  360 3,9 7 1e+012*kAsE2fRb #AsE2fRb unit_conversion=1/(2e-12*0.5)
+  361 4,9 8 1e+012*kAsE2fRb #AsE2fRb unit_conversion=1/(2e-12*0.5)
+  362 64,70 68 1e+012*kAsE2fRb #AsE2fRb unit_conversion=1/(2e-12*0.5)
+  363 65,70 69 1e+012*kAsE2fRb #AsE2fRb unit_conversion=1/(2e-12*0.5)
+  364 7 3,9 kDiE2fRb #_reverse_AsE2fRb
+  365 8 4,9 kDiE2fRb #_reverse_AsE2fRb
+  366 68 64,70 kDiE2fRb #_reverse_AsE2fRb
+  367 69 65,70 kDiE2fRb #_reverse_AsE2fRb
+  368 12,17 16 1e+012*kAsACdh #AsApcCdh unit_conversion=1/(2e-12*0.5)
+  369 15,17 22 1e+012*kAsACdh #AsApcCdh unit_conversion=1/(2e-12*0.5)
+  370 73,78 77 1e+012*kAsACdh #AsApcCdh unit_conversion=1/(2e-12*0.5)
+  371 76,78 83 1e+012*kAsACdh #AsApcCdh unit_conversion=1/(2e-12*0.5)
+  372 16 12,17 kDiACdh #_reverse_AsApcCdh
+  373 22 15,17 kDiACdh #_reverse_AsApcCdh
+  374 77 73,78 kDiACdh #_reverse_AsApcCdh
+  375 83 76,78 kDiACdh #_reverse_AsApcCdh
+  376 16,20 19 1e+012*kAsACE #AsACE unit_conversion=1/(2e-12*0.5)
+  377 20,22 21 1e+012*kAsACE #AsACE unit_conversion=1/(2e-12*0.5)
+  378 77,81 80 1e+012*kAsACE #AsACE unit_conversion=1/(2e-12*0.5)
+  379 81,83 82 1e+012*kAsACE #AsACE unit_conversion=1/(2e-12*0.5)
+  380 19 16,20 kDiACE #_reverse_AsACE
+  381 21 20,22 kDiACE #_reverse_AsACE
+  382 80 77,81 kDiACE #_reverse_AsACE
+  383 82 81,83 kDiACE #_reverse_AsACE
+  384 13,15 14 1e+012*kAspACdc #AspApcCdc20 unit_conversion=1/(2e-12*0.5)
+  385 74,76 75 1e+012*kAspACdc #AspApcCdc20 unit_conversion=1/(2e-12*0.5)
+  386 14 13,15 kDipACdc #_reverse_AspApcCdc20
+  387 75 74,76 kDipACdc #_reverse_AspApcCdc20
+  388 11,38 39 1e+012*kAspEB55 #AspEB55 unit_conversion=1/(2e-12*0.5)
+  389 72,99 100 1e+012*kAspEB55 #AspEB55 unit_conversion=1/(2e-12*0.5)
+  390 39 11,38 kDipEB55 #_reverse_AspEB55
+  391 100 72,99 kDipEB55 #_reverse_AspEB55
+  392 3,40 45 1e+012*kAsEPx #AsE2fProCe unit_conversion=1/(2e-12*0.5)
+  393 4,40 50 1e+012*kAsEPx #AsE2fProCe unit_conversion=1/(2e-12*0.5)
+  394 64,101 106 1e+012*kAsEPx #AsE2fProCe unit_conversion=1/(2e-12*0.5)
+  395 65,101 111 1e+012*kAsEPx #AsE2fProCe unit_conversion=1/(2e-12*0.5)
+  396 45 3,40 kDiEPx #_reverse_AsE2fProCe
+  397 50 4,40 kDiEPx #_reverse_AsE2fProCe
+  398 106 64,101 kDiEPx #_reverse_AsE2fProCe
+  399 111 65,101 kDiEPx #_reverse_AsE2fProCe
+  400 3,41 46 1e+012*kAsEPx #AsE2fProCa unit_conversion=1/(2e-12*0.5)
+  401 4,41 51 1e+012*kAsEPx #AsE2fProCa unit_conversion=1/(2e-12*0.5)
+  402 64,102 107 1e+012*kAsEPx #AsE2fProCa unit_conversion=1/(2e-12*0.5)
+  403 65,102 112 1e+012*kAsEPx #AsE2fProCa unit_conversion=1/(2e-12*0.5)
+  404 46 3,41 kDiEPx #_reverse_AsE2fProCa
+  405 51 4,41 kDiEPx #_reverse_AsE2fProCa
+  406 107 64,102 kDiEPx #_reverse_AsE2fProCa
+  407 112 65,102 kDiEPx #_reverse_AsE2fProCa
+  408 3,42 47 1e+012*kAsEPx #AsE2fProE2f unit_conversion=1/(2e-12*0.5)
+  409 4,42 52 1e+012*kAsEPx #AsE2fProE2f unit_conversion=1/(2e-12*0.5)
+  410 64,103 108 1e+012*kAsEPx #AsE2fProE2f unit_conversion=1/(2e-12*0.5)
+  411 65,103 113 1e+012*kAsEPx #AsE2fProE2f unit_conversion=1/(2e-12*0.5)
+  412 47 3,42 kDiEPx #_reverse_AsE2fProE2f
+  413 52 4,42 kDiEPx #_reverse_AsE2fProE2f
+  414 108 64,103 kDiEPx #_reverse_AsE2fProE2f
+  415 113 65,103 kDiEPx #_reverse_AsE2fProE2f
+  416 3,43 48 1e+012*kAsEPx #AsE2fProEmi unit_conversion=1/(2e-12*0.5)
+  417 4,43 53 1e+012*kAsEPx #AsE2fProEmi unit_conversion=1/(2e-12*0.5)
+  418 64,104 109 1e+012*kAsEPx #AsE2fProEmi unit_conversion=1/(2e-12*0.5)
+  419 65,104 114 1e+012*kAsEPx #AsE2fProEmi unit_conversion=1/(2e-12*0.5)
+  420 48 3,43 kDiEPx #_reverse_AsE2fProEmi
+  421 53 4,43 kDiEPx #_reverse_AsE2fProEmi
+  422 109 64,104 kDiEPx #_reverse_AsE2fProEmi
+  423 114 65,104 kDiEPx #_reverse_AsE2fProEmi
+  424 3,44 49 1e+012*kAsEPx #AsE2fProFox unit_conversion=1/(2e-12*0.5)
+  425 4,44 54 1e+012*kAsEPx #AsE2fProFox unit_conversion=1/(2e-12*0.5)
+  426 64,105 110 1e+012*kAsEPx #AsE2fProFox unit_conversion=1/(2e-12*0.5)
+  427 65,105 115 1e+012*kAsEPx #AsE2fProFox unit_conversion=1/(2e-12*0.5)
+  428 49 3,44 kDiEPx #_reverse_AsE2fProFox
+  429 54 4,44 kDiEPx #_reverse_AsE2fProFox
+  430 110 64,105 kDiEPx #_reverse_AsE2fProFox
+  431 115 65,105 kDiEPx #_reverse_AsE2fProFox
+  432 0 56 1e-012*kSySkp2 #SySkp2 unit_conversion=2e-12*0.5
+  433 56 0 kDeSkp2_1 #DeSkp2_1
+  434 117 0 kDeSkp2_1 #DeSkp2_1
+  435 16,56 16 1e+012*kDeSkp2_2 #DeSkp2_2 unit_conversion=1/(2e-12*0.5)
+  436 22,56 22 1e+012*kDeSkp2_2 #DeSkp2_2 unit_conversion=1/(2e-12*0.5)
+  437 77,117 77 1e+012*kDeSkp2_2 #DeSkp2_2 unit_conversion=1/(2e-12*0.5)
+  438 83,117 83 1e+012*kDeSkp2_2 #DeSkp2_2 unit_conversion=1/(2e-12*0.5)
+  439 57,58 122 1e+012*kAsTP53PCDKN1A #AsTP53PCDKN1A unit_conversion=1/(2e-12*0.5)
+  440 118,119 123 1e+012*kAsTP53PCDKN1A #AsTP53PCDKN1A unit_conversion=1/(2e-12*0.5)
+  441 0 124 1e-012*kSyCDKN1A_1 #SyCDKN1A_1 unit_conversion=2e-12*0.5
+  442 59,60 125 1e+012*kAsFOXOPCDKN1B #AsFOXOPCDKN1B unit_conversion=1/(2e-12*0.5)
+  443 120,121 126 1e+012*kAsFOXOPCDKN1B #AsFOXOPCDKN1B unit_conversion=1/(2e-12*0.5)
+  444 0 127 1e-012*kSyCDKN1B_1 #SyCDKN1B_1 unit_conversion=2e-12*0.5
+  445 1,61 61,62 1e+012*kImImCCND_1 #ImCCND_1 unit_conversion=1/(2e-12*0.5)
+  446 61,62 1,61 1e+012*kExImCCND_1 #_reverse_ImCCND_1 unit_conversion=1/(2e-12*0.5)
+  447 2,61 61,63 1e+012*kImImCCNE_CDKN1A_B__1 #ImCCNE_CDKN1A_B__1 unit_conversion=1/(2e-12*0.5)
+  448 61,63 2,61 1e+012*kExImCCNE_CDKN1A_B__1 #_reverse_ImCCNE_CDKN1A_B__1 unit_conversion=1/(2e-12*0.5)
+  449 3,61 61,64 1e+012*kImImE2F_DBD_RB1_Ser332u__1 #ImE2F_DBD_RB1_Ser332u__1 unit_conversion=1/(2e-12*0.5)
+  450 61,64 3,61 1e+012*kExImE2F_DBD_RB1_Ser332u__1 #_reverse_ImE2F_DBD_RB1_Ser332u__1 unit_conversion=1/(2e-12*0.5)
+  451 4,61 61,65 1e+012*kImImE2F_DBD_RB1_Ser332p__1 #ImE2F_DBD_RB1_Ser332p__1 unit_conversion=1/(2e-12*0.5)
+  452 61,65 4,61 1e+012*kExImE2F_DBD_RB1_Ser332p__1 #_reverse_ImE2F_DBD_RB1_Ser332p__1 unit_conversion=1/(2e-12*0.5)
+  453 5,61 61,66 1e+012*kImImCCNA_CDKN1A_B__1 #ImCCNA_CDKN1A_B__1 unit_conversion=1/(2e-12*0.5)
+  454 61,66 5,61 1e+012*kExImCCNA_CDKN1A_B__1 #_reverse_ImCCNA_CDKN1A_B__1 unit_conversion=1/(2e-12*0.5)
+  455 6,61 61,67 1e+012*kImImCCNB_CDK1_Thr14_Tyr15u_CDKN1A__1 #ImCCNB_CDK1_Thr14_Tyr15u_CDKN1A__1 unit_conversion=1/(2e-12*0.5)
+  456 61,67 6,61 1e+012*kExImCCNB_CDK1_Thr14_Tyr15u_CDKN1A__1 #_reverse_ImCCNB_CDK1_Thr14_Tyr15u_CDKN1A__1 unit_conversion=1/(2e-12*0.5)
+  457 7,61 61,68 1e+012*kImImE2F_DBD_RB11_Ser332u__RB1_E2F1_Ser807_Ser811u__1 #ImE2F_DBD_RB11_Ser332u__RB1_E2F1_Ser807_Ser811u__1 unit_conversion=1/(2e-12*0.5)
+  458 61,68 7,61 1e+012*kExImE2F_DBD_RB11_Ser332u__RB1_E2F1_Ser807_Ser811u__1 #_reverse_ImE2F_DBD_RB11_Ser332u__RB1_E2F1_Ser807_Ser811u__1 unit_conversion=1/(2e-12*0.5)
+  459 8,61 61,69 1e+012*kImImE2F_DBD_RB11_Ser332p__RB1_E2F1_Ser807_Ser811u__1 #ImE2F_DBD_RB11_Ser332p__RB1_E2F1_Ser807_Ser811u__1 unit_conversion=1/(2e-12*0.5)
+  460 61,69 8,61 1e+012*kExImE2F_DBD_RB11_Ser332p__RB1_E2F1_Ser807_Ser811u__1 #_reverse_ImE2F_DBD_RB11_Ser332p__RB1_E2F1_Ser807_Ser811u__1 unit_conversion=1/(2e-12*0.5)
+  461 9,61 61,70 1e+012*kImImRB1_E2F_Ser807_Ser811u__1 #ImRB1_E2F_Ser807_Ser811u__1 unit_conversion=1/(2e-12*0.5)
+  462 61,70 9,61 1e+012*kExImRB1_E2F_Ser807_Ser811u__1 #_reverse_ImRB1_E2F_Ser807_Ser811u__1 unit_conversion=1/(2e-12*0.5)
+  463 10,61 61,71 1e+012*kImImRB1_E2F_Ser807_Ser811p__1 #ImRB1_E2F_Ser807_Ser811p__1 unit_conversion=1/(2e-12*0.5)
+  464 61,71 10,61 1e+012*kExImRB1_E2F_Ser807_Ser811p__1 #_reverse_ImRB1_E2F_Ser807_Ser811p__1 unit_conversion=1/(2e-12*0.5)
+  465 11,61 61,72 1e+012*kImImPPP2R2B_ENSA_ARPP19__1 #ImPPP2R2B_ENSA_ARPP19__1 unit_conversion=1/(2e-12*0.5)
+  466 61,72 11,61 1e+012*kExImPPP2R2B_ENSA_ARPP19__1 #_reverse_ImPPP2R2B_ENSA_ARPP19__1 unit_conversion=1/(2e-12*0.5)
+  467 12,61 61,73 1e+012*kImImAPC_FBXO5_FZR1_CDC20_Ser355u__1 #ImAPC_FBXO5_FZR1_CDC20_Ser355u__1 unit_conversion=1/(2e-12*0.5)
+  468 61,73 12,61 1e+012*kExImAPC_FBXO5_FZR1_CDC20_Ser355u__1 #_reverse_ImAPC_FBXO5_FZR1_CDC20_Ser355u__1 unit_conversion=1/(2e-12*0.5)
+  469 13,61 61,74 1e+012*kImImCDC20_APC__1 #ImCDC20_APC__1 unit_conversion=1/(2e-12*0.5)
+  470 61,74 13,61 1e+012*kExImCDC20_APC__1 #_reverse_ImCDC20_APC__1 unit_conversion=1/(2e-12*0.5)
+  471 14,61 61,75 1e+012*kImImAPC_FBXO5_FZR1_CDC201_Ser355p__CDC20_APC1__1 #ImAPC_FBXO5_FZR1_CDC201_Ser355p__CDC20_APC1__1 unit_conversion=1/(2e-12*0.5)
+  472 61,75 14,61 1e+012*kExImAPC_FBXO5_FZR1_CDC201_Ser355p__CDC20_APC1__1 #_reverse_ImAPC_FBXO5_FZR1_CDC201_Ser355p__CDC20_APC1__1 unit_conversion=1/(2e-12*0.5)
+  473 15,61 61,76 1e+012*kImImAPC_FBXO5_FZR1_CDC20_Ser355p__1 #ImAPC_FBXO5_FZR1_CDC20_Ser355p__1 unit_conversion=1/(2e-12*0.5)
+  474 61,76 15,61 1e+012*kExImAPC_FBXO5_FZR1_CDC20_Ser355p__1 #_reverse_ImAPC_FBXO5_FZR1_CDC20_Ser355p__1 unit_conversion=1/(2e-12*0.5)
+  475 16,61 61,77 1e+012*kImImAPC_FBXO5_FZR1_CDC201_Ser355u__FZR1_APC1_FBXO5_nTermu__1 #ImAPC_FBXO5_FZR1_CDC201_Ser355u__FZR1_APC1_FBXO5_nTermu__1 unit_conversion=1/(2e-12*0.5)
+  476 61,77 16,61 1e+012*kExImAPC_FBXO5_FZR1_CDC201_Ser355u__FZR1_APC1_FBXO5_nTermu__1 #_reverse_ImAPC_FBXO5_FZR1_CDC201_Ser355u__FZR1_APC1_FBXO5_nTermu__1 unit_conversion=1/(2e-12*0.5)
+  477 17,61 61,78 1e+012*kImImFZR1_APC_FBXO5_nTermu__1 #ImFZR1_APC_FBXO5_nTermu__1 unit_conversion=1/(2e-12*0.5)
+  478 61,78 17,61 1e+012*kExImFZR1_APC_FBXO5_nTermu__1 #_reverse_ImFZR1_APC_FBXO5_nTermu__1 unit_conversion=1/(2e-12*0.5)
+  479 18,61 61,79 1e+012*kImImFZR1_APC_FBXO5_nTermp__1 #ImFZR1_APC_FBXO5_nTermp__1 unit_conversion=1/(2e-12*0.5)
+  480 61,79 18,61 1e+012*kExImFZR1_APC_FBXO5_nTermp__1 #_reverse_ImFZR1_APC_FBXO5_nTermp__1 unit_conversion=1/(2e-12*0.5)
+  481 19,61 61,80 1e+012*kImImAPC_FBXO51_FZR1_CDC202_Ser355u__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1 #ImAPC_FBXO51_FZR1_CDC202_Ser355u__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1 unit_conversion=1/(2e-12*0.5)
+  482 61,80 19,61 1e+012*kExImAPC_FBXO51_FZR1_CDC202_Ser355u__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1 #_reverse_ImAPC_FBXO51_FZR1_CDC202_Ser355u__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1 unit_conversion=1/(2e-12*0.5)
+  483 20,61 61,81 1e+012*kImImFBXO5_APC_FZR1_Ser182u__1 #ImFBXO5_APC_FZR1_Ser182u__1 unit_conversion=1/(2e-12*0.5)
+  484 61,81 20,61 1e+012*kExImFBXO5_APC_FZR1_Ser182u__1 #_reverse_ImFBXO5_APC_FZR1_Ser182u__1 unit_conversion=1/(2e-12*0.5)
+  485 21,61 61,82 1e+012*kImImAPC_FBXO51_FZR1_CDC202_Ser355p__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1 #ImAPC_FBXO51_FZR1_CDC202_Ser355p__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1 unit_conversion=1/(2e-12*0.5)
+  486 61,82 21,61 1e+012*kExImAPC_FBXO51_FZR1_CDC202_Ser355p__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1 #_reverse_ImAPC_FBXO51_FZR1_CDC202_Ser355p__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1 unit_conversion=1/(2e-12*0.5)
+  487 22,61 61,83 1e+012*kImImAPC_FBXO5_FZR1_CDC201_Ser355p__FZR1_APC1_FBXO5_nTermu__1 #ImAPC_FBXO5_FZR1_CDC201_Ser355p__FZR1_APC1_FBXO5_nTermu__1 unit_conversion=1/(2e-12*0.5)
+  488 61,83 22,61 1e+012*kExImAPC_FBXO5_FZR1_CDC201_Ser355p__FZR1_APC1_FBXO5_nTermu__1 #_reverse_ImAPC_FBXO5_FZR1_CDC201_Ser355p__FZR1_APC1_FBXO5_nTermu__1 unit_conversion=1/(2e-12*0.5)
+  489 23,61 61,84 1e+012*kImImFBXO5_APC_FZR1_Ser182p__1 #ImFBXO5_APC_FZR1_Ser182p__1 unit_conversion=1/(2e-12*0.5)
+  490 61,84 23,61 1e+012*kExImFBXO5_APC_FZR1_Ser182p__1 #_reverse_ImFBXO5_APC_FZR1_Ser182p__1 unit_conversion=1/(2e-12*0.5)
+  491 24,61 61,85 1e+012*kImImFOXM1_DBD_Thr600u__1 #ImFOXM1_DBD_Thr600u__1 unit_conversion=1/(2e-12*0.5)
+  492 61,85 24,61 1e+012*kExImFOXM1_DBD_Thr600u__1 #_reverse_ImFOXM1_DBD_Thr600u__1 unit_conversion=1/(2e-12*0.5)
+  493 25,61 61,86 1e+012*kImImFOXM1_DBD_Thr600p__1 #ImFOXM1_DBD_Thr600p__1 unit_conversion=1/(2e-12*0.5)
+  494 61,86 25,61 1e+012*kExImFOXM1_DBD_Thr600p__1 #_reverse_ImFOXM1_DBD_Thr600p__1 unit_conversion=1/(2e-12*0.5)
+  495 30,61 61,91 1e+012*kImImWEE1_Ser123u__1 #ImWEE1_Ser123u__1 unit_conversion=1/(2e-12*0.5)
+  496 61,91 30,61 1e+012*kExImWEE1_Ser123u__1 #_reverse_ImWEE1_Ser123u__1 unit_conversion=1/(2e-12*0.5)
+  497 31,61 61,92 1e+012*kImImCCNB_CDK1_Thr14_Tyr15p_CDKN1A__1 #ImCCNB_CDK1_Thr14_Tyr15p_CDKN1A__1 unit_conversion=1/(2e-12*0.5)
+  498 61,92 31,61 1e+012*kExImCCNB_CDK1_Thr14_Tyr15p_CDKN1A__1 #_reverse_ImCCNB_CDK1_Thr14_Tyr15p_CDKN1A__1 unit_conversion=1/(2e-12*0.5)
+  499 32,61 61,93 1e+012*kImImWEE1_Ser123p__1 #ImWEE1_Ser123p__1 unit_conversion=1/(2e-12*0.5)
+  500 61,93 32,61 1e+012*kExImWEE1_Ser123p__1 #_reverse_ImWEE1_Ser123p__1 unit_conversion=1/(2e-12*0.5)
+  501 33,61 61,94 1e+012*kImImCDC25_pSitesp__1 #ImCDC25_pSitesp__1 unit_conversion=1/(2e-12*0.5)
+  502 61,94 33,61 1e+012*kExImCDC25_pSitesp__1 #_reverse_ImCDC25_pSitesp__1 unit_conversion=1/(2e-12*0.5)
+  503 34,61 61,95 1e+012*kImImCDC25_pSitesu__1 #ImCDC25_pSitesu__1 unit_conversion=1/(2e-12*0.5)
+  504 61,95 34,61 1e+012*kExImCDC25_pSitesu__1 #_reverse_ImCDC25_pSitesu__1 unit_conversion=1/(2e-12*0.5)
+  505 35,61 61,96 1e+012*kImImMASTL_Thr198u__1 #ImMASTL_Thr198u__1 unit_conversion=1/(2e-12*0.5)
+  506 61,96 35,61 1e+012*kExImMASTL_Thr198u__1 #_reverse_ImMASTL_Thr198u__1 unit_conversion=1/(2e-12*0.5)
+  507 36,61 61,97 1e+012*kImImMASTL_Thr198p__1 #ImMASTL_Thr198p__1 unit_conversion=1/(2e-12*0.5)
+  508 61,97 36,61 1e+012*kExImMASTL_Thr198p__1 #_reverse_ImMASTL_Thr198p__1 unit_conversion=1/(2e-12*0.5)
+  509 37,61 61,98 1e+012*kImImENSA_ARPP19_PPP2R2B_Ser62_Ser67u__1 #ImENSA_ARPP19_PPP2R2B_Ser62_Ser67u__1 unit_conversion=1/(2e-12*0.5)
+  510 61,98 37,61 1e+012*kExImENSA_ARPP19_PPP2R2B_Ser62_Ser67u__1 #_reverse_ImENSA_ARPP19_PPP2R2B_Ser62_Ser67u__1 unit_conversion=1/(2e-12*0.5)
+  511 38,61 61,99 1e+012*kImImENSA_ARPP19_PPP2R2B_Ser62_Ser67p__1 #ImENSA_ARPP19_PPP2R2B_Ser62_Ser67p__1 unit_conversion=1/(2e-12*0.5)
+  512 61,99 38,61 1e+012*kExImENSA_ARPP19_PPP2R2B_Ser62_Ser67p__1 #_reverse_ImENSA_ARPP19_PPP2R2B_Ser62_Ser67p__1 unit_conversion=1/(2e-12*0.5)
+  513 39,61 61,100 1e+012*kImImENSA_ARPP19_PPP2R2B1_Ser62_Ser67p__PPP2R2B_ENSA_ARPP191__1 #ImENSA_ARPP19_PPP2R2B1_Ser62_Ser67p__PPP2R2B_ENSA_ARPP191__1 unit_conversion=1/(2e-12*0.5)
+  514 61,100 39,61 1e+012*kExImENSA_ARPP19_PPP2R2B1_Ser62_Ser67p__PPP2R2B_ENSA_ARPP191__1 #_reverse_ImENSA_ARPP19_PPP2R2B1_Ser62_Ser67p__PPP2R2B_ENSA_ARPP191__1 unit_conversion=1/(2e-12*0.5)
+  515 55,61 61,116 1e+012*kImImiWEE_1 #ImiWEE_1 unit_conversion=1/(2e-12*0.5)
+  516 61,116 55,61 1e+012*kExImiWEE_1 #_reverse_ImiWEE_1 unit_conversion=1/(2e-12*0.5)
+  517 56,61 61,117 1e+012*kImImSKP2_1 #ImSKP2_1 unit_conversion=1/(2e-12*0.5)
+  518 61,117 56,61 1e+012*kExImSKP2_1 #_reverse_ImSKP2_1 unit_conversion=1/(2e-12*0.5)
+  519 57,61 61,118 1e+012*kImImTP53_DBD_Ser15p__1 #ImTP53_DBD_Ser15p__1 unit_conversion=1/(2e-12*0.5)
+  520 61,118 57,61 1e+012*kExImTP53_DBD_Ser15p__1 #_reverse_ImTP53_DBD_Ser15p__1 unit_conversion=1/(2e-12*0.5)
+  521 59,61 61,120 1e+012*kImImFOXO_DBD__1 #ImFOXO_DBD__1 unit_conversion=1/(2e-12*0.5)
+  522 61,120 59,61 1e+012*kExImFOXO_DBD__1 #_reverse_ImFOXO_DBD__1 unit_conversion=1/(2e-12*0.5)
+  523 122 57,58 kDiTP53PCDKN1A #_reverse_AsTP53PCDKN1A
+  524 123 118,119 kDiTP53PCDKN1A #_reverse_AsTP53PCDKN1A
+  525 122 122,124 kSyCDKN1A_2 #SyCDKN1A_2
+  526 123 123,124 kSyCDKN1A_2 #SyCDKN1A_2
+  527 124 0 kDeCDKN1A_1 #DeCDKN1A_1
+  528 56,124 56 1e+012*kDeCDKN1A_2 #DeCDKN1A_3 unit_conversion=1/(2e-12*0.5)
+  529 5,124 128 1e+012*kAsCdkn1aC #AsCDKN1ACCNA unit_conversion=1/(2e-12*0.5)
+  530 2,124 129 1e+012*kAsCdkn1aC #AsCDKN1ACCNE unit_conversion=1/(2e-12*0.5)
+  531 6,124 130 1e+012*kAsCdkn1aC #AsCDKN1ACCNB unit_conversion=1/(2e-12*0.5)
+  532 31,124 131 1e+012*kAsCdkn1aC #AsCDKN1ACCNB unit_conversion=1/(2e-12*0.5)
+  533 2,124 2,132 1e+012*kPhCDKN1AByCe #PhCDKN1AByCe unit_conversion=1/(2e-12*0.5)
+  534 5,124 5,132 1e+012*kPhCDKN1AByCa #PhCDKN1AByCa unit_conversion=1/(2e-12*0.5)
+  535 6,124 6,132 1e+012*kPhCDKN1AByCb #PhCDKN1AByCb unit_conversion=1/(2e-12*0.5)
+  536 125 59,60 kDiFOXOPCDKN1B #_reverse_AsFOXOPCDKN1B
+  537 126 120,121 kDiFOXOPCDKN1B #_reverse_AsFOXOPCDKN1B
+  538 125 125,127 kSyCDKN1B_2 #SyCDKN1B_2
+  539 126 126,127 kSyCDKN1B_2 #SyCDKN1B_2
+  540 127 0 kDeCDKN1B_1 #DeCDKN1B_1
+  541 56,127 56 1e+012*_rateLaw3 #DeCDKN1B_3 unit_conversion=1/(2e-12*0.5)
+  542 5,127 133 1e+012*kAsCdkn1bC #AsCDKN1BCCNA unit_conversion=1/(2e-12*0.5)
+  543 2,127 134 1e+012*kAsCdkn1bC #AsCDKN1BCCNE unit_conversion=1/(2e-12*0.5)
+  544 2,127 2,135 1e+012*kPhCDKN1BByCe #PhCDKN1BByCe unit_conversion=1/(2e-12*0.5)
+  545 5,127 5,135 1e+012*kPhCDKN1BByCa #PhCDKN1BByCa unit_conversion=1/(2e-12*0.5)
+  546 6,127 6,135 1e+012*kPhCDKN1BByCb #PhCDKN1BByCb unit_conversion=1/(2e-12*0.5)
+  547 61,124 61,136 1e+012*kImImCDKN1A_CCNE_A_B_Ser130u__1 #ImCDKN1A_CCNE_A_B_Ser130u__1 unit_conversion=1/(2e-12*0.5)
+  548 61,127 61,137 1e+012*kImImCDKN1B_CCNE_A_Thr187u__1 #ImCDKN1B_CCNE_A_Thr187u__1 unit_conversion=1/(2e-12*0.5)
+  549 129 124 kDeCe #DeCe1
+  550 134 127 kDeCe #DeCe1
+  551 2,129 2,124 1e+012*kPhCeE #DeCe2 unit_conversion=1/(2e-12*0.5)
+  552 2,134 2,127 1e+012*kPhCeE #DeCe2 unit_conversion=1/(2e-12*0.5)
+  553 128 124 kDeCa1 #DeCa1
+  554 133 127 kDeCa1 #DeCa1
+  555 5,129 5,124 1e+012*kPhCeA #DeCe3 unit_conversion=1/(2e-12*0.5)
+  556 5,134 5,127 1e+012*kPhCeA #DeCe3 unit_conversion=1/(2e-12*0.5)
+  557 16,128 16,124 1e+012*kDeCa2 #DeCa2 unit_conversion=1/(2e-12*0.5)
+  558 22,128 22,124 1e+012*kDeCa2 #DeCa2 unit_conversion=1/(2e-12*0.5)
+  559 16,133 16,127 1e+012*kDeCa2 #DeCa2 unit_conversion=1/(2e-12*0.5)
+  560 22,133 22,127 1e+012*kDeCa2 #DeCa2 unit_conversion=1/(2e-12*0.5)
+  561 14,128 14,124 1e+012*kDeCa3 #DeCa3 unit_conversion=1/(2e-12*0.5)
+  562 14,133 14,127 1e+012*kDeCa3 #DeCa3 unit_conversion=1/(2e-12*0.5)
+  563 130 124 kDeCb1 #DeCb
+  564 131 124 kDeCb1 #DeCb
+  565 16,130 16,124 1e+012*kDeCb2 #DeCbByApcCdh unit_conversion=1/(2e-12*0.5)
+  566 22,130 22,124 1e+012*kDeCb2 #DeCbByApcCdh unit_conversion=1/(2e-12*0.5)
+  567 16,131 16,124 1e+012*kDeCb2 #DeCbByApcCdh unit_conversion=1/(2e-12*0.5)
+  568 22,131 22,124 1e+012*kDeCb2 #DeCbByApcCdh unit_conversion=1/(2e-12*0.5)
+  569 14,130 14,124 1e+012*kDeCb3 #DeCbByApcCdc unit_conversion=1/(2e-12*0.5)
+  570 14,131 14,124 1e+012*kDeCb3 #DeCbByApcCdc unit_conversion=1/(2e-12*0.5)
+  571 30,130 30,131 1e+012*kWee2 #PhCbByWee unit_conversion=1/(2e-12*0.5)
+  572 32,130 32,131 1e+012*kWee1 #PhCbBypWee unit_conversion=1/(2e-12*0.5)
+  573 33,131 33,130 1e+012*kCdc25_2 #DppCbBypCdc25 unit_conversion=1/(2e-12*0.5)
+  574 34,131 34,130 1e+012*kCdc25_1 #DppCbByCdc25 unit_conversion=1/(2e-12*0.5)
+  575 128 5 kDeCDKN1A_1 #DeCDKN1A_1
+  576 129 2 kDeCDKN1A_1 #DeCDKN1A_1
+  577 130 6 kDeCDKN1A_1 #DeCDKN1A_1
+  578 131 31 kDeCDKN1A_1 #DeCDKN1A_1
+  579 132 0 kDeCDKN1A_1 #DeCDKN1A_1
+  580 136 0 kDeCDKN1A_1 #DeCDKN1A_1
+  581 56,132 56 1e+012*kDeCDKN1A_2 #DeCDKN1A_2 unit_conversion=1/(2e-12*0.5)
+  582 56,128 5,56 1e+012*kDeCDKN1A_2 #DeCDKN1A_3 unit_conversion=1/(2e-12*0.5)
+  583 56,129 2,56 1e+012*kDeCDKN1A_2 #DeCDKN1A_3 unit_conversion=1/(2e-12*0.5)
+  584 56,130 6,56 1e+012*kDeCDKN1A_2 #DeCDKN1A_3 unit_conversion=1/(2e-12*0.5)
+  585 56,131 31,56 1e+012*kDeCDKN1A_2 #DeCDKN1A_3 unit_conversion=1/(2e-12*0.5)
+  586 117,136 117 1e+012*kDeCDKN1A_2 #DeCDKN1A_3 unit_conversion=1/(2e-12*0.5)
+  587 66,136 138 1e+012*kAsCdkn1aC #AsCDKN1ACCNA unit_conversion=1/(2e-12*0.5)
+  588 128 5,124 kDiCdkn1aC #_reverse_AsCDKN1ACCNA
+  589 63,136 139 1e+012*kAsCdkn1aC #AsCDKN1ACCNE unit_conversion=1/(2e-12*0.5)
+  590 129 2,124 kDiCdkn1aC #_reverse_AsCDKN1ACCNE
+  591 67,136 140 1e+012*kAsCdkn1aC #AsCDKN1ACCNB unit_conversion=1/(2e-12*0.5)
+  592 92,136 141 1e+012*kAsCdkn1aC #AsCDKN1ACCNB unit_conversion=1/(2e-12*0.5)
+  593 130 6,124 kDiCdkn1aC #_reverse_AsCDKN1ACCNB
+  594 131 31,124 kDiCdkn1aC #_reverse_AsCDKN1ACCNB
+  595 63,136 63,142 1e+012*kPhCDKN1AByCe #PhCDKN1AByCe unit_conversion=1/(2e-12*0.5)
+  596 2,128 2,5,132 1e+012*kPhCDKN1AByCe #PhCdkn1aCaByCe unit_conversion=1/(2e-12*0.5)
+  597 2,129 2,2,132 1e+012*kPhCDKN1AByCe #PhCdkn1aCeByCe unit_conversion=1/(2e-12*0.5)
+  598 2,130 2,6,132 1e+012*kPhCDKN1AByCe #PhCdkn1aCbByCe unit_conversion=1/(2e-12*0.5)
+  599 2,131 2,31,132 1e+012*kPhCDKN1AByCe #PhCdkn1aCbByCe unit_conversion=1/(2e-12*0.5)
+  600 66,136 66,142 1e+012*kPhCDKN1AByCa #PhCDKN1AByCa unit_conversion=1/(2e-12*0.5)
+  601 5,128 5,5,132 1e+012*kPhCDKN1AByCa #PhCdkn1aCaByCa unit_conversion=1/(2e-12*0.5)
+  602 5,129 2,5,132 1e+012*kPhCDKN1AByCa #PhCdkn1aCeByCa unit_conversion=1/(2e-12*0.5)
+  603 5,130 5,6,132 1e+012*kPhCDKN1AByCa #PhCdkn1aCbByCa unit_conversion=1/(2e-12*0.5)
+  604 5,131 5,31,132 1e+012*kPhCDKN1AByCa #PhCdkn1aCbByCa unit_conversion=1/(2e-12*0.5)
+  605 67,136 67,142 1e+012*kPhCDKN1AByCb #PhCDKN1AByCb unit_conversion=1/(2e-12*0.5)
+  606 6,128 5,6,132 1e+012*kPhCDKN1AByCb #PhCdkn1aCaByCb unit_conversion=1/(2e-12*0.5)
+  607 6,129 2,6,132 1e+012*kPhCDKN1AByCb #PhCdkn1aCeByCb unit_conversion=1/(2e-12*0.5)
+  608 6,130 6,6,132 1e+012*kPhCDKN1AByCb #PhCdkn1aCbByCb unit_conversion=1/(2e-12*0.5)
+  609 6,131 6,31,132 1e+012*kPhCDKN1AByCb #PhCdkn1aCbByCb unit_conversion=1/(2e-12*0.5)
+  610 132 124 kDpCDKN1A #DpCDKN1A
+  611 133 5 kDeCDKN1B_1 #DeCDKN1B_1
+  612 134 2 kDeCDKN1B_1 #DeCDKN1B_1
+  613 135 0 kDeCDKN1B_1 #DeCDKN1B_1
+  614 137 0 kDeCDKN1B_1 #DeCDKN1B_1
+  615 56,135 56 1e+012*kDeCDKN1B_2 #DeCDKN1B_2 unit_conversion=1/(2e-12*0.5)
+  616 56,133 5,56 1e+012*_rateLaw3 #DeCDKN1B_3 unit_conversion=1/(2e-12*0.5)
+  617 56,134 2,56 1e+012*_rateLaw3 #DeCDKN1B_3 unit_conversion=1/(2e-12*0.5)
+  618 117,137 117 1e+012*_rateLaw3 #DeCDKN1B_3 unit_conversion=1/(2e-12*0.5)
+  619 5,135 143 1e+012*kAsCdkn1bC #AsCDKN1BCCNA unit_conversion=1/(2e-12*0.5)
+  620 66,137 144 1e+012*kAsCdkn1bC #AsCDKN1BCCNA unit_conversion=1/(2e-12*0.5)
+  621 133 5,127 kDiCdkn1bC #_reverse_AsCDKN1BCCNA
+  622 2,135 145 1e+012*kAsCdkn1bC #AsCDKN1BCCNE unit_conversion=1/(2e-12*0.5)
+  623 63,137 146 1e+012*kAsCdkn1bC #AsCDKN1BCCNE unit_conversion=1/(2e-12*0.5)
+  624 134 2,127 kDiCdkn1bC #_reverse_AsCDKN1BCCNE
+  625 2,133 2,143 1e+012*kPhCDKN1BByCe #PhCDKN1BByCe unit_conversion=1/(2e-12*0.5)
+  626 2,134 2,145 1e+012*kPhCDKN1BByCe #PhCDKN1BByCe unit_conversion=1/(2e-12*0.5)
+  627 63,137 63,147 1e+012*kPhCDKN1BByCe #PhCDKN1BByCe unit_conversion=1/(2e-12*0.5)
+  628 5,133 5,143 1e+012*kPhCDKN1BByCa #PhCDKN1BByCa unit_conversion=1/(2e-12*0.5)
+  629 5,134 5,145 1e+012*kPhCDKN1BByCa #PhCDKN1BByCa unit_conversion=1/(2e-12*0.5)
+  630 66,137 66,147 1e+012*kPhCDKN1BByCa #PhCDKN1BByCa unit_conversion=1/(2e-12*0.5)
+  631 6,133 6,143 1e+012*kPhCDKN1BByCb #PhCDKN1BByCb unit_conversion=1/(2e-12*0.5)
+  632 6,134 6,145 1e+012*kPhCDKN1BByCb #PhCDKN1BByCb unit_conversion=1/(2e-12*0.5)
+  633 67,137 67,147 1e+012*kPhCDKN1BByCb #PhCDKN1BByCb unit_conversion=1/(2e-12*0.5)
+  634 135 127 kDpCDKN1B #DpCDKN1B
+  635 61,136 61,124 1e+012*kExImCDKN1A_CCNE_A_B_Ser130u__1 #_reverse_ImCDKN1A_CCNE_A_B_Ser130u__1 unit_conversion=1/(2e-12*0.5)
+  636 61,137 61,127 1e+012*kExImCDKN1B_CCNE_A_Thr187u__1 #_reverse_ImCDKN1B_CCNE_A_Thr187u__1 unit_conversion=1/(2e-12*0.5)
+  637 61,128 61,138 1e+012*kImImCCNA_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1 #ImCCNA_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1 unit_conversion=1/(2e-12*0.5)
+  638 61,129 61,139 1e+012*kImImCCNE_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1 #ImCCNE_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1 unit_conversion=1/(2e-12*0.5)
+  639 61,130 61,140 1e+012*kImImCCNB_CDK1_Thr14_Tyr15u_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1 #ImCCNB_CDK1_Thr14_Tyr15u_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1 unit_conversion=1/(2e-12*0.5)
+  640 61,131 61,141 1e+012*kImImCCNB_CDK1_Thr14_Tyr15p_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1 #ImCCNB_CDK1_Thr14_Tyr15p_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1 unit_conversion=1/(2e-12*0.5)
+  641 61,132 61,142 1e+012*kImImCDKN1A_CCNE_A_B_Ser130p__1 #ImCDKN1A_CCNE_A_B_Ser130p__1 unit_conversion=1/(2e-12*0.5)
+  642 61,133 61,144 1e+012*kImImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1 #ImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1 unit_conversion=1/(2e-12*0.5)
+  643 61,134 61,146 1e+012*kImImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1 #ImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1 unit_conversion=1/(2e-12*0.5)
+  644 61,135 61,147 1e+012*kImImCDKN1B_CCNE_A_Thr187p__1 #ImCDKN1B_CCNE_A_Thr187p__1 unit_conversion=1/(2e-12*0.5)
+  645 139 136 kDeCe #DeCe1
+  646 145 135 kDeCe #DeCe1
+  647 146 137 kDeCe #DeCe1
+  648 2,145 2,135 1e+012*kPhCeE #DeCe2 unit_conversion=1/(2e-12*0.5)
+  649 63,139 63,136 1e+012*kPhCeE #DeCe2 unit_conversion=1/(2e-12*0.5)
+  650 63,146 63,137 1e+012*kPhCeE #DeCe2 unit_conversion=1/(2e-12*0.5)
+  651 138 136 kDeCa1 #DeCa1
+  652 143 135 kDeCa1 #DeCa1
+  653 144 137 kDeCa1 #DeCa1
+  654 66,139 66,136 1e+012*kPhCeA #DeCe3 unit_conversion=1/(2e-12*0.5)
+  655 5,145 5,135 1e+012*kPhCeA #DeCe3 unit_conversion=1/(2e-12*0.5)
+  656 66,146 66,137 1e+012*kPhCeA #DeCe3 unit_conversion=1/(2e-12*0.5)
+  657 77,138 77,136 1e+012*kDeCa2 #DeCa2 unit_conversion=1/(2e-12*0.5)
+  658 83,138 83,136 1e+012*kDeCa2 #DeCa2 unit_conversion=1/(2e-12*0.5)
+  659 16,143 16,135 1e+012*kDeCa2 #DeCa2 unit_conversion=1/(2e-12*0.5)
+  660 22,143 22,135 1e+012*kDeCa2 #DeCa2 unit_conversion=1/(2e-12*0.5)
+  661 77,144 77,137 1e+012*kDeCa2 #DeCa2 unit_conversion=1/(2e-12*0.5)
+  662 83,144 83,137 1e+012*kDeCa2 #DeCa2 unit_conversion=1/(2e-12*0.5)
+  663 75,138 75,136 1e+012*kDeCa3 #DeCa3 unit_conversion=1/(2e-12*0.5)
+  664 14,143 14,135 1e+012*kDeCa3 #DeCa3 unit_conversion=1/(2e-12*0.5)
+  665 75,144 75,137 1e+012*kDeCa3 #DeCa3 unit_conversion=1/(2e-12*0.5)
+  666 140 136 kDeCb1 #DeCb
+  667 141 136 kDeCb1 #DeCb
+  668 77,140 77,136 1e+012*kDeCb2 #DeCbByApcCdh unit_conversion=1/(2e-12*0.5)
+  669 83,140 83,136 1e+012*kDeCb2 #DeCbByApcCdh unit_conversion=1/(2e-12*0.5)
+  670 77,141 77,136 1e+012*kDeCb2 #DeCbByApcCdh unit_conversion=1/(2e-12*0.5)
+  671 83,141 83,136 1e+012*kDeCb2 #DeCbByApcCdh unit_conversion=1/(2e-12*0.5)
+  672 75,140 75,136 1e+012*kDeCb3 #DeCbByApcCdc unit_conversion=1/(2e-12*0.5)
+  673 75,141 75,136 1e+012*kDeCb3 #DeCbByApcCdc unit_conversion=1/(2e-12*0.5)
+  674 91,140 91,141 1e+012*kWee2 #PhCbByWee unit_conversion=1/(2e-12*0.5)
+  675 93,140 93,141 1e+012*kWee1 #PhCbBypWee unit_conversion=1/(2e-12*0.5)
+  676 94,141 94,140 1e+012*kCdc25_2 #DppCbBypCdc25 unit_conversion=1/(2e-12*0.5)
+  677 95,141 95,140 1e+012*kCdc25_1 #DppCbByCdc25 unit_conversion=1/(2e-12*0.5)
+  678 138 66 kDeCDKN1A_1 #DeCDKN1A_1
+  679 139 63 kDeCDKN1A_1 #DeCDKN1A_1
+  680 140 67 kDeCDKN1A_1 #DeCDKN1A_1
+  681 141 92 kDeCDKN1A_1 #DeCDKN1A_1
+  682 142 0 kDeCDKN1A_1 #DeCDKN1A_1
+  683 117,142 117 1e+012*kDeCDKN1A_2 #DeCDKN1A_2 unit_conversion=1/(2e-12*0.5)
+  684 117,138 66,117 1e+012*kDeCDKN1A_2 #DeCDKN1A_3 unit_conversion=1/(2e-12*0.5)
+  685 117,139 63,117 1e+012*kDeCDKN1A_2 #DeCDKN1A_3 unit_conversion=1/(2e-12*0.5)
+  686 117,140 67,117 1e+012*kDeCDKN1A_2 #DeCDKN1A_3 unit_conversion=1/(2e-12*0.5)
+  687 117,141 92,117 1e+012*kDeCDKN1A_2 #DeCDKN1A_3 unit_conversion=1/(2e-12*0.5)
+  688 138 66,136 kDiCdkn1aC #_reverse_AsCDKN1ACCNA
+  689 139 63,136 kDiCdkn1aC #_reverse_AsCDKN1ACCNE
+  690 140 67,136 kDiCdkn1aC #_reverse_AsCDKN1ACCNB
+  691 141 92,136 kDiCdkn1aC #_reverse_AsCDKN1ACCNB
+  692 63,138 63,66,142 1e+012*kPhCDKN1AByCe #PhCdkn1aCaByCe unit_conversion=1/(2e-12*0.5)
+  693 63,139 63,63,142 1e+012*kPhCDKN1AByCe #PhCdkn1aCeByCe unit_conversion=1/(2e-12*0.5)
+  694 63,140 63,67,142 1e+012*kPhCDKN1AByCe #PhCdkn1aCbByCe unit_conversion=1/(2e-12*0.5)
+  695 63,141 63,92,142 1e+012*kPhCDKN1AByCe #PhCdkn1aCbByCe unit_conversion=1/(2e-12*0.5)
+  696 66,138 66,66,142 1e+012*kPhCDKN1AByCa #PhCdkn1aCaByCa unit_conversion=1/(2e-12*0.5)
+  697 66,139 63,66,142 1e+012*kPhCDKN1AByCa #PhCdkn1aCeByCa unit_conversion=1/(2e-12*0.5)
+  698 66,140 66,67,142 1e+012*kPhCDKN1AByCa #PhCdkn1aCbByCa unit_conversion=1/(2e-12*0.5)
+  699 66,141 66,92,142 1e+012*kPhCDKN1AByCa #PhCdkn1aCbByCa unit_conversion=1/(2e-12*0.5)
+  700 67,138 66,67,142 1e+012*kPhCDKN1AByCb #PhCdkn1aCaByCb unit_conversion=1/(2e-12*0.5)
+  701 67,139 63,67,142 1e+012*kPhCDKN1AByCb #PhCdkn1aCeByCb unit_conversion=1/(2e-12*0.5)
+  702 67,140 67,67,142 1e+012*kPhCDKN1AByCb #PhCdkn1aCbByCb unit_conversion=1/(2e-12*0.5)
+  703 67,141 67,92,142 1e+012*kPhCDKN1AByCb #PhCdkn1aCbByCb unit_conversion=1/(2e-12*0.5)
+  704 142 136 kDpCDKN1A #DpCDKN1A
+  705 143 5 kDeCDKN1B_1 #DeCDKN1B_1
+  706 144 66 kDeCDKN1B_1 #DeCDKN1B_1
+  707 145 2 kDeCDKN1B_1 #DeCDKN1B_1
+  708 146 63 kDeCDKN1B_1 #DeCDKN1B_1
+  709 147 0 kDeCDKN1B_1 #DeCDKN1B_1
+  710 56,143 5,56 1e+012*kDeCDKN1B_2 #DeCDKN1B_2 unit_conversion=1/(2e-12*0.5)
+  711 56,145 2,56 1e+012*kDeCDKN1B_2 #DeCDKN1B_2 unit_conversion=1/(2e-12*0.5)
+  712 117,147 117 1e+012*kDeCDKN1B_2 #DeCDKN1B_2 unit_conversion=1/(2e-12*0.5)
+  713 117,144 66,117 1e+012*_rateLaw3 #DeCDKN1B_3 unit_conversion=1/(2e-12*0.5)
+  714 117,146 63,117 1e+012*_rateLaw3 #DeCDKN1B_3 unit_conversion=1/(2e-12*0.5)
+  715 66,147 148 1e+012*kAsCdkn1bC #AsCDKN1BCCNA unit_conversion=1/(2e-12*0.5)
+  716 143 5,135 kDiCdkn1bC #_reverse_AsCDKN1BCCNA
+  717 144 66,137 kDiCdkn1bC #_reverse_AsCDKN1BCCNA
+  718 63,147 149 1e+012*kAsCdkn1bC #AsCDKN1BCCNE unit_conversion=1/(2e-12*0.5)
+  719 145 2,135 kDiCdkn1bC #_reverse_AsCDKN1BCCNE
+  720 146 63,137 kDiCdkn1bC #_reverse_AsCDKN1BCCNE
+  721 63,144 63,148 1e+012*kPhCDKN1BByCe #PhCDKN1BByCe unit_conversion=1/(2e-12*0.5)
+  722 63,146 63,149 1e+012*kPhCDKN1BByCe #PhCDKN1BByCe unit_conversion=1/(2e-12*0.5)
+  723 66,144 66,148 1e+012*kPhCDKN1BByCa #PhCDKN1BByCa unit_conversion=1/(2e-12*0.5)
+  724 66,146 66,149 1e+012*kPhCDKN1BByCa #PhCDKN1BByCa unit_conversion=1/(2e-12*0.5)
+  725 67,144 67,148 1e+012*kPhCDKN1BByCb #PhCDKN1BByCb unit_conversion=1/(2e-12*0.5)
+  726 67,146 67,149 1e+012*kPhCDKN1BByCb #PhCDKN1BByCb unit_conversion=1/(2e-12*0.5)
+  727 143 133 kDpCDKN1B #DpCDKN1B
+  728 145 134 kDpCDKN1B #DpCDKN1B
+  729 147 137 kDpCDKN1B #DpCDKN1B
+  730 61,138 61,128 1e+012*kExImCCNA_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1 #_reverse_ImCCNA_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1 unit_conversion=1/(2e-12*0.5)
+  731 61,139 61,129 1e+012*kExImCCNE_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1 #_reverse_ImCCNE_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1 unit_conversion=1/(2e-12*0.5)
+  732 61,140 61,130 1e+012*kExImCCNB_CDK1_Thr14_Tyr15u_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1 #_reverse_ImCCNB_CDK1_Thr14_Tyr15u_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1 unit_conversion=1/(2e-12*0.5)
+  733 61,141 61,131 1e+012*kExImCCNB_CDK1_Thr14_Tyr15p_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1 #_reverse_ImCCNB_CDK1_Thr14_Tyr15p_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1 unit_conversion=1/(2e-12*0.5)
+  734 61,142 61,132 1e+012*kExImCDKN1A_CCNE_A_B_Ser130p__1 #_reverse_ImCDKN1A_CCNE_A_B_Ser130p__1 unit_conversion=1/(2e-12*0.5)
+  735 61,144 61,133 1e+012*kExImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1 #_reverse_ImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1 unit_conversion=1/(2e-12*0.5)
+  736 61,146 61,134 1e+012*kExImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1 #_reverse_ImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1 unit_conversion=1/(2e-12*0.5)
+  737 61,147 61,135 1e+012*kExImCDKN1B_CCNE_A_Thr187p__1 #_reverse_ImCDKN1B_CCNE_A_Thr187p__1 unit_conversion=1/(2e-12*0.5)
+  738 61,143 61,148 1e+012*kImImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1 #ImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1 unit_conversion=1/(2e-12*0.5)
+  739 61,145 61,149 1e+012*kImImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1 #ImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1 unit_conversion=1/(2e-12*0.5)
+  740 149 147 kDeCe #DeCe1
+  741 63,149 63,147 1e+012*kPhCeE #DeCe2 unit_conversion=1/(2e-12*0.5)
+  742 148 147 kDeCa1 #DeCa1
+  743 66,149 66,147 1e+012*kPhCeA #DeCe3 unit_conversion=1/(2e-12*0.5)
+  744 77,148 77,147 1e+012*kDeCa2 #DeCa2 unit_conversion=1/(2e-12*0.5)
+  745 83,148 83,147 1e+012*kDeCa2 #DeCa2 unit_conversion=1/(2e-12*0.5)
+  746 75,148 75,147 1e+012*kDeCa3 #DeCa3 unit_conversion=1/(2e-12*0.5)
+  747 148 66 kDeCDKN1B_1 #DeCDKN1B_1
+  748 149 63 kDeCDKN1B_1 #DeCDKN1B_1
+  749 117,148 66,117 1e+012*kDeCDKN1B_2 #DeCDKN1B_2 unit_conversion=1/(2e-12*0.5)
+  750 117,149 63,117 1e+012*kDeCDKN1B_2 #DeCDKN1B_2 unit_conversion=1/(2e-12*0.5)
+  751 148 66,147 kDiCdkn1bC #_reverse_AsCDKN1BCCNA
+  752 149 63,147 kDiCdkn1bC #_reverse_AsCDKN1BCCNE
+  753 148 144 kDpCDKN1B #DpCDKN1B
+  754 149 146 kDpCDKN1B #DpCDKN1B
+  755 61,148 61,143 1e+012*kExImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1 #_reverse_ImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1 unit_conversion=1/(2e-12*0.5)
+  756 61,149 61,145 1e+012*kExImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1 #_reverse_ImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1 unit_conversion=1/(2e-12*0.5)
+end reactions
+begin groups
+    1 tCCNE                2,63,129,134,139,145,146,149
+    2 tCCNA                5,66,128,133,138,143,144,148
+    3 tCCNB                6,31,67,92,130,131,140,141
+    4 tCDKN1A              124,128,129,130,131,132,136,138,139,140,141,142
+    5 tCDKN1B              127,133,134,135,137,143,144,145,146,147,148,149
+    6 tSKP2                56,117
+    7 ApcCdh               16,22,77,83
+    8 aCCNB                6,67
+end groups
