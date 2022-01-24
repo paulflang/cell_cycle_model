@@ -342,5 +342,20 @@ end model
 
 generate_network({overwrite=>1})
 writeSBML()
-simulate({method=>"ode",t_end=>1e6,n_steps=>1e3,atol=>1e-8,rtol=>1e-8})
+#simulate({method=>"ode",t_end=>1e6,n_steps=>1e3,atol=>1e-8,rtol=>1e-8})
+
+simulate({method=>"ode",t_end=>0.73e5,n_steps=>1e3,atol=>1e-8,rtol=>1e-8})
+saveConcentrations();
+setConcentration("@cell:TP53(DBD,Ser15~p)","1*1");
+simulate({method=>"ode",continue=>1,t_start=>0.73e5,t_end=>1.5e5,n_steps=>1e3});
+saveConcentrations();
+setConcentration("@cell:TP53(DBD,Ser15~p)","0*1");
+simulate({method=>"ode",continue=>1,t_start=>1.5e5,t_end=>2.8e5,n_steps=>1e3});
+saveConcentrations();
+setConcentration("@cell:TP53(DBD,Ser15~p)","1*1");
+simulate({method=>"ode",continue=>1,t_start=>2.8e5,t_end=>3.2e5,n_steps=>1e3});
+saveConcentrations();
+setConcentration("@cell:TP53(DBD,Ser15~p)","0*1");
+simulate({method=>"ode",continue=>1,t_start=>3.2e5,t_end=>4.0e5,n_steps=>1e3});
+
 #simulate({method=>"ssa",t_end=>100,n_steps=>4e2})
