@@ -108,8 +108,8 @@ begin parameters
     kAsCdkn1aC 0.007/6.022e23
 	kDiCdkn1aC 0.0003  # Consider using different binding strength for different CKI/CDK complexes
 	kPhCDKN1AByCe 0.005/6.022e23
-	kPhCDKN1AByCa 0.0005/6.022e23
-	kPhCDKN1AByCb 0.005/6.022e23
+	kPhCDKN1AByCa 0.0002/6.022e23
+	kPhCDKN1AByCb 0.002/6.022e23
 	kDpCDKN1A 0.002
 	kAsFOXOPCDKN1B 0.3/6.022e23
 	kDiFOXOPCDKN1B 0.15
