@@ -391,9 +391,9 @@ begin observables
 	Species ApcCdh APC(FBXO5,FZR1_CDC20!1).FZR1(FBXO5,APC!1)
 	Species aCCNB CCNB(CDKN1A,CDK1_Thr14_Tyr15~u)
 end observables
-begin functions
-	rPhNup() (kPhNup*aCCNB)^10
-end functions
+#begin functions
+#	rPhNup() (kPhNup*aCCNB)^10
+#end functions
 begin reaction rules
     SyE2f1: 0 -> @Cyt:E2F(DBD,RB1,Ser332~u) kSyE2f1
 	AspFoxPcb: FOXM1(DBD,Thr600~p) + CCNB_promoter(FOXM1) <-> FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) kAsFPcb,kDiFPcb
@@ -531,8 +531,8 @@ begin reaction rules
 	PhCDKN1BByCa: CDKN1B(Thr187~u) + CCNA(CDKN1A_B) -> CDKN1B(Thr187~p) + CCNA(CDKN1A_B) kPhCDKN1BByCa
 	PhCDKN1BByCb: CDKN1B(Thr187~u) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> CDKN1B(Thr187~p) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCDKN1BByCb
 	DpCDKN1B: CDKN1B(Thr187~p) -> CDKN1B(Thr187~u) kDpCDKN1B
-	PhNup: @Num:NUP(pSites~u) -> @Num:NUP(pSites~p) rPhNup()
-	DpNup_1: @Num:NUP(pSites~p) -> @Num:NUP(pSites~u) kDpNup_1
+	# PhNup: @Num:NUP(pSites~u) -> @Num:NUP(pSites~p) rPhNup()
+	# DpNup_1: @Num:NUP(pSites~p) -> @Num:NUP(pSites~u) kDpNup_1
 	# Transport rules:
 	ImCCND_1: @Cyt:CCND() + @Num:NUP(pSites~u) <-> @Nuc:CCND() + @Num:NUP(pSites~u) kImImCCND_1,kExImCCND_1
 	ImCCNE_CDKN1A_B__1: @Cyt:CCNE(CDKN1A_B) + @Num:NUP(pSites~u) <-> @Nuc:CCNE(CDKN1A_B) + @Num:NUP(pSites~u) kImImCCNE_CDKN1A_B__1,kExImCCNE_CDKN1A_B__1
@@ -642,7 +642,7 @@ end model
 
 generate_network({overwrite=>1})
 writeSBML()
-simulate({method=>"ode",t_end=>2e5,n_steps=>1e3,atol=>1e-10,rtol=>1e-10})
+simulate({method=>"ode",t_end=>1e6,n_steps=>1e3,atol=>1e-8,rtol=>1e-8})
 #simulate({method=>"ssa",t_end=>100,n_steps=>4e2})
 #saveConcentrations();
 #setConcentration("TP53(DBD,Ser15~p)","1*6.022e23");
