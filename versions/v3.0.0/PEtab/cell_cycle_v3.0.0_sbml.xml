@@ -6,205 +6,200 @@
       <compartment id="cell" spatialDimensions="3" size="1"/>
     </listOfCompartments>
     <listOfSpecies>
-      <species id="_cell__CCND" compartment="cell" initialConcentration="6.022e+023" name="_cell__CCND"/>
-      <species id="_cell__CCNE" compartment="cell" initialConcentration="1.3986043e+023" name="_cell__CCNE"/>
-      <species id="_cell__E2F_DBD_RB1_Ser332u_" compartment="cell" initialConcentration="1.1128068e+022" name="_cell__E2F_DBD_RB1_Ser332u_"/>
-      <species id="_cell__E2F_DBD_RB1_Ser332p_" compartment="cell" initialConcentration="2.2932894e+019" name="_cell__E2F_DBD_RB1_Ser332p_"/>
-      <species id="_cell__CCNA" compartment="cell" initialConcentration="4.2325597e+021" name="_cell__CCNA"/>
-      <species id="_cell__CCNB_CDK1_Thr14_Tyr15u_" compartment="cell" initialConcentration="1.133559e+021" name="_cell__CCNB_CDK1_Thr14_Tyr15u_"/>
-      <species id="_cell__E2F_DBD_RB1_1_Ser332u__RB1_E2F_1_Ser807_Ser811u_" compartment="cell" initialConcentration="4.3034014e+022" name="_cell__E2F_DBD_RB1_1_Ser332u__RB1_E2F_1_Ser807_Ser811u_"/>
-      <species id="_cell__E2F_DBD_RB1_1_Ser332p__RB1_E2F_1_Ser807_Ser811u_" compartment="cell" initialConcentration="9.065434e+019" name="_cell__E2F_DBD_RB1_1_Ser332p__RB1_E2F_1_Ser807_Ser811u_"/>
-      <species id="_cell__RB1_E2F_Ser807_Ser811u_" compartment="cell" initialConcentration="5.2778426e+022" name="_cell__RB1_E2F_Ser807_Ser811u_"/>
-      <species id="_cell__RB1_E2F_Ser807_Ser811p_" compartment="cell" initialConcentration="5.0629691e+023" name="_cell__RB1_E2F_Ser807_Ser811p_"/>
-      <species id="_cell__PPP2R2B_ENSA_ARPP19_" compartment="cell" initialConcentration="4.6484797e+022" name="_cell__PPP2R2B_ENSA_ARPP19_"/>
-      <species id="_cell__APC_FBXO5_FZR1_CDC20_Ser355u_" compartment="cell" initialConcentration="2.4260911e+024" name="_cell__APC_FBXO5_FZR1_CDC20_Ser355u_"/>
-      <species id="_cell__CDC20_APC_" compartment="cell" initialConcentration="1.3847757e+023" name="_cell__CDC20_APC_"/>
-      <species id="_cell__APC_FBXO5_FZR1_CDC20_1_Ser355p__CDC20_APC_1_" compartment="cell" initialConcentration="4.2087805e+022" name="_cell__APC_FBXO5_FZR1_CDC20_1_Ser355p__CDC20_APC_1_"/>
-      <species id="_cell__APC_FBXO5_FZR1_CDC20_Ser355p_" compartment="cell" initialConcentration="3.7993439e+022" name="_cell__APC_FBXO5_FZR1_CDC20_Ser355p_"/>
-      <species id="_cell__APC_FBXO5_FZR1_CDC20_1_Ser355u__FZR1_APC_1_FBXO5_nTermu_" compartment="cell" initialConcentration="4.2969631e+023" name="_cell__APC_FBXO5_FZR1_CDC20_1_Ser355u__FZR1_APC_1_FBXO5_nTermu_"/>
-      <species id="_cell__FZR1_APC_FBXO5_nTermu_" compartment="cell" initialConcentration="3.4406152e+020" name="_cell__FZR1_APC_FBXO5_nTermu_"/>
-      <species id="_cell__FZR1_APC_FBXO5_nTermp_" compartment="cell" initialConcentration="9.7028319e+022" name="_cell__FZR1_APC_FBXO5_nTermp_"/>
-      <species id="_cell__APC_FBXO5_1_FZR1_CDC20_2_Ser355u__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_" compartment="cell" initialConcentration="6.5604459e+022" name="_cell__APC_FBXO5_1_FZR1_CDC20_2_Ser355u__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_"/>
-      <species id="_cell__FBXO5_APC_FZR1_Ser182u_" compartment="cell" initialConcentration="4.3226888e+020" name="_cell__FBXO5_APC_FZR1_Ser182u_"/>
-      <species id="_cell__APC_FBXO5_1_FZR1_CDC20_2_Ser355p__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_" compartment="cell" initialConcentration="1.3323959e+021" name="_cell__APC_FBXO5_1_FZR1_CDC20_2_Ser355p__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_"/>
-      <species id="_cell__APC_FBXO5_FZR1_CDC20_1_Ser355p__FZR1_APC_1_FBXO5_nTermu_" compartment="cell" initialConcentration="8.1944566e+021" name="_cell__APC_FBXO5_FZR1_CDC20_1_Ser355p__FZR1_APC_1_FBXO5_nTermu_"/>
-      <species id="_cell__FBXO5_APC_FZR1_Ser182p_" compartment="cell" initialConcentration="1.1324333e+019" name="_cell__FBXO5_APC_FZR1_Ser182p_"/>
-      <species id="_cell__FOXM1_DBD_Thr600u_" compartment="cell" initialConcentration="3.3510826e+021" name="_cell__FOXM1_DBD_Thr600u_"/>
-      <species id="_cell__FOXM1_DBD_Thr600p_" compartment="cell" initialConcentration="2.2950816e+020" name="_cell__FOXM1_DBD_Thr600p_"/>
-      <species id="_cell__CCNB_promoter_FOXM1_1__FOXM1_DBD_1_Thr600p_" compartment="cell" initialConcentration="1.1461427e+017" name="_cell__CCNB_promoter_FOXM1_1__FOXM1_DBD_1_Thr600p_"/>
-      <species id="_cell__CCNB_promoter_FOXM1_" compartment="cell" initialConcentration="6.0105386e+019" name="_cell__CCNB_promoter_FOXM1_"/>
-      <species id="_cell__CDC20_promoter_FOXM1_" compartment="cell" initialConcentration="6.0174121e+019" name="_cell__CDC20_promoter_FOXM1_"/>
-      <species id="_cell__CDC20_promoter_FOXM1_1__FOXM1_DBD_1_Thr600p_" compartment="cell" initialConcentration="4.5878816e+016" name="_cell__CDC20_promoter_FOXM1_1__FOXM1_DBD_1_Thr600p_"/>
-      <species id="_cell__WEE1_Ser123u_" compartment="cell" initialConcentration="5.9042195e+023" name="_cell__WEE1_Ser123u_"/>
-      <species id="_cell__CCNB_CDK1_Thr14_Tyr15p_" compartment="cell" initialConcentration="4.5242773e+021" name="_cell__CCNB_CDK1_Thr14_Tyr15p_"/>
-      <species id="_cell__WEE1_Ser123p_" compartment="cell" initialConcentration="1.1778049e+022" name="_cell__WEE1_Ser123p_"/>
-      <species id="_cell__CDC25_pSitesp_" compartment="cell" initialConcentration="1.1103404e+022" name="_cell__CDC25_pSitesp_"/>
-      <species id="_cell__CDC25_pSitesu_" compartment="cell" initialConcentration="5.910966e+023" name="_cell__CDC25_pSitesu_"/>
-      <species id="_cell__MASTL_Thr198u_" compartment="cell" initialConcentration="6.0070998e+023" name="_cell__MASTL_Thr198u_"/>
-      <species id="_cell__MASTL_Thr198p_" compartment="cell" initialConcentration="1.4900204e+021" name="_cell__MASTL_Thr198p_"/>
-      <species id="_cell__ENSA_ARPP19_PPP2R2B_Ser62_Ser67u_" compartment="cell" initialConcentration="4.9793694e+023" name="_cell__ENSA_ARPP19_PPP2R2B_Ser62_Ser67u_"/>
-      <species id="_cell__ENSA_ARPP19_PPP2R2B_Ser62_Ser67p_" compartment="cell" initialConcentration="1.9785953e+020" name="_cell__ENSA_ARPP19_PPP2R2B_Ser62_Ser67p_"/>
-      <species id="_cell__ENSA_ARPP19_PPP2R2B_1_Ser62_Ser67p__PPP2R2B_ENSA_ARPP19_1_" compartment="cell" initialConcentration="1.040652e+023" name="_cell__ENSA_ARPP19_PPP2R2B_1_Ser62_Ser67p__PPP2R2B_ENSA_ARPP19_1_"/>
-      <species id="_cell__CCNE_promoter_E2F_" compartment="cell" initialConcentration="5.0873268e+019" name="_cell__CCNE_promoter_E2F_"/>
-      <species id="_cell__CCNA_promoter_E2F_" compartment="cell" initialConcentration="5.0873268e+019" name="_cell__CCNA_promoter_E2F_"/>
-      <species id="_cell__E2F_promoter_E2F_" compartment="cell" initialConcentration="5.0873268e+019" name="_cell__E2F_promoter_E2F_"/>
-      <species id="_cell__FBXO5_promoter_E2F_" compartment="cell" initialConcentration="5.0873268e+019" name="_cell__FBXO5_promoter_E2F_"/>
-      <species id="_cell__FOXM1_promoter_E2F_" compartment="cell" initialConcentration="5.0873268e+019" name="_cell__FOXM1_promoter_E2F_"/>
-      <species id="_cell__CCNE_promoter_E2F_1__E2F_DBD_1_RB1_Ser332u_" compartment="cell" initialConcentration="9.3467317e+018" name="_cell__CCNE_promoter_E2F_1__E2F_DBD_1_RB1_Ser332u_"/>
-      <species id="_cell__CCNA_promoter_E2F_1__E2F_DBD_1_RB1_Ser332u_" compartment="cell" initialConcentration="9.3467317e+018" name="_cell__CCNA_promoter_E2F_1__E2F_DBD_1_RB1_Ser332u_"/>
-      <species id="_cell__E2F_DBD_1_RB1_Ser332u__E2F_promoter_E2F_1_" compartment="cell" initialConcentration="9.3467317e+018" name="_cell__E2F_DBD_1_RB1_Ser332u__E2F_promoter_E2F_1_"/>
-      <species id="_cell__E2F_DBD_1_RB1_Ser332u__FBXO5_promoter_E2F_1_" compartment="cell" initialConcentration="9.3467317e+018" name="_cell__E2F_DBD_1_RB1_Ser332u__FBXO5_promoter_E2F_1_"/>
-      <species id="_cell__E2F_DBD_1_RB1_Ser332u__FOXM1_promoter_E2F_1_" compartment="cell" initialConcentration="9.3467317e+018" name="_cell__E2F_DBD_1_RB1_Ser332u__FOXM1_promoter_E2F_1_"/>
+      <species id="_cell__CCND" compartment="cell" initialConcentration="1" name="_cell__CCND"/>
+      <species id="_cell__CCNE" compartment="cell" initialConcentration="0.23224914" name="_cell__CCNE"/>
+      <species id="_cell__E2F_DBD_RB1_Ser332u_" compartment="cell" initialConcentration="0.018479024" name="_cell__E2F_DBD_RB1_Ser332u_"/>
+      <species id="_cell__E2F_DBD_RB1_Ser332p_" compartment="cell" initialConcentration="3.8081857e-005" name="_cell__E2F_DBD_RB1_Ser332p_"/>
+      <species id="_cell__CCNA" compartment="cell" initialConcentration="0.0070284949" name="_cell__CCNA"/>
+      <species id="_cell__CCNB_CDK1_Thr14_Tyr15u_" compartment="cell" initialConcentration="0.0018823629" name="_cell__CCNB_CDK1_Thr14_Tyr15u_"/>
+      <species id="_cell__E2F_DBD_RB1_1_Ser332u__RB1_E2F_1_Ser807_Ser811u_" compartment="cell" initialConcentration="0.071461332" name="_cell__E2F_DBD_RB1_1_Ser332u__RB1_E2F_1_Ser807_Ser811u_"/>
+      <species id="_cell__E2F_DBD_RB1_1_Ser332p__RB1_E2F_1_Ser807_Ser811u_" compartment="cell" initialConcentration="0.00015053859" name="_cell__E2F_DBD_RB1_1_Ser332p__RB1_E2F_1_Ser807_Ser811u_"/>
+      <species id="_cell__RB1_E2F_Ser807_Ser811u_" compartment="cell" initialConcentration="0.087642687" name="_cell__RB1_E2F_Ser807_Ser811u_"/>
+      <species id="_cell__RB1_E2F_Ser807_Ser811p_" compartment="cell" initialConcentration="0.84074544" name="_cell__RB1_E2F_Ser807_Ser811p_"/>
+      <species id="_cell__PPP2R2B_ENSA_ARPP19_" compartment="cell" initialConcentration="0.077191625" name="_cell__PPP2R2B_ENSA_ARPP19_"/>
+      <species id="_cell__APC_FBXO5_FZR1_CDC20_Ser355u_" compartment="cell" initialConcentration="4.0287133" name="_cell__APC_FBXO5_FZR1_CDC20_Ser355u_"/>
+      <species id="_cell__CDC20_APC_" compartment="cell" initialConcentration="0.22995279" name="_cell__CDC20_APC_"/>
+      <species id="_cell__APC_FBXO5_FZR1_CDC20_1_Ser355p__CDC20_APC_1_" compartment="cell" initialConcentration="0.069890078" name="_cell__APC_FBXO5_FZR1_CDC20_1_Ser355p__CDC20_APC_1_"/>
+      <species id="_cell__APC_FBXO5_FZR1_CDC20_Ser355p_" compartment="cell" initialConcentration="0.063091065" name="_cell__APC_FBXO5_FZR1_CDC20_Ser355p_"/>
+      <species id="_cell__APC_FBXO5_FZR1_CDC20_1_Ser355u__FZR1_APC_1_FBXO5_nTermu_" compartment="cell" initialConcentration="0.71354419" name="_cell__APC_FBXO5_FZR1_CDC20_1_Ser355u__FZR1_APC_1_FBXO5_nTermu_"/>
+      <species id="_cell__FZR1_APC_FBXO5_nTermu_" compartment="cell" initialConcentration="0.00057134095" name="_cell__FZR1_APC_FBXO5_nTermu_"/>
+      <species id="_cell__FZR1_APC_FBXO5_nTermp_" compartment="cell" initialConcentration="0.16112308" name="_cell__FZR1_APC_FBXO5_nTermp_"/>
+      <species id="_cell__APC_FBXO5_1_FZR1_CDC20_2_Ser355u__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_" compartment="cell" initialConcentration="0.10894131" name="_cell__APC_FBXO5_1_FZR1_CDC20_2_Ser355u__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_"/>
+      <species id="_cell__FBXO5_APC_FZR1_Ser182u_" compartment="cell" initialConcentration="0.00071781614" name="_cell__FBXO5_APC_FZR1_Ser182u_"/>
+      <species id="_cell__APC_FBXO5_1_FZR1_CDC20_2_Ser355p__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_" compartment="cell" initialConcentration="0.0022125471" name="_cell__APC_FBXO5_1_FZR1_CDC20_2_Ser355p__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_"/>
+      <species id="_cell__APC_FBXO5_FZR1_CDC20_1_Ser355p__FZR1_APC_1_FBXO5_nTermu_" compartment="cell" initialConcentration="0.013607533" name="_cell__APC_FBXO5_FZR1_CDC20_1_Ser355p__FZR1_APC_1_FBXO5_nTermu_"/>
+      <species id="_cell__FBXO5_APC_FZR1_Ser182p_" compartment="cell" initialConcentration="1.8804937e-005" name="_cell__FBXO5_APC_FZR1_Ser182p_"/>
+      <species id="_cell__FOXM1_DBD_Thr600u_" compartment="cell" initialConcentration="0.0055647336" name="_cell__FOXM1_DBD_Thr600u_"/>
+      <species id="_cell__FOXM1_DBD_Thr600p_" compartment="cell" initialConcentration="0.00038111617" name="_cell__FOXM1_DBD_Thr600p_"/>
+      <species id="_cell__CCNB_promoter_FOXM1_1__FOXM1_DBD_1_Thr600p_" compartment="cell" initialConcentration="1.9032592e-007" name="_cell__CCNB_promoter_FOXM1_1__FOXM1_DBD_1_Thr600p_"/>
+      <species id="_cell__CCNB_promoter_FOXM1_" compartment="cell" initialConcentration="9.9809674e-005" name="_cell__CCNB_promoter_FOXM1_"/>
+      <species id="_cell__CDC20_promoter_FOXM1_" compartment="cell" initialConcentration="9.9923815e-005" name="_cell__CDC20_promoter_FOXM1_"/>
+      <species id="_cell__CDC20_promoter_FOXM1_1__FOXM1_DBD_1_Thr600p_" compartment="cell" initialConcentration="7.6185347e-008" name="_cell__CDC20_promoter_FOXM1_1__FOXM1_DBD_1_Thr600p_"/>
+      <species id="_cell__WEE1_Ser123u_" compartment="cell" initialConcentration="0.98044163" name="_cell__WEE1_Ser123u_"/>
+      <species id="_cell__CCNB_CDK1_Thr14_Tyr15p_" compartment="cell" initialConcentration="0.0075129148" name="_cell__CCNB_CDK1_Thr14_Tyr15p_"/>
+      <species id="_cell__WEE1_Ser123p_" compartment="cell" initialConcentration="0.019558367" name="_cell__WEE1_Ser123p_"/>
+      <species id="_cell__CDC25_pSitesp_" compartment="cell" initialConcentration="0.018438067" name="_cell__CDC25_pSitesp_"/>
+      <species id="_cell__CDC25_pSitesu_" compartment="cell" initialConcentration="0.98156193" name="_cell__CDC25_pSitesu_"/>
+      <species id="_cell__MASTL_Thr198u_" compartment="cell" initialConcentration="0.99752571" name="_cell__MASTL_Thr198u_"/>
+      <species id="_cell__MASTL_Thr198p_" compartment="cell" initialConcentration="0.002474295" name="_cell__MASTL_Thr198p_"/>
+      <species id="_cell__ENSA_ARPP19_PPP2R2B_Ser62_Ser67u_" compartment="cell" initialConcentration="0.82686306" name="_cell__ENSA_ARPP19_PPP2R2B_Ser62_Ser67u_"/>
+      <species id="_cell__ENSA_ARPP19_PPP2R2B_Ser62_Ser67p_" compartment="cell" initialConcentration="0.00032856116" name="_cell__ENSA_ARPP19_PPP2R2B_Ser62_Ser67p_"/>
+      <species id="_cell__ENSA_ARPP19_PPP2R2B_1_Ser62_Ser67p__PPP2R2B_ENSA_ARPP19_1_" compartment="cell" initialConcentration="0.17280837" name="_cell__ENSA_ARPP19_PPP2R2B_1_Ser62_Ser67p__PPP2R2B_ENSA_ARPP19_1_"/>
+      <species id="_cell__CCNE_promoter_E2F_" compartment="cell" initialConcentration="8.4479024e-005" name="_cell__CCNE_promoter_E2F_"/>
+      <species id="_cell__CCNA_promoter_E2F_" compartment="cell" initialConcentration="8.4479024e-005" name="_cell__CCNA_promoter_E2F_"/>
+      <species id="_cell__E2F_promoter_E2F_" compartment="cell" initialConcentration="8.4479024e-005" name="_cell__E2F_promoter_E2F_"/>
+      <species id="_cell__FBXO5_promoter_E2F_" compartment="cell" initialConcentration="8.4479024e-005" name="_cell__FBXO5_promoter_E2F_"/>
+      <species id="_cell__FOXM1_promoter_E2F_" compartment="cell" initialConcentration="8.4479024e-005" name="_cell__FOXM1_promoter_E2F_"/>
+      <species id="_cell__CCNE_promoter_E2F_1__E2F_DBD_1_RB1_Ser332u_" compartment="cell" initialConcentration="1.5520976e-005" name="_cell__CCNE_promoter_E2F_1__E2F_DBD_1_RB1_Ser332u_"/>
+      <species id="_cell__CCNA_promoter_E2F_1__E2F_DBD_1_RB1_Ser332u_" compartment="cell" initialConcentration="1.5520976e-005" name="_cell__CCNA_promoter_E2F_1__E2F_DBD_1_RB1_Ser332u_"/>
+      <species id="_cell__E2F_DBD_1_RB1_Ser332u__E2F_promoter_E2F_1_" compartment="cell" initialConcentration="1.5520976e-005" name="_cell__E2F_DBD_1_RB1_Ser332u__E2F_promoter_E2F_1_"/>
+      <species id="_cell__E2F_DBD_1_RB1_Ser332u__FBXO5_promoter_E2F_1_" compartment="cell" initialConcentration="1.5520976e-005" name="_cell__E2F_DBD_1_RB1_Ser332u__FBXO5_promoter_E2F_1_"/>
+      <species id="_cell__E2F_DBD_1_RB1_Ser332u__FOXM1_promoter_E2F_1_" compartment="cell" initialConcentration="1.5520976e-005" name="_cell__E2F_DBD_1_RB1_Ser332u__FOXM1_promoter_E2F_1_"/>
       <species id="_cell__iWEE" compartment="cell" initialConcentration="0" name="_cell__iWEE"/>
     </listOfSpecies>
     <listOfParameters>
       <!-- Independent variables -->
-      <parameter id="kPhRbD" value="9.206253e-027"/>
-      <parameter id="kPhRbE" value="1.1507816e-026"/>
+      <parameter id="kPhRbD" value="0.0055440055"/>
+      <parameter id="kPhRbE" value="0.0069300069"/>
       <parameter id="kDpRb" value="0.0013860014"/>
-      <parameter id="kPhRb" value="3.4523449e-026"/>
-      <parameter id="kSyCe1" value="8.3465003e+018"/>
+      <parameter id="kPhRb" value="0.020790021"/>
+      <parameter id="kSyCe1" value="1.3860014e-005"/>
       <parameter id="kSyCe2" value="4.1580042"/>
       <parameter id="kDeCe" value="0.00013860014"/>
       <parameter id="kDiE2fRb" value="0.00034650035"/>
-      <parameter id="kAsE2fRb" value="5.7539081e-025"/>
-      <parameter id="kSyE2f1" value="4.1732502e+018"/>
+      <parameter id="kAsE2fRb" value="0.34650035"/>
+      <parameter id="kSyE2f1" value="6.9300069e-006"/>
       <parameter id="kSyE2f2" value="0.69300069"/>
       <parameter id="kDeE2f1" value="6.9300069e-005"/>
       <parameter id="kDeE2f2" value="0.0013860014"/>
-      <parameter id="kPhE2f" value="2.3015632e-027"/>
-      <parameter id="kDpE2f2" value="1.1507816e-025"/>
-      <parameter id="kSyEmi1" value="2.0866251e+019"/>
+      <parameter id="kPhE2f" value="0.0013860014"/>
+      <parameter id="kDpE2f2" value="0.069300069"/>
+      <parameter id="kSyEmi1" value="3.4650035e-005"/>
       <parameter id="kSyEmi2" value="3.4650035"/>
       <parameter id="kDeEmi1" value="0.00034650035"/>
       <parameter id="kDeEmi2" value="0.00034650035"/>
       <parameter id="kDeEmi3" value="0.0034650035"/>
-      <parameter id="kPhEmiA" value="5.7539081e-029"/>
-      <parameter id="kPhEmiB" value="2.8769541e-028"/>
+      <parameter id="kPhEmiA" value="3.4650035e-005"/>
+      <parameter id="kPhEmiB" value="0.00017325017"/>
       <parameter id="kDpEmi" value="3.4650035e-006"/>
-      <parameter id="kSyCa1" value="4.1732502e+018"/>
+      <parameter id="kSyCa1" value="6.9300069e-006"/>
       <parameter id="kSyCa2" value="0.51975052"/>
       <parameter id="kDeCa1" value="6.9300069e-006"/>
-      <parameter id="kDeCa2" value="4.6031265e-027"/>
-      <parameter id="kDeCa3" value="1.1507816e-027"/>
+      <parameter id="kDeCa2" value="0.0027720028"/>
+      <parameter id="kDeCa3" value="0.00069300069"/>
       <parameter id="kDpCdh" value="0.0034650035"/>
-      <parameter id="kPhCdhA" value="2.8769541e-026"/>
-      <parameter id="kPhCdhE" value="1.1507816e-027"/>
-      <parameter id="kPhCdhB" value="2.8769541e-025"/>
+      <parameter id="kPhCdhA" value="0.017325017"/>
+      <parameter id="kPhCdhE" value="0.00069300069"/>
+      <parameter id="kPhCdhB" value="0.17325017"/>
       <parameter id="kDiACE" value="0.00034650035"/>
-      <parameter id="kAsACE" value="5.7539081e-025"/>
+      <parameter id="kAsACE" value="0.34650035"/>
       <parameter id="kDiACdh" value="0.00034650035"/>
-      <parameter id="kAsACdh" value="5.7539081e-025"/>
-      <parameter id="kPhCeA" value="1.1507816e-026"/>
-      <parameter id="kPhCeE" value="1.1507816e-028"/>
-      <parameter id="kPhFoxE" value="1.1507816e-027"/>
-      <parameter id="kPhFoxA" value="1.1507816e-027"/>
-      <parameter id="kPhFoxB" value="5.7539081e-027"/>
+      <parameter id="kAsACdh" value="0.34650035"/>
+      <parameter id="kPhCeA" value="0.0069300069"/>
+      <parameter id="kPhCeE" value="6.9300069e-005"/>
+      <parameter id="kPhFoxE" value="0.00069300069"/>
+      <parameter id="kPhFoxA" value="0.00069300069"/>
+      <parameter id="kPhFoxB" value="0.0034650035"/>
       <parameter id="kDpFox" value="3.4650035e-005"/>
-      <parameter id="kSyCb1" value="4.1732502e+018"/>
+      <parameter id="kSyCb1" value="6.9300069e-006"/>
       <parameter id="kSyCb2" value="0.51975052"/>
       <parameter id="kDeCb1" value="6.9300069e-006"/>
-      <parameter id="kDeCb2" value="1.438477e-027"/>
-      <parameter id="kDeCb3" value="1.438477e-027"/>
-      <parameter id="kPhEnsa" value="1.1507816e-027"/>
+      <parameter id="kDeCb2" value="0.00086625087"/>
+      <parameter id="kDeCb3" value="0.00086625087"/>
+      <parameter id="kPhEnsa" value="0.00069300069"/>
       <parameter id="kDpEnsa" value="0.00034650035"/>
-      <parameter id="kPhGw" value="1.1507816e-026"/>
+      <parameter id="kPhGw" value="0.0069300069"/>
       <parameter id="kDpGw1" value="0.0017325017"/>
-      <parameter id="kDpGw2" value="1.1507816e-025"/>
-      <parameter id="kWee1" value="1.1507816e-028"/>
-      <parameter id="kWee2" value="1.1507816e-026"/>
-      <parameter id="kPhWeeA" value="1.1507816e-027"/>
-      <parameter id="kPhWeeB" value="1.1507816e-026"/>
-      <parameter id="kDpWee" value="1.1507816e-025"/>
-      <parameter id="kCdc25_1" value="1.1507816e-027"/>
-      <parameter id="kCdc25_2" value="1.1507816e-026"/>
-      <parameter id="kDpCdc25" value="1.1507816e-025"/>
+      <parameter id="kDpGw2" value="0.069300069"/>
+      <parameter id="kWee1" value="6.9300069e-005"/>
+      <parameter id="kWee2" value="0.0069300069"/>
+      <parameter id="kPhWeeA" value="0.00069300069"/>
+      <parameter id="kPhWeeB" value="0.0069300069"/>
+      <parameter id="kDpWee" value="0.069300069"/>
+      <parameter id="kCdc25_1" value="0.00069300069"/>
+      <parameter id="kCdc25_2" value="0.0069300069"/>
+      <parameter id="kDpCdc25" value="0.069300069"/>
       <parameter id="kDipEB55" value="4.7124047e-005"/>
-      <parameter id="kAspEB55" value="6.5594552e-025"/>
-      <parameter id="kSyCdc_1" value="4.1732502e+018"/>
+      <parameter id="kAspEB55" value="0.3950104"/>
+      <parameter id="kSyCdc_1" value="6.9300069e-006"/>
       <parameter id="kSyCdc_2" value="0.69300069"/>
       <parameter id="kDeCdc_1" value="2.7720028e-005"/>
-      <parameter id="kDeCdc_2" value="4.6031265e-028"/>
+      <parameter id="kDeCdc_2" value="0.00027720028"/>
       <parameter id="kDipACdc" value="0.00086625087"/>
-      <parameter id="kAspACdc" value="1.1507816e-026"/>
-      <parameter id="kPhApcA" value="1.1507816e-028"/>
-      <parameter id="kDpApc" value="5.7539081e-026"/>
-      <parameter id="kSyFox1" value="4.1732502e+018"/>
+      <parameter id="kAspACdc" value="0.0069300069"/>
+      <parameter id="kPhApcA" value="6.9300069e-005"/>
+      <parameter id="kDpApc" value="0.034650035"/>
+      <parameter id="kSyFox1" value="6.9300069e-006"/>
       <parameter id="kSyFox2" value="0.51975052"/>
       <parameter id="kDeFox1" value="6.9300069e-006"/>
-      <parameter id="kDeFox2" value="5.7539081e-027"/>
-      <parameter id="kAsEPx" value="5.7539081e-025"/>
+      <parameter id="kDeFox2" value="0.0034650035"/>
+      <parameter id="kAsEPx" value="0.34650035"/>
       <parameter id="kDiEPx" value="0.034650035"/>
-      <parameter id="kAsFPcb" value="5.7539081e-025"/>
+      <parameter id="kAsFPcb" value="0.34650035"/>
       <parameter id="kDiFPcb" value="0.069300069"/>
-      <parameter id="kAsFPcdc" value="5.7539081e-025"/>
+      <parameter id="kAsFPcdc" value="0.34650035"/>
       <parameter id="kDiFPcdc" value="0.17325017"/>
-      <parameter id="kPhC25B" value="1.1507816e-026"/>
-      <parameter id="kPhCAEE" value="9.2062529e-028"/>
-      <parameter id="kPhCAEA" value="2.3015632e-026"/>
-      <parameter id="kPhCAEB" value="2.3015632e-025"/>
+      <parameter id="kPhC25B" value="0.0069300069"/>
+      <parameter id="kPhCAEE" value="0.00055440055"/>
+      <parameter id="kPhCAEA" value="0.013860014"/>
+      <parameter id="kPhCAEB" value="0.13860014"/>
       <parameter id="ikSyCb" value="1"/>
-      <parameter id="jiWee" value="6.022e+022"/>
+      <parameter id="jiWee" value="0.1"/>
       <parameter id="kDpE2f1" value="0"/>
       <parameter id="kPhC25A" value="0"/>
-      <parameter id="_InitialConc1" value="6.022e+023"/>
-      <parameter id="_InitialConc2" value="1.3986043e+023"/>
-      <parameter id="_InitialConc3" value="1.1128068e+022"/>
-      <parameter id="_InitialConc4" value="2.2932894e+019"/>
-      <parameter id="_InitialConc5" value="4.2325597e+021"/>
-      <parameter id="_InitialConc6" value="1.133559e+021"/>
-      <parameter id="_InitialConc7" value="4.3034014e+022"/>
-      <parameter id="_InitialConc8" value="9.065434e+019"/>
-      <parameter id="_InitialConc9" value="5.2778426e+022"/>
-      <parameter id="_InitialConc10" value="5.0629691e+023"/>
-      <parameter id="_InitialConc11" value="4.6484797e+022"/>
-      <parameter id="_InitialConc12" value="2.4260911e+024"/>
-      <parameter id="_InitialConc13" value="1.3847757e+023"/>
-      <parameter id="_InitialConc14" value="4.2087805e+022"/>
-      <parameter id="_InitialConc15" value="3.7993439e+022"/>
-      <parameter id="_InitialConc16" value="4.2969631e+023"/>
-      <parameter id="_InitialConc17" value="3.4406152e+020"/>
-      <parameter id="_InitialConc18" value="9.7028319e+022"/>
-      <parameter id="_InitialConc19" value="6.5604459e+022"/>
-      <parameter id="_InitialConc20" value="4.3226888e+020"/>
-      <parameter id="_InitialConc21" value="1.3323959e+021"/>
-      <parameter id="_InitialConc22" value="8.1944566e+021"/>
-      <parameter id="_InitialConc23" value="1.1324333e+019"/>
-      <parameter id="_InitialConc24" value="3.3510826e+021"/>
-      <parameter id="_InitialConc25" value="2.2950816e+020"/>
-      <parameter id="_InitialConc26" value="1.1461427e+017"/>
-      <parameter id="_InitialConc27" value="6.0105386e+019"/>
-      <parameter id="_InitialConc28" value="6.0174121e+019"/>
-      <parameter id="_InitialConc29" value="4.5878816e+016"/>
-      <parameter id="_InitialConc30" value="5.9042195e+023"/>
-      <parameter id="_InitialConc31" value="4.5242773e+021"/>
-      <parameter id="_InitialConc32" value="1.1778049e+022"/>
-      <parameter id="_InitialConc33" value="1.1103404e+022"/>
-      <parameter id="_InitialConc34" value="5.910966e+023"/>
-      <parameter id="_InitialConc35" value="6.0070998e+023"/>
-      <parameter id="_InitialConc36" value="1.4900204e+021"/>
-      <parameter id="_InitialConc37" value="4.9793694e+023"/>
-      <parameter id="_InitialConc38" value="1.9785953e+020"/>
-      <parameter id="_InitialConc39" value="1.040652e+023"/>
-      <parameter id="_InitialConc40" value="5.0873268e+019"/>
-      <parameter id="_InitialConc41" value="5.0873268e+019"/>
-      <parameter id="_InitialConc42" value="5.0873268e+019"/>
-      <parameter id="_InitialConc43" value="5.0873268e+019"/>
-      <parameter id="_InitialConc44" value="5.0873268e+019"/>
-      <parameter id="_InitialConc45" value="9.3467317e+018"/>
-      <parameter id="_InitialConc46" value="9.3467317e+018"/>
-      <parameter id="_InitialConc47" value="9.3467317e+018"/>
-      <parameter id="_InitialConc48" value="9.3467317e+018"/>
-      <parameter id="_InitialConc49" value="9.3467317e+018"/>
+      <parameter id="_InitialConc1" value="1"/>
+      <parameter id="_InitialConc2" value="0.23224914"/>
+      <parameter id="_InitialConc3" value="0.018479024"/>
+      <parameter id="_InitialConc4" value="3.8081857e-005"/>
+      <parameter id="_InitialConc5" value="0.0070284949"/>
+      <parameter id="_InitialConc6" value="0.0018823629"/>
+      <parameter id="_InitialConc7" value="0.071461332"/>
+      <parameter id="_InitialConc8" value="0.00015053859"/>
+      <parameter id="_InitialConc9" value="0.087642687"/>
+      <parameter id="_InitialConc10" value="0.84074544"/>
+      <parameter id="_InitialConc11" value="0.077191625"/>
+      <parameter id="_InitialConc12" value="4.0287133"/>
+      <parameter id="_InitialConc13" value="0.22995279"/>
+      <parameter id="_InitialConc14" value="0.069890078"/>
+      <parameter id="_InitialConc15" value="0.063091065"/>
+      <parameter id="_InitialConc16" value="0.71354419"/>
+      <parameter id="_InitialConc17" value="0.00057134095"/>
+      <parameter id="_InitialConc18" value="0.16112308"/>
+      <parameter id="_InitialConc19" value="0.10894131"/>
+      <parameter id="_InitialConc20" value="0.00071781614"/>
+      <parameter id="_InitialConc21" value="0.0022125471"/>
+      <parameter id="_InitialConc22" value="0.013607533"/>
+      <parameter id="_InitialConc23" value="1.8804937e-005"/>
+      <parameter id="_InitialConc24" value="0.0055647336"/>
+      <parameter id="_InitialConc25" value="0.00038111617"/>
+      <parameter id="_InitialConc26" value="1.9032592e-007"/>
+      <parameter id="_InitialConc27" value="9.9809674e-005"/>
+      <parameter id="_InitialConc28" value="9.9923815e-005"/>
+      <parameter id="_InitialConc29" value="7.6185347e-008"/>
+      <parameter id="_InitialConc30" value="0.98044163"/>
+      <parameter id="_InitialConc31" value="0.0075129148"/>
+      <parameter id="_InitialConc32" value="0.019558367"/>
+      <parameter id="_InitialConc33" value="0.018438067"/>
+      <parameter id="_InitialConc34" value="0.98156193"/>
+      <parameter id="_InitialConc35" value="0.99752571"/>
+      <parameter id="_InitialConc36" value="0.002474295"/>
+      <parameter id="_InitialConc37" value="0.82686306"/>
+      <parameter id="_InitialConc38" value="0.00032856116"/>
+      <parameter id="_InitialConc39" value="0.17280837"/>
+      <parameter id="_InitialConc40" value="8.4479024e-005"/>
+      <parameter id="_InitialConc41" value="8.4479024e-005"/>
+      <parameter id="_InitialConc42" value="8.4479024e-005"/>
+      <parameter id="_InitialConc43" value="8.4479024e-005"/>
+      <parameter id="_InitialConc44" value="8.4479024e-005"/>
+      <parameter id="_InitialConc45" value="1.5520976e-005"/>
+      <parameter id="_InitialConc46" value="1.5520976e-005"/>
+      <parameter id="_InitialConc47" value="1.5520976e-005"/>
+      <parameter id="_InitialConc48" value="1.5520976e-005"/>
+      <parameter id="_InitialConc49" value="1.5520976e-005"/>
       <parameter id="_InitialConc50" value="0"/>
       <!-- Dependent variables -->
       <parameter id="_rateLaw1" constant="true"/>
       <parameter id="_rateLaw2" constant="true"/>
-      <!-- Observables -->
-      <parameter id="Ce_compartment" constant="false"/>
-      <parameter id="Wee_compartment" constant="false"/>
-      <parameter id="pWee_compartment" constant="false"/>
-      <parameter id="iWee_compartment" constant="false"/>
     </listOfParameters>
     <listOfInitialAssignments>
       <!-- Dependent variables -->
@@ -227,45 +222,6 @@
         </math>
       </initialAssignment>
     </listOfInitialAssignments>
-    <listOfRules>
-      <!-- Observables -->
-      <assignmentRule variable="Ce_compartment">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <apply>
-              <plus/>
-              <cn> 0 </cn>
-              <ci> _cell__CCNE </ci>
-            </apply>
-          </math>
-      </assignmentRule>
-      <assignmentRule variable="Wee_compartment">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <apply>
-              <plus/>
-              <cn> 0 </cn>
-              <ci> _cell__WEE1_Ser123u_ </ci>
-            </apply>
-          </math>
-      </assignmentRule>
-      <assignmentRule variable="pWee_compartment">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <apply>
-              <plus/>
-              <cn> 0 </cn>
-              <ci> _cell__WEE1_Ser123p_ </ci>
-            </apply>
-          </math>
-      </assignmentRule>
-      <assignmentRule variable="iWee_compartment">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <apply>
-              <plus/>
-              <cn> 0 </cn>
-              <ci> _cell__iWEE </ci>
-            </apply>
-          </math>
-      </assignmentRule>
-    </listOfRules>
     <listOfReactions>
       <reaction id="R1" reversible="false">
         <listOfProducts>
