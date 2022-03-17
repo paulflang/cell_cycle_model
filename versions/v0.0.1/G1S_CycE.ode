@@ -1,0 +1,112 @@
+### MODEL NAME
+# G1S_Ce
+
+
+## MODEL NOTES
+# This model can be used to reproduce Fig. 3D.
+# The model shows how Ce flips the G1/S toggle between Ca and ApcCdh. The switch is required
+# to delay Ca accumulation so that it rises only after Ce rises. The toggle comprises Ca and ApcCdh,
+# which mutually inhibit each other.
+
+
+### Relation to other models:
+# Sister models G1S_E2f and G1S_E2f_2D use E2f as bifurcation parameter instead of Ce.
+
+
+### Major assumptions:
+# All reactions (even non elementary reactions) are best modelled with mass action kinetics for all reactions.
+# Protein expression takes no time.
+# Levels of tCdh and tDna are constant. Their degradation rates are incorporated in
+# the corresponding dephosphorylation and dissociation rates.
+# The unit [dna] is negligibly small compared to the unit [e2f].
+# Transcription factors that are in complex with Dna are not accessible to degrading enzymes (and baseline 
+# degradation rates are included in the dissociation constant).
+# Apc is present in excess and has high affinity to Cdh, i.e. all unphosphorylated
+# Cdh is in complex with Apc.
+# Ca phosphorylates Cdh stronger than Ce does (this corresponds to experimental evidence
+# and is needed to get a large bistable range in Ce). 
+
+
+### Variables (quantities of dimension concentration given in the arbitrary units shown in square brackets):
+# tEmi: total amount of Emi1 in the system; [cdh]
+# Ca: cyclin A-cdk1/2 complex; [a]
+# ApcCdh, pCdh, ACE: active Cdh, phosphorylated Cdh, ApcCdhEmi complex; [cdh]
+# E2fPx: E2f:Promoter of gene X complex; [dna]
+
+### Parameter description:
+# Ce: cyclin E-cdk2 complex; [e];
+# kSyEmi1, kSyEmi2: baseline and activated synthesis rates of Emi; [cdh/min]
+#   E2f: free E2f (E2f that is not bound to Rb; includes E2f bound to DNA); [e2f]
+#   kDeEmi1, kDeEmi2: baseline and Cdh mediated degradation rate of Emi; [1/min]
+# kSyCa1, kSyCa2: baseline and activated synthesis rates of Ca; [a/min]
+#  kDeCa1, kDeCa2: [1/min], [1/(cdh*min)]
+# tCdh: total amount of Cdh present in the system; [cdh]
+# kDpCdh, kPhCdhA, kPhCdhE: (de)phosphorylation rates of Cdh; [1/min], [1/(min*a)], [1/(min*e)]
+# kDiACE, kAsACE: dissociation and association rates of ApcCdh with Emi; [1/min]
+# tDna: total Dna (i.e. promoter) concentration; [dna]
+# kAsEPx, kDiEPx: assosiation and dissociation rate constants of E2fPx; [1/(min*dna)], [1/min]
+
+
+### Idea behind parameter values:
+# Parameters shall be biologically reasonable.
+# E2f is set just below the high E2f steady state in RP_aa, i.e. at 0.7.
+# Lower bifurcation point shall be at Ce < 0, upper bifurcation point just below the high steady state
+# of Ce in RP_aa, i.e. at Ce = 0.7.
+# Ca shall be a rather stable protein.
+
+
+### Limitations:
+# Experimental results show that once Ca is in the high state, inhibition of tEmi
+# via siRNA or Cdk1/2 acticity via chemical inhibitors does not lead to recurrence
+# of the Ca low state. However, the model does not reflect these findings. 
+
+
+##################################################################################
+
+### MODEL STATES
+tEmi' = kSyEmi1 + kSyEmi2 * E2fPx - kDeEmi1 * tEmi - kDeEmi2 * ACE
+Ca' = kSyCa1 + kSyCa2 * E2fPx - (kDeCa1 + kDeCa2 * ApcCdh) * Ca
+ACE' = kAsACE * ApcCdh * (tEmi - ACE) - (kDiACE + kDeEmi1 + kDeEmi2 + kPhCdhE * Ce + kPhCdhA * Ca) * ACE
+pCdh' = (kPhCdhA*Ca + kPhCdhE*Ce) * (tCdh - pCdh) - kDpCdh * pCdh
+E2fPx' = kAsEPx * E2f * (tDna - E2fPx) - kDiEPx * E2fPx
+
+
+### INITIAL CONDITIONS
+init tEmi = 0.0, Ca = 0.00, ACE = 0.00, pCdh = 0.0
+
+
+### ALGEBRAIC EQUATIONS
+# Mass conservations:
+ApcCdh = tCdh - pCdh - ACE
+
+
+### AUXILIARY QUANTITIES (for plotting purposes)
+aux ApcCdh_ = ApcCdh
+aux ACE_ = ACE
+aux pCdh_ = pCdh
+ 
+
+### MODEL PARAMETERS
+par Ce = 0
+
+par kSyEmi1 = 0.01, kSyEmi2 = 0.1
+  par E2f = 0.7
+  par kDeEmi1 = 0.1, kDeEmi2 = 0.1
+par kSyCa1 = 0.005, kSyCa2 = 0.05
+  par kDeCa1 = 0.005, kDeCa2 = 2.5
+par tCdh = 1
+par kDpCdh = 1.5, kPhCdhA = 5, kPhCdhE = 0.4
+par kDiACE = 0.1, kAsACE = 100
+par tDna = 1, kAsEPx = 50, kDiEPx = 5
+
+
+### XppAut SETTINGS
+@ Method=stiff, Total=1200, Bounds=100, Dt=1
+@ xp=tEmi, yp=Ca, xlo=0, xhi=1, ylo=0, yhi=1, nmesh=400
+@ Nplot=4, Yp1=tEmi, Yp2=Ca, Yp3=ApcCdh_, Yp4=ACE_
+
+@ Ntst=1000, Nmax=10000, Npr=2000
+@ Ds=.002, Dsmin=.0001, Dsmax=.05, ParMin=-1, ParMax=1
+@ AutoVar=Ca, AutoXmin=-1, AutoXmax=1, AutoYmin=0, AutoYmax=1
+
+done

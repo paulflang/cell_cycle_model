@@ -1,0 +1,236 @@
+### MODEL NAME
+# RP-G1S-MA
+
+
+### MODEL NOTES
+# This model can be used to reproduce Fig. 6B.
+#
+# The model shows how Cd flips the restriction point toggle between Rb and Ce (and tE2f). After enough time to allow
+# Ce (and E2f) to reach a certain level, Ce (and E2f) then flip the G1/S toggle. Ca accumulates, inactivates Ce and 
+# activates Fox. Fox activates the synthesis of tCb. When tCb reaches a certain threshold, it flips the G2/M toggle between B55 and Cb
+# to activate Cb.
+#
+# The variable terminology is described below and may sometimes differ from the project report, partially due to character limitations of XPP.
+
+
+### Major assumptions:
+# All reactions (even non elementary reactions) are best modelled with mass action kinetics.
+# Protein expression takes no time.
+# Levels of tRb, tCdh, tEnsa, tB55, tGw, tWee, tCdc25, tApc and tDna are constant. Their degradation rate is incorporated in
+# the corresponding dephosphorylation and dissociation rates.
+# Free and E2f bound forms of Rb are phosphorylated with the same rates.
+# B55 invokes negative feedback at two steps: (1) at Gw and (2) at Wee/Cdc25
+# B55 is a putative pApc phoshpatase.
+# The unit [dna] is negligibly small compared to the unit [e2f], or the unit [fox].
+# Transcription factors that are in complex with Dna are not accessible to degrading enzymes (and baseline degradation rates are included in the dissociation constant).
+# Phosphorylated cyclin E and A are immediately degraded.
+
+
+### Variables (quantities of dimension concentration given in the arbitrary units shown in square brackets):
+# Rb, pRb: unphosphorylated (incl. (p)E2fRb) and phosphorylated Retinoblastoma protein; [e2f]
+# Ce: cyclin E:cdk2 complex; [e];
+# tE2f: total E2f; [e2f]
+# E2fPx: E2f:Promoter of gene X complex; [dna]
+# E2f: E2f that is neither phosphorylated nor bound by Rb; [e2f]
+# pE2f: E2f that is phosphorylated but not bound to Rb; [e2f]
+# E2fRb: unphosphorylated E2f bound to Rb; [e2f]
+# pE2fRb: phosphorylated E2f bound to Rb; [e2f]
+# fRb: unphosphorylated, free Rb; [e2f]
+#
+# tEmi: total Emi1; [cdh]
+# pEmi: phosphorylated free Emi1; [cdh]
+# Emi: free unphosphorylated Emi1; [cdh]
+# Ca: cyclin A:cdk1/2 complex; [a]
+# Apc: free, unphosphorylated anaphase promoting complex; [cdh]
+# pApc: free, phosphorylated Apc; [cdh]
+# Cdh: free, unphosphorylated APC substrate adaptor subunit CDH1; [cdh]
+# ApcCdh, pCdh, ACE: Apc:Cdh complex, phosphorylated Cdh, Apc:Cdh:Emi complex; [cdh]
+# pApcCdh: phosphorylated APC bound to CDH1; [cdh]
+# pACE: pApc:Cdh:Emi complex; [cdh]
+# tFox and pFox: total and phosphorylated transcription factor FoxM1; [fox]
+#
+# tCb: total cyclin B:cdk1 complex; [b]
+# Cb: active cyclin B:Cdk1 complex; [b]
+# pEnsa: phosporylated Ensa (endosulfine & cAMP regulated phosphoprotein 19), incl. pEnsaB55; [ensa]
+# B55: free protein phosphatase 2A:B55 (a hetrotrimeric enzyme complex); [ensa]
+# pGw: phosphorylated Greatwall 1; [gw]
+# pEB55: pEnsa:B55 complex; [ensa]
+# pFoxPcb: phosphorylated FOX M1 bound to the promoter of cyclin B [dna]
+# Wee: unphosphorylated Wee; [wee]
+# pCdc25: phosphorylated pCdc25; [c25]
+#
+# tCdc20: total APC substrate adaptor subunit CDC20; [cdh]
+# pFoxPCdc: phosphorylated FOX M1 bound to the promoter of CDC20; [dna]
+# Cdc20: free CDC20; [cdh]
+# pApcCdc: phosphorylated APC bound to CDC20; [cdh]
+
+
+### Parameter description:
+# Cd: cyclin D:cdk4/6 complex; [e]
+#   kDpRb, kPhRb: dephosphorylation rate and cyclin A and B mediated phosphorylation efficiency (k_cat/other substrates) of Rb; [1/min], [1/(e2f*min)]
+#   kPhRbD, kPhRbE: cyclin D and E mediated phosphorylation efficiency of Rb; [1/(e2f*min)]
+# tDna: total Dna (i.e. promoter) concentration; [dna]
+# kAsEPx, kDiEPx: assosiation and dissociation rate constants of E2fPx; [1/(min*dna)], [1/min]
+# kSyCe1, kSyCe2: baseline and activated synthesis rates of Ce; [e/min], [e/(dna*min)]
+#   kDeCe: degradation rate of Ce; [1/min]
+# kDiE2fRb, kAsE2fRb: dissociation and association rates of the (p)E2f:Rb protein complex; [1/min], [1/(e2f*min)]
+# kSyE2f1, kSyE2f2: baseline and activated synthesis rates of tE2f; [e2f/min], [e2f/(dna*min)]
+#   kDeE2f1, kDeE2f2: baseline degradation rate of tE2f and accelleration of degradation rate of E2f by phosphorylation, respectively; [1/min]
+#   kPhE2f, kDpE2f1, kDpE2f1: Cb mediated E2f phorphorylation efficiency, baseline dephosphorylation rate and B55 mediated dephosphorylation efficiency of E2f; [1/(min*Cb)], [1/min], [1/(min*ensa)]
+# tRb: total Rb; [e2f]
+#
+# kSyEmi1, kSyEmi2: baseline and activated synthesis rates of Emi; [cdh/min], [cdh/(dna*min)]
+#   kDeEmi1, kDeEmi2, kPhEmiA, kPhEmiB: baseline and Cdh mediated degradation rate of Emi, Ca and Cb mediateted phosphorylation efficiency of Emi; [1/min], [1/(min*cdh)], [1/(min*a)], [1/(min*b)]
+#   kDpEmi: dephosphorylation rate of Emi; [1/min]
+#   kDeEmi3: accelleration of Emi degradation rate via phosphorylation; [1/min] 
+# kSyCa1, kSyCa2: baseline and activated synthesis rates of Ca; [a/min], [a/(dna*min)]
+#   kDeCa1, kDeCa2, kDeCa3: baseline degradation rate and (p)ApcCdh and pApcCdc mediated degradation efficiencies of Ca [1/min], [1/(cdh*min)], [1/(cdh*min)]
+# tCdh: total Cdh; [cdh]
+# tApc: total Apc; [cdh]
+# kDpCdh, kPhCdhA, kPhCdhE, kPhCdhB: dephosphorylation rate and Ca or Ce mediated dephosphorylation efficiencies of Cdh; [1/min], [1/(min*a)], [1/(min*e)], [1/(min*b)]
+# kDiACE, kAsACE: dissociation and association rates of (p)ApcCdh with Emi; [1/min], [1/(min*cdh)]
+# kDiACdh, kAsACdh: dissociation and association rates of (p)Apc with Cdh; [1/min], [1/(min*cdh)]
+#
+# kPhCeA, kPhCeE: Ca and Ce mediated phosphorylation efficiencies of Ce; [1/(min*Ca)], [1/(min*Ce)]
+# kSyFox1, kSyFox2: baseline and activated synthesis rates of tFox; [fox/min], [fox/(dna*min)]
+# kDeFox1, kDeFox2: baseline and (p)ApcCdh mediated degradation of tFox; [1/min], [1/(min*cdh)]
+# kPhFoxE, kPhFoxA, kPhFoxB, kDpFox: Ce, Ca and Cb mediated phosphorylation efficiencies, and background dephosphorylation rate
+# of Fox; [1/(min*e)], [1/(min*a)], [1/(min*b)], [1/min]
+# kAsFPcb, kDiFPcb: assosiation and dissociation rate constants of FoxPcb; [1/(min*dna)], [1/min]
+# kSyCb1,  kSyCb2: baseline and activated synthesis rates of Cb; [b/min], [b/(dna*min)]
+#   kDeCb1, kDeCb2, kDeCb3: baseline degradation rate and (p)ApcCdh and pApcCdc mediated degradation efficiencies of Cb [1/min], [1/(cdh*min)], [1/(cdh*min)]
+#
+# kPhEnsa, kDpEnsa: phosphorylation efficiency (k_cat/K_M) and dephosphorylation rate of Ensa; [1/(min*gw)], [1/min] 
+#   tEnsa: total Ensa; [ensa]
+# tCb: concentration of total Cb in the system; [b]
+# tB55: total B55; [ensa]
+# kPhGw, kDpGw1, kDpGw2: phosphorylation, background dephosphorylation, and B55 mediated dephosphorylation
+# efficiencies of Gw; [1/(min*b)], [1/min], [1/(min*ensa)]
+#   tGw: concentration of total Gw in the system; [gw]
+# kWee1, kWee2: inactive Wee1 and active Wee mediated phosphorylation efficiencies of Cb times concentration of
+# inactive Wee1 and active Wee, respectively; [1/min]
+#   kPhWeeA, kPhWeeB, kDpWee: Ca and Cb mediated phosphorylation and B55 mediated dephosphorylation efficiencies of Wee;  [1/(min*a)], [1/(min*b)], [1/(min*ensa)]
+# kCdc25_1, kCdc25_2: Cdc25 mediated dephosphorylation efficiencies of Cb times concentration of inactive
+# and active Cdc25, respectively; [1/min]
+#   kPhC25A, kPhC25B, kDpCdc25: Ca and Cb mediated phosphorylation and B55 mediated dephosphorylation efficiencies
+#   of Cdc25; [1/(min*b)], [1/(min*b)], [1/(min*ensa)]
+# kDipEB55, kAspEB55: dissociation and association rate constants of pEB55; [1/min], [1/(min*ensa)]
+#
+# kSyCdc_1, kSyCdc_2: baseline and activated synthesis rates of tCdc20; [cdh/min], [cdh/(dna*min)]
+# kDeCdc_1, kDeCdc_2: baseline and (p)ApcCdh mediated degradation rates of Cdc; [1/min], [1/(min*cdh)]
+# kPhApcA, kPhApcB: Ca and Cb mediated phosphorylation rates of Apc; [1/(min*Ca)], [1/(min*Cb)]
+# kDpApc: dephosphorylation rate of Apc; [1/min]
+# kDipACdc, kAspACdc: dissociation and association rate constants of pApcCdc; [1/min], [1/(min*cdh)]
+# kAsFPcdc, kDiFPcdc: assosiation and dissociation rate constants of FoxPcdc; [1/(min*dna)], [1/min]
+#
+# f1: Apc (de)phosphorylation efficiency if in complex with Cdh (and Emi); []
+# f2: Cdh phosphorylation efficiency if in complex with (p)Apc; []
+# f3: Emi phosphorylation efficiency if in complex with Apc and Cdh; []
+# f4: Cdh phosphorylation efficiency if in complex with Apc and Emi; []
+
+
+
+##################################################################################
+
+### MODEL STATES
+Rb' = kDpRb * pRb - kPhRb * (Cd + Ce + Ca + Cb) * Rb + kDeE2f * E2fRb
+Ce' = kSyCe1 + kSyCe2 * E2fPx - (kDeCe + kPhCeA * Ca) * Ce
+E2f' = kSyE2f1 + kSyE2f2 * E2fPx - kDeE2f * E2f + kDiE2fRb * E2fRb - kAsE2fRb * E2f * fRb
+tE2f' = kSyE2f1 + kSyE2f2 * E2fPx - kDeE2f * tE2f
+E2fPx' = kAsEPx * E2f * (tDna - E2fPx) - kDiEPx * E2fPx
+
+tEmi' = kSyEmi1 + kSyEmi2 * E2fPx - kDeEmi1 * tEmi - kDeEmi2 * ACE
+Ca' = kSyCa1 + kSyCa2 * E2fPx - (kDeCa1 + kDeCa2 * ApcCdh) * Ca
+ACE' = kAsACE * ApcCdh * (tEmi - ACE) - (kDiACE + kDeEmi1 + kDeEmi2 + kPhCdhE * Ce + kPhCdhA * Ca) * ACE
+pCdh' = (kPhCdhA*Ca + kPhCdhE*Ce + kPhCdhB*Cb) * (tCdh - pCdh) - kDpCdh * pCdh
+
+tFox'     = kSyFox1 + kSyFox2 * E2fPx\
+            - (kDeFox1 + kDeFox2 * ApcCdh) * tFox
+pFox'     = (kPhFoxE * Ce + kPhFoxA * Ca + kPhFoxB * Cb) * (tFox - pFox)\
+            - kDpFox * pFox\
+            - (kDeFox1 + kDeFox2 * ApcCdh) * pFox
+pFoxPcb'  = kAsFPcb * pFox * (tDna - pFoxPcb) - kDiFPCb * pFoxPcb
+
+pEnsa' = kPhEnsa*pGw*(tEnsa - pEnsa) - kDpEnsa*pEB55
+Cb' = rCdc25*(tCb - Cb) - rWee*Cb - (kDeCb1 + kDeCb2 * ApcCdh) * Cb
+pGw' = kPhGw*Cb*(tGw-pGw) - (kDpGw1+kDpGw2*B55)*pGw
+pEB55' = kAspEB55*B55*(pEnsa - pEB55) - (kDipEB55 + kDpEnsa)*pEB55
+
+tCb' = kSyCb1 + kSyCb2 * pFoxPcb - (kDeCb1 + kDeCb2 * ApcCdh) * tCb
+
+### INITIAL CONDITIONS
+init tEmi = 0.0, Ca = 0.00, ACE = 0.00, pCdh = 0.0
+
+
+### ALGEBRAIC EQUATIONS
+# Mass conservations:
+pRb = tRb - Rb
+fRb = Rb - (tE2f - E2f)
+E2fRb = tE2f - E2f
+
+ApcCdh = tCdh - pCdh - ACE
+
+B55 = tB55 - pEB55
+
+# Substitutions
+rWee = kWee1 + (kWee2-kWee1)*kDpWee*B55/(kDpWee*B55 + kPhWee*Cb)
+rCdc25 = kCdc25_1 + (kCdc25_2-kCdc25_1)*(kPhCdc25*Cb)/(kPhCdc25*Cb + kDpCdc25*B55)
+
+
+### AUXILIARY QUANTITIES (for plotting purposes)
+aux pRb_ = pRb
+aux fRb_ = fRb
+aux E2fRb_ = E2fRb
+
+aux ApcCdh_ = ApcCdh
+aux ACE_ = ACE
+aux pCdh_ = pCdh
+ 
+
+### MODEL PARAMETERS
+par Cd = 0
+
+  par kDpRb = 1, kPhRb = 10
+par kSyCe1 = 0.01, kSyCe2 = 0.1
+  par kDeCe = 0.11, kPhCeA = 0.3
+par kDiE2fRb = 0.1, kAsE2fRb  = 100
+par kSyE2f1 = 0.01, kSyE2f2 = 0.1
+ par kDeE2f = 0.11
+par tRb = 1
+par tDna = 1, kAsEPx = 50, kDiEPx = 5
+
+par kSyEmi1 = 0.01, kSyEmi2 = 0.1
+  par kDeEmi1 = 0.1, kDeEmi2 = 0.1
+par kSyCa1 = 0.005, kSyCa2 = 0.05
+  par kDeCa1 = 0.005, kDeCa2 = 2.5
+par tCdh = 1
+par kDpCdh = 1.5, kPhCdhA = 5, kPhCdhB = 5, kPhCdhE = 0.4
+par kDiACE = 0.1, kAsACE = 100
+
+par kAsFPcb = 50, kDiFPcb = 10
+par kSyFox1 = 0.001, kSyFox2 = 0.0075
+  par kDeFox1 = 0.001, kDeFox2 = 0.5
+par kPhFoxE = 0.1,  kPhFoxA = 0.1, kPhFoxB = 0.5, kDpFox = 0.005
+
+par kPhEnsa=0.1, kDpEnsa=0.05
+  par tEnsa=1
+par tB55=0.25
+par kPhGw=1, kDpGw1=0.25, kDpGw2=10
+  par tGw=1
+par kWee1=0.01, kWee2=1, kPhWee=1, kDpWee=10
+par kCdc25_1=0.1, kCdc25_2=1, kPhCdc25=1, kDpCdc25=10
+par kDipEB55=0.0068, kAspEB55=57
+
+par kSyCb1 = 0.002, kSyCb2 = 0.015
+par kDeCb1 = 0.01, kDeCb2 = 0.4
+
+### XppAut SETTINGS
+@ Method=stiff, Total=1200, Bounds=100, Dt=1
+@ xp=tEmi, yp=Ca, xlo=0, xhi=1, ylo=0, yhi=1, nmesh=400
+@ Nplot=4, Yp1=tEmi, Yp2=Ca, Yp3=ApcCdh_, Yp4=ACE_
+
+@ Ntst=15, Nmax=200, Npr=500
+@ Ds=.002, Dsmin=.0001, Dsmax=.05, ParMin=-1, ParMax=1
+@ AutoVar=Ca, AutoXmin=-1, AutoXmax=1, AutoYmin=0, AutoYmax=1
+
+done

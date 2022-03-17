@@ -1,0 +1,100 @@
+### MODEL NAME
+# RP_aa
+
+## MODEL NOTES
+# This model can be used to reproduce Fig. 2D-E.
+# The model shows how Cd flips the restriction point toggle between Rb and Ce (and tE2f).
+# The variable terminology is described below and may sometimes differ from the project report, partially due to character limitations of XPP.
+
+
+### Relation to other models:
+# RP and RP_2D do not contain E2f autoactivation.
+
+
+### Major assumptions:
+# All reactions (even non elementary reactions) are best modelled with mass action kinetics for all reactions.
+# Protein expression takes no time.
+# Levels of tRb and tDna are constant. tRb degradation rate is incorporated in
+# the corresponding dephosphorylation and dissociation rates.
+# Cd and Ce have same phosphorylation rate constant. This constant is equal for E2fRb and free Rb.
+# The unit [dna] is negligibly small compared to the unit [e2f].
+# Transcription factors that are in complex with Dna are not accessible to degrading enzymes (and baseline degradation rates are included in the dissociation constant).
+
+
+### Variables (quantities of dimension concentration given in the arbitrary units shown in square brackets):
+# Rb, pRb: unphosphorylated (incl. E2fRb) and phosphorylated Retinoblastoma protein; [e2f]
+# Ce: cyclin E-cdk2 complex; [e];
+# E2f, tE2f: free E2f (E2f that is not bound to Rb; includes E2f bound to DNA), total E2f; [e2f]
+# fRb: unphosphorylated, free Rb; [e2f]
+# E2fRb: E2f:Rb complex; [e2f]
+# E2fPx: E2f:Promoter of gene X complex; [dna]
+
+
+### Parameter description:
+# Cd: cyclin D-cdk4/6 complex; [e]
+#   kDpRb, kPhRb: (de)phosphorylation rate of Rb; [1/min], [1/(e2f*min)]
+# kSyCe1, kSyCe2: baseline and activated synthesis rates of Ce; [e/min]
+#   kDeCe: degradation rate of Ce; [1/min]
+# kDiE2fRb, kAsE2fRb: dissociation and association constants of the E2f:Rb protein complex; [1/min], [1/(e2f*min)]
+# kSyE2f1, kSyE2f2: baseline and activated synthesis rates of tE2f; [e2f/min]
+#   kDeE2f: degradation rate of tE2f; [1/min]
+# tRb: total amount of Rb present in the system; [e2f]
+# tDna: total Dna (i.e. promoter) concentration; [dna]
+# kAsEPx, kDiEPx: assosiation and dissociation rate constants of E2fPx; [1/(min*dna)], [1/min]
+
+
+### Idea behind parameter values:
+# Parameters shall be biologically reasonable.
+# Ce and tE2f shall reach a theoretical maximum of 1 and have a ~10 fold dynamic range.
+# Lower bifurcation point shall be at Cd < 0, upper bifurcation point at Cd = 0.5.
+
+
+##################################################################################
+
+### MODEL STATES
+Rb' = kDpRb * pRb - kPhRb * (Cd + Ce) * Rb + kDeE2f * E2fRb
+Ce' = kSyCe1 + kSyCe2 * E2fPx - kDeCe*Ce
+E2f' = kSyE2f1 + kSyE2f2 * E2fPx - kDeE2f * E2f + kDiE2fRb * E2fRb - kAsE2fRb * E2f * fRb
+tE2f' = kSyE2f1 + kSyE2f2 * E2fPx - kDeE2f * tE2f
+E2fPx' = kAsEPx * E2f * (tDna - E2fPx) - kDiEPx * E2fPx
+
+
+### INITIAL CONDITIONS (to be taken from mitotic exit)
+init Rb = 1, Ce = 0.0, E2f = 0.00, tE2f = 0.0
+
+
+### ALGEBRAIC EQUATIONS
+# Mass conservation:
+pRb = tRb - Rb
+fRb = Rb - (tE2f - E2f)
+E2fRb = tE2f - E2f
+
+
+### AUXILIARY QUANTITIES (for plotting purposes; indicated with underscore)
+aux pRb_ = pRb
+aux fRb_ = fRb
+aux E2fRb_ = E2fRb
+
+
+### MODEL PARAMETERS
+par Cd = 0
+
+  par kDpRb = 1, kPhRb = 10
+par kSyCe1 = 0.01, kSyCe2 = 0.1
+  par kDeCe = 0.11
+par kDiE2fRb = 0.1, kAsE2fRb  = 100
+par kSyE2f1 = 0.01, kSyE2f2 = 0.1
+ par kDeE2f = 0.11
+par tRb = 1
+par tDna = 1, kAsEPx = 50, kDiEPx = 5
+
+### XppAut SETTINGS
+@ Method=stiff, Total=1200, Bounds=100, Dt=1
+@ Xp=t, Xlo=0, Xhi=400, Ylo=0, Yhi=1
+@ Nplot=4, Yp1=Rb, Yp2=Ce, Yp3=E2f, Yp4=tE2f
+
+@ Ntst=150, Nmax=1000000, Npr=1000
+@ Ds=.001, Dsmin=.0001, Dsmax=.005, ParMin=-1, ParMax=1
+@ AutoVar=Ce, AutoXmin=-1, AutoXmax=1, AutoYmin=0, AutoYmax=1
+
+done
