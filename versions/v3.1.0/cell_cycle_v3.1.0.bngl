@@ -131,7 +131,7 @@ begin molecule types
 	FBXO5_promoter(E2F)
 	CDC20_promoter(FOXM1)
 	FBXO5(APC,FZR1,Ser182~u~p) # The FBXO5 C-terminus binds to APC and FZR1
-	iWEE()
+#	iWEE()
 	FOXM1(DBD,Thr600~u~p)
 	WEE1(Ser123~u~p)
 	CCNE_promoter(E2F)
@@ -201,7 +201,7 @@ begin seed species
 	@cell:E2F(DBD!1,RB1,Ser332~p).E2F_promoter(E2F!1) (0*1)  #E2fProE2f
 	@cell:E2F(DBD!1,RB1,Ser332~p).FBXO5_promoter(E2F!1) (0*1)  #E2fProEmi
 	@cell:E2F(DBD!1,RB1,Ser332~p).FOXM1_promoter(E2F!1) (0*1)  #E2fProFox
-	@cell:iWEE() (0*1)  #iWee
+#	@cell:iWEE() (0*1)  #iWee
 	@cell:SKP2() (1*1)
 	@cell:TP53(DBD,Ser15~p) (0*1)
 	@cell:CDKN1A_promoter(TP53) (1e-04*1)
