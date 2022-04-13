@@ -91,8 +91,8 @@ begin parameters
 	kPhCAEE 0.00055440055/1  # former kPhCdhEf4
 	kPhCAEA 0.01386001385/1  # former kPhCdhAf4
 	kPhCAEB 0.13860013864/1  # former kPhCdhBf4
-	ikSyCb 1.0
-	jiWee 0.1*1
+#	ikSyCb 1.0
+#	jiWee 0.1*1
 	kDpE2f1 0
 	kPhC25A 0/1
 #	iWee_0 0
@@ -274,8 +274,8 @@ begin reaction rules
 	DppFox_1: @cell:FOXM1(DBD,Thr600~p) -> @cell:FOXM1(DBD,Thr600~u) kDpFox
 	DppFox_2: @cell:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) -> @cell:FOXM1(DBD,Thr600~u) + @cell:CDC20_promoter(FOXM1) kDpFox
 	DppFox_3: @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) -> @cell:FOXM1(DBD,Thr600~u) + @cell:CCNB_promoter(FOXM1) kDpFox
-	SyCb1: 0 -> @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kSyCb1 * ikSyCb
-	SyCb2: @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) -> @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kSyCb2 * ikSyCb
+	SyCb1: 0 -> @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kSyCb1
+	SyCb2: @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) -> @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kSyCb2
 	DeCb: @cell:CCNB(CDK1_Thr14_Tyr15) -> 0  kDeCb1 DeleteMolecules
 	DeCbByApcCdh: @cell:CCNB(CDK1_Thr14_Tyr15) + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeCb2 DeleteMolecules
 	DeCbByApcCdc: @cell:CCNB(CDK1_Thr14_Tyr15) + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) kDeCb3 DeleteMolecules
