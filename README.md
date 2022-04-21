@@ -25,8 +25,6 @@ Models are of different degree of complexity. They typicall include `BNGL` and `
 ## Tutorial, and documentation
 Please see the [documentation](https://cell_cycle_model.readthedocs.io/en/latest/index.html) for a description of how to use `cell_cycle_model`. 
 
-## License
-The package is released under the [MIT license](https://github.com/paulflang/cell_cycle_model/blob/develop/LICENSE).
 
 ## Development team
 This package was developed by [Paul F. Lang](https://www.linkedin.com/in/paul-lang-7b54a81a3/) at the University of Oxford, UK.
