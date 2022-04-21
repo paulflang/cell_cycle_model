@@ -24,8 +24,6 @@ promoter (formerly called Px).
 * v4.0.0: added compartments.
 * v4.0.1: scaled promoters to 2 per cell; added observables.
 
-## License
-The package is released under the [MIT license](https://github.com/paulflang/cell_cycle_model/blob/develop/LICENSE).
 
 ## Development team
 This package was developed by [Paul F. Lang](https://www.linkedin.com/in/paul-lang-7b54a81a3/) at the University of Oxford, UK.
