@@ -31,6 +31,7 @@ versions/v3.0.0/modify_bngl.py
 versions/v3.0.0/make_petab_compatible.py
 versions/.metadata/
 versions/v*/cell_cycle_v[0-9].[0-9].[0-9].xml
+*sim_log.log
 
 # Recycle bin
 sim2opt.csv.xlsx
