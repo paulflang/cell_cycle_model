@@ -351,8 +351,8 @@ begin seed species  # Species (concentration*scaling*volume)
 	@Nuc:FOXM1(DBD,Thr600~u) (0.0055647336*6.022e23*1e-12*1e-6)  #Fox
 	@Nuc:FOXM1(DBD,Thr600~p) (0.00038111617*6.022e23*1e-12*1e-6)  #pFox
 	@Nuc:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) (0*6.022e23*1e-12*1e-6)  #pFoxProCb
-	@Nuc:CCNB_promoter(FOXM1) (3.3211558e-24*6.022e23*1e-12*1e-6)  #ProCb
-	@Nuc:CDC20_promoter(FOXM1) (3.3211558e-24*6.022e23*1e-12*1e-6)  #ProCdc
+	@Nuc:CCNB_promoter(FOXM1) (3.3211558e-6*6.022e23*1e-12*1e-6)  #ProCb
+	@Nuc:CDC20_promoter(FOXM1) (3.3211558e-6*6.022e23*1e-12*1e-6)  #ProCdc
 	@Nuc:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) (0*6.022e23*1e-12*1e-6)  #pFoxProCdc
 	@Nuc:WEE1(Ser123~u) (0.980441633*6.022e23*1e-12*1e-6)  #Wee
 	@Nuc:CCNB(CDKN1A,CDK1_Thr14_Tyr15~p) (0.00751291485*6.022e23*1e-12*1e-6)  #pCb
@@ -364,11 +364,11 @@ begin seed species  # Species (concentration*scaling*volume)
 	@Nuc:ENSA_ARPP19(PPP2R2B,Ser62_Ser67~u) (0.826863064*6.022e23*1e-12*1e-6)  #Ensa
 	@Nuc:ENSA_ARPP19(PPP2R2B,Ser62_Ser67~p) (0.000328561161*6.022e23*1e-12*1e-6)  #pEnsa
 	@Nuc:ENSA_ARPP19(PPP2R2B!1,Ser62_Ser67~p).PPP2R2B(ENSA_ARPP19!1) (0.172808375*6.022e23*1e-12*1e-6)  #pEB55
-	@Nuc:CCNE_promoter(E2F) (3.3211558e-24*6.022e23*1e-12*1e-6)  #ProCe
-	@Nuc:CCNA_promoter(E2F) (3.3211558e-24*6.022e23*1e-12*1e-6)  #ProCa
-	@Nuc:E2F_promoter(E2F) (3.3211558e-24*6.022e23*1e-12*1e-6)  #ProE2f
-	@Nuc:FBXO5_promoter(E2F) (3.3211558e-24*6.022e23*1e-12*1e-6)  #ProEmi
-	@Nuc:FOXM1_promoter(E2F) (3.3211558e-24*6.022e23*1e-12*1e-6)  #ProFox
+	@Nuc:CCNE_promoter(E2F) (3.3211558e-6*6.022e23*1e-12*1e-6)  #ProCe
+	@Nuc:CCNA_promoter(E2F) (3.3211558e-6*6.022e23*1e-12*1e-6)  #ProCa
+	@Nuc:E2F_promoter(E2F) (3.3211558e-6*6.022e23*1e-12*1e-6)  #ProE2f
+	@Nuc:FBXO5_promoter(E2F) (3.3211558e-6*6.022e23*1e-12*1e-6)  #ProEmi
+	@Nuc:FOXM1_promoter(E2F) (3.3211558e-6*6.022e23*1e-12*1e-6)  #ProFox
 	# @Nuc:E3F(DBD!1,RB1,Ser332~u).CCNE_promoter(E2F!1) (0*6.022e23*1e-12*1e-6)  #E2fProCe
 	# @Nuc:E2F(DBD!1,RB1,Ser332~u).CCNA_promoter(E2F!1) (0*6.022e23*1e-12*1e-6)  #E2fProCa
 	# @Nuc:E2F(DBD!1,RB1,Ser332~u).E2F_promoter(E2F!1) (0*6.022e23*1e-12*1e-6)  #E2fProE2f
@@ -382,9 +382,9 @@ begin seed species  # Species (concentration*scaling*volume)
 	# @Nuc:iWEE() (0*6.022e23*1e-12*1e-6)  #iWee
 	@Nuc:SKP2() (1*6.022e23*1e-12*1e-6)
 	# @Nuc:TP53(DBD,Ser15~p) (0*6.022e23*1e-12*1e-6)
-	@Nuc:CDKN1A_promoter(TP53) (3.3211558e-24*6.022e23*1e-12*1e-6)
+	@Nuc:CDKN1A_promoter(TP53) (3.3211558e-6*6.022e23*1e-12*1e-6)
 	@Nuc:FOXO(DBD) (1*6.022e23*1e-12*1e-6)
-	@Nuc:CDKN1B_promoter(FOXO) (3.3211558e-24*6.022e23*1e-12*1e-6)
+	@Nuc:CDKN1B_promoter(FOXO) (3.3211558e-6*6.022e23*1e-12*1e-6)
 end seed species
 begin observables
 	Species tCCNE CCNE()
