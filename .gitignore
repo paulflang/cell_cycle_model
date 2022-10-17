@@ -23,6 +23,7 @@ docs/Makefile
 amici_models
 run_flake8.sh
 venv/
+.wenv/
 .vscode
 */.vscode/
 versions/v3.0.0/cell_cycle_v3.0.0.txt
