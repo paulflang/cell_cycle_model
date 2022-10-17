@@ -47,7 +47,7 @@ begin parameters
 	kPhFoxA 0.000693000693/6.022e23*1e18
 	kPhFoxB 0.003465003465/6.022e23*1e18
 	kDpFox 1e-05
-	kSyCb1 6.93000693e-06*6.022e23*2*1e18
+	kSyCb1 6.93000693e-06*6.022e23*2/1e18
 	kSyCb2 1.5649688e19*2/1e18
 	kDeCb1 6.93000693e-06
 	kDeCb2 0.00086625086625/6.022e23*1e18
@@ -77,8 +77,8 @@ begin parameters
 #	kPhApcB 6.93000693e-05 #
 	kDpApc_1 0/6.022e23*1e18
 	kDpApc_2 0.03465003465/6.022e23*1e18
-	kSyFox1 6.93000693e-06*6.022e23*2*1e18
-	kSyFox2 1.5649688e19*2*1e18
+	kSyFox1 6.93000693e-06*6.022e23*2/1e18
+	kSyFox2 1.5649688e19*2/1e18
 	kDeFox1 6.93000693e-06
 	kDeFox2 0.003465003465/6.022e23*1e18
 	kAsEPx 0.3465003465/6.022e23*1e18
@@ -241,13 +241,13 @@ begin compartments
     # A_nuc = 2*11*pi*2+2*pi*11^2 ~ 900 um^2 = 9e-8 dm^2
     # Membrane thickness: ~1e-7 dm 
 	# Plm 2 2e-14
-	Plm 2 2000
+	Plm 2 2
 	# Cyt 3 2e-12*0.5 Plm
-	Cyt 3 2000 Plm
+	Cyt 3 2 Plm
 	# Num 2 9e-15 Cyt
-	Num 2 900 Cyt
+	Num 2 0.9 Cyt
 	# Nuc 3 2e-12*0.5 Num
-	Nuc 3 1000 Num
+	Nuc 3 1 Num
 end compartments
 begin molecule types
 	E2F(DBD,RB1,Ser332~u~p)
@@ -324,7 +324,8 @@ begin seed species  # Species (concentration*scaling*volume)
 	# @Cyt:SKP2() (1*6.022e23*1e-12*1e-6)
 	# @Cyt:TP53(DBD,Ser15~p) (0*6.022e23*1e-12*1e-6)
 	@Cyt:FOXO(DBD) (1*6.022e23*1e-12*1e-6)
-	@Num:NUP(pSites~u) (5.5e-7*6.022e23*9e-15*1e-6)
+	# @Num:NUP(pSites~u) (5.5e-7*6.022e23*9e-15*1e-6)
+	@Num:NUP(pSites~u) (5.5e-7*6.022e23*9e-15)
 	@Nuc:CCND() (1.0*6.022e23*1e-12*1e-6)  #Cd
 	@Nuc:CCNE(CDKN1A_B) (0.232249137*6.022e23*1e-12*1e-6)  #Ce
 	@Nuc:E2F(DBD,RB1,Ser332~u) (0.0184790235*6.022e23*1e-12*1e-6)  #E2f
@@ -647,7 +648,7 @@ end model
 
 generate_network({overwrite=>1})
 writeSBML()
-simulate({method=>"ode",t_end=>1e6,n_steps=>1e3,atol=>1e-8,rtol=>1e-8})
+simulate({method=>"ode",t_end=>5e5,n_steps=>1e3,atol=>1e-8,rtol=>1e-8})
 # simulate({method=>"ssa", t_end=>100,n_steps=>4e2})
 # simulate({method=>"psa", poplevel=>10000,t_end=>100,n_steps=>4e2})
 # saveConcentrations();
