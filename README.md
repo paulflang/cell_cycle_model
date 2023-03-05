@@ -28,7 +28,7 @@ promoter (formerly called Px).
 
 
 ## Development team
-This package was developed by [Paul F. Lang](https://www.linkedin.com/in/paul-lang-7b54a81a3/) at the University of Oxford, UK.
+This package was developed by [Paul F. Lang](paul.lang100@gmail.com) at the University of Oxford, UK.
 
 ## Questions and comments
 Please contact [Paul F. Lang](mailto:paul.lang@wolfson.ox.ac.uk) with any questions or comments.
