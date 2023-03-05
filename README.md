@@ -1,5 +1,7 @@
 # `cell_cycle_model`
 
+[![DOI](https://zenodo.org/badge/311147606.svg)](https://zenodo.org/badge/latestdoi/311147606)
+
 `cell_cycle_model` is a repository that stores several cell cycle model versions. It also provides utility functions to compare different cell cycle model versions.
 
 ## Models
