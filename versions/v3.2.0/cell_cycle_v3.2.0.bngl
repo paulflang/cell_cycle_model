@@ -375,8 +375,8 @@ end model
 
 generate_network({overwrite=>1})
 writeSBML()
-simulate({method=>"ode",t_end=>1e6,n_steps=>1e3,atol=>1e-8,rtol=>1e-8})
-#simulate({method=>"ssa",t_end=>100,n_steps=>4e2})
+# simulate({method=>"ode",t_end=>1e6,n_steps=>1e3,atol=>1e-8,rtol=>1e-8})
+simulate({method=>"ssa",t_end=>100,n_steps=>4e2})
 #saveConcentrations();
 #setConcentration("@cell:TP53(DBD,Ser15~p)","1*6.022e23");
 #simulate({method=>"ode",continue=>1,t_start=>1.2e5,t_end=>2e5,n_steps=>1e3}); 
